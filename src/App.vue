@@ -16,7 +16,14 @@ export default {
 <style>
 :root {
   --color-primary: #0091a0;
+  --color-primary-low: #0090a0ad;
+  --color-primary-low-button: #0090a00a;
+
   --color-secondary: #f37031;
+  --color-secondary-low: #f36e3181;
+  --color-secondary-low-button: #f36e310e;
+
+  --color-third: #08b0c1;
 
   --color-text-general: #333333;
   --color-nav-link: #2e2e2e;
@@ -24,20 +31,116 @@ export default {
   --color-text-gray-light: #a7a7a7;
   --color-text-gray: #777777;
   --color-text-gray-dark: #525252;
+  --color-text-black: #393939;
+
+  --color-card-id: #656565;
 
   --background-white: #fff;
+  --background-gray-light: #f0f0f0;
   --background-general: #f8f8f8;
+
+  --font-black: "Branding-Black";
+  --font-black-italic: "Branding-BlackItalic";
+  --font-bold: "Branding-Bold";
+  --font-bold-italic: "Branding-BoldItalic";
+  --font-light: "Branding-Light";
+  --font-light-italic: "Branding-LightItalic";
+  --font-medium: "Branding-Medium";
+  --font-medium-italic: "Branding-MediumItalic";
+  --font-semibold: "Branding-Semibold";
+  --font-semibold-italic: "Branding-SemiboldItalic";
+  --font-semilight: "Branding-Semilight";
+  --font-semilight-italic: "Branding-SemilightItalic";
+  --font-thin: "Branding-Thin";
+  --font-thin-italic: "Branding-ThinItalic";
+}
+
+@font-face {
+  font-family: "Branding-Black";
+  src: local("Branding-Black"),
+    url("../src/assets/fonts/Branding-Black.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Branding-BlackItalic";
+  src: local("Branding-BlackItalic"),
+    url("../src/assets/fonts/Branding-BlackItalic.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Branding-Bold";
+  src: local("Branding-Bold"),
+    url("../src/assets/fonts/Branding-Bold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Branding-BoldItalic";
+  src: local("Branding-BoldItalic"),
+    url("../src/assets/fonts/Branding-BoldItalic.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Branding-Light";
+  src: local("Branding-Light"),
+    url("../src/assets/fonts/Branding-Light.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Branding-LightItalic";
+  src: local("Branding-LightItalic"),
+    url("../src/assets/fonts/Branding-LightItalic.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Branding-Medium";
+  src: local("Branding-Medium"),
+    url("../src/assets/fonts/Branding-Medium.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Branding-MediumItalic";
+  src: local("Branding-MediumItalic"),
+    url("../src/assets/fonts/Branding-MediumItalic.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Branding-Semibold";
+  src: local("Branding-Semibold"),
+    url("../src/assets/fonts/Branding-Semibold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Branding-SemiboldItalic";
+  src: local("Branding-SemiboldItalic"),
+    url("../src/assets/fonts/Branding-SemiboldItalic.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Branding-Semilight";
+  src: local("Branding-Semilight"),
+    url("../src/assets/fonts/Branding-Semilight.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Branding-SemilightItalic";
+  src: local("Branding-SemilightItalic"),
+    url("../src/assets/fonts/Branding-SemilightItalic.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Branding-Thin";
+  src: local("Branding-Thin"),
+    url("../src/assets/fonts/Branding-Thin.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Branding-ThinItalic";
+  src: local("Branding-ThinItalic"),
+    url("../src/assets/fonts/Branding-ThinItalic.ttf") format("truetype");
 }
 
 * {
+  /* overflow-x: hidden; */
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Branding-Medium";
+}
+#App {
+  width: 100vw;
+  overflow-x: hidden;
 }
 
 .wrapper {
   margin: auto;
-  width: 80%;
+  width: 100%;
   height: 100%;
   max-width: 1200px;
 }
@@ -57,9 +160,10 @@ export default {
 .default-button {
   width: auto;
   padding: 0 20px;
-  border: 1px solid var(--color-text-gray);
+  border: 1px solid transparent;
   height: 50px;
   background: transparent;
+  width: auto;
 }
 
 .background-primary {
@@ -67,6 +171,12 @@ export default {
 }
 .background-secondary {
   background: var(--color-secondary);
+}
+.background-gray-light {
+  background: var(--background-gray-light);
+}
+.background-general {
+  background: var(--background-general);
 }
 
 .text-color-white {
@@ -77,6 +187,9 @@ export default {
   color: var(--color-nav-link);
 }
 
+.text-color-general {
+  color: var(--color-text-general);
+}
 .text-color-primary {
   color: var(--color-primary);
 }
@@ -86,7 +199,7 @@ export default {
 
 @media (max-width: 1400px) {
   .wrapper {
-    width: 90%;
+    width: 100%;
   }
 }
 </style>
