@@ -6,6 +6,7 @@
     <GridGallery />
     <AdsArea />
     <GridGallery />
+    <HoverGallery />
     <Footer />
   </div>
 </template>
@@ -16,9 +17,18 @@ import Carousel from "../components/Carousel.vue";
 import Footer from "../components/Footer.vue";
 import GridGallery from "../components/GridGallery.vue";
 import HeroSlider from "../components/HeroSlider.vue";
+import HoverGallery from "../components/HoverGallery.vue";
 import Navbar from "../components/Navbar.vue";
 export default {
-  components: { Navbar, HeroSlider, Carousel, GridGallery, AdsArea, Footer },
+  components: {
+    Navbar,
+    HeroSlider,
+    Carousel,
+    GridGallery,
+    AdsArea,
+    Footer,
+    HoverGallery,
+  },
   name: "Homepage",
 };
 </script>
