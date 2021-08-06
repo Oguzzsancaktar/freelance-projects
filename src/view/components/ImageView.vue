@@ -1,6 +1,6 @@
 <template>
   <div id="ImageView">
-    <div :style="` height:&${height}; ; width:${width} `" class="image__area">
+    <div :style="` height:${height}; ; width:${width} `" class="image__area">
       <img :src="image" :alt="imageName" />
     </div>
   </div>

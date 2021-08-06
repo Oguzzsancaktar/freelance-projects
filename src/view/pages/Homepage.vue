@@ -1,12 +1,13 @@
 <template>
   <div id="Homepage">
-    <Navbar />
+    <FullScreenNavbar @navbar-animations="navbarAnimations" />
+    <Navbar @navbar-animations="navbarAnimations" />
     <HeroSlider />
     <Carousel class="homepage__carrousel" />
     <GridGallery />
     <AdsArea />
     <GridGallery />
-    <HoverGallery />
+    <MasonryGallery />
     <Footer />
   </div>
 </template>
@@ -17,8 +18,10 @@ import Carousel from "../components/Carousel.vue";
 import Footer from "../components/Footer.vue";
 import GridGallery from "../components/GridGallery.vue";
 import HeroSlider from "../components/HeroSlider.vue";
-import HoverGallery from "../components/HoverGallery.vue";
+import MasonryGallery from "../components/Flexbox.vue";
 import Navbar from "../components/Navbar.vue";
+import FullScreenNavbar from "../components/FullScreenNavbar.vue";
+
 export default {
   components: {
     Navbar,
@@ -27,9 +30,15 @@ export default {
     GridGallery,
     AdsArea,
     Footer,
-    HoverGallery,
+    MasonryGallery,
+    FullScreenNavbar,
   },
   name: "Homepage",
+  methods: {
+    navbarAnimations: function(fromTo) {
+      this.$emit("navbar-animations", fromTo);
+    },
+  },
 };
 </script>
 

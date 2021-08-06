@@ -46,7 +46,27 @@
             </div>
           </div>
         </div>
-        <div class="area vertical-center">
+
+        <div class="area vertical-center collapse-hidden">
+          <Button
+            background="--color-secondary"
+            family="var(--font-medium)"
+            radius="30px"
+            color="white"
+            type="icon"
+            iconType="hearth"
+            width="60px"
+            padding="0"
+            iconColor="var(--background-white)"
+            iconWidth="30px"
+            iconHeight="26px"
+            fontSize="15px"
+            margin="0 10px"
+          />
+          <NavbarHamburger @navbar-animations="navbarAnimations" />
+        </div>
+
+        <div class="area vertical-center login-language">
           <div class="area__layout__section">
             <Button
               family="var(--font-medium)"
@@ -83,27 +103,52 @@
 </template>
 
 <script>
+import jquery from "jquery";
+
 import Button from "./Button.vue";
 import Navlink from "./Navlink.vue";
 import ImageView from "./ImageView.vue";
+import NavbarHamburger from "./NavbarHamburger.vue";
 
 export default {
-  components: { Button, Navlink, ImageView },
+  components: { Button, Navlink, ImageView, NavbarHamburger },
   name: "Navbar",
+  methods: {
+    navbarAnimations: function(fromTo) {
+      this.$emit("navbar-animations", fromTo);
+    },
+  },
+
+  created() {
+    this.$root.$refs.Navbar = this;
+
+    jquery(window).scroll(function() {
+      var $nav = jquery("#Navbar");
+      $nav.toggleClass("scrolled", jquery(this).scrollTop() > $nav.height());
+    });
+  },
 };
 </script>
 
 <style lang="scss" scoped>
+#Navbar.scrolled {
+  height: 80px;
+
+  transition: 0.4s;
+}
 #Navbar {
   position: fixed;
+  transition: 0.4s;
   top: 0;
   left: 0;
   height: 150px;
   background: var(--background-white);
   width: 100vw;
   z-index: 9;
+  justify-content: center;
 
   .layout {
+    margin: auto;
     height: 100%;
     width: 100%;
     display: flex;
@@ -111,8 +156,26 @@ export default {
     justify-content: space-between;
     align-items: center;
 
+    .collapse-hidden {
+      button:first-child {
+        margin-right: 10px;
+      }
+      width: 130px !important;
+      display: none;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .login-language {
+      display: flex;
+    }
+
     :first-child {
       max-width: 180px;
+    }
+
+    .area:last-child {
+      max-width: 140px !important;
     }
     .area:nth-child(2) {
       justify-content: space-between;
@@ -130,9 +193,8 @@ export default {
 
       &__layout {
         max-width: none;
-
         display: flex;
-        justify-content: space-between;
+        justify-content: flex-start;
         width: 100%;
 
         :first-child {
@@ -140,7 +202,7 @@ export default {
         }
 
         &__section {
-          width: 100%;
+          // width: 100%;
           display: flex;
           max-width: none !important;
           align-items: center;
@@ -156,4 +218,86 @@ export default {
     }
   }
 }
+
+@media (max-width: 1300px) {
+  #Navbar {
+    .wrapper {
+      .layout {
+        .area:nth-child(2) {
+          margin: 0 50px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  #Navbar {
+    .wrapper {
+      .layout {
+        .collapse-hidden {
+          display: flex;
+        }
+        .login-language {
+          display: none;
+        }
+        .area:nth-child(2) {
+          margin: 0 40px;
+        }
+
+        .area {
+          &__layout {
+            width: 95%;
+            justify-content: center;
+            &__section {
+              justify-content: center;
+            }
+            &__section:first-child {
+              button:first-child {
+                display: none;
+              }
+            }
+            .nav__link {
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1100px) {
+  #Navbar {
+      .wrapper {
+        .layout {
+          .area:nth-child(2) {
+            margin: 0 10px;
+            justify-content: center;
+          }
+          .area {
+            &__layout {
+              width: 85%;
+
+              .nav__link {
+                margin: 0 8px;
+              }
+            }
+          }
+        }
+      }
+  }
+}
+
+@media (max-width: 950px) {
+  #Navbar {
+    .wrapper {
+      .layout {
+        .area:nth-child(2) {
+          display: none;
+        }
+      }
+    }
+  }
+}
 </style>
+}

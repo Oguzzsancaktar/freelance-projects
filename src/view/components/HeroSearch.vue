@@ -53,4 +53,10 @@ export default {
     height: 100%;
   }
 }
+
+@media (max-width: 900px) {
+  .hero__search {
+    flex-direction: column;
+  }
+}
 </style>

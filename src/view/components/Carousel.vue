@@ -36,12 +36,7 @@
             v-bind:style="itemStyle"
             :key="item"
           >
-            <ImageView
-              width="auto"
-              height="60%"
-              imageType="images"
-              :imageName="item"
-            />
+            <ImageView width="60%" imageType="images" :imageName="item" />
           </div>
         </transition-group>
       </div>

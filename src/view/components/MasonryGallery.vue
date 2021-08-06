@@ -1,9 +1,9 @@
 <template>
-  <div class="hover__gallery">
+  <div class="masonry__gallery">
     <div class="wrapper">
-      <div class="hover__gallery__nav">
+      <div class="masonry__gallery__nav">
         <div class="section">
-          <h2 style="color:var(--color-primary)">Featured Listing</h2>
+          <h2 style="color:var(--color-primary)">Where is near ?</h2>
         </div>
         <div class="section">
           <span
@@ -30,8 +30,12 @@
           />
         </div>
       </div>
-      <div class="hover__gallery__layout">
-        <HoverCard />
+      <div class="masonry__gallery__layout">
+        <MasonryCard type="short" />
+        <MasonryCard type="long" />
+        <MasonryCard type="short" />
+        <MasonryCard type="short" />
+        <MasonryCard type="short" />
       </div>
     </div>
   </div>
@@ -39,21 +43,24 @@
 
 <script>
 import Button from "./Button.vue";
-import HoverCard from "./HoverCard.vue";
+import MasonryCard from "./MasonryCard.vue";
 
 export default {
-  components: { Button, HoverCard },
-  name: "HoverGallery",
+  components: { Button, MasonryCard },
+  name: "masonryGallery",
 };
 </script>
 
 <style lang="scss" scoped>
-.hover__gallery {
+.masonry__gallery {
   min-height: 850px;
   width: 100%;
   padding: 70px 0;
   background: var(--background-white);
+
   .wrapper {
+    height: 100%;
+    min-height: 900px;
   }
 
   &__nav {
@@ -73,8 +80,15 @@ export default {
   &__layout {
     display: flex;
     justify-content: space-between;
-    flex-wrap: wrap;
+    // flex-wrap: wrap;
+    height: 100%;
 
+    flex-flow: column wrap;
+    flex-direction: row;
+
+    -webkit-columns: 380px 3; /* Chrome, Safari, Opera */
+    -moz-columns: 380px 3; /* Firefox */
+    columns: 380px 3;
     // &__item:nth-child(2),
     // &__item:nth-child(5) {
     //   margin: auto 20px;

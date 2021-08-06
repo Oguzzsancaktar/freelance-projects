@@ -202,4 +202,10 @@ export default {
     width: 100%;
   }
 }
+
+@media (max-width: 1300px) {
+  .wrapper {
+    width: 90%;
+  }
+}
 </style>
