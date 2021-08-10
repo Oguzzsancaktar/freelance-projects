@@ -39,6 +39,8 @@ export default {
   --background-gray-light: #f0f0f0;
   --background-general: #f8f8f8;
 
+  --box-shadow-color: #1b1b1bcf;
+
   --font-black: "Branding-Black";
   --font-black-italic: "Branding-BlackItalic";
   --font-bold: "Branding-Bold";
@@ -127,12 +129,43 @@ export default {
 }
 
 * {
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-primary) var(--color-primary-low);
   /* overflow-x: hidden; */
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: "Branding-Medium";
 }
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px var(--color-primary-low-button);
+  background-color: var(--color-text-gray-light);
+}
+
+::-webkit-scrollbar {
+  height: 5px;
+  background-color: var(--color-primary);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--color-primary);
+  background-image: -webkit-linear-gradient(
+    45deg,
+    rgba(0, 0, 0, 0.2) 25%,
+    transparent 25%,
+    transparent 50%,
+    rgba(0, 0, 0, 0.2) 50%,
+    rgba(0, 0, 0, 0.2) 75%,
+    transparent 75%,
+    transparent
+  );
+}
+
 #App {
   width: 100vw;
   overflow-x: hidden;

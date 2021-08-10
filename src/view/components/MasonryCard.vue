@@ -21,6 +21,7 @@
             />
           </div>
           <ImageView
+            width="100%"
             height="100%"
             imageType="images"
             imageName="cardImage-1.png"
@@ -134,6 +135,35 @@ export default {
         opacity: 1;
 
         transition: 0.5s;
+      }
+    }
+  }
+}
+@media (max-width: 1300px) {
+  .masonry-card {
+    display: inline-flex;
+    -webkit-column-break-inside: avoid;
+    page-break-inside: avoid;
+    break-inside: avoid-column;
+    width: 100%;
+    // height: 295px;
+    justify-content: space-between;
+
+    .card.long {
+      position: relative;
+      border-radius: 10px;
+      height: 615px;
+      width: 100%;
+      background: var(--background-white);
+    }
+    .card {
+      &__layout {
+      }
+      &__image {
+        &__hover {
+        }
+        &__hover:hover {
+        }
       }
     }
   }

@@ -38,6 +38,9 @@
           <div class="hero__left__search">
             <HeroSearch />
           </div>
+          <div class="hero__left__search__mobile">
+            <HeroSearchMobile />
+          </div>
           <div class="hero__left__buttons">
             <SliderButtons @goToSlide="goToSlide" activeSlide="slideCounter" />
           </div>
@@ -84,43 +87,75 @@
 import HeroSearch from "./HeroSearch.vue";
 import HeroSliderInfo from "./HeroSliderInfo.vue";
 import SliderButtons from "./SliderButtons.vue";
+import jquery from "jquery";
+import HeroSearchMobile from "./HeroSearchMobile.vue";
 export default {
   name: "HeroSlider",
-  components: { HeroSliderInfo, SliderButtons, HeroSearch },
+  components: { HeroSliderInfo, SliderButtons, HeroSearch, HeroSearchMobile },
   data: function() {
     return {
       activeCounter: 0,
       activeSliderImage: `../../assets/images/heroBackground-0.png`,
+      sliderTimer: 6,
     };
   },
   methods: {
     goToSlide(event) {
-      var sliderCounter = 0;
-      if (event !== undefined) {
-        sliderCounter = event.target.getAttribute("data-slider-counter");
+      if (this.sliderTimer > 2) {
+        this.sliderTimer = 0;
+        var sliderCounter = 0;
+        if (event !== undefined) {
+          sliderCounter = event.target.getAttribute("data-slider-counter");
+        }
+
+        this.activeCounter = sliderCounter;
+
+        // this.activeSliderImage = `../../assets/images/heroBackground-${sliderCounter}.png`;
+        let lineArr = document.getElementsByClassName("slider__buttons__line");
+        let infoArr = document.getElementsByClassName("hero__slider__info");
+        let imageArr = document.getElementsByClassName("hero__slider__image");
+
+        for (let i = 0; i < lineArr.length; i++) {
+          lineArr[i].classList.remove("active");
+          infoArr[i].classList.remove("active");
+          imageArr[i].classList.remove("active");
+        }
+        lineArr[sliderCounter].classList.add("active");
+        setTimeout(() => {
+          infoArr[sliderCounter].classList.add("active");
+          imageArr[sliderCounter].classList.add("active");
+        }, 1000);
       }
-
-      this.activeCounter = sliderCounter;
-
-      // this.activeSliderImage = `../../assets/images/heroBackground-${sliderCounter}.png`;
-      let lineArr = document.getElementsByClassName("slider__buttons__line");
-      let infoArr = document.getElementsByClassName("hero__slider__info");
-      let imageArr = document.getElementsByClassName("hero__slider__image");
-
-      for (let i = 0; i < lineArr.length; i++) {
-        lineArr[i].classList.remove("active");
-        infoArr[i].classList.remove("active");
-        imageArr[i].classList.remove("active");
-      }
-      lineArr[sliderCounter].classList.add("active");
-      setTimeout(() => {
-        infoArr[sliderCounter].classList.add("active");
-        imageArr[sliderCounter].classList.add("active");
-      }, 1500);
     },
   },
   mounted: function() {
     this.goToSlide();
+  },
+  created: function() {
+    setInterval(() => {
+      if (this.sliderTimer < 6) {
+        this.sliderTimer++;
+      } else {
+        this.sliderTimer = 6;
+      }
+    }, 1000);
+
+    setInterval(() => {
+      let $sliderButtons = jquery(".slider__buttons__button");
+
+      if (this.sliderTimer == 6) {
+        this.activeCounter++;
+
+        if (this.activeCounter < $sliderButtons.length) {
+          jquery($sliderButtons[this.activeCounter]).click();
+        } else {
+          this.activeCounter = 0;
+          jquery($sliderButtons[this.activeCounter]).click();
+        }
+
+        this.sliderTimer = 0;
+      }
+    }, 6000);
   },
 };
 </script>
@@ -136,7 +171,6 @@ export default {
 
   .wrapper {
     display: flex;
-    width: 100%;
     height: 100%;
 
     .hero__layout {
@@ -189,6 +223,12 @@ export default {
         position: absolute;
         bottom: 130px;
         border-radius: 10px;
+        box-shadow: 0 0 10px -7px var(--box-shadow-color);
+
+        &__mobile {
+          width: 90%;
+          display: none;
+        }
       }
       &__buttons {
         position: absolute;
@@ -241,19 +281,32 @@ export default {
           height: 40%;
           width: 100%;
           display: flex;
-          justify-content: center;
+          // justify-content: center;
+          flex-direction: column;
+
+          &__buttons {
+            bottom: 40px;
+            left: 50%;
+            transform: translateX(-50%);
+          }
 
           &__search {
             margin: auto;
-            width: 80%;
-            height: 100%;
+            width: 90%;
+            // height: 100%;
             position: initial;
+            &__mobile {
+              margin: 0 auto;
+            }
           }
 
           &__info {
             margin: auto;
             width: 80%;
-            height: 100%;
+            height: 240px;
+            border-radius: 20px;
+            padding: 20px 10px;
+            top: -300px;
           }
         }
         .hero__images {
@@ -262,8 +315,48 @@ export default {
           height: 60%;
           width: 100%;
 
+          filter: blur(3px) brightness(1.2);
+
           .hero__slider__image {
             width: 100%;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 777px) {
+  #HeroSlider {
+    min-height: 1000px;
+    .wrapper {
+      .hero__layout {
+        border-radius: 10px;
+        .hero__left {
+          padding: 30px 20px;
+          height: 600px;
+
+          &__buttons {
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+          }
+          &__search {
+            height: auto;
+            display: none;
+            &__mobile {
+              display: flex;
+              flex-direction: column;
+            }
+          }
+
+          &__info {
+          }
+        }
+        .hero__images {
+          height: 50%;
+
+          .hero__slider__image {
           }
         }
       }

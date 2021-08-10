@@ -6,6 +6,42 @@
     "
   >
     <div v-if="'icon' == type">
+      <span :style="`width:${iconAreaW}  `" v-if="'Twitter' == iconType">
+        <Icon
+          :iconColor="iconColor"
+          iconName="twitter"
+          width="20px"
+          height="20px"
+          viewBox="0 0 24 24"
+          :iconWidth="iconWidth"
+          :iconHeight="iconHeight"
+        />
+      </span>
+
+      <span :style="`width:${iconAreaW}  `" v-if="'Facebook' == iconType">
+        <Icon
+          :iconColor="iconColor"
+          iconName="facebook"
+          width="20px"
+          height="20px"
+          viewBox="0 0 24 24"
+          :iconWidth="iconWidth"
+          :iconHeight="iconHeight"
+        />
+      </span>
+
+      <span :style="`width:${iconAreaW}  `" v-if="'Instagram' == iconType">
+        <Icon
+          :iconColor="iconColor"
+          iconName="instagram"
+          width="20px"
+          height="20px"
+          viewBox="0 0 511.8 511"
+          :iconWidth="iconWidth"
+          :iconHeight="iconHeight"
+        />
+      </span>
+
       <span v-if="'hearth' == iconType">
         <Icon
           iconName="hearth"
@@ -171,7 +207,7 @@
           iconName="twitter"
           width="20px"
           height="20px"
-          viewBox="0 0 359.97 359.975"
+          viewBox="0 0 24 24"
           :iconWidth="iconWidth"
           :iconHeight="iconHeight"
         />
@@ -183,7 +219,7 @@
           iconName="facebook"
           width="20px"
           height="20px"
-          viewBox="0 0 359.97 359.975"
+          viewBox="0 0 24 24"
           :iconWidth="iconWidth"
           :iconHeight="iconHeight"
         />

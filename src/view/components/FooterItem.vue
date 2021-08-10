@@ -67,7 +67,7 @@
               :iconType="text"
               iconAreaW="25px"
               :text="text"
-              iconColor="var(--color-secondary)"
+              iconColor="var(--background-white)"
               iconHeight="24px"
               iconWidth="24px"
               fontSize="13px"
@@ -92,6 +92,70 @@
         />
       </div>
     </div>
+
+    <div v-if="type == 'mobile'" class="footer-item">
+      <div class="section">
+        <ImageView
+          style="justify-content:center"
+          class="footer-item__image"
+          width="47px"
+          height="85px"
+          imageType="svg"
+          imageName="logo-2.svg"
+        />
+        <div style="text-align:center; margin:20px 0;" class="section">
+          Tüm hakları <b>Borsa</b> da saklıdır.
+        </div>
+
+        <ul
+          style="justify-content:center; text-align:center"
+          v-for="(text, index) in texts"
+          :key="index"
+          class="list"
+        >
+          <li class="list__item">{{ text }}</li>
+        </ul>
+
+        <ul
+          class="list"
+          style="display:flex; flex-direction:row; justify-content:space-evenly; margin:20px 0;"
+        >
+          <li v-for="(text, index) in social" :key="index" class="list__item">
+            <Button
+              margin="auto"
+              padding="0px"
+              direction="row"
+              background="transparent"
+              radius="high"
+              color="white"
+              type="icon"
+              :iconType="text"
+              iconAreaW="25px"
+              :text="text"
+              iconColor="var(--background-white)"
+              iconHeight="24px"
+              iconWidth="24px"
+              fontSize="13px"
+              textColor="white"
+              family="var(--font-light)"
+              width="25px"
+              height="25px"
+              textAlign="start"
+              marginLeft="5px"
+            />
+          </li>
+        </ul>
+
+        <ImageView
+          style="justify-content:center"
+          class="footer-item__image"
+          imageType="svg"
+          width="90px"
+          height="auto"
+          imageName="gigant-tech-logo.svg"
+        />
+      </div>
+    </div>
   </div>
 </template>
 
@@ -103,6 +167,9 @@ export default {
   components: { Button, ImageView },
   props: {
     texts: {
+      type: Array,
+    },
+    social: {
       type: Array,
     },
     type: {
@@ -149,6 +216,24 @@ export default {
           margin: 3px 0;
           font-size: 14px;
           font-family: var(--font-light);
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .footers {
+    .footer-item {
+      &__image {
+      }
+      .section {
+        b {
+        }
+        .list {
+          &__item {
+            margin: 5px 0;
+          }
         }
       }
     }

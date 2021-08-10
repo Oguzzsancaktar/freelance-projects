@@ -169,6 +169,8 @@ export default {
       font-size: 17px;
       color: var(--color-text-gray);
       font-family: var(--font-medium);
+      background: var(--background-white);
+
       &:hover {
         color: white;
         background: var(--color-secondary);
@@ -182,6 +184,14 @@ export default {
     }
     .visible {
       visibility: visible;
+    }
+  }
+}
+
+@media (max-width: 777px) {
+  .hero__search__select {
+    .aselect {
+      width: auto;
     }
   }
 }

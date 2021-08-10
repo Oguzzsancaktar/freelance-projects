@@ -2,20 +2,54 @@
   <div class="navbar-fullscreen">
     <div class="navbar-fullscreen-layout">
       <div class="navbar-fullscreen-item">
-        <a href="./aboutus.html">ABOUT US</a>
+        <a href="./aboutus.html"> <Navlink type="white" text="Self/Rent"/></a>
       </div>
       <div class="navbar-fullscreen-item">
-        <a href="./services.html">SERVICES</a>
+        <a href="./services.html"> <Navlink text="About Us" type="white"/></a>
       </div>
       <div class="navbar-fullscreen-item">
-        <a href="./activities.html">OUR ACTIVITIES</a>
+        <a href="./activities.html">
+          <Navlink text="Contact Us" type="white"
+        /></a>
       </div>
-      <div class="navbar-fullscreen-item">
-        <a href="./projects.html">PROJECTS</a>
+      <div class="navbar-fullscreen-item button">
+        <a href="./projects.html">
+          <Button
+            family="var(--font-medium)"
+            textColor="white"
+            iconWidth="17px"
+            iconHeight="17px"
+            iconColor="white"
+            background="--color-primary"
+            text="Add Property"
+            radius="30px"
+            color="white"
+            type="together"
+            iconType="plus"
+            width="220px"
+            fontSize="20px"
+          />
+        </a>
       </div>
 
-      <div class="navbar-fullscreen-item">
-        <a href="./contact.html">CONTACT</a>
+      <div class="navbar-fullscreen-item button">
+        <a href="./contact.html">
+          <Button
+            family="var(--font-medium)"
+            color="dark"
+            textColor="var(--color-general-dark)"
+            text="Login / Sign up"
+            type="together"
+            iconType="login"
+            iconColor="var(--color-primary)"
+            background="--background-gray-light"
+            radius="30px"
+            width="220px"
+            padding="0 20px"
+            iconWidth="22px"
+            iconHeight="21px"
+            fontSize="20px"
+        /></a>
       </div>
     </div>
   </div>
@@ -23,6 +57,8 @@
 
 <script>
 import jquery from "jquery";
+import Button from "./Button.vue";
+import Navlink from "./Navlink.vue";
 
 export default {
   name: "FullScreenNavbar",
@@ -31,6 +67,8 @@ export default {
       isNavbarOpen: false,
     };
   },
+  components: { Button, Navlink },
+
   created() {
     this.$root.$refs.FullScreenNavbar = this;
 
@@ -85,7 +123,7 @@ export default {
   display: none;
   position: fixed;
   width: 100vw;
-  height: auto;
+  height: 100vh;
   top: 0;
   left: 50%;
   transform: translateX(-50%);
@@ -95,7 +133,7 @@ export default {
 }
 
 .navbar-fullscreen-layout {
-  margin-top: 150px;
+  // margin-top: 150px;
   padding: 20px;
   height: 100%;
 
@@ -133,6 +171,11 @@ export default {
     color: #fff;
     text-decoration: none;
   }
+}
+
+.navbar-fullscreen-item.button {
+  padding: 0px 0px;
+  background: transparent;
 }
 
 .navbar-fullscreen-item:hover {

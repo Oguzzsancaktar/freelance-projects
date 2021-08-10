@@ -121,6 +121,9 @@ export default {
 
 <style lang="scss" scoped>
 .card {
+  box-shadow: 0 0 10px -5px var(--box-shadow-color);
+
+  overflow: hidden;
   position: relative;
   border-radius: 10px;
   height: 500px;
@@ -209,6 +212,125 @@ export default {
           color: var(--color-text-gray-dark);
           font-size: 15px;
           font-family: var(--font-semilight);
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1300px) {
+  .card {
+    position: relative;
+    border-radius: 10px;
+
+    width: 32%;
+    background: var(--background-white);
+    margin: 15px 0;
+
+    &__layout {
+    }
+    &__image {
+      &__hover {
+      }
+      &__hover:hover {
+      }
+    }
+    &__info {
+      padding: 20px 15px;
+      .info__layout {
+        .info__row {
+          .price {
+          }
+          .row__item {
+            .text {
+            }
+          }
+        }
+
+        .info__col {
+          .header {
+          }
+          .subtitle {
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1150px) {
+  .card {
+    position: relative;
+    border-radius: 10px;
+    height: 460px;
+    width: 49%;
+    background: var(--background-white);
+    margin: 15px 0;
+
+    &__layout {
+    }
+    &__image {
+      &__hover {
+      }
+      &__hover:hover {
+      }
+    }
+    &__info {
+      padding: 10px 25px;
+      height: 230px;
+      .info__layout {
+        .info__row {
+          .price {
+          }
+          .row__item {
+            .text {
+            }
+          }
+        }
+
+        .info__col {
+          .header {
+          }
+          .subtitle {
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  .card {
+    width: 100%;
+    background: var(--background-white);
+    margin: 15px 0;
+
+    &__layout {
+    }
+    &__image {
+      height: 200px;
+      &__hover {
+      }
+      &__hover:hover {
+      }
+    }
+    &__info {
+      padding: 20px 15px;
+      .info__layout {
+        .info__row {
+          .price {
+          }
+          .row__item {
+            .text {
+            }
+          }
+        }
+
+        .info__col {
+          .header {
+          }
+          .subtitle {
+          }
         }
       }
     }

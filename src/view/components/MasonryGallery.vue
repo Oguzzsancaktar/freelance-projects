@@ -1,12 +1,12 @@
 <template>
   <div class="masonry__gallery">
     <div class="wrapper">
-      <div class="masonry__gallery__nav">
+      <div class="grid__gallery__nav">
         <div class="section">
-          <h2 style="color:var(--color-primary)">Where is near ?</h2>
+          <h2 style="color:var(--color-primary)">Featured Listing</h2>
         </div>
         <div class="section">
-          <span
+          <span class="gallery-description"
             >About <b style="color:var(--color-primary)">765</b> ads waiting
             fdor you.</span
           >
@@ -30,13 +30,25 @@
           />
         </div>
       </div>
-      <div class="masonry__gallery__layout">
-        <MasonryCard type="short" />
-        <MasonryCard type="long" />
-        <MasonryCard type="short" />
-        <MasonryCard type="short" />
-        <MasonryCard type="short" />
-      </div>
+
+      <main class="container">
+        <div>
+          <MasonryCard />
+        </div>
+        <div class="vertical">
+          <MasonryCard type="long" />
+        </div>
+
+        <div>
+          <MasonryCard />
+        </div>
+        <div>
+          <MasonryCard />
+        </div>
+        <div>
+          <MasonryCard />
+        </div>
+      </main>
     </div>
   </div>
 </template>
@@ -44,55 +56,98 @@
 <script>
 import Button from "./Button.vue";
 import MasonryCard from "./MasonryCard.vue";
-
 export default {
-  components: { Button, MasonryCard },
-  name: "masonryGallery",
+  components: { MasonryCard, Button },
+  name: "MasonryGallery",
 };
 </script>
 
 <style lang="scss" scoped>
 .masonry__gallery {
-  min-height: 850px;
+  display: flex;
+  align-items: center;
   width: 100%;
+  min-height: 850px;
   padding: 70px 0;
   background: var(--background-white);
-
   .wrapper {
-    height: 100%;
-    min-height: 900px;
-  }
+    .grid__gallery {
+      &__nav {
+        padding: 25px 0;
+        width: 100%;
+        height: 20px;
+        background: transparent;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 15px;
+        .section {
+          display: flex;
+          width: 100%;
+          justify-content: flex-start;
+          span {
+            display: flex;
+            align-items: center;
+            margin: 0 20px;
+          }
+        }
 
-  &__nav {
-    width: 100%;
-    height: 20px;
-    background: transparent;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 15px;
-    .section {
-      span {
-        margin: 0 20px;
+        .section:last-child {
+          justify-content: flex-end;
+        }
       }
     }
+
+    .container {
+      width: 100%;
+      display: grid;
+      grid-gap: 25px;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      grid-auto-rows: 300px;
+      grid-auto-flow: dense;
+    }
+
+    div {
+      overflow: hidden;
+      padding: 0;
+      display: flex;
+      align-items: stretch;
+      justify-content: center;
+    }
+
+    .vertical {
+      grid-row: span 2;
+    }
   }
-  &__layout {
-    display: flex;
-    justify-content: space-between;
-    // flex-wrap: wrap;
-    height: 100%;
 
-    flex-flow: column wrap;
-    flex-direction: row;
+  @media (max-width: 676px) {
+    .wrapper {
+      .grid__gallery {
+        min-height: 1200px;
+        width: 100%;
+        padding: 70px 0;
+        .wrapper {
+        }
 
-    -webkit-columns: 380px 3; /* Chrome, Safari, Opera */
-    -moz-columns: 380px 3; /* Firefox */
-    columns: 380px 3;
-    // &__item:nth-child(2),
-    // &__item:nth-child(5) {
-    //   margin: auto 20px;
-    // }
+        &__nav {
+          .section {
+            .gallery-description {
+              display: none;
+            }
+            span {
+              margin: 0 20px;
+            }
+          }
+        }
+        &__layout {
+        }
+      }
+      .container {
+        height: 100%;
+        display: flex !important;
+        flex-direction: column;
+      }
+    }
   }
 }
 </style>

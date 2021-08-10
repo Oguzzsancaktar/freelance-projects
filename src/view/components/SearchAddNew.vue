@@ -17,6 +17,7 @@
       iconColor="var(--color-secondary)"
       margin="0"
       height="30px"
+      textAlign="left"
     />
   </div>
 </template>
@@ -35,9 +36,9 @@ export default {
 
 <style lang="scss" scoped>
 .search__add__new {
-  // margin: 0 20px;
   padding: 0 10px;
-  // width: 130px;
+  text-align: start;
+  margin: 20px auto;
 
   p {
     font-size: 14px;

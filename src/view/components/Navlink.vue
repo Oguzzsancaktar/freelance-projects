@@ -1,6 +1,6 @@
 <template>
   <span class="nav__link">
-    <a href="">{{ text }}</a>
+    <a :class="`${type}`" href="">{{ text }}</a>
   </span>
 </template>
 
@@ -11,6 +11,10 @@ export default {
     text: {
       type: String,
       default: " Nav Text Default",
+    },
+    type: {
+      type: String,
+      default: " ",
     },
   },
 };
@@ -37,6 +41,12 @@ export default {
   a.active:hover {
     color: var(--color-nav-link);
     transition: 0.4s;
+  }
+
+  a.white {
+    color: white;
+    font-weight: 700;
+    font-size: 20px;
   }
 }
 </style>

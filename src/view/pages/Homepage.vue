@@ -18,7 +18,7 @@ import Carousel from "../components/Carousel.vue";
 import Footer from "../components/Footer.vue";
 import GridGallery from "../components/GridGallery.vue";
 import HeroSlider from "../components/HeroSlider.vue";
-import MasonryGallery from "../components/Flexbox.vue";
+import MasonryGallery from "../components/MasonryGallery.vue";
 import Navbar from "../components/Navbar.vue";
 import FullScreenNavbar from "../components/FullScreenNavbar.vue";
 

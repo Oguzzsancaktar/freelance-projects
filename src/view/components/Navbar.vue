@@ -146,6 +146,7 @@ export default {
   width: 100vw;
   z-index: 9;
   justify-content: center;
+  box-shadow: 0 0 10px -7px var(--box-shadow-color);
 
   .layout {
     margin: auto;
@@ -268,23 +269,23 @@ export default {
 
 @media (max-width: 1100px) {
   #Navbar {
-      .wrapper {
-        .layout {
-          .area:nth-child(2) {
-            margin: 0 10px;
-            justify-content: center;
-          }
-          .area {
-            &__layout {
-              width: 85%;
+    .wrapper {
+      .layout {
+        .area:nth-child(2) {
+          margin: 0 10px;
+          justify-content: center;
+        }
+        .area {
+          &__layout {
+            width: 85%;
 
-              .nav__link {
-                margin: 0 8px;
-              }
+            .nav__link {
+              margin: 0 8px;
             }
           }
         }
       }
+    }
   }
 }
 

@@ -244,6 +244,7 @@ export default {
 
   cursor: pointer;
   transition: 0.4s;
+  box-shadow: 0 0 10px -7px var(--box-shadow-color);
 }
 
 .item:hover {

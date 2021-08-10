@@ -6,7 +6,7 @@
           <h2 style="color:var(--color-primary)">Featured Listing</h2>
         </div>
         <div class="section">
-          <span
+          <span class="gallery-description"
             >About <b style="color:var(--color-primary)">765</b> ads waiting
             fdor you.</span
           >
@@ -73,9 +73,18 @@ export default {
     justify-content: space-between;
     margin-bottom: 15px;
     .section {
+      display: flex;
+      width: 100%;
       span {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
         margin: 0 20px;
       }
+    }
+
+    .section:last-child {
+      justify-content: flex-end;
     }
   }
   &__layout {
@@ -87,6 +96,29 @@ export default {
     // &__item:nth-child(5) {
     //   margin: auto 20px;
     // }
+  }
+}
+
+@media (max-width: 660px) {
+  .grid__gallery {
+    min-height: 1200px;
+    width: 100%;
+    padding: 70px 0;
+    .wrapper {
+    }
+
+    &__nav {
+      .section {
+        .gallery-description {
+          display: none;
+        }
+        span {
+          margin: 0 20px;
+        }
+      }
+    }
+    &__layout {
+    }
   }
 }
 </style>
