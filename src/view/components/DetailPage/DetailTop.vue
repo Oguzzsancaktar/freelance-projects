@@ -3,73 +3,89 @@
     <div class="wrapper">
       <div class="layout">
         <div class="area">
-          <Button
-            background="--color-secondary"
-            family="var(--font-medium)"
-            radius="30px"
-            color="white"
-            type="icon"
-            iconType="hearth"
-            width="60px"
-            padding="0"
-            iconColor="var(--background-white)"
-            iconWidth="30px"
-            iconHeight="26px"
-            fontSize="15px"
-          />
-
+          <a class="home-button" href="./">
+            <Button
+              background="transparent"
+              family="var(--font-medium)"
+              radius="30px"
+              color="white"
+              type="icon"
+              iconType="house"
+              width="60px"
+              padding="0 10px"
+              iconColor="var(--color-primary)"
+              iconWidth="30px"
+              iconHeight="26px"
+              fontSize="15px"
+              direction="center"
+            />
+          </a>
           <span>asdfasdfas as dfasdfas df</span>
         </div>
 
         <div class="area">
-          <Button
-            family="var(--font-medium)"
-            color="dark"
-            textColor="var(--color-general-dark)"
-            text="Login / Sign up"
-            type="together"
-            iconType="login"
-            iconColor="var(--color-primary)"
-            background="--background-gray-light"
-            radius="30px"
-            width="170px"
-            padding="0 20px"
-            iconWidth="22px"
-            iconHeight="21px"
-            fontSize="15px"
-          />
-          <Button
-            family="var(--font-medium)"
-            color="dark"
-            textColor="var(--color-general-dark)"
-            text="Login / Sign up"
-            type="together"
-            iconType="login"
-            iconColor="var(--color-primary)"
-            background="--background-gray-light"
-            radius="30px"
-            width="170px"
-            padding="0 20px"
-            iconWidth="22px"
-            iconHeight="21px"
-            fontSize="15px"
-          />
-          <Button
-            family="var(--font-medium)"
-            color="dark"
-            textColor="var(--color-general-dark)"
-            text="Login / Sign up"
-            type="together"
-            iconType="login"
-            iconColor="var(--color-primary)"
-            background="--background-gray-light"
-            radius="30px"
-            width="170px"
-            padding="0 20px"
-            iconWidth="22px"
-            iconHeight="21px"
-            fontSize="15px"
-          />
+          <a href="">
+            <Button
+              family="var(--font-medium)"
+              color="dark"
+              textColor="var(--color-general-dark)"
+              text="Giant Logo"
+              textAlign="left"
+              type="together"
+              iconType="gallery"
+              iconColor="var(--color-primary)"
+              background="transparent"
+              radius="0"
+              width="125px"
+              padding="0 0px"
+              iconWidth="22px"
+              iconHeight="21px"
+              fontSize="15px"
+              iconAreaW="50px"
+              direction="center"
+            />
+          </a>
+          <a href="">
+            <Button
+              family="var(--font-medium)"
+              color="dark"
+              textColor="var(--color-general-dark)"
+              text="Share"
+              textAlign="left"
+              type="together"
+              iconType="share"
+              iconColor="var(--color-primary)"
+              background="transparent"
+              radius="0"
+              width="80px"
+              padding="0 0px"
+              iconWidth="30px"
+              iconHeight="40px"
+              fontSize="15px"
+              iconAreaW="30px"
+            />
+          </a>
+
+          <a href="">
+            <Button
+              family="var(--font-medium)"
+              color="dark"
+              textColor="var(--color-general-dark)"
+              text="Favorites"
+              textAlign="left"
+              type="together"
+              iconType="favorites"
+              iconColor="var(--color-primary)"
+              background="transparent"
+              radius="0"
+              width="120px"
+              padding="0 0px"
+              iconWidth="22px"
+              iconHeight="21px"
+              fontSize="15px"
+              iconAreaW="50px"
+            />
+          </a>
         </div>
       </div>
     </div>
@@ -86,8 +102,11 @@ export default {
 
 <style lang="scss" scoped>
 .DetailTop {
+  margin: 20px 0;
+
   .wrapper {
     .layout {
+      border-radius: 5px;
       width: 100%;
       background: var(--background-white);
       display: flex;
@@ -96,6 +115,18 @@ export default {
       .area {
         display: flex;
         align-items: center;
+        // justify-content: space-between;
+
+        .home-button {
+          border-right: 1px solid var(--background-general);
+        }
+      }
+      .area:first-child {
+        width: 60%;
+      }
+      .area:last-child {
+        width: 40%;
+        justify-content: flex-end;
       }
     }
   }

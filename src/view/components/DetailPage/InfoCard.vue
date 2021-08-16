@@ -2,7 +2,11 @@
   <div class="InfoCard">
     <div class="layout">
       <div class="area">
-        <ImageView width="70%" imageType="svg" imageName="logo.svg" />
+        <ImageView
+          width="70%"
+          imageType="images"
+          imageName="refferance-logo-6.png"
+        />
       </div>
 
       <div class="area">
@@ -19,15 +23,16 @@
             textColor="var(--color-general-dark)"
             text="Login / Sign up"
             type="together"
-            iconType="login"
+            iconType="phone"
             iconColor="var(--color-primary)"
-            background="--background-gray-light"
+            background="transparent"
             radius="30px"
             width="200px"
             padding="0 20px"
             iconWidth="22px"
             iconHeight="21px"
             fontSize="15px"
+            border="2px solid var(--background-general)"
           />
           <Button
             class="btn"
@@ -36,15 +41,16 @@
             textColor="var(--color-general-dark)"
             text="Login / Sign up"
             type="together"
-            iconType="login"
+            iconType="envelope"
             iconColor="var(--color-primary)"
-            background="--background-gray-light"
+            background="transparent"
             radius="30px"
             width="200px"
             padding="0 20px"
             iconWidth="22px"
             iconHeight="21px"
             fontSize="15px"
+            border="2px solid var(--background-general)"
           />
         </div>
       </div>
@@ -54,17 +60,17 @@
           family="var(--font-medium)"
           color="dark"
           textColor="var(--color-general-dark)"
-          text="Login / Sign up"
+          text="Other postings of the company"
           type="together"
-          iconType="login"
+          iconType="house"
           iconColor="var(--color-primary)"
-          background="--background-gray-light"
+          background="transparent"
           radius="30px"
-          width="170px"
-          padding="0 20px"
+          width="100%"
+          padding="0 0px"
           iconWidth="22px"
           iconHeight="21px"
-          fontSize="15px"
+          fontSize="12px"
         />
       </div>
     </div>

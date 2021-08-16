@@ -51,5 +51,7 @@ export default {
 
 <style lang="scss">
 #AdvertDetailPage {
+  .subpage-content {
+  }
 }
 </style>

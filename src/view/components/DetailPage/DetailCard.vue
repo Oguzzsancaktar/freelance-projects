@@ -30,8 +30,24 @@
         <div class="info__layout">
           <div class="info__row">
             <div class="row__item">
-              <span class="text">Property ID : </span>
-              <span class="text">1234567890</span>
+              <Button
+                color="var(--color-secondary)"
+                textColor="var(--color-text-general)"
+                width="100px"
+                text="Irak/Erbil"
+                radius="10px"
+                type="together"
+                border="1px solid transparent"
+                iconType="maps"
+                height="35px"
+                iconColor="var(--color-secondary)"
+                padding="0 0px"
+                margin="0"
+                iconWidth="20px"
+                iconHeight="16px"
+                family="var(--font-medium)"
+                fontSize="14px"
+              />
             </div>
             <div class="row__item">
               <Button
@@ -78,30 +94,17 @@
 
             <span class="subtitle"
               >New Build Modern Istanbul Property with Sea View on Bagdat
-              Streetpremium three bedroom apartment offers dual aspect south
-              eastern views towards Canary Wharf and the</span
-            >
+              Streetpremium
+            </span>
           </div>
 
           <div class="info__row">
             <h2 class="price">£ 1,150,000</h2>
-            <Button
-              color="var(--color-secondary)"
-              textColor="var(--color-text-general)"
-              width="100px"
-              text="Irak/Erbil"
-              radius="10px"
-              type="together"
-              border="1px solid transparent"
-              iconType="maps"
-              height="35px"
-              iconColor="var(--color-secondary)"
-              padding="0 10px"
-              margin="0"
-              iconWidth="20px"
-              iconHeight="16px"
-              family="var(--font-medium)"
-              fontSize="14px"
+            <ImageView
+              width="100%"
+              height="100%"
+              imageType="images"
+              imageName="cardImage-1.png"
             />
           </div>
         </div>
@@ -111,8 +114,8 @@
 </template>
 
 <script>
-import Button from "./Button.vue";
-import ImageView from "./ImageView.vue";
+import Button from "../Button.vue";
+import ImageView from "../ImageView.vue";
 export default {
   name: "DetailCard",
   components: { ImageView, Button },
@@ -126,10 +129,10 @@ export default {
   overflow: hidden;
   position: relative;
   border-radius: 10px;
-  height: 500px;
-  width: 380px;
+  height: 425px;
+  width: 100%;
   background: var(--background-white);
-  margin: 15px 0;
+  min-width: 280px;
 
   &__layout {
     display: flex;
@@ -139,7 +142,7 @@ export default {
     position: relative;
 
     width: 100%;
-    height: 233px;
+    height: 180px;
     border-radius: 10px;
 
     &__hover {
@@ -223,7 +226,6 @@ export default {
     position: relative;
     border-radius: 10px;
 
-    width: 32%;
     background: var(--background-white);
     margin: 15px 0;
 

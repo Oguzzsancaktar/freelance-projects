@@ -5,7 +5,24 @@
       `width:${width} ;padding:${padding} ; height:${height}; background:var(${background}); border-radius:${radius} ; border:${border} `
     "
   >
-    <div v-if="'icon' == type">
+    <div class="button-icon" v-if="'icon' == type">
+      <span
+        v-if="'house' == iconType"
+        :style="
+          `width:${iconAreaW} ;color:${textColor}; font-family:${family};font-size:${fontSize} `
+        "
+      >
+        <Icon
+          viewBox="0 0 388.958 372.96"
+          :iconColor="iconColor"
+          iconName="house"
+          width="20px"
+          height="20px"
+          :iconWidth="iconWidth"
+          :iconHeight="iconHeight"
+        />
+      </span>
+
       <span :style="`width:${iconAreaW}  `" v-if="'Twitter' == iconType">
         <Icon
           :iconColor="iconColor"
@@ -89,7 +106,9 @@
       </span>
     </div>
     <div
-      :style="`color:${textColor}; font-size:${fontSize} font-family:${family}`"
+      :style="
+        `color:${textColor}; font-size:${fontSize}; font-family:${family}`
+      "
       v-if="'text' == type"
     >
       {{ text }}
@@ -107,6 +126,125 @@
           height="20px"
           :iconWidth="iconWidth"
           :iconHeight="iconHeight"
+        />
+      </span>
+
+      <span
+        v-if="'confirm' == iconType"
+        :style="
+          `width:${iconAreaW} ;color:${textColor};flex-direction:${direction}; font-family:${family};font-size:${fontSize} `
+        "
+      >
+        <Icon
+          :iconColor="iconColor"
+          iconName="confirm"
+          width="20px"
+          height="20px"
+          :iconWidth="iconWidth"
+          :iconHeight="iconHeight"
+          viewBox="-49 141 512.13 512.13"
+        />
+      </span>
+
+      <span
+        :style="
+          `width:${iconAreaW} ;color:${textColor}; font-family:${family};font-size:${fontSize} `
+        "
+        v-if="'gallery' == iconType"
+      >
+        <Icon
+          :iconColor="iconColor"
+          iconName="gallery"
+          width="20px"
+          height="20px"
+          :iconWidth="iconWidth"
+          :iconHeight="iconHeight"
+          viewBox="-7.218 208.006 430.23 377.079"
+        />
+      </span>
+
+      <span
+        :style="
+          `width:${iconAreaW} ;color:${textColor}; font-family:${family};font-size:${fontSize} `
+        "
+        v-if="'favorites' == iconType"
+      >
+        <Icon
+          :iconColor="iconColor"
+          iconName="favorites"
+          width="20px"
+          height="20px"
+          :iconWidth="iconWidth"
+          :iconHeight="iconHeight"
+          viewBox="0 -28 512.001 512"
+        />
+      </span>
+
+      <span
+        :style="
+          `width:${iconAreaW} ;color:${textColor}; font-family:${family};font-size:${fontSize} `
+        "
+        v-if="'share' == iconType"
+      >
+        <Icon
+          :iconColor="iconColor"
+          iconName="share"
+          width="20px"
+          height="20px"
+          :iconWidth="iconWidth"
+          :iconHeight="iconHeight"
+          viewBox="0 -28 512.001 512"
+        />
+      </span>
+
+      <span
+        v-if="'phone' == iconType"
+        :style="
+          `width:${iconAreaW} ;color:${textColor}; font-family:${family};font-size:${fontSize} `
+        "
+      >
+        <Icon
+          viewBox="0 0 378.961 380.88"
+          :iconColor="iconColor"
+          iconName="phone"
+          width="20px"
+          height="20px"
+          :iconWidth="iconWidth"
+          :iconHeight="iconHeight"
+        />
+      </span>
+
+      <span
+        v-if="'house' == iconType"
+        :style="
+          `width:${iconAreaW} ;color:${textColor}; font-family:${family};font-size:${fontSize} `
+        "
+      >
+        <Icon
+          viewBox="0 0 388.958 372.96"
+          :iconColor="iconColor"
+          iconName="house"
+          width="20px"
+          height="20px"
+          :iconWidth="iconWidth"
+          :iconHeight="iconHeight"
+        />
+      </span>
+
+      <span
+        v-if="'envelope' == iconType"
+        :style="
+          `width:${iconAreaW} ;color:${textColor}; font-family:${family};font-size:${fontSize} `
+        "
+      >
+        <Icon
+          :iconColor="iconColor"
+          iconName="envelope"
+          width="20px"
+          height="20px"
+          :iconWidth="iconWidth"
+          :iconHeight="iconHeight"
+          viewBox="0 0 386.641 294.238"
         />
       </span>
 
@@ -318,6 +456,9 @@ button div {
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+.button-icon {
+  justify-content: center;
 }
 button span {
   width: 100%;

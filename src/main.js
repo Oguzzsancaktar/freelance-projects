@@ -5,6 +5,8 @@ import App from './App.vue'
 import Homepage from './view/pages/Homepage.vue'
 import AddAdvertPage from './view/pages/AddAdvertPage.vue'
 import AdvertDetailPage from './view/pages/AdvertDetailPage.vue'
+import PreviewPage from './view/pages/PreviewPage.vue'
+
 
 
 
@@ -16,6 +18,8 @@ const routes = [
   { path: '/', component: Homepage },
   { path: '/add', component: AddAdvertPage },
   { path: '/detail', component: AdvertDetailPage },
+  { path: '/preview', component: PreviewPage },
+
 
 ]
 

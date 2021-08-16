@@ -9,16 +9,36 @@
     </div>
     <div class="layout">
       <div class="item">
-        <ImageView width="100%" imageType="svg" imageName="logo.svg" />
+        <ImageView
+          width="100%"
+          height="100%"
+          imageType="images"
+          imageName="heroBackground-0.png"
+        />
       </div>
       <div class="item">
-        <ImageView width="100%" imageType="svg" imageName="logo.svg" />
+        <ImageView
+          width="100%"
+          height="100%"
+          imageType="images"
+          imageName="heroBackground-1.png"
+        />
       </div>
       <div class="item">
-        <ImageView width="100%" imageType="svg" imageName="logo.svg" />
+        <ImageView
+          width="100%"
+          height="100%"
+          imageType="images"
+          imageName="heroBackground-2.png"
+        />
       </div>
       <div class="item">
-        <ImageView width="100%" imageType="svg" imageName="logo.svg" />
+        <ImageView
+          width="100%"
+          height="100%"
+          imageType="images"
+          imageName="heroBackground-3.png"
+        />
       </div>
     </div>
   </div>
@@ -41,6 +61,10 @@ export default {
   .layout {
     display: flex;
     height: 100%;
+
+    .item {
+      width: 100%;
+    }
   }
   .wrapper {
     position: absolute;
