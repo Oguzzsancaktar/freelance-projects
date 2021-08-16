@@ -1,15 +1,12 @@
 <template>
   <div id="App">
-    <Homepage />
+    <router-view to="/"> </router-view>
   </div>
 </template>
 
 <script>
-import Homepage from "./view/pages/Homepage.vue";
-
 export default {
   name: "App",
-  components: { Homepage },
 };
 </script>
 
@@ -37,7 +34,7 @@ export default {
 
   --background-white: #fff;
   --background-gray-light: #f0f0f0;
-  --background-general: #f8f8f8;
+  --background-general: #f3f3f3;
 
   --box-shadow-color: #1b1b1bcf;
 
@@ -169,6 +166,12 @@ export default {
 #App {
   width: 100vw;
   overflow-x: hidden;
+}
+
+.subpage-content {
+  height: 100%;
+  padding-top: 150px;
+  background: var(--background-general);
 }
 
 .wrapper {

@@ -13,7 +13,7 @@
         /></a>
       </div>
       <div class="navbar-fullscreen-item button">
-        <a href="./projects.html">
+        <a href="/add">
           <Button
             family="var(--font-medium)"
             textColor="white"

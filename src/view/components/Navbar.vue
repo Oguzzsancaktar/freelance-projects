@@ -3,7 +3,9 @@
     <div class="wrapper">
       <div class="layout">
         <div class="area vertical-center">
-          <ImageView width="100%" imageType="svg" imageName="logo.svg" />
+          <a href="/">
+            <ImageView width="100%" imageType="svg" imageName="logo.svg" />
+          </a>
         </div>
         <div class="area  vertical-center">
           <div class="area__layout">
@@ -22,21 +24,23 @@
                 iconHeight="26px"
                 fontSize="15px"
               />
-              <Button
-                family="var(--font-medium)"
-                textColor="white"
-                iconWidth="17px"
-                iconHeight="17px"
-                iconColor="white"
-                background="--color-primary"
-                text="Add Property"
-                radius="30px"
-                color="white"
-                type="together"
-                iconType="plus"
-                width="155px"
-                fontSize="15px"
-              />
+              <a href="/add">
+                <Button
+                  family="var(--font-medium)"
+                  textColor="white"
+                  iconWidth="17px"
+                  iconHeight="17px"
+                  iconColor="white"
+                  background="--color-primary"
+                  text="Add Property"
+                  radius="30px"
+                  color="white"
+                  type="together"
+                  iconType="plus"
+                  width="155px"
+                  fontSize="15px"
+                />
+              </a>
             </div>
 
             <div class="area__layout__section">
