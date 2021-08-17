@@ -2,7 +2,7 @@
   <div class="SelectBox" :style="`padding:${padding}!important`">
     <div
       :style="
-        `border:${border}; border-radius:30px; height:${height} ; margin:${margin}; width:${width} ; `
+        `border:${border};  height:${height} ; margin:${margin}; width:${width} ; `
       "
       class="aselect"
       :data-value="value"
@@ -10,7 +10,11 @@
     >
       <p>{{ text }}</p>
 
-      <div class="selector" :style="`${specialStyle}`" @click="toggle()">
+      <div
+        class="selector"
+        :style="`${specialStyle};border-radius:${borderRadius};`"
+        @click="toggle()"
+      >
         <div class="label">
           <span :style="`color:${labelColor}!important`"> {{ value }} </span>
         </div>
@@ -40,7 +44,11 @@
 export default {
   name: "SelectBox",
   props: {
-    text: String,
+    text: {
+      type: String,
+      default: " ",
+    },
+
     border: {
       type: String,
       default: "1px solid transparent",
@@ -69,10 +77,18 @@ export default {
       type: String,
       default: " ",
     },
+    placeholder: {
+      type: String,
+      default: " - ",
+    },
+    borderRadius: {
+      type: String,
+      default: "30px",
+    },
   },
   data: function() {
     return {
-      value: " - ",
+      value: this.placeholder,
       list: ["Orange", "Apple", "Kiwi", "Lemon", "Pineapple"],
       visible: false,
     };
