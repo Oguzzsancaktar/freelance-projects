@@ -69,6 +69,8 @@ export default {
         }
 
         .content {
+          padding: 20px 0;
+
           width: 100%;
 
           &__list {

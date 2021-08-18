@@ -1,12 +1,28 @@
 <template>
   <div id="App">
+    <SignInUp />
+    <FullScreenNavbar @navbar-animations="navbarAnimations" />
+    <Navbar @navbar-animations="navbarAnimations" />
+
     <router-view to="/"> </router-view>
+    <Footer />
   </div>
 </template>
 
 <script>
+import Footer from "./view/components/Footer.vue";
+import Navbar from "./view/components/Navbar.vue";
+import FullScreenNavbar from "./view/components/FullScreenNavbar.vue";
+import SignInUp from "./view/components/sign/SignInUp.vue";
+
 export default {
+  components: { Navbar, Footer, FullScreenNavbar, SignInUp },
   name: "App",
+  methods: {
+    navbarAnimations: function(fromTo) {
+      this.$emit("navbar-animations", fromTo);
+    },
+  },
 };
 </script>
 

@@ -2,7 +2,7 @@
   <button
     :class="['default-button', `text-color-${color}`]"
     :style="
-      `width:${width} ;padding:${padding} ; height:${height}; background:var(${background}); border-radius:${radius} ; border:${border} `
+      `width:${width} ;padding:${padding} ; height:${height}; background:${background}; border-radius:${radius} ; border:${border} `
     "
   >
     <div class="button-icon" v-if="'icon' == type">

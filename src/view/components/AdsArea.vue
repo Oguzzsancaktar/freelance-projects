@@ -25,7 +25,7 @@
             <div class="info__section__item">
               <Button
                 style="margin-left:20px"
-                background="--color-secondary"
+                background="var(--color-secondary)"
                 radius="30px"
                 type="together"
                 iconType="maps"

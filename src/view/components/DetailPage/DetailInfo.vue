@@ -91,7 +91,7 @@
             type="text"
             iconType="login"
             iconColor="var(--color-primary)"
-            background="--background-gray-light"
+            background="var(--background-gray-light)"
             radius="30px"
             width="200px"
             padding="0 20px"

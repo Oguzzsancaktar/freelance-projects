@@ -16,7 +16,57 @@
           />
         </li>
         <li class="item">
-          <CategoryInput header="Price" />
+          <CategoryInput type="dolar" header="Price" />
+        </li>
+        <li class="item">
+          <CategoryInput type="m2" header="Square Meters" />
+        </li>
+
+        <li class="item">
+          <CategoryCheckbox header="Number Of Rooms" :selectList="selectList" />
+        </li>
+
+        <li class="item">
+          <CategoryCheckbox header="Building Age" :selectList="selectList" />
+        </li>
+
+        <li class="item">
+          <CategoryCheckbox header="Floor Location" :selectList="selectList" />
+        </li>
+
+        <li class="item">
+          <CategoryCheckbox
+            header="Number Of Floors In The Building"
+            :selectList="selectList"
+          />
+        </li>
+
+        <li class="item">
+          <CategoryCheckbox header="Title Status" :selectList="selectList" />
+        </li>
+
+        <li class="item">
+          <CategoryCheckbox header="Front" :selectList="selectList" />
+        </li>
+
+        <li class="item">
+          <Button
+            margin="auto"
+            direction="column"
+            background="var(--color-primary)"
+            radius="high"
+            color="white"
+            type="together"
+            iconType="search"
+            text="Search"
+            iconColor="white"
+            iconHeight="19px"
+            iconWidth="19px"
+            fontSize="16px"
+            textColor="white"
+            family="var(--font-semibold)"
+            style="border-radius:5px"
+          />
         </li>
       </ul>
     </div>
@@ -24,11 +74,12 @@
 </template>
 
 <script>
+import Button from "../Button.vue";
 import CategoryCheckbox from "./CategoryCheckbox.vue";
 import CategoryInput from "./CategoryInput.vue";
 import CategorySelect from "./CategorySelect.vue";
 export default {
-  components: { CategorySelect, CategoryCheckbox, CategoryInput },
+  components: { CategorySelect, CategoryCheckbox, CategoryInput, Button },
   name: "Categories",
   data: function() {
     return {
@@ -49,9 +100,11 @@ export default {
 
 <style lang="scss" scoped>
 .Categories {
+  border-radius: 10px;
+
   background: var(--background-white);
 
-  padding: 0 20px;
+  padding: 0px 20px;
   .layout {
     display: flex;
     flex-direction: column;
@@ -59,6 +112,10 @@ export default {
 
     .list {
       list-style: none;
+
+      .item:last-child {
+        padding: 20px 0;
+      }
     }
   }
 }

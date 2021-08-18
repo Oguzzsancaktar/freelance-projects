@@ -13,13 +13,13 @@
               <li class="content__list__item">
                 <input type="number" />
                 <span v-if="type == 'dolar'" class="icon">$</span>
-                <span v-if="type == 'm2'" class="icon">m2</span>
+                <span v-if="type == 'm2'" class="icon">m²</span>
               </li>
 
               <li class="content__list__item">
                 <input type="number" />
                 <span v-if="type == 'dolar'" class="icon">$</span>
-                <span v-if="type == 'm2'" class="icon">m2</span>
+                <span v-if="type == 'm2'" class="icon">m²</span>
               </li>
             </ul>
           </div>
@@ -39,6 +39,10 @@ export default {
     header: {
       type: String,
       default: "You Forgot Header ! :D",
+    },
+    type: {
+      type: String,
+      default: "dolar",
     },
   },
 };
@@ -72,6 +76,7 @@ export default {
         }
 
         .content {
+          padding: 20px 0;
           width: 100%;
 
           &__list {

@@ -1,19 +1,22 @@
 <template>
-  <div class="hero__search__select" :style="`padding:${padding}!important`">
+  <div class="CategorySelectBox" :style="`padding:${padding}!important`">
     <div
       :style="
-        `border:${border}; border-radius:30px; height:${height} ; margin:${margin}; width:${width} ; `
+        `border:${border};  height:${height} ; margin:${margin}; width:${width} ; `
       "
       class="aselect"
       :data-value="value"
       :data-list="list"
     >
       <p>{{ text }}</p>
-      <div class="selector" :style="`${specialStyle}`" @click="toggle()">
+
+      <div
+        class="selector"
+        :style="`${specialStyle};border-radius:${borderRadius};`"
+        @click="toggle()"
+      >
         <div class="label">
-          <span :style="`color:${labelColor}!important`"
-            >{{ value }} {{ text }}
-          </span>
+          <span :style="`color:${labelColor}!important`"> {{ value }} </span>
         </div>
         <div
           :style="`border-top-color:${labelColor}`"
@@ -39,9 +42,13 @@
 
 <script>
 export default {
-  name: "SearchSelect",
+  name: "CategorySelectBox",
   props: {
-    text: String,
+    text: {
+      type: String,
+      default: " ",
+    },
+
     border: {
       type: String,
       default: "1px solid transparent",
@@ -70,10 +77,18 @@ export default {
       type: String,
       default: " ",
     },
+    placeholder: {
+      type: String,
+      default: " - ",
+    },
+    borderRadius: {
+      type: String,
+      default: "30px",
+    },
   },
   data: function() {
     return {
-      value: "Select ",
+      value: this.placeholder,
       list: ["Orange", "Apple", "Kiwi", "Lemon", "Pineapple"],
       visible: false,
     };
@@ -90,7 +105,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.hero__search__select {
+.CategorySelectBox {
   padding: 0 15px;
   h1 {
     color: #f9f9f9;
@@ -113,9 +128,11 @@ export default {
       margin-bottom: 5px;
     }
     width: 140px;
-    margin: 20px auto;
+    // margin: 20px auto;
     .selector {
-      border: 1px solid transparent;
+      border: 1px solid var(--color-text-gray-light);
+      padding: 10px 25px;
+      border-radius: 25px;
       background: transparent;
       position: relative;
       z-index: 1;
@@ -127,7 +144,7 @@ export default {
         height: 0;
         border-left: 7px solid transparent;
         border-right: 7px solid transparent;
-        border-top: 10px solid var(--color-secondary);
+        border-top: 10px solid var(--color-text-gray-light);
         transform: rotateZ(0deg) translateY(0px);
         transition-duration: 0.3s;
         transition-timing-function: cubic-bezier(0.59, 1.39, 0.37, 1.01);
@@ -162,6 +179,8 @@ export default {
       position: absolute;
       z-index: 1;
       background: #fff;
+      left: 0;
+      top: 50px;
     }
     li {
       margin-top: 5px;
@@ -190,7 +209,7 @@ export default {
 }
 
 @media (max-width: 777px) {
-  .hero__search__select {
+  .CategorySelectBox {
     .aselect {
       width: auto;
     }

@@ -1,6 +1,5 @@
 <template>
   <div class="CategoryPage">
-    <Navbar />
     <div class="subpage-content">
       <div class="wrapper">
         <div class="layout">
@@ -11,12 +10,11 @@
 
           <div class="section">
             <TopInfo />
-            <!-- <GridGallery /> -->
+            <CategoryGallery />
           </div>
         </div>
       </div>
     </div>
-    <Footer />
   </div>
 </template>
 
@@ -24,14 +22,10 @@
 import ButtonSelect from "../components/CategoryPage/ButtonSelect.vue";
 import Categories from "../components/CategoryPage/Categories.vue";
 import TopInfo from "../components/CategoryPage/TopInfo.vue";
-import Footer from "../components/Footer.vue";
-import GridGallery from "../components/GridGallery.vue";
-import Navbar from "../components/Navbar.vue";
+import CategoryGallery from "../components/CategoryPage/CategoryGallery.vue";
 export default {
   components: {
-    Navbar,
-    Footer,
-    GridGallery,
+    CategoryGallery,
     ButtonSelect,
     Categories,
     TopInfo,
@@ -56,8 +50,8 @@ export default {
 
         .section:first-child {
           width: 275px;
-
           margin-right: 25px;
+          margin-bottom: 25px;
         }
       }
     }

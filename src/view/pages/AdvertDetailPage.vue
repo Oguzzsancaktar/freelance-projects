@@ -1,8 +1,5 @@
 <template>
   <div id="AdvertDetailPage">
-    <FullScreenNavbar @navbar-animations="navbarAnimations" />
-
-    <Navbar />
     <div class="subpage-content">
       <DetailHero />
       <DetailTop />
@@ -12,14 +9,10 @@
       <DetailInternalFeatures />
       <DetailCards />
     </div>
-    <Footer />
   </div>
 </template>
 
 <script>
-import Footer from "../components/Footer.vue";
-import Navbar from "../components/Navbar.vue";
-
 import DetailTop from "../components/DetailPage/DetailTop.vue";
 import DetailInfo from "../components/DetailPage/DetailInfo.vue";
 import DetailHero from "../components/DetailPage/DetailHero.vue";
@@ -30,8 +23,6 @@ import DetailCards from "../components/DetailPage/DetailCards.vue";
 
 export default {
   components: {
-    Navbar,
-    Footer,
     DetailTop,
     DetailInfo,
     DetailHero,
@@ -41,11 +32,6 @@ export default {
     DetailCards,
   },
   name: "AdvertDetailPage",
-  methods: {
-    navbarAnimations: function(fromTo) {
-      this.$emit("navbar-animations", fromTo);
-    },
-  },
 };
 </script>
 

@@ -33,7 +33,7 @@
               <Button
                 color="var(--color-secondary)"
                 textColor="var(--color-text-general)"
-                width="100px"
+                width="70px"
                 text="Irak/Erbil"
                 radius="10px"
                 type="together"
@@ -46,31 +46,16 @@
                 iconWidth="20px"
                 iconHeight="16px"
                 family="var(--font-medium)"
-                fontSize="14px"
+                fontSize="12px"
               />
             </div>
             <div class="row__item">
               <Button
-                style="margin:5px"
-                background="--color-secondary-low-button"
-                radius="10px"
-                type="icon"
-                iconType="hearth"
-                width="44px"
-                height="36px"
-                iconColor="var(--color-secondary)"
-                border="1px solid var(--color-secondary)"
-                padding="0 10px"
-                margin="0 10px"
-                iconWidth="19px"
-                iconHeight="18px"
-              />
-              <Button
                 color="var(--color-primary)"
                 textColor="var(--color-primary)"
-                width="100px"
-                background="--color-primary-low-button"
-                text="For Sale"
+                width="70px"
+                background="var(--color-primary-low-button)"
+                text="Sale"
                 radius="10px"
                 type="together"
                 border="1px solid var(--color-primary)"
@@ -83,6 +68,22 @@
                 iconHeight="16px"
                 family="var(--font-medium)"
                 fontSize="14px"
+              />
+
+              <Button
+                style="margin:5px"
+                background="var(--color-secondary-low-button)"
+                radius="10px"
+                type="icon"
+                iconType="hearth"
+                width="40px"
+                height="36px"
+                iconColor="var(--color-secondary)"
+                border="1px solid var(--color-secondary)"
+                padding="0 10px"
+                margin="0 10px"
+                iconWidth="19px"
+                iconHeight="18px"
               />
             </div>
           </div>
@@ -100,12 +101,14 @@
 
           <div class="info__row">
             <h2 class="price">£ 1,150,000</h2>
-            <ImageView
-              width="100%"
-              height="100%"
-              imageType="images"
-              imageName="cardImage-1.png"
-            />
+            <div class="refferance">
+              <ImageView
+                width="80%"
+                height="auto"
+                imageType="images"
+                imageName="refferance-logo-0.png"
+              />
+            </div>
           </div>
         </div>
       </div>
@@ -124,15 +127,15 @@ export default {
 
 <style lang="scss" scoped>
 .card {
-  box-shadow: 0 0 10px -5px var(--box-shadow-color);
-
   overflow: hidden;
   position: relative;
   border-radius: 10px;
-  height: 425px;
-  width: 100%;
+  // height: 425px;
+  width: 30%;
   background: var(--background-white);
-  min-width: 280px;
+  min-width: 250px;
+  border: 1px solid var(--color-text-gray-light);
+  // max-width: 250px;
 
   &__layout {
     display: flex;
@@ -170,7 +173,6 @@ export default {
     }
   }
   &__info {
-    padding: 20px 25px;
     height: 270px;
 
     .info__layout {
@@ -184,13 +186,19 @@ export default {
         justify-content: space-between;
         width: 100%;
 
+        .refferance {
+          border-left: 1px solid var(--color-text-gray-light);
+
+          width: 95px;
+        }
         .price {
+          padding: 20px;
           color: var(--color-primary);
         }
         .row__item {
           display: flex;
           align-items: center;
-          justify-content: space-between;
+          // justify-content: space-between;
 
           .text {
             color: var(--color-card-id);
@@ -198,20 +206,32 @@ export default {
             font-family: var(--font-medium);
           }
         }
+
+        .row__item:first-child {
+          padding: 20px;
+        }
+        .row__item:last-child {
+          width: 100%;
+        }
+      }
+      .info__row:first-child {
+        border-bottom: 1px solid var(--color-text-gray-light);
+      }
+      .info__row:last-child {
+        border-top: 1px solid var(--color-text-gray-light);
       }
 
       .info__col {
         display: flex;
         flex-direction: column;
+        padding: 0 20px;
         .header {
           color: var(--color-text-black);
-          font-size: 26px;
+          font-size: 22px;
           font-family: var(--font-semibold);
           margin-bottom: 10px;
         }
         .subtitle {
-          margin-top: 10px;
-
           color: var(--color-text-gray-dark);
           font-size: 15px;
           font-family: var(--font-semilight);
@@ -223,6 +243,7 @@ export default {
 
 @media (max-width: 1300px) {
   .card {
+    width: 47%;
     position: relative;
     border-radius: 10px;
 
@@ -238,7 +259,6 @@ export default {
       }
     }
     &__info {
-      padding: 20px 15px;
       .info__layout {
         .info__row {
           .price {
@@ -264,7 +284,7 @@ export default {
   .card {
     position: relative;
     border-radius: 10px;
-    height: 460px;
+    // height: 460px;
     width: 49%;
     background: var(--background-white);
     margin: 15px 0;
@@ -278,7 +298,6 @@ export default {
       }
     }
     &__info {
-      padding: 10px 25px;
       height: 230px;
       .info__layout {
         .info__row {
@@ -317,7 +336,6 @@ export default {
       }
     }
     &__info {
-      padding: 20px 15px;
       .info__layout {
         .info__row {
           .price {

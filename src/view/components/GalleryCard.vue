@@ -36,7 +36,7 @@
             <div class="row__item">
               <Button
                 style="margin:5px"
-                background="--color-secondary-low-button"
+                background="var(--color-secondary-low-button)"
                 radius="10px"
                 type="icon"
                 iconType="hearth"
@@ -53,7 +53,7 @@
                 color="var(--color-primary)"
                 textColor="var(--color-primary)"
                 width="100px"
-                background="--color-primary-low-button"
+                background="var(--color-primary-low-button)"
                 text="For Sale"
                 radius="10px"
                 type="together"

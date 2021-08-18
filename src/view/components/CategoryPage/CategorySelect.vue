@@ -14,7 +14,7 @@
               :key="index"
               class="content__list__item"
             >
-              <SelectBox
+              <CategorySelectBox
                 height="auto"
                 width="100%"
                 :placeholder="item"
@@ -30,11 +30,11 @@
 </template>
 
 <script>
-import SelectBox from "../SelectBox.vue";
+import CategorySelectBox from "./CategorySelectBox.vue";
 
 export default {
   name: "CategoryInput",
-  components: { SelectBox },
+  components: { CategorySelectBox },
   props: {
     categoryList: Array,
     header: {
@@ -63,6 +63,8 @@ export default {
     }
 
     .content {
+      padding: 20px 0;
+
       &__list {
         list-style: none;
         &__item {

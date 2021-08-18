@@ -7,6 +7,8 @@ import AddAdvertPage from './view/pages/AddAdvertPage.vue'
 import AdvertDetailPage from './view/pages/AdvertDetailPage.vue'
 import PreviewPage from './view/pages/PreviewPage.vue'
 import CategoryPage from './view/pages/CategoryPage.vue'
+import BoostAdvertPage from './view/pages/BoostAdvertPage.vue'
+
 
 
 
@@ -22,6 +24,8 @@ const routes = [
   { path: '/detail', component: AdvertDetailPage },
   { path: '/preview', component: PreviewPage },
   { path: '/category', component: CategoryPage },
+  { path: '/boostAdvert', component: BoostAdvertPage },
+
 
 
 

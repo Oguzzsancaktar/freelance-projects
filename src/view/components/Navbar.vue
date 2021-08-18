@@ -11,7 +11,7 @@
           <div class="area__layout">
             <div class="area__layout__section ">
               <Button
-                background="--color-secondary"
+                background="var(--color-secondary)"
                 family="var(--font-medium)"
                 radius="30px"
                 color="white"
@@ -31,7 +31,7 @@
                   iconWidth="17px"
                   iconHeight="17px"
                   iconColor="white"
-                  background="--color-primary"
+                  background="var(--color-primary)"
                   text="Add Property"
                   radius="30px"
                   color="white"
@@ -53,7 +53,7 @@
 
         <div class="area vertical-center collapse-hidden">
           <Button
-            background="--color-secondary"
+            background="var(--color-secondary)"
             family="var(--font-medium)"
             radius="30px"
             color="white"
@@ -80,7 +80,7 @@
               type="together"
               iconType="login"
               iconColor="var(--color-primary)"
-              background="--background-gray-light"
+              background="var(--background-gray-light)"
               radius="30px"
               width="170px"
               padding="0 20px"
@@ -93,7 +93,7 @@
               textColor="white"
               fontSize="15px"
               color="white"
-              background="--color-primary"
+              background="var(--color-primary)"
               text="AR"
               radius="30px"
               type="text"
