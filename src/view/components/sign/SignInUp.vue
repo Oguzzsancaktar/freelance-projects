@@ -5,9 +5,10 @@
         <div class="signin-card">
           <SignInCard />
         </div>
-        <!-- <div class="signup-card">
+        <div class="signup-card">
           <SignUpCard />
-        </div> -->
+          <button v-on:click="this.showSignin">asdfasd</button>
+        </div>
       </div>
     </div>
   </div>
@@ -19,6 +20,11 @@ import SignUpCard from "./SignUpCard.vue";
 export default {
   components: { SignInCard, SignUpCard },
   name: "SignInUp",
+  methods: {
+    showSignin: function() {
+      console.log("asdf1234");
+    },
+  },
 };
 </script>
 
@@ -29,13 +35,16 @@ export default {
   height: 100vh;
   z-index: 999;
   background: var(--color-primary-low);
+  top: -100vh;
+
   .wrapper {
     width: 100%;
     .layout {
       width: 100%;
       height: 100%;
       position: relative;
-      .signin-card {
+      .signin-card,
+      .signup-card {
         position: absolute;
         margin: auto;
         width: 100%;

@@ -33,7 +33,7 @@
       </div>
 
       <div class="navbar-fullscreen-item button">
-        <a href="./contact.html">
+        <button v-on:click="this.showSignin">
           <Button
             family="var(--font-medium)"
             color="dark"
@@ -49,13 +49,15 @@
             iconWidth="22px"
             iconHeight="21px"
             fontSize="20px"
-        /></a>
+          />
+        </button>
       </div>
     </div>
   </div>
 </template>
 
 <script>
+import SignInUp from "./sign/SignInUp.vue";
 import jquery from "jquery";
 import Button from "./Button.vue";
 import Navlink from "./Navlink.vue";
@@ -114,6 +116,10 @@ export default {
           break;
       }
     },
+
+    showSignin: function() {
+      SignInUp.methods.showSignin();
+    },
   },
 };
 </script>
@@ -165,10 +171,12 @@ export default {
   cursor: pointer;
   text-align: center;
 
+  button,
   a {
     text-align: center;
+    background: transparent;
+    border: none;
 
-    color: #fff;
     text-decoration: none;
   }
 }

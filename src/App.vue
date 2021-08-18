@@ -1,7 +1,10 @@
 <template>
   <div id="App">
     <SignInUp />
-    <FullScreenNavbar @navbar-animations="navbarAnimations" />
+    <FullScreenNavbar
+      @show-signin="showSignin"
+      @navbar-animations="navbarAnimations"
+    />
     <Navbar @navbar-animations="navbarAnimations" />
 
     <router-view to="/"> </router-view>
@@ -21,6 +24,11 @@ export default {
   methods: {
     navbarAnimations: function(fromTo) {
       this.$emit("navbar-animations", fromTo);
+    },
+
+    showSignin: function() {
+      console.log("qqq");
+      // this.$emit("show-signin");
     },
   },
 };

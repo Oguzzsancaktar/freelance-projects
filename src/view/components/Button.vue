@@ -107,7 +107,7 @@
     </div>
     <div
       :style="
-        `color:${textColor}; font-size:${fontSize}; font-family:${family}`
+        `color:${textColor}; font-size:${fontSize}; font-family:${family}; justify-content:${justify}; text-align:${textAlign}`
       "
       v-if="'text' == type"
     >
@@ -442,6 +442,10 @@ export default {
     direction: {
       type: String,
       default: "row",
+    },
+    justify: {
+      type: String,
+      default: " ",
     },
   },
 };
