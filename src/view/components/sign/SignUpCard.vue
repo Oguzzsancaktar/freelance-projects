@@ -1,7 +1,7 @@
 <template>
   <div class="SignUpCard">
     <div class="layout">
-      <div class="close-button">
+      <div @click="this.hideSign" class="close-button">
         <Button
           background="var(--color-secondary)"
           family="var(--font-medium)"
@@ -111,6 +111,11 @@ import ImageView from "../ImageView.vue";
 export default {
   name: "SignUpCard",
   components: { Button, ImageView, Checkbox },
+  methods: {
+    hideSign: function() {
+      this.$emit("hideSign");
+    },
+  },
 };
 </script>
 
@@ -157,7 +162,7 @@ export default {
         overflow: hidden;
         input {
           padding: 15px 25px;
-
+          width: 100%;
           border: transparent;
         }
       }

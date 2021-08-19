@@ -1,7 +1,7 @@
 <template>
   <div class="SignInCard">
     <div class="layout">
-      <div class="close-button">
+      <div v-on:click="this.hideSign" class="close-button">
         <Button
           background="var(--color-secondary)"
           family="var(--font-medium)"
@@ -92,7 +92,7 @@
         <div class="header">
           <h3>Yeni Kayıt</h3>
         </div>
-        <div class="button">
+        <div @click="this.showSignup" class="button">
           <Button
             color="var(--background-white)"
             textColor="var(--color-primary)"
@@ -132,6 +132,15 @@ import ImageView from "../ImageView.vue";
 export default {
   name: "SignInCard",
   components: { Button, ImageView },
+  methods: {
+    hideSign: function() {
+      this.$emit("hideSign");
+    },
+
+    showSignup: function() {
+      this.$emit("showSignup");
+    },
+  },
 };
 </script>
 
@@ -178,7 +187,7 @@ export default {
         overflow: hidden;
         input {
           padding: 15px 25px;
-
+          width: 100%;
           border: transparent;
         }
       }

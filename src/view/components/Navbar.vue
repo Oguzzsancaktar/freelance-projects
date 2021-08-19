@@ -71,7 +71,7 @@
         </div>
 
         <div class="area vertical-center login-language">
-          <div class="area__layout__section">
+          <div v-on:click="this.showSignin" class="area__layout__section">
             <Button
               family="var(--font-medium)"
               color="dark"
@@ -108,6 +108,7 @@
 
 <script>
 import jquery from "jquery";
+import SignInUp from "./sign/SignInUp.vue";
 
 import Button from "./Button.vue";
 import Navlink from "./Navlink.vue";
@@ -120,6 +121,9 @@ export default {
   methods: {
     navbarAnimations: function(fromTo) {
       this.$emit("navbar-animations", fromTo);
+    },
+    showSignin: function() {
+      SignInUp.methods.showSign();
     },
   },
 

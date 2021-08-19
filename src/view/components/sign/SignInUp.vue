@@ -2,12 +2,11 @@
   <div class="SignInUp">
     <div class="wrapper">
       <div class="layout">
-        <div class="signin-card">
-          <SignInCard />
-        </div>
         <div class="signup-card">
-          <SignUpCard />
-          <button v-on:click="this.showSignin">asdfasd</button>
+          <SignUpCard @hideSign="hideSign" />
+        </div>
+        <div class="signin-card">
+          <SignInCard @showSignup="showSignup" @hideSign="hideSign" />
         </div>
       </div>
     </div>
@@ -15,14 +14,32 @@
 </template>
 
 <script>
+import jquery from "jquery";
+
 import SignInCard from "./SignInCard.vue";
 import SignUpCard from "./SignUpCard.vue";
 export default {
   components: { SignInCard, SignUpCard },
   name: "SignInUp",
   methods: {
-    showSignin: function() {
-      console.log("asdf1234");
+    showSign: function() {
+      jquery(".SignInUp").animate({ top: "0" });
+      setTimeout(() => {
+        jquery(".signin-card").addClass("active");
+      }, 600);
+    },
+    hideSign() {
+      jquery(".signin-card").removeClass("active");
+      jquery(".signup-card").removeClass("active");
+
+      setTimeout(() => {
+        jquery(".SignInUp").animate({ top: "-100vh" });
+      }, 1000);
+    },
+    showSignup() {
+      jquery(".signin-card").removeClass("active");
+
+      jquery(".signup-card").addClass("active");
     },
   },
 };
@@ -48,9 +65,18 @@ export default {
         position: absolute;
         margin: auto;
         width: 100%;
-        left: 50%;
+        left: -100vw;
         top: 50%;
         transform: translate(-50%, -50%);
+        transition: 1s;
+      }
+
+      .signup-card.active {
+        left: 50%;
+      }
+
+      .signin-card.active {
+        left: 50%;
       }
     }
   }

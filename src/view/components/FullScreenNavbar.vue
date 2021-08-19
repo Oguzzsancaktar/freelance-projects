@@ -118,7 +118,7 @@ export default {
     },
 
     showSignin: function() {
-      SignInUp.methods.showSignin();
+      SignInUp.methods.showSign();
     },
   },
 };
