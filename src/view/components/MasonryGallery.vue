@@ -35,20 +35,20 @@
 
       <main class="container">
         <div>
-          <MasonryCard />
+          <MasonryCard background="var(--color-other-2)" />
         </div>
         <div class="vertical">
           <MasonryCard type="long" />
         </div>
 
         <div>
-          <MasonryCard />
+          <MasonryCard background="var(--color-other-5)" />
         </div>
         <div>
-          <MasonryCard />
+          <MasonryCard background="var(--color-other-3)" />
         </div>
         <div>
-          <MasonryCard />
+          <MasonryCard background="var(--color-other-1)" />
         </div>
       </main>
     </div>

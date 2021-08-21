@@ -21,7 +21,7 @@ import DetailInfo from "../components/DetailPage/DetailInfo.vue";
 import DetailInternalFeatures from "../components/DetailPage/DetailInternalFeatures.vue";
 import DetailTop from "../components/DetailPage/DetailTop.vue";
 import TopBar from "../components/TopBar.vue";
-import NextEdit from "../NextEdit.vue";
+import NextEdit from "../components/NextEdit.vue";
 export default {
   components: {
     TopBar,

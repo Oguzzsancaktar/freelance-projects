@@ -30,7 +30,7 @@
           color="white"
           type="together"
           iconType="message"
-          iconAreaW="24px"
+          iconAreaW="auto"
           text="Bizim ile görüşlerinizi paylaşabilirsiniz!"
           iconColor="var(--color-secondary)"
           iconHeight="24px"
@@ -160,8 +160,8 @@
 </template>
 
 <script>
-import Button from "./Button.vue";
-import ImageView from "./ImageView.vue";
+import Button from "../Button.vue";
+import ImageView from "../ImageView.vue";
 export default {
   name: "FooterItem",
   components: { Button, ImageView },

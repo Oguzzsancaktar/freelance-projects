@@ -3,22 +3,36 @@
     <div v-if="type == 'short'" class="card">
       <div class="card__layout">
         <div class="card__image">
-          <div class="card__image__hover">
-            <Button
-              style="margin:5px"
-              background="transparent"
-              radius="0px"
-              type="icon"
-              iconType="details"
-              width="55px"
-              height="55px"
-              iconColor="var(--background-white)"
-              border="1px solid transparent"
-              margin="0 10px"
-              iconWidth="55px"
-              iconHeight="55px"
-              padding="0px"
-            />
+          <div
+            class="card__image__hover"
+            :style="`background:${background}!important`"
+          >
+            <div class="layout">
+              <div class="heading">
+                <h2>Al Mansour Mall / Baghdad</h2>
+              </div>
+
+              <Button
+                color="var(--background-white)"
+                textColor="var(--background-white)"
+                width="230px"
+                background="var(--color-primary-low-button)"
+                text="Show nearby areas"
+                radius="28px"
+                type="together"
+                border="1px solid var(--background-white)"
+                iconType="nearLocation"
+                height="55px"
+                iconColor="var(--background-white)"
+                padding="0 30px"
+                margin="0"
+                iconWidth="30px"
+                iconHeight="30px"
+                family="var(--font-light)"
+                fontSize="14px"
+                iconAreaW="auto"
+              />
+            </div>
           </div>
           <ImageView
             width="100%"
@@ -33,21 +47,29 @@
     <div v-if="type == 'long'" class="card long">
       <div class="card__layout">
         <div class="card__image">
-          <div class="card__image__hover">
+          <div
+            class="card__image__hover"
+            style="background:var(--color-other-4)!important"
+          >
             <Button
-              style="margin:5px"
-              background="transparent"
-              radius="0px"
-              type="icon"
-              iconType="details"
-              width="55px"
+              color="var(--background-white)"
+              textColor="var(--background-white)"
+              width="230px"
+              background="var(--color-primary-low-button)"
+              text="Show nearby areas"
+              radius="28px"
+              type="together"
+              border="1px solid var(--background-white)"
+              iconType="nearLocation"
               height="55px"
               iconColor="var(--background-white)"
-              border="1px solid transparent"
-              margin="0 10px"
-              iconWidth="55px"
-              iconHeight="55px"
-              padding="0px"
+              padding="0 30px"
+              margin="0"
+              iconWidth="30px"
+              iconHeight="30px"
+              family="var(--font-light)"
+              fontSize="14px"
+              iconAreaW="auto"
             />
           </div>
           <ImageView
@@ -71,6 +93,10 @@ export default {
     type: {
       type: String,
       default: "short",
+    },
+    background: {
+      type: String,
+      default: "red",
     },
   },
 };
@@ -130,6 +156,17 @@ export default {
         opacity: 0;
         border-radius: 10px;
         opacity: 1;
+        .layout {
+          .heading {
+            h2 {
+              text-align: center;
+              margin-bottom: 20px;
+              font-size: 23px;
+              color: var(--background-white);
+              font-family: var(--font-semibold);
+            }
+          }
+        }
       }
       &__hover:hover {
         opacity: 1;

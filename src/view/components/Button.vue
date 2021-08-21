@@ -126,14 +126,15 @@
       "
       v-if="'together' == type"
     >
-      <span v-if="'hearth' == iconType">
+      <span :style="`width:${iconAreaW}`" v-if="'nearLocation' == iconType">
         <Icon
           :iconColor="iconColor"
-          iconName="hearth"
+          iconName="nearLocation"
           width="20px"
           height="20px"
           :iconWidth="iconWidth"
           :iconHeight="iconHeight"
+          viewBox="0 0 512 512"
         />
       </span>
 

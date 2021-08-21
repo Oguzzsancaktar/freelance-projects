@@ -28,6 +28,7 @@
             iconType="plus"
             width="220px"
             fontSize="20px"
+            iconAreaW="auto"
           />
         </a>
       </div>
@@ -49,6 +50,7 @@
             iconWidth="22px"
             iconHeight="21px"
             fontSize="20px"
+            iconAreaW="auto"
           />
         </button>
       </div>

@@ -21,7 +21,7 @@
 </template>
 
 <script>
-import FooterItem from "../FooterItem.vue";
+import FooterItem from "./FooterItem.vue";
 export default {
   components: { FooterItem },
   name: "Footer",

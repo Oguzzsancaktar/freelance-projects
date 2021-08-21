@@ -54,7 +54,7 @@
 </template>
 
 <script>
-import Button from "./components/Button.vue";
+import Button from "./Button.vue";
 export default {
   components: { Button },
   name: "NextEdit",

@@ -44,7 +44,13 @@ export default {
   --color-secondary-low: #f36e3181;
   --color-secondary-low-button: #f36e310e;
 
-  --color-third: #08b0c1;
+  --color-third: #044c54af;
+
+  --color-other-1: #517a29ae;
+  --color-other-2: #0c6069d7;
+  --color-other-3: #b12d2fbb;
+  --color-other-4: #4f3d88c4;
+  --color-other-5: #01a4d1cc;
 
   --color-text-general: #333333;
   --color-nav-link: #2e2e2e;
