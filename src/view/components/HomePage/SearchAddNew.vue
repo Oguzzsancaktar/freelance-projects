@@ -15,15 +15,15 @@
       iconWidth="22px"
       iconHeight="22px"
       iconColor="var(--color-secondary)"
-      margin="0"
       height="30px"
       textAlign="left"
+      iconAreaW="auto"
     />
   </div>
 </template>
 
 <script>
-import Button from "./Button.vue";
+import Button from "../Button.vue";
 export default {
   components: { Button },
   name: "SearchAddNew",
@@ -38,7 +38,8 @@ export default {
 .search__add__new {
   padding: 0 10px;
   text-align: start;
-  margin: 20px auto;
+  // margin: 20px auto;
+  width: 25%;
 
   p {
     font-size: 14px;

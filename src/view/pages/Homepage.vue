@@ -10,10 +10,10 @@
 </template>
 
 <script>
-import AdsArea from "../components/AdsArea.vue";
-import Carousel from "../components/Carousel.vue";
+import AdsArea from "../components/HomePage/AdsArea.vue";
+import Carousel from "../components/HomePage/Carousel.vue";
 import GridGallery from "../components/GridGallery.vue";
-import HeroSlider from "../components/HeroSlider.vue";
+import HeroSlider from "../components/HomePage/HeroSlider.vue";
 import MasonryGallery from "../components/MasonryGallery.vue";
 
 export default {

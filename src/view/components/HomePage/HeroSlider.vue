@@ -49,31 +49,31 @@
         <div class="hero__images">
           <div class="hero__slider__image">
             <img
-              src="../../assets/images/heroBackground-0.png"
+              src="../../../assets/images/heroBackground-0.png"
               :alt="this.activeSliderImage"
             />
           </div>
           <div class="hero__slider__image">
             <img
-              src="../../assets/images/heroBackground-1.png"
+              src="../../../assets/images/heroBackground-1.png"
               :alt="this.activeSliderImage"
             />
           </div>
           <div class="hero__slider__image">
             <img
-              src="../../assets/images/heroBackground-2.png"
+              src="../../../assets/images/heroBackground-2.png"
               :alt="this.activeSliderImage"
             />
           </div>
           <div class="hero__slider__image">
             <img
-              src="../../assets/images/heroBackground-3.png"
+              src="../../../assets/images/heroBackground-3.png"
               :alt="this.activeSliderImage"
             />
           </div>
           <div class="hero__slider__image">
             <img
-              src="../../assets/images/heroBackground-4.png"
+              src="../../../assets/images/heroBackground-4.png"
               :alt="this.activeSliderImage"
             />
           </div>
@@ -163,7 +163,6 @@ export default {
 <style lang="scss" scoped>
 #HeroSlider {
   width: 100vw;
-  overflow: hidden !important;
   background: var(--background-general);
   padding-top: 150px;
   height: 720px;
@@ -177,27 +176,30 @@ export default {
       display: flex;
     }
 
-    .hero__slider__image {
-      transform: translateX(100%);
-      position: absolute;
-      display: flex;
-      right: 0px;
-      top: 0px;
-      width: calc(100% - 350px);
-      height: 720px;
-      justify-content: flex-end;
-      transition: 1s;
-
-      img {
-        width: 100%;
+    .hero__images {
+      .hero__slider__image {
+        opacity: 0;
+        position: absolute;
+        display: flex;
+        right: 0px;
+        top: 0px;
+        width: calc(100% - 335px);
         height: 720px;
-        object-fit: cover;
+        justify-content: flex-end;
+        transition: 1s;
+
+        img {
+          width: 100%;
+          height: 720px;
+          object-fit: cover;
+        }
+      }
+      .hero__slider__image.active {
+        transition: 1s;
+        opacity: 1;
       }
     }
-    .hero__slider__image.active {
-      transition: 1s;
-      transform: translateX(0);
-    }
+
     .hero__left {
       z-index: 2;
       background: var(--background-general);
@@ -242,7 +244,7 @@ export default {
   #HeroSlider {
     .wrapper {
       .hero__slider__image {
-        width: calc(100% - 350px);
+        width: calc(100% - 335px);
         img {
         }
       }

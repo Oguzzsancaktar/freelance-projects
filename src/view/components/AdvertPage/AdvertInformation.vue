@@ -71,7 +71,7 @@
 <script>
 import InputBox from "../InputBox.vue";
 import Button from "../Button.vue";
-import TextEditorArea from "../TextEditorArea.vue";
+import TextEditorArea from "./TextEditorArea.vue";
 import SelectBox from "../SelectBox.vue";
 
 export default {

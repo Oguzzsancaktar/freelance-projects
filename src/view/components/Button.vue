@@ -435,6 +435,7 @@
       </span>
 
       <span
+        class="together-text"
         :style="
           `color:${textColor}; font-family:${family};font-size:${fontSize} ;text-align:${textAlign}; margin-left:${marginLeft}`
         "
@@ -514,6 +515,7 @@ export default {
 button {
   cursor: pointer;
   width: 100%;
+  align-items: center;
 }
 button div {
   display: flex;
@@ -525,9 +527,15 @@ button div {
 }
 button span {
   width: 100%;
+  align-items: center;
 }
 
 .button-together {
+  span.together-text {
+    text-align: center;
+    margin-bottom: 4px;
+    margin-left: 3px !important;
+  }
   span:first-child {
     // margin-right: 10px;
   }

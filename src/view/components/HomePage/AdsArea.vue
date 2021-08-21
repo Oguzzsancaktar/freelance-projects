@@ -18,8 +18,7 @@
                 margin="0px"
                 padding="0px"
                 labelColor="white"
-                specialStyle=" width: 120px;
-              height: 20px; margin: auto; margin-top: 10px;"
+                specialStyle=" width:100%; padding:0 20px; margin-top: 10px;"
               />
             </div>
             <div class="info__section__item">
@@ -60,9 +59,9 @@
 </template>
 
 <script>
-import Button from "./Button.vue";
+import Button from "../Button.vue";
 import SearchSelect from "./SearchSelect.vue";
-import ImageView from "./ImageView.vue";
+import ImageView from "../ImageView.vue";
 
 export default {
   components: { SearchSelect, Button, ImageView },

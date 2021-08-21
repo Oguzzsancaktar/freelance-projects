@@ -27,10 +27,10 @@
 </template>
 
 <script>
-import Button from "./Button.vue";
-import SearchAddNew from "./ProfilePage/SearchAddNew.vue";
-import SearchInput from "./ProfilePage/SearchInput.vue";
-import SearchSelect from "./ProfilePage/SearchSelect.vue";
+import Button from "../Button.vue";
+import SearchAddNew from "./SearchAddNew.vue";
+import SearchInput from "./SearchInput.vue";
+import SearchSelect from "./SearchSelect.vue";
 export default {
   components: { SearchSelect, SearchInput, Button, SearchAddNew },
   name: "HeroSearch",

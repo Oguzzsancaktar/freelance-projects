@@ -7,8 +7,9 @@
         </div>
         <div class="section">
           <span class="gallery-description"
-            >About <b style="color:var(--color-primary)">765</b> ads waiting
-            fdor you.</span
+            >About
+            <b style=" margin:0 5px; color:var(--color-primary)"> 765 </b> ads
+            waiting for you.</span
           >
           <Button
             iconColor="var(--color-primary)"
@@ -27,6 +28,7 @@
             textColor="var(--text-color-gray-dark)"
             family="var(--font-semilight)"
             fontSize="15px"
+            iconAreaW="auto"
           />
         </div>
       </div>
@@ -86,8 +88,11 @@ export default {
           width: 100%;
           justify-content: flex-start;
           span {
+            color: var(--color-text-gray-dark);
+            font-size: 15px;
             display: flex;
             align-items: center;
+            justify-content: flex-end;
             margin: 0 20px;
           }
         }

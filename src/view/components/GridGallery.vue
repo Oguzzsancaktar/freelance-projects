@@ -7,8 +7,9 @@
         </div>
         <div class="section">
           <span class="gallery-description"
-            >About <b style="color:var(--color-primary)">765</b> ads waiting
-            fdor you.</span
+            >About
+            <b style=" margin:0 5px; color:var(--color-primary)"> 765 </b> ads
+            waiting for you.</span
           >
           <Button
             iconColor="var(--color-primary)"
@@ -16,7 +17,7 @@
             background="transparent"
             text="See All"
             radius="10px"
-            color="--color-text-general"
+            color="--color-text-gray-dark"
             type="together"
             iconType="plus"
             width="100px"
@@ -27,21 +28,17 @@
             textColor="var(--text-color-gray-dark)"
             family="var(--font-semilight)"
             fontSize="15px"
+            iconAreaW="auto"
           />
         </div>
       </div>
       <div class="grid__gallery__layout">
-        <GalleryCard class="grid__gallery__layout__item" />
-
-        <GalleryCard class="grid__gallery__layout__item" />
-
-        <GalleryCard class="grid__gallery__layout__item" />
-
-        <GalleryCard class="grid__gallery__layout__item" />
-
-        <GalleryCard class="grid__gallery__layout__item" />
-
-        <GalleryCard class="grid__gallery__layout__item" />
+        <GalleryCard
+          v-for="(data, index) in homeGalleryData"
+          :key="index"
+          class="grid__gallery__layout__item"
+          :data="data"
+        />
       </div>
     </div>
   </div>
@@ -53,6 +50,70 @@ import GalleryCard from "./GalleryCard.vue";
 export default {
   components: { GalleryCard, Button },
   name: "GridGallery",
+  data: function() {
+    return {
+      homeGalleryData: [
+        {
+          propID: "12341234",
+          image: "cardImage-1.png",
+          header: "Luxury Villa In Alice",
+          description: `New Build Modern Istanbul Property with Sea View on Bagdat
+              Streetpremium three bed-`,
+          price: "£ 1,150,000",
+          location: "Irak/Erbil",
+        },
+        {
+          propID: "12341234",
+          image: "cardImage-2.png",
+          header: "Luxury Villa In Alice",
+          description: `New Build Modern Istanbul Property with Sea View on Bagdat
+              Streetpremium three bed-`,
+          price: "£ 1,150,000",
+          location: "Irak/Erbil",
+        },
+        {
+          propID: "12341234",
+          image: "cardImage-3.png",
+
+          header: "Luxury Villa In Alice",
+          description: `New Build Modern Istanbul Property with Sea View on Bagdat
+              Streetpremium three bed-`,
+          price: "£ 1,150,000",
+          location: "Irak/Erbil",
+        },
+        {
+          propID: "12341234",
+          image: "cardImage-4.png",
+
+          header: "Luxury Villa In Alice",
+          description: `New Build Modern Istanbul Property with Sea View on Bagdat
+              Streetpremium three bed-`,
+          price: "£ 1,150,000",
+          location: "Irak/Erbil",
+        },
+        {
+          propID: "12341234",
+          image: "cardImage-5.png",
+
+          header: "Luxury Villa In Alice",
+          description: `New Build Modern Istanbul Property with Sea View on Bagdat
+              Streetpremium three bed-`,
+          price: "£ 1,150,000",
+          location: "Irak/Erbil",
+        },
+        {
+          propID: "12341234",
+          image: "cardImage-6.png",
+
+          header: "Luxury Villa In Alice",
+          description: `New Build Modern Istanbul Property with Sea View on Bagdat
+              Streetpremium three bed-`,
+          price: "£ 1,150,000",
+          location: "Irak/Erbil",
+        },
+      ],
+    };
+  },
 };
 </script>
 
@@ -76,6 +137,8 @@ export default {
       display: flex;
       width: 100%;
       span {
+        color: var(--color-text-gray-dark);
+        font-size: 15px;
         display: flex;
         align-items: center;
         justify-content: flex-end;

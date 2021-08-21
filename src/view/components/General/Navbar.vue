@@ -39,14 +39,18 @@
                   iconType="plus"
                   width="155px"
                   fontSize="15px"
+                  iconAreaW="auto"
                 />
               </a>
             </div>
 
             <div class="area__layout__section">
-              <Navlink text="Self/Rent" />
-              <Navlink text="About Us" />
-              <Navlink text="Contact Us" />
+              <Navlink
+                v-for="(item, index) in navData"
+                :key="index"
+                :text="item.text"
+                :href="item.href"
+              />
             </div>
           </div>
         </div>
@@ -87,6 +91,7 @@
               iconWidth="22px"
               iconHeight="21px"
               fontSize="15px"
+              iconAreaW="auto"
             />
             <Button
               family="var(--font-medium)"
@@ -108,11 +113,11 @@
 
 <script>
 import jquery from "jquery";
-import SignInUp from "./Sign/SignInUp.vue";
+import SignInUp from "../Sign/SignInUp.vue";
 
-import Button from "./Button.vue";
+import Button from "../Button.vue";
 import Navlink from "./Navlink.vue";
-import ImageView from "./ImageView.vue";
+import ImageView from "../ImageView.vue";
 import NavbarHamburger from "./NavbarHamburger.vue";
 
 export default {
@@ -134,6 +139,16 @@ export default {
       var $nav = jquery("#Navbar");
       $nav.toggleClass("scrolled", jquery(this).scrollTop() > $nav.height());
     });
+  },
+
+  data: function() {
+    return {
+      navData: [
+        { text: "Self/Rent", href: "/add" },
+        { text: "About Us", href: "/about" },
+        { text: "Contact Us", href: "/contact" },
+      ],
+    };
   },
 };
 </script>
@@ -184,12 +199,12 @@ export default {
     }
 
     .area:last-child {
-      max-width: 140px !important;
+      // max-width: 140px !important;
     }
     .area:nth-child(2) {
       justify-content: space-between;
       margin: 0 100px;
-      max-width: 600px;
+      max-width: 900px;
     }
     :last-child {
       max-width: 250px;
@@ -203,7 +218,7 @@ export default {
       &__layout {
         max-width: none;
         display: flex;
-        justify-content: flex-start;
+        justify-content: space-between;
         width: 100%;
 
         :first-child {
@@ -216,6 +231,9 @@ export default {
           max-width: none !important;
           align-items: center;
 
+          .active {
+            color: red;
+          }
           button {
             margin: 0 10px 0 0;
           }

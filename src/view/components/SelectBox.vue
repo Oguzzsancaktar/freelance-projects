@@ -162,7 +162,6 @@ export default {
 
         span {
           margin-top: 5px;
-
           font-size: 17px;
           color: var(--color-text-gray);
           font-family: var(--font-medium);

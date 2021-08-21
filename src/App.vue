@@ -13,9 +13,9 @@
 </template>
 
 <script>
-import Footer from "./view/components/Footer.vue";
-import Navbar from "./view/components/Navbar.vue";
-import FullScreenNavbar from "./view/components/FullScreenNavbar.vue";
+import Footer from "./view/components/General/Footer.vue";
+import Navbar from "./view/components/General/Navbar.vue";
+import FullScreenNavbar from "./view/components/General/FullScreenNavbar.vue";
 import SignInUp from "./view/components/Sign/SignInUp.vue";
 
 export default {

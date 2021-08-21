@@ -1,16 +1,23 @@
 <template>
   <span class="nav__link">
-    <a :class="`${type}`" href="">{{ text }}</a>
+    <a :class="{ active: this.$route.path == href }" :href="href"
+      >{{ text }}
+    </a>
   </span>
 </template>
 
 <script>
 export default {
   name: "Navlink",
+
   props: {
     text: {
       type: String,
       default: " Nav Text Default",
+    },
+    href: {
+      type: String,
+      default: "/",
     },
     type: {
       type: String,
@@ -36,10 +43,6 @@ export default {
   }
   a.active {
     color: var(--color-primary);
-    transition: 0.4s;
-  }
-  a.active:hover {
-    color: var(--color-nav-link);
     transition: 0.4s;
   }
 

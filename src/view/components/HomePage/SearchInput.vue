@@ -17,8 +17,8 @@ export default {
 
 <style lang="scss" scoped>
 .search__input {
-  margin: 20px auto;
-  width: 120px;
+  // margin: auto;
+  width: 25%;
   padding: 0 15px;
   p {
     font-size: 14px;

@@ -45,7 +45,7 @@
 </template>
 
 <script>
-import ImageView from "./ImageView.vue";
+import ImageView from "../ImageView.vue";
 export default {
   components: { ImageView },
   data: function() {
@@ -57,7 +57,6 @@ export default {
         "refferance-logo-3.png",
         "refferance-logo-4.png",
         "refferance-logo-5.png",
-
         "refferance-logo-6.png",
       ],
       position: 0,
@@ -252,6 +251,10 @@ export default {
   height: 100%;
   transition: 0.4s;
   background: var(--color-primary);
+
+  /deep/ img {
+    filter: brightness(0) invert(1);
+  }
 }
 /* moving to the left */
 .carousel-left-enter {

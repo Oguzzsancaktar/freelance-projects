@@ -17,13 +17,14 @@
             iconWidth="55px"
             iconHeight="55px"
             padding="0px"
+            iconAreaW="auto"
           />
         </div>
         <ImageView
           width="100%"
           height="100%"
           imageType="images"
-          imageName="cardImage-1.png"
+          :imageName="data.image"
         />
       </div>
       <div class="card__info">
@@ -31,7 +32,7 @@
           <div class="info__row">
             <div class="row__item">
               <span class="text">Property ID : </span>
-              <span class="text">1234567890</span>
+              <span class="text">{{ data.propID }}</span>
             </div>
             <div class="row__item">
               <Button
@@ -48,6 +49,7 @@
                 margin="0 10px"
                 iconWidth="19px"
                 iconHeight="18px"
+                iconAreaW="auto"
               />
               <Button
                 color="var(--color-primary)"
@@ -67,29 +69,28 @@
                 iconHeight="16px"
                 family="var(--font-medium)"
                 fontSize="14px"
+                iconAreaW="auto"
               />
             </div>
           </div>
 
           <div class="info__col">
             <h2 class="header">
-              Luxury Villa in Alice
+              {{ data.header }}
             </h2>
 
-            <span class="subtitle"
-              >New Build Modern Istanbul Property with Sea View on Bagdat
-              Streetpremium three bedroom apartment offers dual aspect south
-              eastern views towards Canary Wharf and the</span
-            >
+            <span class="subtitle">
+              {{ data.description }}
+            </span>
           </div>
 
           <div class="info__row">
-            <h2 class="price">£ 1,150,000</h2>
+            <h2 class="price">{{ data.price }}</h2>
             <Button
               color="var(--color-secondary)"
               textColor="var(--color-text-general)"
               width="100px"
-              text="Irak/Erbil"
+              :text="data.location"
               radius="10px"
               type="together"
               border="1px solid transparent"
@@ -115,13 +116,16 @@ import Button from "./Button.vue";
 import ImageView from "./ImageView.vue";
 export default {
   name: "GalleryCard",
+  props: {
+    data: Object,
+  },
   components: { ImageView, Button },
 };
 </script>
 
 <style lang="scss" scoped>
 .card {
-  box-shadow: 0 0 10px -5px var(--box-shadow-color);
+  box-shadow: 0 0 5px -5px var(--box-shadow-color);
 
   overflow: hidden;
   position: relative;
@@ -183,6 +187,7 @@ export default {
 
         .price {
           color: var(--color-primary);
+          font-size: 26px;
         }
         .row__item {
           display: flex;
@@ -202,7 +207,7 @@ export default {
         flex-direction: column;
         .header {
           color: var(--color-text-black);
-          font-size: 26px;
+          font-size: 23px;
           font-family: var(--font-semibold);
           margin-bottom: 10px;
         }

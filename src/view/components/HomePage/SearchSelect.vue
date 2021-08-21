@@ -11,9 +11,7 @@
       <p>{{ text }}</p>
       <div class="selector" :style="`${specialStyle}`" @click="toggle()">
         <div class="label">
-          <span :style="`color:${labelColor}!important`"
-            >{{ value }} {{ text }}
-          </span>
+          <span :style="`color:${labelColor}!important`">{{ value }} </span>
         </div>
         <div
           :style="`border-top-color:${labelColor}`"
@@ -91,6 +89,8 @@ export default {
 
 <style lang="scss" scoped>
 .hero__search__select {
+  cursor: pointer;
+
   padding: 0 15px;
   h1 {
     color: #f9f9f9;
@@ -161,24 +161,29 @@ export default {
       border: 1px solid transparent;
       position: absolute;
       z-index: 1;
-      background: #fff;
+      background: transparent;
+      left: 0;
+      top: 40px;
     }
     li {
-      margin-top: 5px;
-
+      border: 1px solid var(--background-white);
+      width: 100%;
+      margin: 10px 0;
+      border-radius: 50px;
       padding: 12px;
       font-size: 17px;
-      color: var(--color-text-gray);
+      color: var(--background-white);
       font-family: var(--font-medium);
-      background: var(--background-white);
+      background: var(--color-secondary);
 
       &:hover {
         color: white;
-        background: var(--color-secondary);
+
+        background: var(--color-primary);
       }
     }
     .current {
-      background: #eaeaea;
+      background: var(--color-primary);
     }
     .hidden {
       visibility: hidden;
