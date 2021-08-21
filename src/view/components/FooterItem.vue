@@ -88,7 +88,7 @@
           width="90px"
           height="auto"
           imageType="svg"
-          imageName="gigant-tech-logo.svg"
+          imageName="gigant-beyaz.svg"
         />
       </div>
     </div>

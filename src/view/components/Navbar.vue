@@ -108,7 +108,7 @@
 
 <script>
 import jquery from "jquery";
-import SignInUp from "./sign/SignInUp.vue";
+import SignInUp from "./Sign/SignInUp.vue";
 
 import Button from "./Button.vue";
 import Navlink from "./Navlink.vue";

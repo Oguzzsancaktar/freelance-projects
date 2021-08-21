@@ -1,5 +1,5 @@
 <template>
-  <div @click="collapseAccordion($event)" class="Accordion">
+  <div @click="collapseAccordion()" class="Accordion">
     <div class="layout">
       <section>
         <div class="heading">
@@ -27,7 +27,7 @@
         </div>
       </section>
 
-      <section class="hiding-area">
+      <section ref="hidingArea" class="hiding-area">
         <p class="description">
           {{ messages.message }}
         </p>
@@ -39,6 +39,7 @@
 <script>
 import Button from "./Button.vue";
 import jquery from "jquery";
+
 export default {
   components: { Button },
   name: "Accordion",
@@ -46,12 +47,19 @@ export default {
     messages: Object,
     index: Number,
   },
+
   methods: {
-    collapseAccordion(event) {
-      console.log(jquery(event.target).parents(".layout"));
-      jquery(event)
-        .find("section.hiding-area")
-        .animate({ height: "200px" });
+    collapseAccordion() {
+      let AccordionArr = [];
+      AccordionArr = jquery(".ProfileMessages .item .hiding-area");
+      if (jquery(this.$refs.hidingArea).hasClass("show")) {
+        jquery(this.$refs.hidingArea).removeClass("show");
+        return 1;
+      }
+      for (let i = 0; i < AccordionArr.length; i++) {
+        jquery(AccordionArr[i]).removeClass("show");
+      }
+      jquery(this.$refs.hidingArea).addClass("show");
     },
   },
 };
@@ -78,8 +86,15 @@ export default {
         align-items: center;
       }
     }
+
     section.hiding-area {
       height: 0px;
+      transition: 0.4s;
+    }
+
+    section.hiding-area.show {
+      height: inherit;
+      transition: 0.4s;
     }
   }
 }

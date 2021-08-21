@@ -9,6 +9,8 @@ import PreviewPage from './view/pages/PreviewPage.vue'
 import CategoryPage from './view/pages/CategoryPage.vue'
 import BoostAdvertPage from './view/pages/BoostAdvertPage.vue'
 import ProfilePage from './view/pages/ProfilePage.vue'
+import AboutPage from './view/pages/AboutPage.vue'
+
 
 
 
@@ -28,11 +30,7 @@ const routes = [
   { path: '/category', component: CategoryPage },
   { path: '/boostAdvert', component: BoostAdvertPage },
   { path: '/profile', component: ProfilePage },
-
-
-
-
-
+  { path: '/about', component: AboutPage },
 ]
 
 const router = new VueRouter({

@@ -16,7 +16,7 @@
 import Footer from "./view/components/Footer.vue";
 import Navbar from "./view/components/Navbar.vue";
 import FullScreenNavbar from "./view/components/FullScreenNavbar.vue";
-import SignInUp from "./view/components/sign/SignInUp.vue";
+import SignInUp from "./view/components/Sign/SignInUp.vue";
 
 export default {
   components: { Navbar, Footer, FullScreenNavbar, SignInUp },
@@ -194,6 +194,7 @@ export default {
 
 .subpage-content {
   height: 100%;
+  min-height: calc(100vh - 285px);
   padding-top: 150px;
   background: var(--background-general);
 }

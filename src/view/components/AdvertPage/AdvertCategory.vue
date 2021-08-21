@@ -1,21 +1,25 @@
 <template>
-  <div class="AdvertAdress">
+  <div class="AdvertCategory">
     <div class="wrapper">
       <div class="layout">
         <div class="heading">
-          <h2>İlan Adress Bilgileri</h2>
+          <h2>İlan Kategorisi</h2>
         </div>
-
-        <div class="area">
+        <div class="area ">
           <div class="area__left">
-            <div class="row">
-              <SelectBox width="100%" margin="0" text="Oda Sayısı" />
-              <SelectBox width="100%" margin="0" text="Salon Sayısı" />
-              <SelectBox width="100%" margin="0" text="Banyo Sayısı" />
+            <div class="item">
+              <SelectBox text="Kategori" height="auto" width="100%" />
+            </div>
+            <div class="item">
+              <SelectBox text="Konut Alt Kategori" height="auto" width="100%" />
+            </div>
+            <div class="item">
+              <SelectBox text="Yayın Tipi" height="auto" width="100%" />
             </div>
           </div>
+
           <div class="area__right">
-            <div class="item icon">
+            <div class="item">
               <Button
                 margin="auto"
                 padding="0px"
@@ -46,23 +50,24 @@
 </template>
 
 <script>
-import Button from "./Button.vue";
-import SelectBox from "./SelectBox.vue";
+import SelectBox from "../SelectBox.vue";
+import Button from "../Button.vue";
 
 export default {
-  name: "AdvertAdress",
-  components: { Button, SelectBox },
+  name: "AdvertCategory",
+  components: { SelectBox, Button },
 };
 </script>
 
 <style lang="scss" scoped>
-.AdvertAdress {
+.AdvertCategory {
   margin: 30px 0;
 
   .wrapper {
     .layout {
-      background: var(--background-white);
       padding: 20px 40px;
+
+      background: var(--background-white);
 
       display: flex;
       flex-direction: column;
@@ -77,29 +82,23 @@ export default {
           padding-bottom: 20px;
         }
       }
+
       .area {
-        width: 100%;
         display: flex;
         justify-content: space-between;
         align-items: center;
+        width: 100%;
 
         &__left {
           width: 75%;
           display: flex;
-
-          .row {
-            width: 100%;
-            display: flex;
-          }
-
-          .SelectBox {
-            width: 100%;
-          }
         }
         &__right {
           width: 25%;
         }
+
         .item {
+          width: 100%;
         }
       }
     }

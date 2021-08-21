@@ -69,10 +69,10 @@
 </template>
 
 <script>
-import InputBox from "./InputBox.vue";
-import Button from "./Button.vue";
-import TextEditorArea from "./TextEditorArea.vue";
-import SelectBox from "./SelectBox.vue";
+import InputBox from "../InputBox.vue";
+import Button from "../Button.vue";
+import TextEditorArea from "../TextEditorArea.vue";
+import SelectBox from "../SelectBox.vue";
 
 export default {
   name: "AdvertInformation",

@@ -4,7 +4,7 @@
       <div class="wrapper">
         <div class="layout">
           <div class="section">
-            <ProfileNav
+            <LeftNav
               :profileNavList="profileNavList"
               :section="section"
               @update-section="update"
@@ -14,7 +14,7 @@
           <div class="section">
             <transition name="fade">
               <div class="section__item" v-if="section == 'profile'">
-                profile
+                <MyProfile />
               </div>
             </transition>
 
@@ -44,23 +44,25 @@
 
 <script>
 import CategoryGallery from "../components/CategoryPage/CategoryGallery.vue";
-import ProfileMessages from "../components/profile/ProfileMessages.vue";
-import ProfileNav from "../components/profile/ProfileNav.vue";
+import MyProfile from "../components/ProfilePage/MyProfile.vue";
+import ProfileMessages from "../components/ProfilePage/ProfileMessages.vue";
+import LeftNav from "../components/LeftNav.vue";
 export default {
   name: "ProfilePage",
   components: {
     CategoryGallery,
-    ProfileNav,
+    LeftNav,
     ProfileMessages,
+    MyProfile,
   },
   data: function() {
     return {
       section: "profile",
       profileNavList: [
-        { text: "Profilim", keyword: "profile" },
-        { text: "İlanlarım", keyword: "adverts" },
-        { text: "Favori İlanlarım", keyword: "favs" },
-        { text: "Mesajlarım", keyword: "messages" },
+        { text: "Profilim", keyword: "profile", iconType: "profile" },
+        { text: "İlanlarım", keyword: "adverts", iconType: "list" },
+        { text: "Favori İlanlarım", keyword: "favs", iconType: "favorites" },
+        { text: "Mesajlarım", keyword: "messages", iconType: "envelope" },
       ],
       messages: [
         {
@@ -112,23 +114,6 @@ export default {
 
 <style lang="scss" scoped>
 .ProfilePage {
-  // .fade-enter,
-  // .fade-enter-active {
-  //   transition: opacity 0.5s ease-in-out 1s;
-  // }
-  // .fade-leave-active {
-  //   transition: opacity 0.5s;
-  // }
-
-  // .fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
-  //   opacity: 0;
-  // }
-
-  // .fade-enter,
-  // .fade-enter-active {
-  //   animation-delay: 1s !important;
-  // }
-
   .fade-enter {
     opacity: 0;
   }
@@ -149,10 +134,10 @@ export default {
         flex-direction: row;
         .section {
           display: flex;
-          width: 100%;
           flex-direction: column;
           position: relative;
 
+          margin-top: 60px;
           &__item {
           }
         }
@@ -161,6 +146,9 @@ export default {
           width: 275px;
           margin-right: 25px;
           margin-bottom: 25px;
+        }
+        .section:last-child {
+          width: calc(100% - 275px);
         }
       }
     }

@@ -57,7 +57,7 @@
 </template>
 
 <script>
-import SignInUp from "./sign/SignInUp.vue";
+import SignInUp from "./Sign/SignInUp.vue";
 import jquery from "jquery";
 import Button from "./Button.vue";
 import Navlink from "./Navlink.vue";

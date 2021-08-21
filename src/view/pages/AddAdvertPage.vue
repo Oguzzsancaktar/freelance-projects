@@ -13,14 +13,14 @@
 </template>
 
 <script>
-import AdvertCategory from "../components/AdvertCategory.vue";
-import AdvertInformation from "../components/AdvertInformation.vue";
-import AdvertAdress from "../components/AdvertAdress.vue";
+import AdvertCategory from "../components/AdvertPage/AdvertCategory.vue";
+import AdvertInformation from "../components/AdvertPage/AdvertInformation.vue";
+import AdvertAdress from "../components/AdvertPage/AdvertAdress.vue";
 
 import TopBar from "../components/TopBar.vue";
-import AdvertPhotos from "../components/AdvertPhotos.vue";
-import AdvertFeatures from "../components/AdvertFeatures.vue";
-import AdvertNext from "../components/AdvertNext.vue";
+import AdvertPhotos from "../components/AdvertPage/AdvertPhotos.vue";
+import AdvertFeatures from "../components/AdvertPage/AdvertFeatures.vue";
+import AdvertNext from "../components/AdvertPage/AdvertNext.vue";
 export default {
   components: {
     TopBar,

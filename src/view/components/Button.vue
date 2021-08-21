@@ -5,6 +5,18 @@
       `width:${width} ;padding:${padding} ; height:${height}; background:${background}; border-radius:${radius} ; border:${border} `
     "
   >
+    <!-- type TEXT -->
+    <div
+      :style="
+        `color:${textColor}; font-size:${fontSize}; font-family:${family}; justify-content:${justify}; text-align:${textAlign}`
+      "
+      v-if="'text' == type"
+    >
+      {{ text }}
+    </div>
+
+    <!-- type ICON -->
+
     <div class="button-icon" v-if="'icon' == type">
       <span
         v-if="'house' == iconType"
@@ -105,17 +117,13 @@
         />
       </span>
     </div>
-    <div
-      :style="
-        `color:${textColor}; font-size:${fontSize}; font-family:${family}; justify-content:${justify}; text-align:${textAlign}`
-      "
-      v-if="'text' == type"
-    >
-      {{ text }}
-    </div>
+    <!-- type TOGETHER -->
+
     <div
       class="button-together"
-      :style="`flex-direction:${direction}`"
+      :style="
+        `width:${iconAreaW} ;color:${textColor};flex-direction:${direction}; font-family:${family};font-size:${fontSize} `
+      "
       v-if="'together' == type"
     >
       <span v-if="'hearth' == iconType">
@@ -126,6 +134,30 @@
           height="20px"
           :iconWidth="iconWidth"
           :iconHeight="iconHeight"
+        />
+      </span>
+
+      <span v-if="'profile' == iconType">
+        <Icon
+          :iconColor="iconColor"
+          iconName="profile"
+          width="20px"
+          height="20px"
+          :iconWidth="iconWidth"
+          :iconHeight="iconHeight"
+          viewBox="0 0 512 512"
+        />
+      </span>
+
+      <span v-if="'list' == iconType">
+        <Icon
+          :iconColor="iconColor"
+          iconName="list"
+          width="20px"
+          height="20px"
+          :iconWidth="iconWidth"
+          :iconHeight="iconHeight"
+          viewBox="0 0 60.123 60.123"
         />
       </span>
 
@@ -148,7 +180,7 @@
 
       <span
         :style="
-          `width:${iconAreaW} ;color:${textColor}; font-family:${family};font-size:${fontSize} `
+          `width:${iconAreaW} ;color:${textColor};flex-direction:${direction}; font-family:${family};font-size:${fontSize} `
         "
         v-if="'gallery' == iconType"
       >
@@ -165,7 +197,7 @@
 
       <span
         :style="
-          `width:${iconAreaW} ;color:${textColor}; font-family:${family};font-size:${fontSize} `
+          `width:${iconAreaW} ;color:${textColor};flex-direction:${direction}; font-family:${family};font-size:${fontSize} `
         "
         v-if="'favorites' == iconType"
       >
@@ -182,7 +214,7 @@
 
       <span
         :style="
-          `width:${iconAreaW} ;color:${textColor}; font-family:${family};font-size:${fontSize} `
+          `width:${iconAreaW} ;color:${textColor};flex-direction:${direction}; font-family:${family};font-size:${fontSize} `
         "
         v-if="'share' == iconType"
       >
@@ -200,7 +232,7 @@
       <span
         v-if="'phone' == iconType"
         :style="
-          `width:${iconAreaW} ;color:${textColor}; font-family:${family};font-size:${fontSize} `
+          `width:${iconAreaW} ;color:${textColor};flex-direction:${direction}; font-family:${family};font-size:${fontSize} `
         "
       >
         <Icon
@@ -217,7 +249,7 @@
       <span
         v-if="'house' == iconType"
         :style="
-          `width:${iconAreaW} ;color:${textColor}; font-family:${family};font-size:${fontSize} `
+          `width:${iconAreaW} ;color:${textColor};flex-direction:${direction}; font-family:${family};font-size:${fontSize} `
         "
       >
         <Icon
@@ -234,7 +266,7 @@
       <span
         v-if="'envelope' == iconType"
         :style="
-          `width:${iconAreaW} ;color:${textColor}; font-family:${family};font-size:${fontSize} `
+          `width:${iconAreaW} ;color:${textColor};flex-direction:${direction}; font-family:${family};font-size:${fontSize} `
         "
       >
         <Icon
@@ -248,7 +280,12 @@
         />
       </span>
 
-      <span :style="`margin:${margin}!important`" v-if="'search' == iconType">
+      <span
+        :style="
+          `width:${iconAreaW} ;color:${textColor};flex-direction:${direction}; font-family:${family};font-size:${fontSize} `
+        "
+        v-if="'search' == iconType"
+      >
         <Icon
           :iconColor="iconColor"
           iconName="search"
@@ -261,7 +298,9 @@
       </span>
 
       <span
-        :style="`margin:${margin}!important; width:30px`"
+        :style="
+          `width:${iconAreaW} ;color:${textColor};flex-direction:${direction}; font-family:${family};font-size:${fontSize} `
+        "
         v-if="'advenced' == iconType"
       >
         <Icon
@@ -275,7 +314,12 @@
         />
       </span>
 
-      <span :style="`width:${iconAreaW} `" v-if="'login' == iconType">
+      <span
+        :style="
+          `width:${iconAreaW} ;color:${textColor};flex-direction:${direction}; font-family:${family};font-size:${fontSize} `
+        "
+        v-if="'login' == iconType"
+      >
         <Icon
           :iconColor="iconColor"
           iconName="login"
@@ -287,7 +331,12 @@
         />
       </span>
 
-      <span :style="`width:${iconAreaW} `" v-if="'plus' == iconType">
+      <span
+        :style="
+          `width:${iconAreaW} ;color:${textColor};flex-direction:${direction}; font-family:${family};font-size:${fontSize} `
+        "
+        v-if="'plus' == iconType"
+      >
         <Icon
           :iconColor="iconColor"
           iconName="plus"
@@ -300,7 +349,7 @@
       </span>
       <span
         :style="
-          `width:${iconAreaW} ;color:${textColor}; font-family:${family};font-size:${fontSize} `
+          `width:${iconAreaW} ;color:${textColor};flex-direction:${direction}; font-family:${family};font-size:${fontSize} `
         "
         v-if="'rentSale' == iconType"
       >
@@ -315,7 +364,12 @@
         />
       </span>
 
-      <span :style="`width:${iconAreaW}  `" v-if="'maps' == iconType">
+      <span
+        :style="
+          `width:${iconAreaW} ;color:${textColor};flex-direction:${direction}; font-family:${family};font-size:${fontSize} `
+        "
+        v-if="'maps' == iconType"
+      >
         <Icon
           :iconColor="iconColor"
           iconName="maps"
@@ -327,7 +381,12 @@
         />
       </span>
 
-      <span :style="`width:${iconAreaW}  `" v-if="'message' == iconType">
+      <span
+        :style="
+          `width:${iconAreaW} ;color:${textColor};flex-direction:${direction}; font-family:${family};font-size:${fontSize} `
+        "
+        v-if="'message' == iconType"
+      >
         <Icon
           :iconColor="iconColor"
           iconName="message"
