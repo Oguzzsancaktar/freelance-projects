@@ -20,14 +20,14 @@
       </div>
       <div class="section">
         <div class="header">
-          <h3>Üye Girişi</h3>
+          <h3>{{ SignInData.SignIn }}</h3>
         </div>
 
         <div class="input">
-          <input type="text" placeholder="E-Posta Adresi" />
+          <input type="text" :placeholder="SignInData.Email" />
         </div>
         <div class="input">
-          <input type="text" placeholder="Şifre" />
+          <input type="text" :placeholder="SignInData.Password" />
         </div>
         <div class="button">
           <Button
@@ -35,7 +35,7 @@
             textColor="var(--background-white)"
             width="100%"
             background="var(--color-primary)"
-            text="Giriş Yap"
+            :text="SignInData.LogIn"
             radius="25px"
             type="text"
             border="1px solid var(--color-primary)"
@@ -53,12 +53,12 @@
         </div>
 
         <div class="forget">
-          <p>Sifremi Unuttum</p>
+          <p>{{ SignInData.ForgetPassword }}</p>
         </div>
 
         <div class="divider">
           <hr />
-          <p>Veya</p>
+          <p>{{ SignInData.Or }}</p>
           <hr />
         </div>
 
@@ -73,7 +73,7 @@
             </div>
 
             <span>
-              Google ile bağlan
+              {{ SignInData.Facebook }}
             </span>
           </div>
 
@@ -82,7 +82,7 @@
               <ImageView width="21px" imageType="svg" imageName="google.svg" />
             </div>
             <span>
-              Facebook ile bağlan
+              {{ SignInData.Google }}
             </span>
           </div>
         </div>
@@ -90,7 +90,7 @@
 
       <div class="section">
         <div class="header">
-          <h3>Yeni Kayıt</h3>
+          <h3>{{ SignInData.NewUser }}</h3>
         </div>
         <div @click="this.showSignup" class="button">
           <Button
@@ -98,7 +98,7 @@
             textColor="var(--color-primary)"
             width="100%"
             background="--color-primary"
-            text="Hesap Oluştur"
+            :text="SignInData.CreateAccount"
             radius="25px"
             type="text"
             border="1px solid var(--color-primary)"
@@ -117,8 +117,7 @@
 
         <div class="text">
           <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorum
-            tempora eum numquam velit blanditiis inventore.
+            {{ SignInData.Description }}
           </p>
         </div>
       </div>
@@ -132,6 +131,9 @@ import ImageView from "../ImageView.vue";
 export default {
   name: "SignInCard",
   components: { Button, ImageView },
+  props: {
+    SignInData: Object,
+  },
   methods: {
     hideSign: function() {
       this.$emit("hideSign");

@@ -5,76 +5,40 @@
         <div class="hero__left">
           <div class="hero__left__info">
             <HeroSliderInfo
-              title="New Project1"
-              beforeText="Find Your Next Perfect1"
-              primaryText=" Place1"
-              afterText=" to Live1"
-            />
-            <HeroSliderInfo
-              title="New Project2"
-              beforeText="Find Your Next Perfect2"
-              primaryText=" Place2"
-              afterText=" to Live2"
-            />
-            <HeroSliderInfo
-              title="New Project3"
-              beforeText="Find Your Next Perfect3"
-              primaryText=" Place3"
-              afterText=" to Live3"
-            />
-            <HeroSliderInfo
-              title="New Project4"
-              beforeText="Find Your Next Perfect4"
-              primaryText=" Place4"
-              afterText=" to Live4"
-            />
-            <HeroSliderInfo
-              title="New Project5"
-              beforeText="Find Your Next Perfect5"
-              primaryText=" Place5"
-              afterText=" to Live5"
+              v-for="(item, index) in HeroSliderData.HeroSliderInfos"
+              :key="index"
+              :title="item.Title"
+              :beforeText="item.BeforeText"
+              :primaryText="item.PrimaryText"
+              :afterText="item.AfterText"
             />
           </div>
           <div class="hero__left__search">
-            <HeroSearch />
+            <HeroSearch :HeroSearchData="HeroSliderData.HeroSearchData" />
           </div>
           <div class="hero__left__search__mobile">
-            <HeroSearchMobile />
+            <HeroSearchMobile :HeroSearchData="HeroSliderData.HeroSearchData" />
           </div>
           <div class="hero__left__buttons">
-            <SliderButtons @goToSlide="goToSlide" activeSlide="slideCounter" />
+            <SliderButtons
+              :HeroSliderData="HeroSliderData.HeroSliderInfos"
+              @goToSlide="goToSlide"
+              activeSlide="slideCounter"
+            />
           </div>
         </div>
 
         <div class="hero__images">
-          <div class="hero__slider__image">
-            <img
-              src="../../../assets/images/heroBackground-0.png"
-              :alt="this.activeSliderImage"
-            />
-          </div>
-          <div class="hero__slider__image">
-            <img
-              src="../../../assets/images/heroBackground-1.png"
-              :alt="this.activeSliderImage"
-            />
-          </div>
-          <div class="hero__slider__image">
-            <img
-              src="../../../assets/images/heroBackground-2.png"
-              :alt="this.activeSliderImage"
-            />
-          </div>
-          <div class="hero__slider__image">
-            <img
-              src="../../../assets/images/heroBackground-3.png"
-              :alt="this.activeSliderImage"
-            />
-          </div>
-          <div class="hero__slider__image">
-            <img
-              src="../../../assets/images/heroBackground-4.png"
-              :alt="this.activeSliderImage"
+          <div
+            v-for="(item, index) in HeroSliderData.HeroSliderInfos"
+            :key="index"
+            class="hero__slider__image"
+          >
+            <ImageView
+              width="auto"
+              height="720px"
+              :imageName="item.Image"
+              imageType="images"
             />
           </div>
         </div>
@@ -89,9 +53,19 @@ import HeroSliderInfo from "./HeroSliderInfo.vue";
 import SliderButtons from "./SliderButtons.vue";
 import jquery from "jquery";
 import HeroSearchMobile from "./HeroSearchMobile.vue";
+import ImageView from "../ImageView.vue";
 export default {
   name: "HeroSlider",
-  components: { HeroSliderInfo, SliderButtons, HeroSearch, HeroSearchMobile },
+  components: {
+    HeroSliderInfo,
+    SliderButtons,
+    HeroSearch,
+    HeroSearchMobile,
+    ImageView,
+  },
+  props: {
+    HeroSliderData: Object,
+  },
   data: function() {
     return {
       activeCounter: 0,
@@ -111,7 +85,7 @@ export default {
         this.activeCounter = sliderCounter;
 
         // this.activeSliderImage = `../../assets/images/heroBackground-${sliderCounter}.png`;
-        let lineArr = document.getElementsByClassName("slider__buttons__line");
+        let lineArr = document.getElementsByClassName("button__line");
         let infoArr = document.getElementsByClassName("hero__slider__info");
         let imageArr = document.getElementsByClassName("hero__slider__image");
 
@@ -120,7 +94,9 @@ export default {
           infoArr[i].classList.remove("active");
           imageArr[i].classList.remove("active");
         }
+
         lineArr[sliderCounter].classList.add("active");
+
         setTimeout(() => {
           infoArr[sliderCounter].classList.add("active");
           imageArr[sliderCounter].classList.add("active");
@@ -141,7 +117,7 @@ export default {
     }, 1000);
 
     setInterval(() => {
-      let $sliderButtons = jquery(".slider__buttons__button");
+      let $sliderButtons = jquery(".slider__buttons .button");
 
       if (this.sliderTimer == 6) {
         this.activeCounter++;

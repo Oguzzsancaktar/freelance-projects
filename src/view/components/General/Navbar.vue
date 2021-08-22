@@ -32,7 +32,7 @@
                   iconHeight="17px"
                   iconColor="white"
                   background="var(--color-primary)"
-                  text="Add Property"
+                  :text="NavbarData.AddProperty"
                   radius="30px"
                   color="white"
                   type="together"
@@ -46,10 +46,13 @@
 
             <div class="area__layout__section">
               <Navlink
-                v-for="(item, index) in navData"
+                textColor="var(--color-nav-link)"
+                fontSize="16px"
+                v-for="(item, index) in NavbarData.NavLinks"
                 :key="index"
                 :text="item.text"
                 :href="item.href"
+                :isNavbar="true"
               />
             </div>
           </div>
@@ -75,35 +78,39 @@
         </div>
 
         <div class="area vertical-center login-language">
-          <div v-on:click="this.showSignin" class="area__layout__section">
-            <Button
-              family="var(--font-medium)"
-              color="dark"
-              textColor="var(--color-general-dark)"
-              text="Login / Sign up"
-              type="together"
-              iconType="login"
-              iconColor="var(--color-primary)"
-              background="var(--background-gray-light)"
-              radius="30px"
-              width="170px"
-              padding="0 20px"
-              iconWidth="22px"
-              iconHeight="21px"
-              fontSize="15px"
-              iconAreaW="auto"
-            />
-            <Button
-              family="var(--font-medium)"
-              textColor="white"
-              fontSize="15px"
-              color="white"
-              background="var(--color-primary)"
-              text="AR"
-              radius="30px"
-              type="text"
-              width="60px"
-            />
+          <div class="area__layout__section">
+            <div v-on:click="this.showSignin" class="control-sign">
+              <Button
+                family="var(--font-medium)"
+                color="dark"
+                textColor="var(--color-general-dark)"
+                :text="NavbarData.LoginSignup"
+                type="together"
+                iconType="login"
+                iconColor="var(--color-primary)"
+                background="var(--background-gray-light)"
+                radius="30px"
+                width="170px"
+                padding="0 20px"
+                iconWidth="22px"
+                iconHeight="21px"
+                fontSize="15px"
+                iconAreaW="auto"
+              />
+            </div>
+            <div @click="languageControl" class="language-control">
+              <Button
+                family="var(--font-medium)"
+                textColor="white"
+                fontSize="15px"
+                color="white"
+                background="var(--color-primary)"
+                :text="NavbarData.Lang"
+                radius="30px"
+                type="text"
+                width="60px"
+              />
+            </div>
           </div>
         </div>
       </div>
@@ -123,7 +130,14 @@ import NavbarHamburger from "./NavbarHamburger.vue";
 export default {
   components: { Button, Navlink, ImageView, NavbarHamburger },
   name: "Navbar",
+  props: {
+    NavbarData: Object,
+  },
   methods: {
+    languageControl: function() {
+      this.$emit("language-control");
+    },
+
     navbarAnimations: function(fromTo) {
       this.$emit("navbar-animations", fromTo);
     },
@@ -139,16 +153,6 @@ export default {
       var $nav = jquery("#Navbar");
       $nav.toggleClass("scrolled", jquery(this).scrollTop() > $nav.height());
     });
-  },
-
-  data: function() {
-    return {
-      navData: [
-        { text: "Self/Rent", href: "/add" },
-        { text: "About Us", href: "/about" },
-        { text: "Contact Us", href: "/contact" },
-      ],
-    };
   },
 };
 </script>

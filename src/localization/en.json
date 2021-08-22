@@ -1,0 +1,376 @@
+{
+  "HomePage": {
+    "HeroSliderData": {
+      "HeroSliderInfos": [
+        {
+          "Title": "New Project1",
+          "BeforeText": "Find Your Next Perfect1",
+          "PrimaryText": " Place1",
+          "AfterText": "to Live1",
+          "Image": "heroBackground-0.png"
+        },
+        {
+          "Title": "New Project2",
+          "BeforeText": "Find Your Next Perfect2",
+          "PrimaryText": " Place2",
+          "AfterText": "to Live2",
+          "Image": "heroBackground-1.png"
+        },
+        {
+          "Title": "New Project3",
+          "BeforeText": "Find Your Next Perfect3",
+          "PrimaryText": " Place3",
+          "AfterText": "to Live3",
+          "Image": "heroBackground-2.png"
+        },
+        {
+          "Title": "New Project4",
+          "BeforeText": "Find Your Next Perfect4",
+          "PrimaryText": " Place4",
+          "AfterText": "to Live4",
+          "Image": "heroBackground-3.png"
+        },
+        {
+          "Title": "New Project5",
+          "BeforeText": "Find Your Next Perfect5",
+          "PrimaryText": " Place5",
+          "AfterText": "to Live5",
+          "Image": "heroBackground-4.png"
+        }
+      ],
+
+      "HeroSearchData": {
+        "SearchSelectData": [
+          {
+            "Text": "Type",
+            "List": ["Type 1", "Type 2", "Type 3", "Type 4", "Type 5"]
+          },
+          {
+            "Text": "City",
+            "List": ["City 1", "City 2", "City 3", "City 4", "City 5"]
+          }
+        ],
+        "SearchInputData": { "Text": "Size", "SubText": "Accusantium" },
+        "SearchAddNewData": { "Text": "Advanced", "SubText": "Other Options" },
+        "Search": "Search"
+      }
+    },
+    "CarouselData": {
+      "Items": [
+        "refferance-logo-0.png",
+        "refferance-logo-1.png",
+        "refferance-logo-2.png",
+        "refferance-logo-3.png",
+        "refferance-logo-4.png",
+        "refferance-logo-5.png",
+        "refferance-logo-6.png"
+      ]
+    },
+    "GridGalleryData": {
+      "TopHeader": "Featured Listing",
+      "About": "About",
+      "Counter": "765",
+      "CounterAfter": "ads waiting for you.",
+      "SeeAll": "See All",
+      "GalleryCards": [
+        {
+          "PropID": "12341234",
+          "Image": "cardImage-1.png",
+          "Header": "Luxury Villa In Alice",
+          "Description": "New Build Modern Istanbul Property with Sea View on Bagdat Streetpremium three bed-",
+          "Price": "£ 1,150,000",
+          "Location": "Irak/Erbil"
+        },
+        {
+          "PropID": "12341234",
+          "Image": "cardImage-2.png",
+          "Header": "Luxury Villa In Alice",
+          "Description": "New Build Modern Istanbul Property with Sea View on Bagdat Streetpremium three bed-",
+          "Price": "£ 1,150,000",
+          "Location": "Irak/Erbil"
+        },
+        {
+          "PropID": "12341234",
+          "Image": "cardImage-3.png",
+          "Header": "Luxury Villa In Alice",
+          "Description": "New Build Modern Istanbul Property with Sea View on Bagdat Streetpremium three bed-",
+          "Price": "£ 1,150,000",
+          "Location": "Irak/Erbil"
+        },
+        {
+          "PropID": "12341234",
+          "Image": "cardImage-4.png",
+          "Header": "Luxury Villa In Alice",
+          "Description": "New Build Modern Istanbul Property with Sea View on Bagdat Streetpremium three bed-",
+          "Price": "£ 1,150,000",
+          "Location": "Irak/Erbil"
+        },
+        {
+          "PropID": "12341234",
+          "Image": "cardImage-5.png",
+          "Header": "Luxury Villa In Alice",
+          "Description": "New Build Modern Istanbul Property with Sea View on Bagdat Streetpremium three bed-",
+          "Price": "£ 1,150,000",
+          "Location": "Irak/Erbil"
+        },
+        {
+          "PropID": "12341234",
+          "Image": "cardImage-6.png",
+          "Header": "Luxury Villa In Alice",
+          "Description": "New Build Modern Istanbul Property with Sea View on Bagdat Streetpremium three bed-",
+          "Price": "£ 1,150,000",
+          "Location": "Irak/Erbil"
+        }
+      ]
+    },
+
+    "AdsAreaData": {
+      "FirstKey": "Set your ",
+      "BgKey": "location",
+      "SecondKey": " and we'll find your special options!",
+      "Search": "Search",
+      "SearchData": {
+        "SearchValue": "Choose Location",
+        "List": [
+          "Location 1",
+          "Location 2",
+          "Location 3",
+          "Location 4",
+          "Location 5"
+        ]
+      }
+    },
+
+    "GridGallery2Data": {
+      "TopHeader": "Featured Listing",
+      "About": "About",
+      "Counter": "765",
+      "CounterAfter": "ads waiting for you.",
+      "SeeAll": "See All",
+      "GalleryCards": [
+        {
+          "PropID": "12341234",
+          "Image": "cardImage-1.png",
+          "Header": "Luxury Villa In Alice",
+          "Description": "New Build Modern Istanbul Property with Sea View on Bagdat Streetpremium three bed-",
+          "Price": "£ 1,150,000",
+          "Location": "Irak/Erbil"
+        },
+        {
+          "PropID": "12341234",
+          "Image": "cardImage-2.png",
+          "Header": "Luxury Villa In Alice",
+          "Description": "New Build Modern Istanbul Property with Sea View on Bagdat Streetpremium three bed-",
+          "Price": "£ 1,150,000",
+          "Location": "Irak/Erbil"
+        },
+        {
+          "PropID": "12341234",
+          "Image": "cardImage-3.png",
+          "Header": "Luxury Villa In Alice",
+          "Description": "New Build Modern Istanbul Property with Sea View on Bagdat Streetpremium three bed-",
+          "Price": "£ 1,150,000",
+          "Location": "Irak/Erbil"
+        },
+        {
+          "PropID": "12341234",
+          "Image": "cardImage-4.png",
+          "Header": "Luxury Villa In Alice",
+          "Description": "New Build Modern Istanbul Property with Sea View on Bagdat Streetpremium three bed-",
+          "Price": "£ 1,150,000",
+          "Location": "Irak/Erbil"
+        },
+        {
+          "PropID": "12341234",
+          "Image": "cardImage-5.png",
+          "Header": "Luxury Villa In Alice",
+          "Description": "New Build Modern Istanbul Property with Sea View on Bagdat Streetpremium three bed-",
+          "Price": "£ 1,150,000",
+          "Location": "Irak/Erbil"
+        },
+        {
+          "PropID": "12341234",
+          "Image": "cardImage-6.png",
+          "Header": "Luxury Villa In Alice",
+          "Description": "New Build Modern Istanbul Property with Sea View on Bagdat Streetpremium three bed-",
+          "Price": "£ 1,150,000",
+          "Location": "Irak/Erbil"
+        }
+      ]
+    },
+    "MasonryGalleryData": {
+      "TopHeader": "Featured Listing",
+      "About": "About",
+      "Counter": "765",
+      "CounterAfter": "ads waiting for you.",
+      "SeeAll": "See All",
+      "MasonryCards": [
+        {
+          "Background": "var(--color-other-2)",
+          "Text": "Al Mansour Mall / Baghdad",
+          "Type": "short",
+          "Class": ""
+        },
+        {
+          "Background": "var(--color-other-4)",
+          "Text": "Supreme Judicial Council",
+          "Type": "long",
+          "Class": "vertical"
+        },
+        {
+          "Background": "var(--color-other-5)",
+          "Text": "Baghdad Railway/ Baghdad",
+          "Type": "short",
+          "Class": ""
+        },
+        {
+          "Background": "var(--color-other-3)",
+          "Text": "Al Mansour Mall / Baghdad",
+          "Type": "short",
+          "Class": ""
+        },
+        {
+          "Background": "var(--color-other-1)",
+          "Text": "Baghdad International  Airport",
+          "Type": "short",
+          "Class": ""
+        }
+      ]
+    }
+  },
+
+  "AboutPage": {},
+
+  "NavbarData": {
+    "Lang": "EN",
+    "AddProperty": "Add Property",
+    "LoginSignup": "Login / Signup",
+    "NavLinks": [
+      { "text": "Self/Rent", "href": "/add" },
+      { "text": "About Us", "href": "/about" },
+      { "text": "Contact Us", "href": "/contact" }
+    ]
+  },
+
+  "SignInUpData": {
+    "SignInData": {
+      "SignIn": "User Sign In",
+      "Email": "E-mail Adress",
+      "Password": "Password",
+      "ForgetPassword": "I forget my password",
+      "LogIn": "Log In",
+      "Or": "Or",
+      "Facebook": "Sign In With Facebook",
+      "Google": "Sign In With Google",
+      "NewUser": "Create New User",
+      "CreateAccount": "Create Account",
+      "Description": "If you dont have account, please enter your informations to form and submit."
+    },
+    "SignUpData": {
+      "NewUser": "Create New User",
+      "NameSurname": "Name Surname",
+      "Phone": "Phone",
+      "Email": "E-mail Adress",
+      "Password": "Password",
+      "Agree": "I agree the",
+      "Terms": "Terms and Conditions",
+      "ForgetPassword": "I forget my password",
+      "LogIn": "Log In",
+      "Or": "Or",
+      "Facebook": "Sign In With Facebook",
+      "Google": "Sign In With Google"
+    }
+  },
+  "FullScreenNavbarData": {
+    "AddProperty": "Add Property",
+    "LoginSignup": "Login / Signup",
+    "Lang": "EN",
+    "NavLinks": [
+      { "text": "Self/Rent", "href": "/add" },
+      { "text": "About Us", "href": "/about" },
+      { "text": "Contact Us", "href": "/contact" }
+    ]
+  },
+
+  "FooterData": {
+    "All": "All",
+    "Rights": "Rights",
+    "Reserved": "Reserved",
+    "Borsa": "Borsa",
+    "ButtonText": "You can share your views with us!",
+    "FooterItems": [
+      {
+        "Type": "logo",
+        "Button": "",
+        "Texts": [
+          "Legal warning",
+          "Terms of Use",
+          "Illumination Text",
+          "Cookie Policy",
+          "Ad Posting Rules"
+        ]
+      },
+
+      {
+        "Type": "normal",
+        "Button": true,
+        "Texts": [
+          "Legal warning",
+          "Terms of Use",
+          "Illumination Text",
+          "Cookie Policy",
+          "Ad Posting Rules"
+        ]
+      },
+      {
+        "Type": "normal",
+        "Button": false,
+        "Texts": [
+          "Legal warning",
+          "Terms of Use",
+          "Illumination Text",
+          "Cookie Policy"
+        ]
+      },
+      {
+        "Type": "normal",
+        "Button": false,
+        "Texts": [
+          "Legal warning",
+          "Terms of Use",
+          "Illumination Text",
+          "Cookie Policy",
+          "Ad Posting Rules"
+        ]
+      },
+
+      {
+        "Type": "normal",
+        "Button": false,
+        "Texts": [
+          "Legal warning",
+          "Terms of Use",
+          "Illumination Text",
+          "Cookie Policy",
+          "Ad Posting Rules"
+        ]
+      },
+
+      {
+        "Type": "social",
+        "Button": false,
+        "Texts": ["Twitter", "Facebook", "Instagram"]
+      },
+      {
+        "Type": "mobile",
+        "Button": "",
+        "Texts": [
+          "About Us",
+          "Membership Agreement",
+          "Advertissement",
+          "Cotact Us"
+        ]
+      }
+    ]
+  }
+}

@@ -20,25 +20,26 @@
       </div>
       <div class="section">
         <div class="header">
-          <h3>Üye Girişi</h3>
+          <h3>{{ SignUpData.NewUser }}</h3>
         </div>
         <div class="input">
-          <input type="text" placeholder="Adınız Soyadınız" />
+          <input type="text" :placeholder="SignUpData.NameSurname" />
         </div>
         <div class="input">
-          <input type="text" placeholder="Telefon" />
+          <input type="text" :placeholder="SignUpData.Phone" />
         </div>
         <div class="input">
-          <input type="text" placeholder="E-Posta" />
+          <input type="text" :placeholder="SignUpData.Email" />
         </div>
         <div class="input">
-          <input type="text" placeholder="Şifre" />
+          <input type="text" :placeholder="SignUpData.Password" />
         </div>
 
         <div class="checkbox">
           <Checkbox />
           <span
-            ><a href="">Üyelik Sözleşmesi</a>'ni okudum ve kabul ediyorum</span
+            ><a href="">{{ SignUpData.Agree }}</a
+            >{{ SignUpData.Terms }}</span
           >
         </div>
 
@@ -48,7 +49,7 @@
             textColor="var(--background-white)"
             width="100%"
             background="var(--color-primary)"
-            text="Giriş Yap"
+            :text="SignUpData.LogIn"
             radius="25px"
             type="text"
             border="1px solid var(--color-primary)"
@@ -66,12 +67,12 @@
         </div>
 
         <div class="forget">
-          <p>Sifremi Unuttum</p>
+          <p>{{ SignUpData.ForgetPassword }}</p>
         </div>
 
         <div class="divider">
           <hr />
-          <p>Veya</p>
+          <p>{{ SignUpData.Or }}</p>
           <hr />
         </div>
 
@@ -86,7 +87,7 @@
             </div>
 
             <span>
-              Google ile bağlan
+              {{ SignUpData.Facebook }}
             </span>
           </div>
 
@@ -95,7 +96,7 @@
               <ImageView width="21px" imageType="svg" imageName="google.svg" />
             </div>
             <span>
-              Facebook ile bağlan
+              {{ SignUpData.Google }}
             </span>
           </div>
         </div>
@@ -111,6 +112,9 @@ import ImageView from "../ImageView.vue";
 export default {
   name: "SignUpCard",
   components: { Button, ImageView, Checkbox },
+  props: {
+    SignUpData: Object,
+  },
   methods: {
     hideSign: function() {
       this.$emit("hideSign");

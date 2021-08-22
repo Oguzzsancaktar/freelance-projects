@@ -2,18 +2,14 @@
   <div class="footer">
     <div class="wrapper">
       <div class="footer__layout">
-        <FooterItem data-footer-item="0" type="logo" :texts="firstTexts" />
-        <FooterItem data-footer-item="1" :button="true" :texts="firstTexts" />
-        <FooterItem data-footer-item="2" :texts="secondTexts" />
-        <FooterItem data-footer-item="3" :texts="firstTexts" />
-        <FooterItem data-footer-item="4" :texts="firstTexts" />
-        <FooterItem data-footer-item="5" type="social" :texts="socialTexts" />
-
         <FooterItem
-          data-footer-item="6"
-          type="mobile"
-          :texts="mobileTexts"
-          :social="socialTexts"
+          v-for="(item, index) in FooterData.FooterItems"
+          :data-footer-item="index"
+          :key="index"
+          :type="item.Type"
+          :texts="item.Texts"
+          :button="item.Button"
+          :FooterData="FooterData"
         />
       </div>
     </div>
@@ -25,24 +21,8 @@ import FooterItem from "./FooterItem.vue";
 export default {
   components: { FooterItem },
   name: "Footer",
-  data: function() {
-    return {
-      firstTexts: [
-        "Yasal Uyarı",
-        "Kullanım Koşulları",
-        "Aydınlatma Metni",
-        "Çerez Politikası",
-        "İlan Yayınlanma Kuralları",
-      ],
-      secondTexts: [
-        "Yasal Uyarı",
-        "Kullanım Koşulları",
-        "Aydınlatma Metni",
-        "Çerez Politikası",
-      ],
-      mobileTexts: ["Hakkımızda", "Üyelik Sözleşmesi", "Reklam", "Bize Ulaşın"],
-      socialTexts: ["Twitter", "Facebook", "Instagram"],
-    };
+  props: {
+    FooterData: Object,
   },
 };
 </script>

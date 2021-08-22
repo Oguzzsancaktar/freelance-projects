@@ -11,7 +11,10 @@
           imageName="logo-2.svg"
         />
       </div>
-      <div class="section">Tüm hakları <b>Borsa</b> da saklıdır.</div>
+      <div class="section">
+        <b>{{ FooterData.Borsa }}</b> {{ FooterData.All }}
+        {{ FooterData.Rights }} {{ FooterData.Reserved }}
+      </div>
     </div>
     <div v-if="type == 'normal'" class="footer-item">
       <div class="section">
@@ -31,10 +34,10 @@
           type="together"
           iconType="message"
           iconAreaW="auto"
-          text="Bizim ile görüşlerinizi paylaşabilirsiniz!"
+          :text="FooterData.ButtonText"
           iconColor="var(--color-secondary)"
           iconHeight="24px"
-          iconWidth="24px"
+          iconWidth="30px"
           fontSize="13px"
           textColor="white"
           family="var(--font-light)"
@@ -104,7 +107,8 @@
           imageName="logo-2.svg"
         />
         <div style="text-align:center; margin:20px 0;" class="section">
-          Tüm hakları <b>Borsa</b> da saklıdır.
+          <b>{{ FooterData.Borsa }}</b> {{ FooterData.All }}
+          {{ FooterData.Rights }} {{ FooterData.Reserved }}
         </div>
 
         <ul
@@ -152,7 +156,7 @@
           imageType="svg"
           width="90px"
           height="auto"
-          imageName="gigant-tech-logo.svg"
+          imageName="gigant-beyaz.svg"
         />
       </div>
     </div>
@@ -180,6 +184,7 @@ export default {
       type: Boolean,
       default: false,
     },
+    FooterData: Object,
   },
 };
 </script>

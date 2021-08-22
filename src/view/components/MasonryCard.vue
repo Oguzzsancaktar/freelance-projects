@@ -9,7 +9,7 @@
           >
             <div class="layout">
               <div class="heading">
-                <h2>Al Mansour Mall / Baghdad</h2>
+                <h2>{{ text }}</h2>
               </div>
 
               <Button
@@ -51,26 +51,31 @@
             class="card__image__hover"
             style="background:var(--color-other-4)!important"
           >
-            <Button
-              color="var(--background-white)"
-              textColor="var(--background-white)"
-              width="230px"
-              background="var(--color-primary-low-button)"
-              text="Show nearby areas"
-              radius="28px"
-              type="together"
-              border="1px solid var(--background-white)"
-              iconType="nearLocation"
-              height="55px"
-              iconColor="var(--background-white)"
-              padding="0 30px"
-              margin="0"
-              iconWidth="30px"
-              iconHeight="30px"
-              family="var(--font-light)"
-              fontSize="14px"
-              iconAreaW="auto"
-            />
+            <div class="layout">
+              <div class="heading">
+                <h2>{{ text }}</h2>
+              </div>
+              <Button
+                color="var(--background-white)"
+                textColor="var(--background-white)"
+                width="230px"
+                background="var(--color-primary-low-button)"
+                text="Show nearby areas"
+                radius="28px"
+                type="together"
+                border="1px solid var(--background-white)"
+                iconType="nearLocation"
+                height="55px"
+                iconColor="var(--background-white)"
+                padding="0 30px"
+                margin="0"
+                iconWidth="30px"
+                iconHeight="30px"
+                family="var(--font-light)"
+                fontSize="14px"
+                iconAreaW="auto"
+              />
+            </div>
           </div>
           <ImageView
             height="100%"
@@ -97,6 +102,10 @@ export default {
     background: {
       type: String,
       default: "red",
+    },
+    text: {
+      type: String,
+      default: " Empty",
     },
   },
 };
@@ -157,6 +166,10 @@ export default {
         border-radius: 10px;
         opacity: 1;
         .layout {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
           .heading {
             h2 {
               text-align: center;

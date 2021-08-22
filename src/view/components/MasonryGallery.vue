@@ -3,19 +3,23 @@
     <div class="wrapper">
       <div class="grid__gallery__nav">
         <div class="section">
-          <h2 style="color:var(--color-primary)">Featured Listing</h2>
+          <h2 style="color:var(--color-primary)">
+            {{ MasonryGalleryData.TopHeader }}
+          </h2>
         </div>
         <div class="section">
           <span class="gallery-description"
-            >About
-            <b style=" margin:0 5px; color:var(--color-primary)"> 765 </b> ads
-            waiting for you.</span
+            >{{ MasonryGalleryData.About }}
+            <b style=" margin:0 5px; color:var(--color-primary)">
+              {{ MasonryGalleryData.Counter }}
+            </b>
+            {{ MasonryGalleryData.CounterAfter }}</span
           >
           <Button
             iconColor="var(--color-primary)"
             border="1px solid var(--color-primary)"
             background="transparent"
-            text="See All"
+            :text="MasonryGalleryData.SeeAll"
             radius="10px"
             color="--color-text-general"
             type="together"
@@ -34,21 +38,16 @@
       </div>
 
       <main class="container">
-        <div>
-          <MasonryCard background="var(--color-other-2)" />
-        </div>
-        <div class="vertical">
-          <MasonryCard type="long" />
-        </div>
-
-        <div>
-          <MasonryCard background="var(--color-other-5)" />
-        </div>
-        <div>
-          <MasonryCard background="var(--color-other-3)" />
-        </div>
-        <div>
-          <MasonryCard background="var(--color-other-1)" />
+        <div
+          v-for="(item, index) in MasonryGalleryData.MasonryCards"
+          :key="index"
+          :class="item.Class"
+        >
+          <MasonryCard
+            :text="item.Text"
+            :background="item.Background"
+            :type="item.Type"
+          />
         </div>
       </main>
     </div>
@@ -61,6 +60,9 @@ import MasonryCard from "./MasonryCard.vue";
 export default {
   components: { MasonryCard, Button },
   name: "MasonryGallery",
+  props: {
+    MasonryGalleryData: Object,
+  },
 };
 </script>
 

@@ -3,10 +3,17 @@
     <div class="wrapper">
       <div class="layout">
         <div class="signup-card">
-          <SignUpCard @hideSign="hideSign" />
+          <SignUpCard
+            :SignUpData="SignInUpData.SignUpData"
+            @hideSign="hideSign"
+          />
         </div>
         <div class="signin-card">
-          <SignInCard @showSignup="showSignup" @hideSign="hideSign" />
+          <SignInCard
+            :SignInData="SignInUpData.SignInData"
+            @showSignup="showSignup"
+            @hideSign="hideSign"
+          />
         </div>
       </div>
     </div>
@@ -21,6 +28,9 @@ import SignUpCard from "./SignUpCard.vue";
 export default {
   components: { SignInCard, SignUpCard },
   name: "SignInUp",
+  props: {
+    SignInUpData: Object,
+  },
   methods: {
     showSign: function() {
       jquery(".SignInUp").animate({ top: "0" });

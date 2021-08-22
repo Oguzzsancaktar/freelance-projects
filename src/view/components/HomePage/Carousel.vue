@@ -48,17 +48,12 @@
 import ImageView from "../ImageView.vue";
 export default {
   components: { ImageView },
+  props: {
+    CarouselData: Object,
+  },
   data: function() {
     return {
-      items: [
-        "refferance-logo-0.png",
-        "refferance-logo-1.png",
-        "refferance-logo-2.png",
-        "refferance-logo-3.png",
-        "refferance-logo-4.png",
-        "refferance-logo-5.png",
-        "refferance-logo-6.png",
-      ],
+      items: this.$props.CarouselData.Items,
       position: 0,
       shown: 6,
       itemWidth: 190,

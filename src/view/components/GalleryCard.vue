@@ -24,15 +24,17 @@
           width="100%"
           height="100%"
           imageType="images"
-          :imageName="data.image"
+          :imageName="data.Image"
         />
       </div>
       <div class="card__info">
         <div class="info__layout">
           <div class="info__row">
             <div class="row__item">
-              <span class="text">Property ID : </span>
-              <span class="text">{{ data.propID }}</span>
+              <span class="text">
+                {{ AppLang == "en" ? "Property ID: " : "Ar Prop Id: " }}
+              </span>
+              <span class="text"> {{ data.PropID }}</span>
             </div>
             <div class="row__item">
               <Button
@@ -76,21 +78,21 @@
 
           <div class="info__col">
             <h2 class="header">
-              {{ data.header }}
+              {{ data.Header }}
             </h2>
 
             <span class="subtitle">
-              {{ data.description }}
+              {{ data.Description }}
             </span>
           </div>
 
           <div class="info__row">
-            <h2 class="price">{{ data.price }}</h2>
+            <h2 class="price">{{ data.Price }}</h2>
             <Button
               color="var(--color-secondary)"
               textColor="var(--color-text-general)"
               width="100px"
-              :text="data.location"
+              :text="data.Location"
               radius="10px"
               type="together"
               border="1px solid transparent"
@@ -120,6 +122,10 @@ export default {
     data: Object,
   },
   components: { ImageView, Button },
+  data: function() {
+    let AppLang = localStorage.ApplicationLanguage;
+    return { AppLang };
+  },
 };
 </script>
 

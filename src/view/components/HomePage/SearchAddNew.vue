@@ -3,7 +3,7 @@
     <p>{{ text }}</p>
     <Button
       background="transparent"
-      text="Other options"
+      :text="subText"
       radius="high"
       color="dark"
       textColor="var(--color-text-gray)"

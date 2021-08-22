@@ -4,14 +4,16 @@
       <div class="ads__area__layout">
         <div class="info">
           <div class="info__section">
-            <span
-              >Set your <span class="key-bg">location</span> and we'll find your
-              special options!</span
-            >
+            <span>
+              {{ AdsAreaData.FirstKey }}
+              <span class="key-bg">{{ AdsAreaData.BgKey }}</span
+              >{{ AdsAreaData.SecondKey }}
+            </span>
           </div>
           <div class="info__section">
             <div class="info__section__item">
               <SearchSelect
+                :list="AdsAreaData.SearchData.List"
                 border="1px solid white"
                 height="55px"
                 width="170px"
@@ -36,7 +38,7 @@
                 margin="0 10px"
                 iconWidth="22px"
                 iconHeight="27px"
-                text="Search"
+                :text="AdsAreaData.Search"
                 fontSize="14px"
                 family="var(--font-semibold)"
                 textColor="white"
@@ -66,6 +68,7 @@ import ImageView from "../ImageView.vue";
 export default {
   components: { SearchSelect, Button, ImageView },
   name: "AdsArea",
+  props: { AdsAreaData: Object },
 };
 </script>
 

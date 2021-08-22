@@ -3,19 +3,23 @@
     <div class="wrapper">
       <div class="grid__gallery__nav">
         <div class="section">
-          <h2 style="color:var(--color-primary)">Featured Listing</h2>
+          <h2 style="color:var(--color-primary)">
+            {{ GridGalleryData.TopHeader }}
+          </h2>
         </div>
         <div class="section">
-          <span class="gallery-description"
-            >About
-            <b style=" margin:0 5px; color:var(--color-primary)"> 765 </b> ads
-            waiting for you.</span
+          <span class="gallery-description">
+            {{ GridGalleryData.About }}
+            <b style=" margin:0 5px; color:var(--color-primary)">
+              {{ GridGalleryData.Counter }}
+            </b>
+            {{ GridGalleryData.CounterAfter }}</span
           >
           <Button
             iconColor="var(--color-primary)"
             border="1px solid var(--color-primary)"
             background="transparent"
-            text="See All"
+            :text="GridGalleryData.SeeAll"
             radius="10px"
             color="--color-text-gray-dark"
             type="together"
@@ -34,7 +38,7 @@
       </div>
       <div class="grid__gallery__layout">
         <GalleryCard
-          v-for="(data, index) in homeGalleryData"
+          v-for="(data, index) in GridGalleryData.GalleryCards"
           :key="index"
           class="grid__gallery__layout__item"
           :data="data"
@@ -50,69 +54,8 @@ import GalleryCard from "./GalleryCard.vue";
 export default {
   components: { GalleryCard, Button },
   name: "GridGallery",
-  data: function() {
-    return {
-      homeGalleryData: [
-        {
-          propID: "12341234",
-          image: "cardImage-1.png",
-          header: "Luxury Villa In Alice",
-          description: `New Build Modern Istanbul Property with Sea View on Bagdat
-              Streetpremium three bed-`,
-          price: "£ 1,150,000",
-          location: "Irak/Erbil",
-        },
-        {
-          propID: "12341234",
-          image: "cardImage-2.png",
-          header: "Luxury Villa In Alice",
-          description: `New Build Modern Istanbul Property with Sea View on Bagdat
-              Streetpremium three bed-`,
-          price: "£ 1,150,000",
-          location: "Irak/Erbil",
-        },
-        {
-          propID: "12341234",
-          image: "cardImage-3.png",
-
-          header: "Luxury Villa In Alice",
-          description: `New Build Modern Istanbul Property with Sea View on Bagdat
-              Streetpremium three bed-`,
-          price: "£ 1,150,000",
-          location: "Irak/Erbil",
-        },
-        {
-          propID: "12341234",
-          image: "cardImage-4.png",
-
-          header: "Luxury Villa In Alice",
-          description: `New Build Modern Istanbul Property with Sea View on Bagdat
-              Streetpremium three bed-`,
-          price: "£ 1,150,000",
-          location: "Irak/Erbil",
-        },
-        {
-          propID: "12341234",
-          image: "cardImage-5.png",
-
-          header: "Luxury Villa In Alice",
-          description: `New Build Modern Istanbul Property with Sea View on Bagdat
-              Streetpremium three bed-`,
-          price: "£ 1,150,000",
-          location: "Irak/Erbil",
-        },
-        {
-          propID: "12341234",
-          image: "cardImage-6.png",
-
-          header: "Luxury Villa In Alice",
-          description: `New Build Modern Istanbul Property with Sea View on Bagdat
-              Streetpremium three bed-`,
-          price: "£ 1,150,000",
-          location: "Irak/Erbil",
-        },
-      ],
-    };
+  props: {
+    GridGalleryData: Object,
   },
 };
 </script>

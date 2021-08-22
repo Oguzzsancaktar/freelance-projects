@@ -68,11 +68,13 @@ export default {
       type: String,
       default: " ",
     },
+    list: {
+      type: Array,
+    },
   },
   data: function() {
     return {
       value: "Select ",
-      list: ["Orange", "Apple", "Kiwi", "Lemon", "Pineapple"],
       visible: false,
     };
   },

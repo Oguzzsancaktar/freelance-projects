@@ -1,17 +1,19 @@
 <template>
   <div class="navbar-fullscreen">
     <div class="navbar-fullscreen-layout">
-      <div class="navbar-fullscreen-item">
-        <a href="./aboutus.html"> <Navlink type="white" text="Self/Rent"/></a>
+      <div
+        v-for="(item, index) in FullScreenNavbarData.NavLinks"
+        :key="index"
+        class="navbar-fullscreen-item"
+      >
+        <Navlink
+          :href="item.href"
+          textColor="white"
+          fontSize="20px"
+          :text="item.text"
+        />
       </div>
-      <div class="navbar-fullscreen-item">
-        <a href="./services.html"> <Navlink text="About Us" type="white"/></a>
-      </div>
-      <div class="navbar-fullscreen-item">
-        <a href="./activities.html">
-          <Navlink text="Contact Us" type="white"
-        /></a>
-      </div>
+
       <div class="navbar-fullscreen-item button">
         <a href="/add">
           <Button
@@ -21,7 +23,7 @@
             iconHeight="17px"
             iconColor="white"
             background="var(--color-primary)"
-            text="Add Property"
+            :text="FullScreenNavbarData.AddProperty"
             radius="30px"
             color="white"
             type="together"
@@ -39,7 +41,7 @@
             family="var(--font-medium)"
             color="dark"
             textColor="var(--color-general-dark)"
-            text="Login / Sign up"
+            :text="FullScreenNavbarData.LoginSignup"
             type="together"
             iconType="login"
             iconColor="var(--color-primary)"
@@ -51,6 +53,24 @@
             iconHeight="21px"
             fontSize="20px"
             iconAreaW="auto"
+          />
+        </button>
+      </div>
+
+      <div class="navbar-fullscreen-item button">
+        <button @click="languageControl" class="language-control">
+          <Button
+            family="var(--font-medium)"
+            textColor="white"
+            fontSize="15px"
+            color="white"
+            background="var(--color-secondary)"
+            radius="30px"
+            type="text"
+            width="220px"
+            iconAreaW="100%"
+            :text="FullScreenNavbarData.Lang"
+            justify="center"
           />
         </button>
       </div>
@@ -66,6 +86,9 @@ import Navlink from "./Navlink.vue";
 
 export default {
   name: "FullScreenNavbar",
+  props: {
+    FullScreenNavbarData: Object,
+  },
   data: function() {
     return {
       isNavbarOpen: false,
@@ -91,6 +114,10 @@ export default {
   },
 
   methods: {
+    languageControl: function() {
+      this.$emit("language-control");
+    },
+
     navbarAnimations(fromTo, navStuation) {
       this.isNavbarOpen = navStuation == undefined ? this.isNavbarOpen : true;
 
@@ -141,7 +168,7 @@ export default {
 }
 
 .navbar-fullscreen-layout {
-  // margin-top: 150px;
+  margin-top: 55px;
   padding: 20px;
   height: 100%;
 

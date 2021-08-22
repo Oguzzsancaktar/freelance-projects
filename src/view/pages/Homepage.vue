@@ -1,11 +1,14 @@
 <template>
   <div id="Homepage">
-    <HeroSlider />
-    <Carousel class="homepage__carrousel" />
-    <GridGallery />
-    <AdsArea />
-    <GridGallery />
-    <MasonryGallery />
+    <HeroSlider :HeroSliderData="Data.HomePage.HeroSliderData" />
+    <Carousel
+      :CarouselData="Data.HomePage.CarouselData"
+      class="homepage__carrousel"
+    />
+    <GridGallery :GridGalleryData="Data.HomePage.GridGalleryData" />
+    <AdsArea :AdsAreaData="Data.HomePage.AdsAreaData" />
+    <GridGallery :GridGalleryData="Data.HomePage.GridGallery2Data" />
+    <MasonryGallery :MasonryGalleryData="Data.HomePage.MasonryGalleryData" />
   </div>
 </template>
 
@@ -25,6 +28,9 @@ export default {
     MasonryGallery,
   },
   name: "Homepage",
+  props: {
+    Data: Object,
+  },
 };
 </script>
 

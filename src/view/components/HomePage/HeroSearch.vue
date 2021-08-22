@@ -1,9 +1,19 @@
 <template>
   <div class="hero__search">
-    <SearchSelect text="Type" />
-    <SearchSelect text="City" />
-    <SearchInput text="Size" subText="Accusantium" />
-    <SearchAddNew text="Size" subText="Accusantium" />
+    <SearchSelect
+      v-for="(item, index) in HeroSearchData.SearchSelectData"
+      :key="index"
+      :text="item.Text"
+      :list="item.List"
+    />
+    <SearchInput
+      :text="HeroSearchData.SearchInputData.Text"
+      :subText="HeroSearchData.SearchInputData.SubText"
+    />
+    <SearchAddNew
+      :text="HeroSearchData.SearchAddNewData.Text"
+      :subText="HeroSearchData.SearchAddNewData.SubText"
+    />
     <div class="hero__search__button">
       <Button
         margin="auto"
@@ -13,7 +23,7 @@
         color="white"
         type="together"
         iconType="search"
-        text="Search"
+        :text="HeroSearchData.Search"
         iconColor="white"
         iconHeight="19px"
         iconWidth="19px"
@@ -34,6 +44,7 @@ import SearchSelect from "./SearchSelect.vue";
 export default {
   components: { SearchSelect, SearchInput, Button, SearchAddNew },
   name: "HeroSearch",
+  props: { HeroSearchData: Object },
 };
 </script>
 

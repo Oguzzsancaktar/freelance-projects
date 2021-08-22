@@ -1,14 +1,35 @@
 <template>
   <div id="App">
-    <SignInUp />
+    <SignInUp
+      :SignInUpData="
+        ApplicationLanguage == 'en' ? enData.SignInUpData : arData.SignInUpData
+      "
+    />
     <FullScreenNavbar
+      @language-control="languageControl"
+      :FullScreenNavbarData="
+        ApplicationLanguage == 'en'
+          ? enData.FullScreenNavbarData
+          : arData.FullScreenNavbarData
+      "
       @show-signin="showSignin"
       @navbar-animations="navbarAnimations"
     />
-    <Navbar @navbar-animations="navbarAnimations" />
+    <Navbar
+      :NavbarData="
+        ApplicationLanguage == 'en' ? enData.NavbarData : arData.NavbarData
+      "
+      @navbar-animations="navbarAnimations"
+      @language-control="languageControl"
+    />
 
-    <router-view to="/"> </router-view>
-    <Footer />
+    <router-view :Data="ApplicationLanguage == 'en' ? enData : arData" to="/">
+    </router-view>
+    <Footer
+      :FooterData="
+        ApplicationLanguage == 'en' ? enData.FooterData : arData.FooterData
+      "
+    />
   </div>
 </template>
 
@@ -18,10 +39,37 @@ import Navbar from "./view/components/General/Navbar.vue";
 import FullScreenNavbar from "./view/components/General/FullScreenNavbar.vue";
 import SignInUp from "./view/components/Sign/SignInUp.vue";
 
+import enData from "./localization/en.json";
+import arData from "./localization/ar.json";
+
+var ApplicationLanguage = "en";
+
 export default {
   components: { Navbar, Footer, FullScreenNavbar, SignInUp },
   name: "App",
+  data: function() {
+    return {
+      ApplicationLanguage,
+      enData,
+      arData,
+    };
+  },
+  mounted() {
+    if (localStorage.ApplicationLanguage) {
+      this.ApplicationLanguage = localStorage.ApplicationLanguage;
+    } else {
+      localStorage.setItem("ApplicationLanguage", "en");
+    }
+  },
   methods: {
+    languageControl: function() {
+      this.ApplicationLanguage == "en"
+        ? (this.ApplicationLanguage = "ar")
+        : (this.ApplicationLanguage = "en");
+      localStorage.setItem("ApplicationLanguage", this.ApplicationLanguage);
+
+      console.log(this.ApplicationLanguage);
+    },
     navbarAnimations: function(fromTo) {
       this.$emit("navbar-animations", fromTo);
     },
@@ -44,7 +92,7 @@ export default {
   --color-secondary-low: #f36e3181;
   --color-secondary-low-button: #f36e310e;
 
-  --color-third: #044c54af;
+  --color-third: #10a6b8;
 
   --color-other-1: #517a29ae;
   --color-other-2: #0c6069d7;

@@ -1,6 +1,9 @@
 <template>
   <span class="nav__link">
-    <a :class="{ active: this.$route.path == href }" :href="href"
+    <a
+      :style="`color:${textColor}; font-size:${fontSize};`"
+      :class="{ active: this.$route.path == href && isNavbar }"
+      :href="href"
       >{{ text }}
     </a>
   </span>
@@ -15,6 +18,10 @@ export default {
       type: String,
       default: " Nav Text Default",
     },
+    isNavbar: {
+      type: Boolean,
+      default: false,
+    },
     href: {
       type: String,
       default: "/",
@@ -22,6 +29,14 @@ export default {
     type: {
       type: String,
       default: " ",
+    },
+    textColor: {
+      type: String,
+      default: "red",
+    },
+    fontSize: {
+      type: String,
+      default: "50px",
     },
   },
 };
@@ -42,7 +57,7 @@ export default {
     transition: 0.4s;
   }
   a.active {
-    color: var(--color-primary);
+    color: var(--color-primary) !important;
     transition: 0.4s;
   }
 
