@@ -3,7 +3,7 @@
     <div class="wrapper">
       <div class="wrapper__relative">
         <div class="card">
-          <InfoCard />
+          <InfoCard :InfoCardData="DetailHeroData.InfoCardData" />
         </div>
       </div>
     </div>
@@ -50,6 +50,9 @@ import InfoCard from "./InfoCard.vue";
 export default {
   name: "DetailHero",
   components: { InfoCard, ImageView },
+  props: {
+    DetailHeroData: Object,
+  },
 };
 </script>
 
@@ -81,6 +84,26 @@ export default {
       top: 50%;
       right: 0;
       transform: translateY(-50%);
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .DetailHero {
+    .layout {
+      .item {
+      }
+    }
+    .wrapper {
+      width: 100%;
+      &__relative {
+      }
+      .card {
+        min-width: 280px;
+
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
     }
   }
 }

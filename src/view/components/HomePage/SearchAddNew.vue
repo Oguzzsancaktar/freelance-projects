@@ -39,7 +39,7 @@ export default {
   padding: 0 10px;
   text-align: start;
   // margin: 20px auto;
-  width: 25%;
+  width: 100%;
 
   p {
     font-size: 14px;

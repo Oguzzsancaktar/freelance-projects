@@ -5,6 +5,7 @@
       :key="index"
       :text="item.Text"
       :list="item.List"
+      :zIndex="index"
     />
     <SearchInput
       :text="HeroSearchData.SearchInputData.Text"

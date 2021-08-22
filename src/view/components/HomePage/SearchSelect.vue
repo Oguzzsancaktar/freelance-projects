@@ -19,7 +19,7 @@
           :class="{ expanded: visible }"
         ></div>
         <div :class="{ hidden: !visible, visible }">
-          <ul>
+          <ul :style="`z-index:${100 - zIndex}!important`">
             <li
               :class="{ current: item === value }"
               v-for="(item, index) in list"
@@ -71,6 +71,9 @@ export default {
     list: {
       type: Array,
     },
+    zIndex: {
+      type: Number,
+    },
   },
   data: function() {
     return {
@@ -119,8 +122,8 @@ export default {
     .selector {
       border: 1px solid transparent;
       background: transparent;
-      position: relative;
-      z-index: 1;
+      position: absolute;
+      width: 80%;
       .arrow {
         position: absolute;
         right: 10px;
@@ -155,6 +158,7 @@ export default {
       }
     }
     ul {
+      background: var(--background-white);
       width: 100%;
       list-style-type: none;
       padding: 0;
@@ -163,13 +167,13 @@ export default {
       border: 1px solid transparent;
       position: absolute;
       z-index: 1;
-      background: transparent;
       left: 0;
       top: 40px;
+      border-radius: 10px;
     }
     li {
       border: 1px solid var(--background-white);
-      width: 100%;
+      width: 20%;
       margin: 10px 0;
       border-radius: 50px;
       padding: 12px;
@@ -200,6 +204,9 @@ export default {
   .hero__search__select {
     .aselect {
       width: auto;
+      li {
+        width: 100%;
+      }
     }
   }
 }

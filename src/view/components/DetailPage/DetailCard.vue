@@ -1,31 +1,33 @@
 <template>
   <div class="card">
     <div class="card__layout">
-      <div class="card__image">
-        <div class="card__image__hover">
-          <Button
-            style="margin:5px"
-            background="transparent"
-            radius="0px"
-            type="icon"
-            iconType="details"
-            width="55px"
-            height="55px"
-            iconColor="var(--background-white)"
-            border="1px solid transparent"
-            margin="0 10px"
-            iconWidth="55px"
-            iconHeight="55px"
-            padding="0px"
+      <a href="/detail">
+        <div class="card__image">
+          <div class="card__image__hover">
+            <Button
+              style="margin:5px"
+              background="transparent"
+              radius="0px"
+              type="icon"
+              iconType="details"
+              width="55px"
+              height="55px"
+              iconColor="var(--background-white)"
+              border="1px solid transparent"
+              margin="0 10px"
+              iconWidth="55px"
+              iconHeight="55px"
+              padding="0px"
+            />
+          </div>
+          <ImageView
+            width="100%"
+            height="100%"
+            imageType="images"
+            imageName="cardImage-1.png"
           />
         </div>
-        <ImageView
-          width="100%"
-          height="100%"
-          imageType="images"
-          imageName="cardImage-1.png"
-        />
-      </div>
+      </a>
       <div class="card__info">
         <div class="info__layout">
           <div class="info__row">
@@ -34,7 +36,7 @@
                 color="var(--color-secondary)"
                 textColor="var(--color-text-general)"
                 width="70px"
-                text="Irak/Erbil"
+                :text="data.Location"
                 radius="10px"
                 type="together"
                 border="1px solid transparent"
@@ -55,7 +57,7 @@
                 textColor="var(--color-primary)"
                 width="70px"
                 background="var(--color-primary-low-button)"
-                text="Sale"
+                :text="data.Type"
                 radius="10px"
                 type="together"
                 border="1px solid var(--color-primary)"
@@ -90,17 +92,16 @@
 
           <div class="info__col">
             <h2 class="header">
-              Luxury Villa in Alice
+              {{ data.Header }}
             </h2>
 
-            <span class="subtitle"
-              >New Build Modern Istanbul Property with Sea View on Bagdat
-              Streetpremium
+            <span class="subtitle">
+              {{ data.Description }}
             </span>
           </div>
 
           <div class="info__row">
-            <h2 class="price">£ 1,150,000</h2>
+            <h2 class="price">{{ data.Price }}</h2>
             <div class="refferance">
               <ImageView
                 width="80%"
@@ -122,6 +123,9 @@ import ImageView from "../ImageView.vue";
 export default {
   name: "DetailCard",
   components: { ImageView, Button },
+  props: {
+    data: Object,
+  },
 };
 </script>
 
@@ -129,12 +133,13 @@ export default {
 .card {
   overflow: hidden;
   position: relative;
-  border-radius: 10px;
+  border-radius: 5px;
   // height: 425px;
-  width: 30%;
+  width: 100%;
+  margin: 0 20px;
   background: var(--background-white);
   min-width: 250px;
-  border: 1px solid var(--color-text-gray-light);
+  border: 1px solid var(--color-card-border);
   // max-width: 250px;
 
   &__layout {
@@ -146,10 +151,10 @@ export default {
 
     width: 100%;
     height: 180px;
-    border-radius: 10px;
+    border-radius: 5px;
 
     &__hover {
-      border-radius: 10px;
+      border-radius: 5px;
       border-bottom-left-radius: 0;
       border-bottom-right-radius: 0;
 
@@ -187,7 +192,7 @@ export default {
         width: 100%;
 
         .refferance {
-          border-left: 1px solid var(--color-text-gray-light);
+          border-left: 1px solid var(--color-card-border);
 
           width: 95px;
         }
@@ -210,24 +215,23 @@ export default {
         .row__item:first-child {
           padding: 20px;
         }
-        .row__item:last-child {
-          width: 100%;
-        }
       }
       .info__row:first-child {
-        border-bottom: 1px solid var(--color-text-gray-light);
+        border-bottom: 1px solid var(--color-card-border);
       }
       .info__row:last-child {
-        border-top: 1px solid var(--color-text-gray-light);
+        border-top: 1px solid var(--color-card-border);
       }
 
       .info__col {
         display: flex;
         flex-direction: column;
         padding: 0 20px;
+        max-height: 100px;
+        overflow: hidden;
         .header {
           color: var(--color-text-black);
-          font-size: 22px;
+          font-size: 18px;
           font-family: var(--font-semibold);
           margin-bottom: 10px;
         }
@@ -235,6 +239,9 @@ export default {
           color: var(--color-text-gray-dark);
           font-size: 15px;
           font-family: var(--font-semilight);
+          line-height: 16px;
+          max-height: 50px;
+          overflow: hidden;
         }
       }
     }
@@ -243,9 +250,9 @@ export default {
 
 @media (max-width: 1300px) {
   .card {
-    width: 47%;
+    width: 100%;
     position: relative;
-    border-radius: 10px;
+    border-radius: 5px;
 
     background: var(--background-white);
     margin: 15px 0;
@@ -280,45 +287,45 @@ export default {
   }
 }
 
-@media (max-width: 1150px) {
-  .card {
-    position: relative;
-    border-radius: 10px;
-    // height: 460px;
-    width: 49%;
-    background: var(--background-white);
-    margin: 15px 0;
+// @media (max-width: 1150px) {
+//   .card {
+//     position: relative;
+//     border-radius: 5px;
+//     // height: 460px;
+//     width: 49%;
+//     background: var(--background-white);
+//     margin: 15px 0;
 
-    &__layout {
-    }
-    &__image {
-      &__hover {
-      }
-      &__hover:hover {
-      }
-    }
-    &__info {
-      height: 230px;
-      .info__layout {
-        .info__row {
-          .price {
-          }
-          .row__item {
-            .text {
-            }
-          }
-        }
+//     &__layout {
+//     }
+//     &__image {
+//       &__hover {
+//       }
+//       &__hover:hover {
+//       }
+//     }
+//     &__info {
+//       height: 230px;
+//       .info__layout {
+//         .info__row {
+//           .price {
+//           }
+//           .row__item {
+//             .text {
+//             }
+//           }
+//         }
 
-        .info__col {
-          .header {
-          }
-          .subtitle {
-          }
-        }
-      }
-    }
-  }
-}
+//         .info__col {
+//           .header {
+//           }
+//           .subtitle {
+//           }
+//         }
+//       }
+//     }
+//   }
+// }
 
 @media (max-width: 800px) {
   .card {

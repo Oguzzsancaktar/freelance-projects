@@ -126,6 +126,30 @@
       "
       v-if="'together' == type"
     >
+      <span :style="`width:${iconAreaW}`" v-if="'livingRoom' == iconType">
+        <Icon
+          :iconColor="iconColor"
+          iconName="livingRoom"
+          width="20px"
+          height="20px"
+          :iconWidth="iconWidth"
+          :iconHeight="iconHeight"
+          viewBox="0 -26 512.00046 512"
+        />
+      </span>
+
+      <span :style="`width:${iconAreaW}`" v-if="'cube' == iconType">
+        <Icon
+          :iconColor="iconColor"
+          iconName="cube"
+          width="20px"
+          height="20px"
+          :iconWidth="iconWidth"
+          :iconHeight="iconHeight"
+          viewBox="0 0 340.8 389.76"
+        />
+      </span>
+
       <span :style="`width:${iconAreaW}`" v-if="'nearLocation' == iconType">
         <Icon
           :iconColor="iconColor"

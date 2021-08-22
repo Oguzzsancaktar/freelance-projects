@@ -4,80 +4,84 @@
       <div class="layout">
         <div class="area">
           <div class="section">
-            <h3>ASDFGASDF DSF ASDF ASDF ASDFAÎß</h3>
+            <h3>{{ DetailInfoData.Header }}</h3>
           </div>
           <div class="section">
             <Button
               color="var(--color-secondary)"
               textColor="var(--color-text-general)"
               width="120px"
-              text="İsanbul/Sarıyer"
+              :text="DetailInfoData.Feature1"
               radius="10px"
               type="together"
               border="1px solid transparent"
               iconType="maps"
               height="35px"
-              iconColor="var(--color-secondary)"
+              iconColor="var(--color-primary)"
               padding="0 0px"
               margin="0"
               iconWidth="20px"
-              iconHeight="16px"
+              iconHeight="26px"
               family="var(--font-medium)"
               fontSize="14px"
+              iconAreaW="auto"
             />
             <Button
               color="var(--color-secondary)"
               textColor="var(--color-text-general)"
               width="100px"
-              text="For Sale"
+              :text="DetailInfoData.Feature2"
               radius="10px"
               type="together"
               border="1px solid transparent"
-              iconType="maps"
+              iconType="rentSale"
               height="35px"
-              iconColor="var(--color-secondary)"
+              iconColor="var(--color-primary)"
               padding="0 10px"
               margin="0"
-              iconWidth="20px"
-              iconHeight="16px"
+              iconWidth="25px"
+              iconHeight="26px"
               family="var(--font-medium)"
               fontSize="14px"
+              iconAreaW="auto"
             />
             <Button
-              color="var(--color-secondary)"
+              color="var(--color-primary)"
               textColor="var(--color-text-general)"
               width="100px"
-              text="200 m2"
+              :text="DetailInfoData.Feature3"
               radius="10px"
               type="together"
               border="1px solid transparent"
-              iconType="maps"
+              iconType="cube"
               height="35px"
-              iconColor="var(--color-secondary)"
+              iconColor="var(--color-primary)"
               padding="0 10px"
               margin="0"
               iconWidth="20px"
-              iconHeight="16px"
+              iconHeight="26px"
               family="var(--font-medium)"
               fontSize="14px"
+              iconAreaW="auto"
             />
             <Button
-              color="var(--color-secondary)"
+              color="var(--color-primary)"
               textColor="var(--color-text-general)"
               width="80px"
-              text="3 + 1"
+              :text="DetailInfoData.Feature4"
               radius="10px"
               type="together"
               border="1px solid transparent"
-              iconType="maps"
+              iconType="livingRoom"
               height="35px"
-              iconColor="var(--color-secondary)"
+              iconColor="var(--color-primary)"
               padding="0 10px"
               margin="0"
               iconWidth="20px"
-              iconHeight="16px"
+              iconHeight="26px"
               family="var(--font-medium)"
               fontSize="14px"
+              iconAreaW="auto"
             />
           </div>
         </div>
@@ -86,18 +90,17 @@
             class="btn"
             family="var(--font-medium)"
             color="dark"
-            textColor="var(--color-general-dark)"
-            text="75.550.000 $"
+            textColor="var(--color-primary)"
+            :text="DetailInfoData.Price"
             type="text"
-            iconType="login"
-            iconColor="var(--color-primary)"
-            background="var(--background-gray-light)"
+            background="var(--color-primary-low-low)"
             radius="30px"
             width="200px"
             padding="0 20px"
             iconWidth="22px"
             iconHeight="21px"
             fontSize="25px"
+            justify="center"
           />
         </div>
       </div>
@@ -110,6 +113,9 @@ import Button from "../Button.vue";
 export default {
   name: "DetailInfo",
   components: { Button },
+  props: {
+    DetailInfoData: Object,
+  },
 };
 </script>
 
@@ -137,6 +143,53 @@ export default {
             align-items: center;
             height: 100%;
             padding-bottom: 20px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .DetailInfo {
+    margin: 20px 0;
+
+    .wrapper {
+      .layout {
+        flex-direction: column;
+        .area {
+          margin: 10px 0;
+
+          .section {
+            display: flex;
+            justify-content: space-between;
+            h3 {
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .DetailInfo {
+    margin: 20px 0;
+
+    .wrapper {
+      .layout {
+        flex-direction: column;
+        .area {
+          margin: 10px 0;
+
+          .section {
+            flex-direction: column;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            h3 {
+            }
           }
         }
       }

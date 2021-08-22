@@ -11,8 +11,8 @@
 
       <div class="area">
         <div class="texts">
-          <h2>Josef Santana</h2>
-          <p>Authorized Person</p>
+          <h2>{{ InfoCardData.Text }}</h2>
+          <p>{{ InfoCardData.Type }}</p>
         </div>
 
         <div class="buttons">
@@ -21,36 +21,38 @@
             family="var(--font-medium)"
             color="dark"
             textColor="var(--color-general-dark)"
-            text="Login / Sign up"
+            :text="InfoCardData.Phone"
             type="together"
             iconType="phone"
             iconColor="var(--color-primary)"
             background="transparent"
             radius="30px"
             width="200px"
-            padding="0 20px"
+            padding="0 10px"
             iconWidth="22px"
             iconHeight="21px"
             fontSize="15px"
             border="2px solid var(--background-general)"
+            iconAreaW="auto"
           />
           <Button
             class="btn"
             family="var(--font-medium)"
             color="dark"
             textColor="var(--color-general-dark)"
-            text="Login / Sign up"
+            :text="InfoCardData.Message"
             type="together"
             iconType="envelope"
             iconColor="var(--color-primary)"
             background="transparent"
             radius="30px"
             width="200px"
-            padding="0 20px"
+            padding="0 30px"
             iconWidth="22px"
             iconHeight="21px"
             fontSize="15px"
             border="2px solid var(--background-general)"
+            iconAreaW="auto"
           />
         </div>
       </div>
@@ -60,7 +62,7 @@
           family="var(--font-medium)"
           color="dark"
           textColor="var(--color-general-dark)"
-          text="Other postings of the company"
+          :text="InfoCardData.Other"
           type="together"
           iconType="house"
           iconColor="var(--color-primary)"
@@ -71,6 +73,7 @@
           iconWidth="22px"
           iconHeight="21px"
           fontSize="12px"
+          iconAreaW="auto"
         />
       </div>
     </div>
@@ -81,7 +84,11 @@
 import Button from "../Button.vue";
 import ImageView from "../ImageView.vue";
 export default {
+  name: "InfoCard",
   components: { Button, ImageView },
+  props: {
+    InfoCardData: Object,
+  },
 };
 </script>
 
@@ -131,6 +138,52 @@ export default {
     .area:last-child {
       height: 50px;
       border-top: 1px solid var(--background-general);
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .InfoCard {
+    width: 100%;
+    min-width: 280px;
+    .layout {
+      height: 100%;
+      padding-bottom: 20px 25px;
+      display: flex;
+      flex-direction: column;
+      .area {
+        display: flex;
+        flex-direction: column;
+        height: calc(100% - 150px);
+        align-items: center;
+        justify-content: space-between;
+        padding: 15px 30px;
+
+        .texts {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: space-between;
+        }
+        .buttons {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: space-between;
+          .btn {
+            margin: 3px 0;
+          }
+        }
+      }
+
+      .area:first-child {
+        height: 100px;
+        border-bottom: 1px solid var(--background-general);
+      }
+      .area:last-child {
+        height: 50px;
+        border-top: 1px solid var(--background-general);
+      }
     }
   }
 }

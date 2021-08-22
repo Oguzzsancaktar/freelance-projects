@@ -5,7 +5,7 @@
         <div class="area">
           <div class="heading">
             <h3>
-              asdfasdfas
+              {{ DetailInternalFeaturesData.Header1 }}
             </h3>
           </div>
 
@@ -18,7 +18,7 @@
               <Button
                 family="var(--font-medium)"
                 textColor="var(--color-text-gray)"
-                iconWidth="17px"
+                iconWidth="40px"
                 iconHeight="17px"
                 iconColor="var(--color-primary)"
                 background="transparent"
@@ -32,7 +32,7 @@
                 fontSize="15px"
                 direction="start"
                 padding="0"
-                iconAreaW="30px"
+                iconAreaW="auto"
               />
             </li>
           </ul>
@@ -41,7 +41,7 @@
         <div class="area">
           <div class="heading">
             <h3>
-              asdfasdfas
+              {{ DetailInternalFeaturesData.Header2 }}
             </h3>
           </div>
 
@@ -54,7 +54,7 @@
               <Button
                 family="var(--font-medium)"
                 textColor="var(--color-text-gray)"
-                iconWidth="17px"
+                iconWidth="40px"
                 iconHeight="17px"
                 iconColor="var(--color-primary)"
                 background="transparent"
@@ -68,7 +68,7 @@
                 fontSize="15px"
                 direction="start"
                 padding="0"
-                iconAreaW="30px"
+                iconAreaW="auto"
               />
             </li>
           </ul>
@@ -77,7 +77,7 @@
         <div class="area">
           <div class="heading">
             <h3>
-              asdfasdfas
+              {{ DetailInternalFeaturesData.Header3 }}
             </h3>
           </div>
 
@@ -90,7 +90,7 @@
               <Button
                 family="var(--font-medium)"
                 textColor="var(--color-text-gray)"
-                iconWidth="17px"
+                iconWidth="40px"
                 iconHeight="17px"
                 iconColor="var(--color-primary)"
                 background="transparent"
@@ -104,7 +104,7 @@
                 fontSize="15px"
                 direction="start"
                 padding="0"
-                iconAreaW="30px"
+                iconAreaW="auto"
               />
             </li>
           </ul>
@@ -119,22 +119,12 @@ import Button from "../Button.vue";
 export default {
   components: { Button },
   name: "DetailInternalFeatures",
+  props: {
+    DetailInternalFeaturesData: Object,
+  },
   data: function() {
     return {
-      featuresList: [
-        "İlan No",
-        "Son Güncelleme Tarihi",
-        "İlan Durumu",
-        "Konut Şekli",
-        "Brüt / Metre2",
-        "Bulunduğu Kat",
-        "Isınma Tipi",
-        "Kat Sayısı",
-        "Brüt / Metre2",
-        "Bulunduğu Kat",
-        "Isınma Tipi",
-        "Kat Sayısı",
-      ],
+      featuresList: this.$props.DetailInternalFeaturesData.List,
     };
   },
 };
@@ -152,8 +142,9 @@ export default {
 
       width: 100%;
       display: flex;
+      justify-content: space-between;
       .area {
-        width: 100%;
+        width: 31%;
 
         .heading {
           h3 {
@@ -167,6 +158,63 @@ export default {
 
         .list {
           list-style: none;
+
+          &__item {
+            // padding: 0 20px;
+          }
+          &__item:nth-child(even) {
+            background: var(--background-white);
+          }
+          &__item:nth-child(odd) {
+            background: var(--background-general);
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .DetailInternalFeatures {
+    margin: 20px 0;
+
+    .wrapper {
+      .layout {
+        padding: 35px 45px;
+
+        background: var(--background-white);
+
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        .area {
+          width: 100%;
+          margin: 20px 0;
+
+          .heading {
+            h3 {
+              display: flex;
+              align-items: center;
+              height: 100%;
+              border-bottom: 1px solid var(--background-general);
+              padding-bottom: 20px;
+            }
+          }
+
+          .list {
+            list-style: none;
+
+            &__item {
+              // padding: 0 20px;
+            }
+            &__item:nth-child(even) {
+              background: var(--background-white);
+            }
+            &__item:nth-child(odd) {
+              background: var(--background-general);
+            }
+          }
         }
       }
     }

@@ -86,6 +86,8 @@ export default {
 :root {
   --color-primary: #0091a0;
   --color-primary-low: #0090a0ad;
+  --color-primary-low-low: #0090a04f;
+
   --color-primary-low-button: #0090a00a;
 
   --color-secondary: #f37031;
@@ -108,6 +110,8 @@ export default {
   --color-text-gray-dark: #525252;
   --color-text-black: #393939;
 
+  --color-text-subpage: #302f2f;
+
   --color-card-id: #656565;
 
   --background-white: #fff;
@@ -115,6 +119,8 @@ export default {
   --background-general: #f3f3f3;
 
   --box-shadow-color: #1b1b1bcf;
+
+  --color-card-border: #dedede;
 
   --font-black: "Branding-Black";
   --font-black-italic: "Branding-BlackItalic";
@@ -251,6 +257,7 @@ export default {
   min-height: calc(100vh - 285px);
   padding-top: 150px;
   background: var(--background-general);
+  color: var(--color-text-subpage);
 }
 
 .wrapper {

@@ -1,4 +1,135 @@
 {
+  "AdvertDetailPage": {
+    "DetailHeroData": {
+      "InfoCardData": {
+        "Text": "Josef Santana",
+        "Type": "Authorized Person",
+        "Phone": "Show Phone Number",
+        "Message": "Send Message",
+        "Other": " Other postings of the company"
+      }
+    },
+    "DetailTopData": {
+      "Header": "Sakarya For Sale, Serdivan For Sale, Esentepe For Sale, Villa For Sale ",
+      "Btn1": "Gigant Logo",
+      "Btn2": "Share",
+      "Btn3": "Favorites"
+    },
+    "DetailInfoData": {
+      "Header": "SERDİVAN ESENTEPEDE SATILIK GÖL MANZARALI VİLLA",
+      "Feature1": "Istanbul/Sarıyer ",
+      "Feature2": "For Sale",
+      "Feature3": "200 m2",
+      "Feature4": "3 + 1",
+      "Price": "£ 75,550,000"
+    },
+
+    "DetailDescriptionData": {
+      "Header": "Ad Description",
+      "Description1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam finibus malesuada rutrum. Nunc sollicitudin ipsum ac nunc blandit blandit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque mattis egestas neque vitae eleifend. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque pulvinar lectus tellus. Duis pretium volutpat tellus, quis porttitor ante facilisis ut. Phasellus velit arcu, molestie non est quis, euismod elementum dolor.",
+      "Description2": "Quisque ullamcorper, enim feugiat porttitor dignissim, sapien eros auctor ex, non elementum dolor nisi ac elit. Aliquam consequat at magna quis feugiat. Nullam lectus ligula, sollicitudin vitae lacinia in, eleifend id justo. Pellentesque risus tortor, pharetra a erat ac, vehicula pretium orci. Quisque dignissim feugiat massa, eleifend eleifend libero consectetur id. Integer placerat eget dolor vel posuere. Vivamus lobortis arcu eget magna lobortis dapibus. Proin molestie enim non odio dapibus iaculis. Sed nec risus nisl. Proin convallis lorem sit amet dolor volutpat, non suscipit elit sodales. Nulla facilisi."
+    },
+
+    "DetailFeaturesData": {
+      "Header": "Ad Information",
+
+      "List": [
+        {
+          "key": "İlan No",
+          "value": "123456789"
+        },
+
+        {
+          "key": "Son Güncelleme Tarihi",
+          "value": "Bugün"
+        },
+        {
+          "key": "İlan Durumu",
+          "value": "Satılık"
+        },
+
+        {
+          "key": "Konut Şekli",
+          "value": "Daire"
+        },
+        {
+          "key": "Brüt / Metre2",
+          "value": "220 M2"
+        },
+
+        {
+          "key": "Bulunduğu Kat",
+          "value": "3"
+        },
+        {
+          "key": "Isınma Tipi",
+          "value": "Kombi"
+        },
+
+        {
+          "key": "Kat Sayısı",
+          "value": "13"
+        }
+      ]
+    },
+    "DetailInternalFeaturesData": {
+      "Header1": "Ad Information1",
+      "Header2": "Ad Information2",
+      "Header3": "Ad Information3",
+
+      "List": [
+        "İlan No",
+        "Son Güncelleme Tarihi",
+        "İlan Durumu",
+        "Konut Şekli",
+        "Brüt / Metre2",
+        "Bulunduğu Kat",
+        "Isınma Tipi",
+        "Kat Sayısı",
+        "Brüt / Metre2",
+        "Bulunduğu Kat",
+        "Isınma Tipi",
+        "Kat Sayısı"
+      ]
+    },
+    "DetailCardsData": {
+      "CardData": [
+        {
+          "Header": "Luxury Villa In Alice",
+
+          "Location": "Irak/Erbil",
+          "Type": "Sale",
+          "Description": "New Build Modern Istanbul Property with Sea View on Bagdat Streetpremium three bedroom apartment offers dual aspect south eastern views towards Canary Wharf and the",
+          "Price": "£ 1,150,000"
+        },
+        {
+          "Header": "Luxury Villa In Alice",
+
+          "Location": "Irak/Erbil",
+          "Type": "Sale",
+          "Description": "New Build Modern Istanbul Property with Sea View on Bagdat Streetpremium three bedroom apartment offers dual aspect south eastern views towards Canary Wharf and the",
+          "Price": "£ 1,150,000"
+        },
+
+        {
+          "Header": "Luxury Villa In Alice",
+
+          "Location": "Irak/Erbil",
+          "Type": "Sale",
+          "Description": "New Build Modern Istanbul Property with Sea View on Bagdat Streetpremium three bedroom apartment offers dual aspect south eastern views towards Canary Wharf and the",
+          "Price": "£ 1,150,000"
+        },
+        {
+          "Header": "Luxury Villa In Alice",
+          "Location": "Irak/Erbil",
+          "Type": "Sale",
+          "Description": "New Build Modern Istanbul Property with Sea View on Bagdat Streetpremium three bedroom apartment offers dual aspect south eastern views towards Canary Wharf and the",
+          "Price": "£ 1,150,000"
+        }
+      ]
+    }
+  },
+
   "HomePage": {
     "HeroSliderData": {
       "HeroSliderInfos": [
@@ -11,7 +142,7 @@
         },
         {
           "Title": "New Project2",
-          "BeforeText": "Find Your Next Perfect2",
+          "BeforeText": "Find Your Next Perfect255",
           "PrimaryText": " Place2",
           "AfterText": "to Live2",
           "Image": "heroBackground-1.png"

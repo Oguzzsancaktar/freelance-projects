@@ -5,7 +5,7 @@
         <div class="area">
           <div class="heading">
             <h3>
-              Ad Information
+              {{ DetailFeaturesData.Header }}
             </h3>
           </div>
         </div>
@@ -46,45 +46,11 @@ export default {
   name: "DetailFeatures",
   data: function() {
     return {
-      keyValArr: [
-        {
-          key: "İlan No",
-          value: "123456789",
-        },
-
-        {
-          key: "Son Güncelleme Tarihi",
-          value: "Bugün",
-        },
-        {
-          key: "İlan Durumu",
-          value: "Satılık",
-        },
-
-        {
-          key: "Konut Şekli",
-          value: "Daire",
-        },
-        {
-          key: "Brüt / Metre2",
-          value: "220 M2",
-        },
-
-        {
-          key: "Bulunduğu Kat",
-          value: "3",
-        },
-        {
-          key: "Isınma Tipi",
-          value: "Kombi",
-        },
-
-        {
-          key: "Kat Sayısı",
-          value: "13",
-        },
-      ],
+      keyValArr: this.$props.DetailFeaturesData.List,
     };
+  },
+  props: {
+    DetailFeaturesData: Object,
   },
 };
 </script>
@@ -92,6 +58,7 @@ export default {
 <style lang="scss" scoped>
 .DetailFeatures {
   margin: 20px 0;
+  color: color(--color-text-subpage);
 
   .wrapper {
     .layout {
@@ -135,8 +102,12 @@ export default {
               justify-content: space-between;
               align-items: center;
               .key {
+                font-size: 15px;
+                font-family: var(--font-semilight);
               }
               .value {
+                font-size: 16px;
+                font-family: var(--font-semibold);
               }
             }
           }
@@ -152,6 +123,82 @@ export default {
         }
         .list:last-child {
           margin-left: 15px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .DetailFeatures {
+    margin: 20px 0;
+    color: color(--color-text-subpage);
+
+    .wrapper {
+      .layout {
+        padding: 35px 45px;
+
+        background: var(--background-white);
+
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+
+        .area {
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+
+          .heading {
+            width: 100%;
+            h3 {
+              display: flex;
+              align-items: center;
+              height: 100%;
+              border-bottom: 2px solid var(--background-general);
+              padding-bottom: 20px;
+              width: 100%;
+            }
+          }
+
+          .list {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            list-style: none;
+            padding: 0px 0;
+
+            &__item {
+              width: 100%;
+              padding: 20px;
+              .content {
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                .key {
+                  font-size: 15px;
+                  font-family: var(--font-semilight);
+                }
+                .value {
+                  font-size: 16px;
+                  font-family: var(--font-semibold);
+                }
+              }
+            }
+            &__item:nth-child(even) {
+              background: var(--background-white);
+            }
+            &__item:nth-child(odd) {
+              background: var(--background-general);
+            }
+          }
+          .list:first-child {
+            margin-right: 0;
+          }
+          .list:last-child {
+            margin-left: 0;
+          }
         }
       }
     }

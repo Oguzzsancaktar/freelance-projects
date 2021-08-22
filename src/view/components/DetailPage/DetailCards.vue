@@ -5,20 +5,12 @@
         <div class="heading"></div>
 
         <ul class="list">
-          <li class="item">
-            <DetailCard />
-          </li>
-
-          <li class="item">
-            <DetailCard />
-          </li>
-
-          <li class="item">
-            <DetailCard />
-          </li>
-
-          <li class="item">
-            <DetailCard />
+          <li
+            v-for="(item, index) in DetailCardsData.CardData"
+            :key="index"
+            class="item"
+          >
+            <DetailCard :data="item" />
           </li>
         </ul>
       </div>
@@ -31,6 +23,9 @@ import DetailCard from "./DetailCard.vue";
 export default {
   components: { DetailCard },
   name: "DetailCards",
+  props: {
+    DetailCardsData: Object,
+  },
 };
 </script>
 
@@ -82,6 +77,63 @@ export default {
           flex-wrap: wrap;
           .item {
             // width: 33%;
+            min-width: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1100px) {
+  .DetailCards {
+    .wrapper {
+      .layout {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+
+        .heading {
+        }
+
+        .list {
+          display: flex;
+          list-style: none;
+          width: 100%;
+          flex-wrap: wrap;
+          .item {
+            width: 49%;
+            min-width: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 800px) {
+  .DetailCards {
+    .wrapper {
+      .layout {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+
+        .heading {
+        }
+
+        .list {
+          display: flex;
+          list-style: none;
+          width: 100%;
+          flex-wrap: wrap;
+          .item {
+            width: 100%;
             min-width: 300px;
             display: flex;
             align-items: center;

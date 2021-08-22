@@ -1,13 +1,21 @@
 <template>
   <div id="AdvertDetailPage">
     <div class="subpage-content">
-      <DetailHero />
-      <DetailTop />
-      <DetailInfo />
-      <DetailDescription />
-      <DetailFeatures />
-      <DetailInternalFeatures />
-      <DetailCards />
+      <DetailHero :DetailHeroData="Data.AdvertDetailPage.DetailHeroData" />
+      <DetailTop :DetailTopData="Data.AdvertDetailPage.DetailTopData" />
+      <DetailInfo :DetailInfoData="Data.AdvertDetailPage.DetailInfoData" />
+      <DetailDescription
+        :DetailDescriptionData="Data.AdvertDetailPage.DetailDescriptionData"
+      />
+      <DetailFeatures
+        :DetailFeaturesData="Data.AdvertDetailPage.DetailFeaturesData"
+      />
+      <DetailInternalFeatures
+        :DetailInternalFeaturesData="
+          Data.AdvertDetailPage.DetailInternalFeaturesData
+        "
+      />
+      <DetailCards :DetailCardsData="Data.AdvertDetailPage.DetailCardsData" />
     </div>
   </div>
 </template>
@@ -31,6 +39,9 @@ export default {
     DetailInternalFeatures,
     DetailCards,
   },
+  props: {
+    Data: Object,
+  },
   name: "AdvertDetailPage",
 };
 </script>
@@ -38,6 +49,7 @@ export default {
 <style lang="scss">
 #AdvertDetailPage {
   .subpage-content {
+    color: var(--color-text-subpage);
   }
 }
 </style>

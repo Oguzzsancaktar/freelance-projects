@@ -3,20 +3,14 @@
     <div class="wrapper">
       <div class="layout">
         <div class="heading">
-          <h3>hEADİNG</h3>
+          <h3>{{ DetailDescriptionData.Header }}</h3>
         </div>
         <div class="description">
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta
-            molestiae id deserunt modi? Fugit exercitationem in, nam ipsam
-            tempora ipsum, explicabo tempore, dolor quos ab molestiae quo error
-            recusandae minima.
+            {{ DetailDescriptionData.Description1 }}
           </p>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta
-            molestiae id deserunt modi? Fugit exercitationem in, nam ipsam
-            tempora ipsum, explicabo tempore, dolor quos ab molestiae quo error
-            recusandae minima.
+            {{ DetailDescriptionData.Description2 }}
           </p>
         </div>
       </div>
@@ -27,6 +21,9 @@
 <script>
 export default {
   name: "DetailDescription",
+  props: {
+    DetailDescriptionData: Object,
+  },
 };
 </script>
 
@@ -50,12 +47,16 @@ export default {
           height: 100%;
           border-bottom: 1px solid var(--background-general);
           padding-bottom: 20px;
+          font-size: 17px;
+          font-family: var(--font-semibold);
         }
       }
 
       .description {
         padding: 15px 0;
         p {
+          font-size: 15px;
+          font-family: var(--font-semilight);
           margin: 10px 0;
         }
       }
