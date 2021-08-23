@@ -12,8 +12,10 @@
         />
       </div>
       <div class="section">
-        <b>{{ FooterData.Borsa }}</b> {{ FooterData.All }}
-        {{ FooterData.Rights }} {{ FooterData.Reserved }}
+        <span class="reserved">
+          <b>{{ FooterData.Borsa }}</b> {{ FooterData.All }}
+          {{ FooterData.Rights }} {{ FooterData.Reserved }}
+        </span>
       </div>
     </div>
     <div v-if="type == 'normal'" class="footer-item">
@@ -205,6 +207,9 @@ export default {
     }
     .section {
       width: 100%;
+      .reserved {
+        cursor: default;
+      }
       //   height: 100%;
 
       color: var(--background-white);
@@ -221,6 +226,11 @@ export default {
           margin: 3px 0;
           font-size: 14px;
           font-family: var(--font-light);
+          cursor: pointer;
+        }
+        &__item:hover {
+          color: var(--color-secondary);
+          font-family: var(--font-semibold);
         }
       }
     }

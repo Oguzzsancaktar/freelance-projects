@@ -2,7 +2,10 @@
   <span class="nav__link">
     <a
       :style="`color:${textColor}; font-size:${fontSize};`"
-      :class="{ active: this.$route.path == href && isNavbar }"
+      :class="[
+        { active: this.$route.path == href && isNavbar },
+        `${hoverClass}`,
+      ]"
       :href="href"
       >{{ text }}
     </a>
@@ -14,6 +17,9 @@ export default {
   name: "Navlink",
 
   props: {
+    hoverClass: {
+      type: String,
+    },
     text: {
       type: String,
       default: " Nav Text Default",
@@ -56,6 +62,7 @@ export default {
     color: var(--color-primary);
     transition: 0.4s;
   }
+
   a.active {
     color: var(--color-primary) !important;
     transition: 0.4s;

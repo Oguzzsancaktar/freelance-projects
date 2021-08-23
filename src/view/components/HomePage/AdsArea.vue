@@ -42,6 +42,7 @@
                 fontSize="14px"
                 family="var(--font-semibold)"
                 textColor="white"
+                hoverClass="hover-secondary-dark"
               />
             </div>
           </div>

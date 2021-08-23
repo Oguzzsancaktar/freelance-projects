@@ -9,7 +9,7 @@
             textColor="var(--color-general-dark)"
             text="İlan Bilgileri"
             type="together"
-            iconType="login"
+            iconType="edit"
             iconColor="var(--color-primary)"
             radius="30px"
             width="170px"
@@ -17,6 +17,7 @@
             iconWidth="22px"
             iconHeight="21px"
             fontSize="15px"
+            iconAreaW="auto"
           />
         </div>
         <div class="item">
@@ -26,7 +27,7 @@
             textColor="var(--color-general-dark)"
             text="Ön izleme"
             type="together"
-            iconType="login"
+            iconType="preview"
             iconColor="var(--color-primary)"
             radius="30px"
             width="170px"
@@ -34,6 +35,7 @@
             iconWidth="22px"
             iconHeight="21px"
             fontSize="15px"
+            iconAreaW="auto"
           />
         </div>
 
@@ -44,14 +46,15 @@
             textColor="var(--color-general-dark)"
             text="İlan Öne Çıkar"
             type="together"
-            iconType="login"
-            iconColor="var(--color-primary)"
+            iconType="boost"
+            iconColor="var(--color-secondary)"
             radius="30px"
             width="170px"
             padding="0 20px"
             iconWidth="22px"
             iconHeight="21px"
             fontSize="15px"
+            iconAreaW="auto"
           />
         </div>
 

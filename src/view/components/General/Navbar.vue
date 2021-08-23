@@ -23,6 +23,7 @@
                 iconWidth="30px"
                 iconHeight="26px"
                 fontSize="15px"
+                hoverClass="hover-secondary"
               />
               <a href="/add">
                 <Button
@@ -40,6 +41,7 @@
                   width="155px"
                   fontSize="15px"
                   iconAreaW="auto"
+                  hoverClass="hover-primary"
                 />
               </a>
             </div>
@@ -53,6 +55,7 @@
                 :text="item.text"
                 :href="item.href"
                 :isNavbar="true"
+                hoverClass="nav-hover"
               />
             </div>
           </div>
@@ -73,6 +76,7 @@
             iconHeight="26px"
             fontSize="15px"
             margin="0 10px"
+            hoverClass="hover-secondary"
           />
           <NavbarHamburger @navbar-animations="navbarAnimations" />
         </div>
@@ -96,6 +100,7 @@
                 iconHeight="21px"
                 fontSize="15px"
                 iconAreaW="auto"
+                hoverClass="hover-primary"
               />
             </div>
             <div @click="languageControl" class="language-control">
@@ -109,6 +114,7 @@
                 radius="30px"
                 type="text"
                 width="60px"
+                hoverClass="hover-primary"
               />
             </div>
           </div>

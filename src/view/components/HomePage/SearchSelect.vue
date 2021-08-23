@@ -95,6 +95,8 @@ export default {
 <style lang="scss" scoped>
 .hero__search__select {
   cursor: pointer;
+  position: relative;
+  width: 100%;
 
   padding: 0 15px;
   h1 {
@@ -119,6 +121,8 @@ export default {
     }
     width: 140px;
     margin: 20px auto;
+    margin-top: -10px;
+
     .selector {
       border: 1px solid transparent;
       background: transparent;
@@ -173,7 +177,7 @@ export default {
     }
     li {
       border: 1px solid var(--background-white);
-      width: 20%;
+      width: 100%;
       margin: 10px 0;
       border-radius: 50px;
       padding: 12px;
@@ -204,6 +208,7 @@ export default {
   .hero__search__select {
     .aselect {
       width: auto;
+      margin: 45px auto;
       li {
         width: 100%;
       }

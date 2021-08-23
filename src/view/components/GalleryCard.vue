@@ -54,6 +54,7 @@
                 iconWidth="19px"
                 iconHeight="18px"
                 iconAreaW="auto"
+                hoverClass="hover-primary"
               />
               <Button
                 color="var(--color-primary)"
@@ -74,6 +75,7 @@
                 family="var(--font-medium)"
                 fontSize="14px"
                 iconAreaW="auto"
+                hoverClass="hover-secondary"
               />
             </div>
           </div>

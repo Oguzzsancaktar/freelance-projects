@@ -1,6 +1,6 @@
 <template>
   <button
-    :class="['default-button', `text-color-${color}`]"
+    :class="['default-button', `text-color-${color}`, `${hoverClass}`]"
     :style="
       `width:${width} ;padding:${padding} ; height:${height}; background:${background}; border-radius:${radius} ; border:${border} `
     "
@@ -104,7 +104,6 @@
           :iconHeight="iconHeight"
         />
       </span>
-
       <span :style="`width:${iconAreaW} `" v-if="'plus' == iconType">
         <Icon
           iconName="plus"
@@ -135,6 +134,42 @@
           :iconWidth="iconWidth"
           :iconHeight="iconHeight"
           viewBox="0 -26 512.00046 512"
+        />
+      </span>
+
+      <span :style="[`width:${iconAreaW}`]" v-if="'edit' == iconType">
+        <Icon
+          :iconColor="iconColor"
+          iconName="edit"
+          width="20px"
+          height="20px"
+          :iconWidth="iconWidth"
+          :iconHeight="iconHeight"
+          viewBox="-31.933 158.066 477.873 477.867"
+        />
+      </span>
+
+      <span :style="[`width:${iconAreaW}`]" v-if="'preview' == iconType">
+        <Icon
+          :iconColor="iconColor"
+          iconName="preview"
+          width="20px"
+          height="20px"
+          :iconWidth="iconWidth"
+          :iconHeight="iconHeight"
+          viewBox="0 0 384.001 225"
+        />
+      </span>
+
+      <span :style="[`width:${iconAreaW}`]" v-if="'boost' == iconType">
+        <Icon
+          :iconColor="iconColor"
+          iconName="boost"
+          width="20px"
+          height="20px"
+          :iconWidth="iconWidth"
+          :iconHeight="iconHeight"
+          viewBox="0 0 380.33 370.226"
         />
       </span>
 
@@ -532,6 +567,10 @@ export default {
       type: String,
       default: " ",
     },
+    hoverClass: {
+      type: String,
+      default: "hover-error",
+    },
   },
 };
 </script>
@@ -561,6 +600,14 @@ button span {
     margin-bottom: 4px;
     margin-left: 3px !important;
   }
+
+  span.active {
+    background: var(--color-primary);
+    padding: 10px;
+    border-radius: 25px;
+    box-shadow: 0 0 0px 10px var(--color-primary-low-low);
+  }
+
   span:first-child {
     // margin-right: 10px;
   }

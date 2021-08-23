@@ -31,7 +31,7 @@ export default {
     font-size: 17px;
     color: var(--color-text-gray);
     font-family: var(--font-medium);
-
+    width: 120px;
     border: 1px solid transparent;
     outline: none;
   }

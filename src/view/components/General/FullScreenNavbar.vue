@@ -11,6 +11,7 @@
           textColor="white"
           fontSize="20px"
           :text="item.text"
+          hoverClass="hover-primary"
         />
       </div>
 
@@ -31,6 +32,7 @@
             width="220px"
             fontSize="20px"
             iconAreaW="auto"
+            hoverClass="hover-primary"
           />
         </a>
       </div>
@@ -53,6 +55,7 @@
             iconHeight="21px"
             fontSize="20px"
             iconAreaW="auto"
+            hoverClass="hover-secondary"
           />
         </button>
       </div>
@@ -71,6 +74,7 @@
             iconAreaW="100%"
             :text="FullScreenNavbarData.Lang"
             justify="center"
+            hoverClass="hover-secondary"
           />
         </button>
       </div>

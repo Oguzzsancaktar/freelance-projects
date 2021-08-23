@@ -85,12 +85,16 @@ export default {
 <style>
 :root {
   --color-primary: #0091a0;
+  --color-primary-dark: #005b65;
+
   --color-primary-low: #0090a0ad;
   --color-primary-low-low: #0090a04f;
 
   --color-primary-low-button: #0090a00a;
 
   --color-secondary: #f37031;
+  --color-secondary-dark: #ca551e;
+
   --color-secondary-low: #f36e3181;
   --color-secondary-low-button: #f36e310e;
 
@@ -280,6 +284,7 @@ export default {
 }
 
 .default-button {
+  transition: 0.4s;
   width: auto;
   padding: 0 20px;
   border: 1px solid transparent;
@@ -318,6 +323,84 @@ export default {
 .text-color-secondary {
   color: var(--color-secondary);
 }
+
+/* Hover Class */
+/* Hover Class */
+/* Hover Class */
+
+.hover-error:hover {
+  transition: 0.4s !important;
+  background: rebeccapurple !important;
+}
+.hover-error:hover g {
+  transition: 0.4s !important;
+  fill: red !important;
+}
+.hover-error:hover span {
+  transition: 0.4s !important;
+  color: violet !important;
+}
+
+.hover-primary:hover {
+  transition: 0.4s !important;
+  background: var(--color-secondary) !important;
+}
+.hover-primary:hover g {
+  transition: 0.4s !important;
+  fill: var(--background-white) !important;
+}
+.hover-primary:hover span {
+  transition: 0.4s !important;
+  color: var(--background-white) !important;
+}
+
+.hover-secondary:hover {
+  transition: 0.4s !important;
+  background: var(--color-primary) !important;
+}
+.hover-secondary:hover g {
+  transition: 0.4s !important;
+  fill: var(--background-white) !important;
+}
+.hover-secondary:hover span {
+  transition: 0.4s !important;
+  color: var(--background-white) !important;
+}
+
+.hover-white:hover {
+  transition: 0.4s !important;
+  background: var(--background-white) !important;
+}
+.hover-white:hover g {
+  transition: 0.4s !important;
+  fill: var(--color-nav-link) !important;
+}
+.hover-white:hover span {
+  transition: 0.4s !important;
+  color: var(--color-nav-link) !important;
+}
+
+.hover-secondary-dark:hover {
+  transition: 0.4s !important;
+  background: var(--color-secondary-dark) !important;
+}
+.hover-secondary-dark:hover g {
+  transition: 0.4s !important;
+  fill: var(--background-white) !important;
+}
+.hover-secondary-dark:hover span {
+  transition: 0.4s !important;
+  color: var(--background-white) !important;
+}
+
+.nav-hover:hover {
+  transition: 0.4s !important;
+  color: var(--color-primary) !important;
+}
+
+/* Hover Class */
+/* Hover Class */
+/* Hover Class */
 
 @media (max-width: 1400px) {
   .wrapper {

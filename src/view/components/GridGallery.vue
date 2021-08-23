@@ -33,6 +33,7 @@
             family="var(--font-semilight)"
             fontSize="15px"
             iconAreaW="auto"
+            hoverClass="hover-secondary"
           />
         </div>
       </div>

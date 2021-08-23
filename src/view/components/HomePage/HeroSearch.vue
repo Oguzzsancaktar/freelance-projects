@@ -60,11 +60,17 @@ export default {
     align-items: center;
     justify-content: center;
     text-align: center;
-    background: var(--color-secondary);
     width: 100px;
     height: 100%;
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
+    background: var(--color-secondary);
+    transition: 0.4s;
+  }
+
+  &__button:hover {
+    background: var(--color-secondary-dark);
+    transition: 0.4s;
   }
 }
 

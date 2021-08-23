@@ -1,12 +1,12 @@
 <template>
-    <div class="navbar-collapse-button" v-on:click="toggleNavbar()">
-      <div id="navbarHamburger">
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
+  <div class="navbar-collapse-button" v-on:click="toggleNavbar()">
+    <div id="navbarHamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
     </div>
+  </div>
 </template>
 
 <script>
@@ -53,17 +53,18 @@ export default {
   width: 60px;
   height: 50px;
   background: var(--color-primary);
-  justify-content: center!important;
+  justify-content: center !important;
   cursor: pointer;
   transition: 0.4s;
   border-radius: 30px;
   align-items: center;
 }
+
 .navbar-collapse-button:hover {
   transition: 0.4s;
   cursor: pointer;
 
-  background: var(--color-primary);
+  background: var(--color-secondary);
 }
 #navbarHamburger {
   top: 0%;
@@ -108,9 +109,6 @@ export default {
   transition: 0.25s ease-in-out;
 }
 
-
-
-
 #navbarHamburger span:nth-child(1) {
   top: 0px;
 }
@@ -143,16 +141,11 @@ export default {
   -o-transform: rotate(-45deg);
   transform: rotate(-45deg);
   left: 16px;
-
 }
 
 #navbarHamburger.open span:nth-child(4) {
   top: 10px;
   width: 0%;
   left: 20px;
-
 }
-
-
-
 </style>

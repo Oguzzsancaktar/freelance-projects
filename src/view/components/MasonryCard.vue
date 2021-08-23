@@ -31,6 +31,7 @@
                 family="var(--font-light)"
                 fontSize="14px"
                 iconAreaW="auto"
+                hoverClass="hover-white"
               />
             </div>
           </div>
@@ -74,6 +75,7 @@
                 family="var(--font-light)"
                 fontSize="14px"
                 iconAreaW="auto"
+                hoverClass="hover-white"
               />
             </div>
           </div>
