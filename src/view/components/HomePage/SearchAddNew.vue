@@ -18,6 +18,8 @@
       height="30px"
       textAlign="left"
       iconAreaW="auto"
+      justify="start"
+      textMargin="0 0 0 3px"
     />
   </div>
 </template>
@@ -45,7 +47,7 @@ export default {
     font-size: 14px;
     color: var(--color-text-gray-light);
     font-family: var(--font-medium);
-    margin-bottom: 5px;
+    // margin-bottom: 5px;
   }
 
   input {

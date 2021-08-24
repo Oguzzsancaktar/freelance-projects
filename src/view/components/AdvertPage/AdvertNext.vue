@@ -5,12 +5,14 @@
         <div class="check-terms">
           <Checkbox />
           <span
-            >İlan <b>Yayınlama Kurallarını</b> okudum ve kabul ediyorum.</span
+            >{{ AdvertNextData.ReadAccept
+            }}<b>{{ AdvertNextData.AdvertRules }}</b
+            >.</span
           >
         </div>
 
         <button>
-          <span>Devam Et</span>
+          <span> {{ AdvertNextData.Next }} </span>
         </button>
       </div>
     </div>
@@ -21,11 +23,15 @@
 import Checkbox from "../Checkbox.vue";
 export default {
   components: { Checkbox },
+  props: {
+    AdvertNextData: Object,
+  },
 };
 </script>
 
 <style lang="scss" scoped>
 .AdvertNext {
+  padding: 40px 0px;
   .wrapper {
     .layout {
       width: 100%;
@@ -50,11 +56,41 @@ export default {
         max-width: 250px;
         width: 100%;
         background: var(--color-primary);
-        padding: 20px 10px;
+        padding: 10px 10px;
+        color: var(--background-white);
         border: 1px solid var(--color-primary);
         border-radius: 10px;
         margin-left: 20px;
-        font-size: 40px;
+        font-size: 25px;
+        height: 60px;
+      }
+    }
+  }
+}
+
+@media (max-width: 700px) {
+  .AdvertNext {
+    padding: 40px 0px;
+    .wrapper {
+      .layout {
+        flex-direction: column;
+        width: 100%;
+
+        .check-terms {
+          width: 100%;
+
+          span {
+            width: 100%;
+            b {
+            }
+          }
+        }
+        button {
+          cursor: pointer;
+          margin-top: 20px;
+          max-width: none;
+          width: 100%;
+        }
       }
     }
   }

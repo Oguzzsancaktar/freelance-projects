@@ -16,25 +16,30 @@
       </div>
 
       <div class="navbar-fullscreen-item button">
-        <a href="/add">
-          <Button
-            family="var(--font-medium)"
-            textColor="white"
-            iconWidth="17px"
-            iconHeight="17px"
-            iconColor="white"
-            background="var(--color-primary)"
-            :text="FullScreenNavbarData.AddProperty"
-            radius="30px"
-            color="white"
-            type="together"
-            iconType="plus"
-            width="220px"
-            fontSize="20px"
-            iconAreaW="auto"
-            hoverClass="hover-primary"
-          />
-        </a>
+        <router-link to="/add">
+          <a>
+            <Button
+              family="var(--font-medium)"
+              textColor="white"
+              iconWidth="17px"
+              iconHeight="17px"
+              iconColor="white"
+              background="var(--color-primary)"
+              :text="FullScreenNavbarData.AddProperty"
+              radius="30px"
+              color="white"
+              type="together"
+              iconType="plus"
+              width="220px"
+              fontSize="20px"
+              iconAreaW="auto"
+              hoverClass="hover-primary"
+              justify="center"
+              textMargin="0"
+              padding="0 35px"
+            />
+          </a>
+        </router-link>
       </div>
 
       <div class="navbar-fullscreen-item button">
@@ -50,12 +55,13 @@
             background="var(--background-gray-light)"
             radius="30px"
             width="220px"
-            padding="0 20px"
+            padding="0 28px"
             iconWidth="22px"
             iconHeight="21px"
             fontSize="20px"
             iconAreaW="auto"
             hoverClass="hover-secondary"
+            justify="center"
           />
         </button>
       </div>

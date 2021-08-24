@@ -49,6 +49,7 @@
                 iconHeight="16px"
                 family="var(--font-medium)"
                 fontSize="12px"
+                iconAreaW="auto"
               />
             </div>
             <div class="row__item">

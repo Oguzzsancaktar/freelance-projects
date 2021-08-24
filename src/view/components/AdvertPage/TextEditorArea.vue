@@ -1,5 +1,12 @@
 <template>
-  <quill-editor ref="myQuillEditor" :options="editorOption"> </quill-editor>
+  <div class="layout">
+    <p :style="`font-family:${family}; color:${textColor}`">
+      {{ text }} <b v-if="isRequired">*</b>
+    </p>
+    <div class="quillEditor">
+      <quill-editor ref="myQuillEditor" :options="editorOption"> </quill-editor>
+    </div>
+  </div>
 </template>
 
 <script>
@@ -14,12 +21,29 @@ export default {
   components: {
     quillEditor,
   },
+  props: {
+    text: String,
+    textColor: {
+      type: String,
+    },
+    placeholder: {
+      type: String,
+      default: " Select ",
+    },
+    family: {
+      type: String,
+    },
+    isRequired: {
+      type: Boolean,
+      default: false,
+    },
+  },
 
   data: function() {
     return {
       editorOption: {
         theme: "snow",
-
+        placeholder: " ",
         modules: {
           toolbar: [
             [{ font: [] }],
@@ -43,44 +67,52 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-#app {
-  background: #fff;
-  border-radius: 4px;
-  padding: 20px;
-  transition: all 0.2s;
-}
+.layout {
+  p {
+    font-size: 14px;
+    color: var(--color-text-gray-light);
+    font-family: var(--font-medium);
+    margin-bottom: 25px;
 
-#editor {
-  height: 250px;
-}
-#editor .quill-editor {
-  height: 100%;
-}
-#editor .quill-editor .ql-container {
-  height: 60%;
-}
+    b {
+      margin-top: 10px;
+      color: var(--color-primary);
+      font-size: 20px;
+    }
+  }
 
-#preview {
-  padding: 15px;
-}
+  .quillEditor {
+    max-width: none;
+    width: 75%;
+    height: 250px;
+    border-radius: 10px;
+    border: 1px solid var(--color-card-border);
+    display: flex;
+    flex-direction: column;
 
-#preview h1 {
-  display: block;
-  font-size: 2em;
-  margin-block-start: 0.67em;
-  margin-block-end: 0.67em;
-  margin-inline-start: 0px;
-  margin-inline-end: 0px;
-  font-weight: bold;
-}
+    /deep/ .quill-editor {
+      * {
+        font-family: var(--font-semilight) !important;
+      }
+    }
 
-h2 {
-  display: block;
-  font-size: 1.5em;
-  margin-block-start: 0.83em;
-  margin-block-end: 0.83em;
-  margin-inline-start: 0px;
-  margin-inline-end: 0px;
-  font-weight: bold;
+    /deep/ .ql-toolbar.ql-snow {
+      max-width: none;
+
+      width: 100%;
+      border: transparent;
+      min-height: 50px;
+      padding-top: 12px;
+      border-bottom: 1px solid var(--color-card-border);
+    }
+
+    /deep/ .ql-container {
+      max-width: none;
+
+      width: 100%;
+      border: transparent;
+      height: 200px;
+    }
+  }
 }
 </style>

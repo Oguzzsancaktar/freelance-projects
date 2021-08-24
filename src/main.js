@@ -39,9 +39,6 @@ const router = new VueRouter({
   mode: 'history'
 })
 
-
-
-
 new Vue({
 
   render: h => h(App),

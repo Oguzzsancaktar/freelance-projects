@@ -129,6 +129,226 @@
       ]
     }
   },
+  "AddAdvertPage": {
+    "TopBarData": {
+      "AdvertInfo": "Advert Information",
+      "Preview": "Preview",
+      "Boost": "Boost Advert",
+      "Entered": "Entered Information"
+    },
+    "AdvertCategoryData": {
+      "InfoText": "The correct selection of the ad category is important so that your ad can be sold/rented faster.",
+      "Heading": "Advert Categories",
+      "SelectBoxData": [
+        {
+          "Required": true,
+          "Placeholder": "Select",
+          "Text": "Category1",
+          "List": ["Category1-a", "Category1-b", "Category1-c", "Category1-d"]
+        },
+        {
+          "Required": true,
+          "Placeholder": "Select",
+          "Text": "Category2",
+          "List": ["Category2-a", "Category2-b", "Category2-c", "Category2-d"]
+        },
+        {
+          "Required": true,
+          "Placeholder": "Select",
+          "Text": "Category2",
+          "List": ["Category3-a", "Category3-b", "Category3-c", "Category3-d"]
+        }
+      ]
+    },
+    "AdvertInformationData": {
+      "InfoText": "The correct selection of the ad category is important so that your ad can be sold/rented faster.",
+      "AdvertHeading": "Advert Heading",
+      "AdvertDescription": "Advert Description",
+      "Heading": "Advert Information",
+
+      "InputData": {
+        "Required": true,
+        "Placeholder": "Select",
+        "Text": "Category1"
+      },
+
+      "EditorData": {
+        "Required": true,
+        "Placeholder": "Select",
+        "Text": "Category1"
+      },
+
+      "SelectBoxData": [
+        [
+          {
+            "Required": true,
+            "Placeholder": "Select",
+            "Text": "Category1",
+            "List": ["Category1-a", "Category1-b", "Category1-c", "Category1-d"]
+          },
+          {
+            "Required": true,
+            "Placeholder": "Select",
+            "Text": "Category2",
+            "List": ["Category2-a", "Category2-b", "Category2-c", "Category2-d"]
+          },
+          {
+            "Required": true,
+            "Placeholder": "Select",
+            "Text": "Category2",
+            "List": ["Category3-a", "Category3-b", "Category3-c", "Category3-d"]
+          }
+        ],
+        [
+          {
+            "Required": true,
+            "Placeholder": "Select",
+            "Text": "Category1",
+            "List": ["Category1-a", "Category1-b", "Category1-c", "Category1-d"]
+          },
+          {
+            "Required": true,
+            "Placeholder": "Select",
+            "Text": "Category2",
+            "List": ["Category2-a", "Category2-b", "Category2-c", "Category2-d"]
+          },
+          {
+            "Required": true,
+            "Placeholder": "Select",
+            "Text": "Category2",
+            "List": ["Category3-a", "Category3-b", "Category3-c", "Category3-d"]
+          }
+        ],
+        [
+          {
+            "Required": true,
+            "Placeholder": "Select",
+            "Text": "Category1",
+            "List": ["Category1-a", "Category1-b", "Category1-c", "Category1-d"]
+          },
+          {
+            "Required": true,
+            "Placeholder": "Select",
+            "Text": "Category2",
+            "List": ["Category2-a", "Category2-b", "Category2-c", "Category2-d"]
+          },
+          {
+            "Required": true,
+            "Placeholder": "Select",
+            "Text": "Category2",
+            "List": ["Category3-a", "Category3-b", "Category3-c", "Category3-d"]
+          }
+        ],
+        [
+          {
+            "Required": true,
+            "Placeholder": "Select",
+            "Text": "Category1",
+            "List": ["Category1-a", "Category1-b", "Category1-c", "Category1-d"]
+          },
+          {
+            "Required": true,
+            "Placeholder": "Select",
+            "Text": "Category2",
+            "List": ["Category2-a", "Category2-b", "Category2-c", "Category2-d"]
+          },
+          {
+            "Required": true,
+            "Placeholder": "Select",
+            "Text": "Category2",
+            "List": ["Category3-a", "Category3-b", "Category3-c", "Category3-d"]
+          }
+        ]
+      ]
+    },
+    "AdvertAdressData": {
+      "Heading": "Advert Adress Informations",
+      "InfoText": "The correct selection of the ad category is important so that your ad can be sold/rented faster.",
+
+      "SelectBoxData": [
+        {
+          "Required": true,
+          "Placeholder": "Select",
+          "Text": "Category1",
+          "List": ["Category1-a", "Category1-b", "Category1-c", "Category1-d"]
+        },
+        {
+          "Required": true,
+          "Placeholder": "Select",
+          "Text": "Category2",
+          "List": ["Category2-a", "Category2-b", "Category2-c", "Category2-d"]
+        },
+        {
+          "Required": true,
+          "Placeholder": "Select",
+          "Text": "Category2",
+          "List": ["Category3-a", "Category3-b", "Category3-c", "Category3-d"]
+        }
+      ]
+    },
+
+    "AdvertFeaturesData": {
+      "Heading": "Advert Features ",
+      "CheckBoxData": [
+        {
+          "Text": "Inline Features",
+          "List": [
+            "Category3-a",
+            "Category3-b",
+            "Category3-c",
+            "Category3-d",
+            "Category3-a",
+            "Category3-b",
+            "Category3-c",
+            "Category3-d"
+          ]
+        },
+        {
+          "Text": "Outline Features",
+          "List": [
+            "Category3-a",
+            "Category3-b",
+            "Category3-c",
+            "Category3-d",
+            "Category3-a",
+            "Category3-b",
+            "Category3-c",
+            "Category3-d"
+          ]
+        },
+        {
+          "Text": "Location",
+          "List": [
+            "Category3-a",
+            "Category3-b",
+            "Category3-c",
+            "Category3-d",
+            "Category3-a",
+            "Category3-b",
+            "Category3-c",
+            "Category3-d"
+          ]
+        }
+      ]
+    },
+
+    "AdvertPhotosData": {
+      "Heading": "Advert Photos",
+      "Photos": [
+        { "Type": "together", "IconType": "camera", "Text": "Add Photo" },
+        { "Type": "icon", "IconType": "plus", "Text": "" },
+        { "Type": "icon", "IconType": "plus", "Text": "" },
+        { "Type": "icon", "IconType": "plus", "Text": "" },
+        { "Type": "icon", "IconType": "plus", "Text": "" }
+      ]
+    },
+
+    "AdvertNextData": {
+      "Next": "Next",
+      "ReadAccept": "I read and accept the",
+      "AdvertRules": "Advert Rules"
+    }
+  },
 
   "HomePage": {
     "HeroSliderData": {

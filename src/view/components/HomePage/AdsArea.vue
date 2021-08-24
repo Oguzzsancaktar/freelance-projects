@@ -43,6 +43,7 @@
                 family="var(--font-semibold)"
                 textColor="white"
                 hoverClass="hover-secondary-dark"
+                iconAreaW="auto"
               />
             </div>
           </div>

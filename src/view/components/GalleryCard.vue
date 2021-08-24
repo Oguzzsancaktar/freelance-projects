@@ -2,32 +2,34 @@
   <div class="card">
     <div class="card__layout">
       <div class="card__image">
-        <a href="/detail">
-          <div class="card__image__hover">
-            <Button
-              style="margin:5px"
-              background="transparent"
-              radius="0px"
-              type="icon"
-              iconType="details"
-              width="55px"
-              height="55px"
-              iconColor="var(--background-white)"
-              border="1px solid transparent"
-              margin="0 10px"
-              iconWidth="55px"
-              iconHeight="55px"
-              padding="0px"
-              iconAreaW="auto"
+        <router-link to="detail">
+          <a>
+            <div class="card__image__hover">
+              <Button
+                style="margin:5px"
+                background="transparent"
+                radius="0px"
+                type="icon"
+                iconType="details"
+                width="55px"
+                height="55px"
+                iconColor="var(--background-white)"
+                border="1px solid transparent"
+                margin="0 10px"
+                iconWidth="55px"
+                iconHeight="55px"
+                padding="0px"
+                iconAreaW="auto"
+              />
+            </div>
+            <ImageView
+              width="100%"
+              height="100%"
+              imageType="images"
+              :imageName="data.Image"
             />
-          </div>
-          <ImageView
-            width="100%"
-            height="100%"
-            imageType="images"
-            :imageName="data.Image"
-          />
-        </a>
+          </a>
+        </router-link>
       </div>
       <div class="card__info">
         <div class="info__layout">
@@ -109,6 +111,7 @@
               iconHeight="16px"
               family="var(--font-medium)"
               fontSize="14px"
+              iconAreaW="auto"
             />
           </div>
         </div>

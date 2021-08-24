@@ -117,8 +117,12 @@ export default {
       font-size: 14px;
       color: var(--color-text-gray-light);
       font-family: var(--font-medium);
-      margin-bottom: 5px;
+
+      i {
+        color: var(--color-primary);
+      }
     }
+
     width: 140px;
     margin: 20px auto;
     margin-top: -10px;
@@ -130,7 +134,7 @@ export default {
       width: 80%;
       .arrow {
         position: absolute;
-        right: 10px;
+        right: 20px;
         top: 40%;
         width: 0;
         height: 0;

@@ -96,6 +96,8 @@ export default {
   --color-secondary-dark: #ca551e;
 
   --color-secondary-low: #f36e3181;
+  --color-secondary-low-low: #f36e3150;
+
   --color-secondary-low-button: #f36e310e;
 
   --color-third: #10a6b8;

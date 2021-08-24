@@ -2,117 +2,32 @@
   <div class="AdvertPhotos">
     <div class="wrapper">
       <div class="heading">
-        <h2>İlan Fotografları</h2>
+        <h2>{{ AdvertPhotosData.Heading }}</h2>
       </div>
 
       <div class="photos">
-        <div class="photo">
+        <div
+          v-for="(item, index) in AdvertPhotosData.Photos"
+          :key="index"
+          class="photo"
+        >
           <Button
             margin="auto"
             direction="column"
             background="transparent"
             radius="high"
             color="white"
-            type="together"
-            iconType="search"
-            text="Add Photo"
+            :type="item.Type"
+            :iconType="item.IconType"
+            :text="item.Text"
             iconColor="var(--color-primary)"
-            iconHeight="19px"
-            iconWidth="19px"
-            fontSize="16px"
-            textColor="white"
+            iconHeight="30px"
+            iconWidth="35px"
+            fontSize="14px"
+            textColor="var(--color-nav-link)"
             family="var(--font-semibold)"
-          />
-        </div>
-
-        <div class="photo">
-          <Button
-            margin="auto"
-            direction="column"
-            background="transparent"
-            radius="high"
-            color="white"
-            type="icon"
-            iconType="plus"
-            text="Add Photo"
-            iconColor="var(--background-white)"
-            iconHeight="25px"
-            iconWidth="25px"
-            family="var(--font-semibold)"
-            width="25px"
-            padding="0"
-          />
-        </div>
-        <div class="photo">
-          <Button
-            margin="auto"
-            direction="column"
-            background="transparent"
-            radius="high"
-            color="white"
-            type="icon"
-            iconType="plus"
-            text="Add Photo"
-            iconColor="var(--background-white)"
-            iconHeight="25px"
-            iconWidth="25px"
-            family="var(--font-semibold)"
-            width="25px"
-            padding="0"
-          />
-        </div>
-        <div class="photo">
-          <Button
-            margin="auto"
-            direction="column"
-            background="transparent"
-            radius="high"
-            color="white"
-            type="icon"
-            iconType="plus"
-            text="Add Photo"
-            iconColor="var(--background-white)"
-            iconHeight="25px"
-            iconWidth="25px"
-            family="var(--font-semibold)"
-            width="25px"
-            padding="0"
-          />
-        </div>
-        <div class="photo">
-          <Button
-            margin="auto"
-            direction="column"
-            background="transparent"
-            radius="high"
-            color="white"
-            type="icon"
-            iconType="plus"
-            text="Add Photo"
-            iconColor="var(--background-white)"
-            iconHeight="25px"
-            iconWidth="25px"
-            family="var(--font-semibold)"
-            width="25px"
-            padding="0"
-          />
-        </div>
-        <div class="photo">
-          <Button
-            margin="auto"
-            direction="column"
-            background="transparent"
-            radius="high"
-            color="white"
-            type="icon"
-            iconType="plus"
-            text="Add Photo"
-            iconColor="var(--background-white)"
-            iconHeight="25px"
-            iconWidth="25px"
-            family="var(--font-semibold)"
-            width="25px"
-            padding="0"
+            iconAreaW="auto"
+            textMargin="10px 0"
           />
         </div>
       </div>
@@ -125,6 +40,9 @@ import Button from "../Button.vue";
 export default {
   name: "AdvertPhotos",
   components: { Button },
+  props: {
+    AdvertPhotosData: Object,
+  },
 };
 </script>
 
@@ -132,20 +50,26 @@ export default {
 .AdvertPhotos {
   margin: 30px 0;
   .wrapper {
-    padding: 20px 40px;
+    border-radius: 10px;
 
     background: var(--background-white);
 
     .heading {
       h2 {
+        text-transform: uppercase;
+        padding: 20px 40px;
+        font-size: 16px;
+        font-family: var(--font-semibold);
         display: flex;
         align-items: center;
         height: 100%;
-        border-bottom: 1px solid var(--background-general);
+        border-bottom: 2px solid var(--background-general);
         padding-bottom: 20px;
       }
     }
     .photos {
+      padding: 20px 40px;
+
       width: 100%;
       display: flex;
       justify-content: space-between;
@@ -157,6 +81,82 @@ export default {
         display: flex;
         align-items: center;
         justify-content: center;
+      }
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .AdvertPhotos {
+    margin: 30px 0;
+    .wrapper {
+      .heading {
+        h2 {
+        }
+      }
+      .photos {
+        .photo {
+        }
+        .photo:nth-child(5) {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 700px) {
+  .AdvertPhotos {
+    margin: 30px 0;
+    .wrapper {
+      .heading {
+        h2 {
+        }
+      }
+      .photos {
+        .photo {
+        }
+        .photo:nth-child(4) {
+          display: none;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 600px) {
+  .AdvertPhotos {
+    margin: 30px 0;
+    .wrapper {
+      .heading {
+        h2 {
+        }
+      }
+      .photos {
+        .photo {
+        }
+        .photo:nth-child(3) {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 450px) {
+  .AdvertPhotos {
+    margin: 30px 0;
+    .wrapper {
+      .heading {
+        h2 {
+        }
+      }
+      .photos {
+        justify-content: center;
+        .photo {
+        }
+        .photo:nth-child(2) {
+          display: none;
+        }
       }
     }
   }

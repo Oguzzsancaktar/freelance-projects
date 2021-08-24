@@ -2,7 +2,7 @@
   <div class="ProgressBar">
     <div class="layout">
       <div class="area">
-        <span>{{ text }}</span>
+        <span>{{ data }}</span>
         <span>25%</span>
       </div>
 
@@ -18,7 +18,7 @@
 export default {
   name: "ProgressBar",
   props: {
-    text: {
+    data: {
       type: String,
     },
   },
@@ -60,9 +60,9 @@ export default {
         &__percentage {
           position: absolute;
           background: var(--color-primary);
-          z-index: 99;
+          z-index: 1;
 
-          width: 100%;
+          width: 25%;
           height: 10px;
           margin: auto;
           border-radius: 5px;

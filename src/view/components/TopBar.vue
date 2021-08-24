@@ -2,64 +2,75 @@
   <div class="TopBar">
     <div class="wrapper">
       <div class="layout">
-        <div class="item">
+        <div @click="changeSection(0)" class="item">
           <Button
             family="var(--font-medium) "
             color="dark"
             textColor="var(--color-general-dark)"
-            text="İlan Bilgileri"
+            :text="TopBarData.AdvertInfo"
             type="together"
             iconType="edit"
             iconColor="var(--color-primary)"
             radius="30px"
-            width="170px"
-            padding="0 20px"
-            iconWidth="22px"
-            iconHeight="21px"
+            width="210px"
+            padding="0 0px"
+            iconWidth="18px"
+            iconHeight="18px"
             fontSize="15px"
             iconAreaW="auto"
+            :activeSection="selected"
+            height="60px"
+            textTransfrom="uppercase"
           />
         </div>
-        <div class="item">
+        <div @click="changeSection(1)" class="item">
           <Button
             family="var(--font-medium)"
             color="dark"
             textColor="var(--color-general-dark)"
-            text="Ön izleme"
+            :text="TopBarData.Preview"
             type="together"
             iconType="preview"
             iconColor="var(--color-primary)"
             radius="30px"
             width="170px"
             padding="0 20px"
-            iconWidth="22px"
-            iconHeight="21px"
+            iconWidth="24px"
+            iconHeight="20px"
             fontSize="15px"
             iconAreaW="auto"
+            height="60px"
+            :activeSection="selected"
+            textTransfrom="uppercase"
           />
         </div>
 
-        <div class="item">
+        <div @click="changeSection(2)" class="item">
           <Button
             family="var(--font-medium)"
             color="dark"
             textColor="var(--color-general-dark)"
-            text="İlan Öne Çıkar"
+            :text="TopBarData.Boost"
             type="together"
             iconType="boost"
             iconColor="var(--color-secondary)"
             radius="30px"
-            width="170px"
-            padding="0 20px"
-            iconWidth="22px"
-            iconHeight="21px"
+            width="180px"
+            padding="0 10px"
+            iconWidth="20px"
+            iconHeight="20px"
             fontSize="15px"
+            height="60px"
             iconAreaW="auto"
+            justify="center"
+            textAlign="start"
+            :activeSection="selected"
+            textTransfrom="uppercase"
           />
         </div>
 
         <div class="item progress">
-          <ProgressBar text="Girilen Bilgiler" />
+          <ProgressBar :data="TopBarData.Entered" />
         </div>
       </div>
     </div>
@@ -72,6 +83,29 @@ import ProgressBar from "./ProgressBar.vue";
 export default {
   name: "TopBar",
   components: { Button, ProgressBar },
+  props: {
+    section: {
+      type: Number,
+      default: 0,
+    },
+    TopBarData: Object,
+  },
+  data: function() {
+    return {
+      selected: 0,
+    };
+  },
+  methods: {
+    changeSection(num) {
+      let activeSection = this.section;
+      activeSection = num;
+      // console.log(activeSection);
+
+      this.selected = activeSection;
+
+      this.$emit("update-section", activeSection);
+    },
+  },
 };
 </script>
 
@@ -83,6 +117,7 @@ export default {
   .wrapper {
     height: 100%;
     .layout {
+      border-radius: 10px;
       padding: 20px 40px;
       background: var(--background-white);
 
@@ -100,10 +135,38 @@ export default {
         background: var(--background-white);
         width: 100%;
         border-right: 1px solid var(--background-general);
+
+        /deep/.button-together {
+          span:first-child {
+            width: 35px !important;
+          }
+          span:last-child {
+            width: calc(100% - 35px) !important;
+          }
+        }
       }
       .item.progress {
-        padding: 0 40px;
+        padding: 0 25px;
         border-right: none;
+      }
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .TopBar {
+    height: auto;
+    .wrapper {
+      height: 100%;
+      .layout {
+        height: 100%;
+
+        flex-wrap: wrap;
+        .item {
+        }
+        .item.progress {
+          min-width: 180px;
+        }
       }
     }
   }

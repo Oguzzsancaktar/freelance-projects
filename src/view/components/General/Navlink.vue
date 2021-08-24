@@ -1,14 +1,15 @@
 <template>
   <span class="nav__link">
-    <a
-      :style="`color:${textColor}; font-size:${fontSize};`"
-      :class="[
-        { active: this.$route.path == href && isNavbar },
-        `${hoverClass}`,
-      ]"
-      :href="href"
-      >{{ text }}
-    </a>
+    <router-link :to="href">
+      <a
+        :style="`color:${textColor}; font-size:${fontSize};`"
+        :class="[
+          { active: this.$route.path == href && isNavbar },
+          `${hoverClass}`,
+        ]"
+        >{{ text }}
+      </a>
+    </router-link>
   </span>
 </template>
 

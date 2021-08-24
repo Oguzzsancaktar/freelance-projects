@@ -27,7 +27,7 @@ export default {
     margin-bottom: 5px;
   }
   input {
-    margin-top: 5px;
+    // margin-top: 5px;
     font-size: 17px;
     color: var(--color-text-gray);
     font-family: var(--font-medium);

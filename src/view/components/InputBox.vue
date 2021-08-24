@@ -6,7 +6,9 @@
       "
       class="aselect"
     >
-      <p>{{ text }}</p>
+      <p :style="`font-family:${family}; color:${textColor}`">
+        {{ text }} <b v-if="isRequired">*</b>
+      </p>
 
       <input type="text" />
     </div>
@@ -46,19 +48,52 @@ export default {
       type: String,
       default: " ",
     },
+
+    borderRadius: {
+      type: String,
+      default: "30px",
+    },
+    List: {
+      type: Array,
+    },
+    textColor: {
+      type: String,
+    },
+    placeholder: {
+      type: String,
+      default: " Select ",
+    },
+    family: {
+      type: String,
+    },
+    isRequired: {
+      type: Boolean,
+      default: false,
+    },
   },
 };
 </script>
 
 <style lang="scss" scoped>
 .InputBox {
-  padding: 0 15px;
-
   width: 100%;
+
+  p {
+    font-size: 14px;
+    color: var(--color-text-gray-light);
+    font-family: var(--font-medium);
+    margin-bottom: 5px;
+
+    b {
+      margin-top: 10px;
+      color: var(--color-primary);
+      font-size: 20px;
+    }
+  }
 
   input {
     border-radius: 25px;
-    border: 1px solid var(--color-text-gray-light);
+    border: 1px solid var(--color-card-border);
     padding: 10px 25px;
     width: 100%;
     outline: none;

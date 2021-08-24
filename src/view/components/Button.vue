@@ -136,8 +136,34 @@
           viewBox="0 -26 512.00046 512"
         />
       </span>
+      <span :style="`width:${iconAreaW}  `" v-if="'camera' == iconType">
+        <Icon
+          :iconColor="iconColor"
+          iconName="camera"
+          width="20px"
+          height="20px"
+          :iconWidth="iconWidth"
+          :iconHeight="iconHeight"
+          viewBox="0 0 359.984 311.999"
+        />
+      </span>
+      <span :style="`width:40px`" v-if="'information' == iconType">
+        <Icon
+          :iconColor="iconColor"
+          iconName="information"
+          width="20px"
+          height="20px"
+          :iconWidth="iconWidth"
+          :iconHeight="iconHeight"
+          viewBox="0 0 330 384"
+        />
+      </span>
 
-      <span :style="[`width:${iconAreaW}`]" v-if="'edit' == iconType">
+      <span
+        :class="{ active: activeSection >= 0 }"
+        :style="`width:${iconAreaW}`"
+        v-if="'edit' == iconType"
+      >
         <Icon
           :iconColor="iconColor"
           iconName="edit"
@@ -149,7 +175,11 @@
         />
       </span>
 
-      <span :style="[`width:${iconAreaW}`]" v-if="'preview' == iconType">
+      <span
+        :class="{ active: activeSection >= 1 }"
+        :style="`width:${iconAreaW}`"
+        v-if="'preview' == iconType"
+      >
         <Icon
           :iconColor="iconColor"
           iconName="preview"
@@ -161,7 +191,11 @@
         />
       </span>
 
-      <span :style="[`width:${iconAreaW}`]" v-if="'boost' == iconType">
+      <span
+        :class="{ activeSecondary: activeSection >= 2 }"
+        :style="`width:${iconAreaW}`"
+        v-if="'boost' == iconType"
+      >
         <Icon
           :iconColor="iconColor"
           iconName="boost"
@@ -497,7 +531,7 @@
       <span
         class="together-text"
         :style="
-          `color:${textColor}; font-family:${family};font-size:${fontSize} ;text-align:${textAlign}; margin-left:${marginLeft}`
+          `color:${textColor}; font-family:${family};font-size:${fontSize} ;text-align:${textAlign}; margin-left:${marginLeft}; justify-content:${justify}; margin:${textMargin} ; text-transform:${textTransfrom}`
         "
         >{{ text }}</span
       >
@@ -509,9 +543,17 @@
 import Icon from "./Icon.vue";
 export default {
   name: "Button",
+
+  data: function() {
+    return {
+      activeTab: 0,
+    };
+  },
   components: { Icon },
   props: {
     margin: { type: String, default: "0 10px 0 0" },
+    textMargin: { type: String },
+
     marginLeft: { type: String, default: "0" },
 
     padding: { type: String, default: "0 20px" },
@@ -557,7 +599,7 @@ export default {
     },
     iconType: {
       type: String,
-      default: "hearth",
+      default: "plus",
     },
     direction: {
       type: String,
@@ -569,7 +611,14 @@ export default {
     },
     hoverClass: {
       type: String,
-      default: "hover-error",
+      default: " ",
+    },
+    activeSection: {
+      type: Number,
+      default: 0,
+    },
+    textTransfrom: {
+      type: String,
     },
   },
 };
@@ -601,11 +650,47 @@ button span {
     margin-left: 3px !important;
   }
 
+  span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.4s;
+  }
+
+  span:first-child {
+    background: transparent;
+    box-shadow: 0 0 0px 5px transparent;
+  }
+  span:last-child {
+    background: transparent;
+    box-shadow: 0 0 0px 5px transparent;
+  }
   span.active {
+    transition: 0.4s;
+
     background: var(--color-primary);
-    padding: 10px;
-    border-radius: 25px;
-    box-shadow: 0 0 0px 10px var(--color-primary-low-low);
+    height: 35px;
+
+    border-radius: 50%;
+    box-shadow: 0 0 0px 5px var(--color-primary-low-low);
+
+    /deep/ g {
+      fill: var(--background-white) !important;
+    }
+  }
+
+  span.activeSecondary {
+    transition: 0.4s;
+    height: 35px;
+
+    background: var(--color-secondary);
+
+    border-radius: 50%;
+    box-shadow: 0 0 0px 5px var(--color-secondary-low-low);
+
+    /deep/ g {
+      fill: var(--background-white) !important;
+    }
   }
 
   span:first-child {

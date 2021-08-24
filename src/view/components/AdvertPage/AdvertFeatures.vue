@@ -2,53 +2,21 @@
   <div class="AdvertFeatures">
     <div class="wrapper">
       <div class="heading">
-        <h2>İlan Özellikleri</h2>
+        <h2>{{ AdvertFeaturesData.Heading }}</h2>
       </div>
       <div class="layout">
-        <div class="area">
+        <div
+          v-for="(item, index) in AdvertFeaturesData.CheckBoxData"
+          :key="index"
+          class="area"
+        >
           <div class="area__header">
-            <h3>Area Header</h3>
+            <h3>{{ item.Text }}</h3>
           </div>
 
-          <ul
-            v-for="(item, index) in featuresList1"
-            class="area__list"
-            :key="index"
-          >
+          <ul v-for="(j, index) in item.List" class="area__list" :key="index">
             <li class="area__list__item">
-              <Checkbox :item="item" />
-            </li>
-          </ul>
-        </div>
-
-        <div class="area">
-          <div class="area__header">
-            <h3>Area Header</h3>
-          </div>
-
-          <ul
-            v-for="(item, index) in featuresList1"
-            class="area__list"
-            :key="index"
-          >
-            <li class="area__list__item">
-              <Checkbox :item="item" />
-            </li>
-          </ul>
-        </div>
-
-        <div class="area">
-          <div class="area__header">
-            <h3>Area Header</h3>
-          </div>
-
-          <ul
-            v-for="(item, index) in featuresList1"
-            class="area__list"
-            :key="index"
-          >
-            <li class="area__list__item">
-              <Checkbox :item="item" />
+              <Checkbox :item="j" />
             </li>
           </ul>
         </div>
@@ -63,6 +31,7 @@ export default {
   components: { Checkbox },
   name: "AdvertFeatures",
   props: {
+    AdvertFeaturesData: Object,
     featuresList1: {
       type: Array,
     },
@@ -74,24 +43,29 @@ export default {
 .AdvertFeatures {
   margin: 30px 0;
   .wrapper {
-    padding: 20px 40px;
+    border-radius: 10px;
 
     background: var(--background-white);
 
     .heading {
       h2 {
+        text-transform: uppercase;
+        padding: 20px 40px;
+        font-size: 16px;
+        font-family: var(--font-semibold);
         display: flex;
         align-items: center;
         height: 100%;
-        border-bottom: 1px solid var(--background-general);
+        border-bottom: 2px solid var(--background-general);
         padding-bottom: 20px;
       }
     }
     .layout {
+      padding: 20px 40px;
+
       display: flex;
       width: 100%;
       justify-content: space-between;
-      padding: 20px 0;
 
       .area {
         width: 100%;
@@ -111,6 +85,33 @@ export default {
             margin: 15px 0;
             display: flex;
             align-items: center;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .AdvertFeatures {
+    .wrapper {
+      .heading {
+        h2 {
+        }
+      }
+      .layout {
+        flex-direction: column;
+        .area {
+          width: 100%;
+          &__header {
+            h3 {
+              justify-content: center;
+            }
+          }
+          &__list {
+            &__item {
+              justify-content: center;
+            }
           }
         }
       }

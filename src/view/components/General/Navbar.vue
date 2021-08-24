@@ -3,47 +3,58 @@
     <div class="wrapper">
       <div class="layout">
         <div class="area vertical-center">
+          <!-- <router-link to="/"> -->
           <a href="/">
             <ImageView width="100%" imageType="svg" imageName="logo.svg" />
           </a>
+          <!-- </router-link> -->
         </div>
         <div class="area  vertical-center">
           <div class="area__layout">
             <div class="area__layout__section ">
-              <Button
-                background="var(--color-secondary)"
-                family="var(--font-medium)"
-                radius="30px"
-                color="white"
-                type="icon"
-                iconType="hearth"
-                width="60px"
-                padding="0"
-                iconColor="var(--background-white)"
-                iconWidth="30px"
-                iconHeight="26px"
-                fontSize="15px"
-                hoverClass="hover-secondary"
-              />
-              <a href="/add">
+              <router-link to="/profile">
                 <Button
+                  background="var(--color-secondary)"
                   family="var(--font-medium)"
-                  textColor="white"
-                  iconWidth="17px"
-                  iconHeight="17px"
-                  iconColor="white"
-                  background="var(--color-primary)"
-                  :text="NavbarData.AddProperty"
                   radius="30px"
                   color="white"
-                  type="together"
-                  iconType="plus"
-                  width="155px"
+                  type="icon"
+                  iconType="hearth"
+                  width="60px"
+                  padding="0"
+                  iconColor="var(--background-white)"
+                  iconWidth="30px"
+                  iconHeight="26px"
                   fontSize="15px"
-                  iconAreaW="auto"
-                  hoverClass="hover-primary"
+                  hoverClass="hover-secondary"
                 />
-              </a>
+              </router-link>
+
+              <router-link to="/add">
+                <a>
+                  <Button
+                    family="var(--font-medium)"
+                    textColor="white"
+                    iconWidth="17px"
+                    iconHeight="17px"
+                    iconColor="white"
+                    background="var(--color-primary)"
+                    :text="NavbarData.AddProperty"
+                    radius="30px"
+                    color="white"
+                    type="together"
+                    iconType="plus"
+                    width="155px"
+                    fontSize="15px"
+                    iconAreaW="auto"
+                    hoverClass="hover-primary"
+                    justify="start"
+                    padding="0 20px"
+                    textAlign="start"
+                    textMargin="0"
+                  />
+                </a>
+              </router-link>
             </div>
 
             <div class="area__layout__section">
@@ -62,22 +73,24 @@
         </div>
 
         <div class="area vertical-center collapse-hidden">
-          <Button
-            background="var(--color-secondary)"
-            family="var(--font-medium)"
-            radius="30px"
-            color="white"
-            type="icon"
-            iconType="hearth"
-            width="60px"
-            padding="0"
-            iconColor="var(--background-white)"
-            iconWidth="30px"
-            iconHeight="26px"
-            fontSize="15px"
-            margin="0 10px"
-            hoverClass="hover-secondary"
-          />
+          <router-link to="/profile">
+            <Button
+              background="var(--color-secondary)"
+              family="var(--font-medium)"
+              radius="30px"
+              color="white"
+              type="icon"
+              iconType="hearth"
+              width="60px"
+              padding="0"
+              iconColor="var(--background-white)"
+              iconWidth="30px"
+              iconHeight="26px"
+              fontSize="15px"
+              margin="0 10px"
+              hoverClass="hover-secondary"
+            />
+          </router-link>
           <NavbarHamburger @navbar-animations="navbarAnimations" />
         </div>
 
@@ -101,6 +114,7 @@
                 fontSize="15px"
                 iconAreaW="auto"
                 hoverClass="hover-primary"
+                justify="start"
               />
             </div>
             <div @click="languageControl" class="language-control">

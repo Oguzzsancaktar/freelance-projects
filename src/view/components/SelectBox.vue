@@ -2,13 +2,15 @@
   <div class="SelectBox" :style="`padding:${padding}!important`">
     <div
       :style="
-        `border:${border};  height:${height} ; margin:${margin}; width:${width} ; `
+        `border:${border};  height:${height} ; margin:${margin}; width:${width} ;  `
       "
       class="aselect"
       :data-value="value"
       :data-list="list"
     >
-      <p>{{ text }}</p>
+      <p :style="`font-family:${family}; color:${textColor}`">
+        {{ text }} <b v-if="isRequired">*</b>
+      </p>
 
       <div
         class="selector"
@@ -24,7 +26,7 @@
           :class="{ expanded: visible }"
         ></div>
         <div :class="{ hidden: !visible, visible }">
-          <ul>
+          <ul :style="`z-index:${zIndex}`">
             <li
               :class="{ current: item === value }"
               v-for="(item, index) in list"
@@ -79,17 +81,33 @@ export default {
     },
     placeholder: {
       type: String,
-      default: " - ",
+      default: " Select ",
     },
     borderRadius: {
       type: String,
       default: "30px",
     },
+    family: {
+      type: String,
+    },
+    textColor: {
+      type: String,
+    },
+    List: {
+      type: Array,
+    },
+    isRequired: {
+      type: Boolean,
+      default: false,
+    },
+    zIndex: {
+      type: Number,
+    },
   },
   data: function() {
     return {
       value: this.placeholder,
-      list: ["Orange", "Apple", "Kiwi", "Lemon", "Pineapple"],
+      list: this.$props.List,
       visible: false,
     };
   },
@@ -106,6 +124,7 @@ export default {
 
 <style lang="scss" scoped>
 .SelectBox {
+  margin: 5px 0;
   padding: 0 15px;
   h1 {
     color: #f9f9f9;
@@ -126,19 +145,27 @@ export default {
       color: var(--color-text-gray-light);
       font-family: var(--font-medium);
       margin-bottom: 5px;
+
+      b {
+        margin-top: 10px;
+        color: var(--color-primary);
+        font-size: 20px;
+      }
     }
     width: 140px;
     margin: 20px auto;
     .selector {
-      border: 1px solid var(--color-text-gray-light);
+      border: 1px solid var(--color-card-border);
       padding: 10px 25px;
       border-radius: 25px;
       background: transparent;
       position: relative;
-      z-index: 1;
+      width: 100%;
+      cursor: pointer;
+
       .arrow {
         position: absolute;
-        right: 10px;
+        right: 20px;
         top: 40%;
         width: 0;
         height: 0;
@@ -169,6 +196,7 @@ export default {
       }
     }
     ul {
+      background: var(--background-white);
       width: 100%;
       list-style-type: none;
       padding: 0;
@@ -177,22 +205,26 @@ export default {
       border: 1px solid transparent;
       position: absolute;
       z-index: 1;
-      background: #fff;
       left: 0;
       top: 50px;
+      border-radius: 10px;
     }
     li {
-      margin-top: 5px;
-
+      border: 1px solid var(--color-card-border);
+      width: 100%;
+      margin: 10px 0;
+      border-radius: 50px;
       padding: 12px;
       font-size: 17px;
-      color: var(--color-text-gray);
+      color: var(--color-text-gray-light);
+      text-align: center;
       font-family: var(--font-medium);
-      background: var(--background-white);
+      // background: var(--color-secondary);
 
       &:hover {
         color: white;
         background: var(--color-secondary);
+        cursor: pointer;
       }
     }
     .current {

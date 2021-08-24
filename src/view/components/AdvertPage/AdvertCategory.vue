@@ -3,18 +3,26 @@
     <div class="wrapper">
       <div class="layout">
         <div class="heading">
-          <h2>İlan Kategorisi</h2>
+          <h2>{{ AdvertCategoryData.Heading }}</h2>
         </div>
         <div class="area ">
           <div class="area__left">
-            <div class="item">
-              <SelectBox text="Kategori" height="auto" width="100%" />
-            </div>
-            <div class="item">
-              <SelectBox text="Konut Alt Kategori" height="auto" width="100%" />
-            </div>
-            <div class="item">
-              <SelectBox text="Yayın Tipi" height="auto" width="100%" />
+            <div
+              v-for="(item, index) in AdvertCategoryData.SelectBoxData"
+              :key="index"
+              class="item"
+            >
+              <SelectBox
+                family="var(--font-semibold)"
+                :text="item.Text"
+                :List="item.List"
+                height="auto"
+                width="100%"
+                textColor="var(--color-nav-link)"
+                :placeholder="item.Placeholder"
+                :isRequired="item.Required"
+                :zIndex="100 - index"
+              />
             </div>
           </div>
 
@@ -28,18 +36,19 @@
                 radius="high"
                 color="white"
                 type="together"
-                iconType="message"
-                iconAreaW="24px"
-                text="İlanınızın daha hızlı satılıp/kiralanabilmesi için ilan kategorisinin doğru seçimi önemlidir."
-                iconColor="var(--color-secondary)"
+                iconType="information"
+                iconAreaW="200px"
+                :text="AdvertCategoryData.InfoText"
+                iconColor="var(--color-primary)"
                 iconHeight="24px"
                 iconWidth="24px"
                 fontSize="13px"
                 textColor="var(--color-text-gray)"
-                family="var(--font-light)"
+                family="var(--font-semibold)"
                 width="100%"
                 textAlign="start"
                 marginLeft="5px"
+                justify="center"
               />
             </div>
           </div>
@@ -56,6 +65,9 @@ import Button from "../Button.vue";
 export default {
   name: "AdvertCategory",
   components: { SelectBox, Button },
+  props: {
+    AdvertCategoryData: Object,
+  },
 };
 </script>
 
@@ -65,7 +77,7 @@ export default {
 
   .wrapper {
     .layout {
-      padding: 20px 40px;
+      border-radius: 10px;
 
       background: var(--background-white);
 
@@ -75,10 +87,14 @@ export default {
 
       .heading {
         h2 {
+          text-transform: uppercase;
+          padding: 20px 40px;
+          font-size: 16px;
+          font-family: var(--font-semibold);
           display: flex;
           align-items: center;
           height: 100%;
-          border-bottom: 1px solid var(--background-general);
+          border-bottom: 2px solid var(--background-general);
           padding-bottom: 20px;
         }
       }
@@ -88,6 +104,7 @@ export default {
         justify-content: space-between;
         align-items: center;
         width: 100%;
+        padding: 20px 40px;
 
         &__left {
           width: 75%;
@@ -99,6 +116,53 @@ export default {
 
         .item {
           width: 100%;
+          position: relative;
+
+          /deep/ button {
+            display: flex;
+            justify-content: center;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .AdvertCategory {
+    margin: 30px 0;
+
+    .wrapper {
+      .layout {
+        .heading {
+          h2 {
+          }
+        }
+
+        .area {
+          flex-direction: column;
+
+          &__left {
+            width: 100%;
+
+            flex-direction: column;
+          }
+          &__right {
+            width: 100%;
+          }
+
+          .item {
+            /deep/ button {
+              width: 100% !important;
+              .button-together {
+                width: 100% !important;
+                text-align: left;
+                .together-text {
+                  justify-content: start !important;
+                }
+              }
+            }
+          }
         }
       }
     }
