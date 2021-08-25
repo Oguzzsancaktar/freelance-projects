@@ -99,7 +99,6 @@ export default {
     changeSection(num) {
       let activeSection = this.section;
       activeSection = num;
-      // console.log(activeSection);
 
       this.selected = activeSection;
 

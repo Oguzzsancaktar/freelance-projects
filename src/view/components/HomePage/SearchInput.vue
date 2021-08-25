@@ -20,6 +20,7 @@ export default {
   // margin: auto;
   width: 20%;
   padding: 0 15px;
+  cursor: pointer;
   p {
     font-size: 14px;
     color: var(--color-text-gray-light);
@@ -53,8 +54,9 @@ export default {
 
 @media (max-width: 777px) {
   .search__input {
-    width: 100%;
-    padding: 0 15px;
+    width: 90%;
+    padding: 0 0px;
+    margin: 0 auto;
     p {
       font-size: 14px;
       color: var(--color-text-gray-light);

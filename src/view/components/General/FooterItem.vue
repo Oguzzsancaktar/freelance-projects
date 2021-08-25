@@ -223,12 +223,16 @@ export default {
         list-style: none;
         color: var(--background-white);
         &__item {
+          transition: 0.7s;
+
           margin: 3px 0;
           font-size: 14px;
           font-family: var(--font-light);
           cursor: pointer;
         }
         &__item:hover {
+          transition: 0.7s;
+
           color: var(--color-secondary);
           font-family: var(--font-semibold);
         }

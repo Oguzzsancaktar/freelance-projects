@@ -1,5 +1,5 @@
 <template>
-  <div class="search__add__new">
+  <div @click="showAdvenced" class="search__add__new">
     <p>{{ text }}</p>
     <Button
       background="transparent"
@@ -33,15 +33,21 @@ export default {
     text: String,
     subText: String,
   },
+  methods: {
+    showAdvenced: function() {
+      this.$emit("show-advenced");
+    },
+  },
 };
 </script>
 
 <style lang="scss" scoped>
 .search__add__new {
-  padding: 0 10px;
+  padding: 0 0px;
   text-align: start;
   // margin: 20px auto;
-  width: 100%;
+  width: 90%;
+  margin: 10px auto !important;
 
   p {
     font-size: 14px;

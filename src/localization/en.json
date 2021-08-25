@@ -404,6 +404,64 @@
         "SearchInputData": { "Text": "Size", "SubText": "Accusantium" },
         "SearchAddNewData": { "Text": "Advanced", "SubText": "Other Options" },
         "Search": "Search"
+      },
+
+      "AdvencedSettingsData": {
+        "Heading": "Advenced Search",
+        "Search": "Search",
+
+        "SelectBoxData": [
+          {
+            "Placeholder": "Select",
+            "Text": "Category1",
+            "List": ["Category1-a", "Category1-b", "Category1-c", "Category1-d"]
+          },
+          {
+            "Placeholder": "Select",
+            "Text": "Category2",
+            "List": ["Category2-a", "Category2-b", "Category2-c", "Category2-d"]
+          },
+          {
+            "Placeholder": "Select",
+            "Text": "Category2",
+            "List": ["Category3-a", "Category3-b", "Category3-c", "Category3-d"]
+          },
+          {
+            "Placeholder": "Select",
+            "Text": "Category1",
+            "List": ["Category1-a", "Category1-b", "Category1-c", "Category1-d"]
+          },
+          {
+            "Placeholder": "Select",
+            "Text": "Category2",
+            "List": ["Category2-a", "Category2-b", "Category2-c", "Category2-d"]
+          },
+          {
+            "Placeholder": "Select",
+            "Text": "Category2",
+            "List": ["Category3-a", "Category3-b", "Category3-c", "Category3-d"]
+          }
+        ],
+        "CheckBoxData": [
+          {
+            "Text": "Inline Features"
+          },
+          {
+            "Text": "Outline Features"
+          },
+          {
+            "Text": "Location"
+          },
+          {
+            "Text": "Inline Features"
+          },
+          {
+            "Text": "Outline Features"
+          },
+          {
+            "Text": "Location"
+          }
+        ]
       }
     },
     "CarouselData": {

@@ -12,6 +12,7 @@
       :subText="HeroSearchData.SearchInputData.SubText"
     />
     <SearchAddNew
+      @show-advenced="showAdvenced"
       :text="HeroSearchData.SearchAddNewData.Text"
       :subText="HeroSearchData.SearchAddNewData.SubText"
     />
@@ -46,6 +47,11 @@ export default {
   components: { SearchSelect, SearchInput, Button, SearchAddNew },
   name: "HeroSearch",
   props: { HeroSearchData: Object },
+  methods: {
+    showAdvenced: function() {
+      this.$emit("show-advenced");
+    },
+  },
 };
 </script>
 
@@ -85,7 +91,7 @@ export default {
     margin: auto;
 
     .search__add__new {
-      margin: 10px 5px;
+      margin: 10px 0px;
     }
     &__button {
       background: var(--color-secondary);

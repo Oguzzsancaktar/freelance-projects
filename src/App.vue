@@ -67,15 +67,12 @@ export default {
         ? (this.ApplicationLanguage = "ar")
         : (this.ApplicationLanguage = "en");
       localStorage.setItem("ApplicationLanguage", this.ApplicationLanguage);
-
-      console.log(this.ApplicationLanguage);
     },
     navbarAnimations: function(fromTo) {
       this.$emit("navbar-animations", fromTo);
     },
 
     showSignin: function() {
-      console.log("qqq");
       // this.$emit("show-signin");
     },
   },
@@ -226,7 +223,7 @@ export default {
 }
 
 ::-webkit-scrollbar {
-  width: 10px;
+  width: 4px;
 }
 
 ::-webkit-scrollbar-track {

@@ -96,9 +96,9 @@ export default {
 .hero__search__select {
   cursor: pointer;
   position: relative;
-  width: 100%;
+  width: 90%;
+  margin: auto;
 
-  padding: 0 15px;
   h1 {
     color: #f9f9f9;
     text-align: center;
@@ -131,7 +131,7 @@ export default {
       border: 1px solid transparent;
       background: transparent;
       position: absolute;
-      width: 80%;
+      width: 100%;
       .arrow {
         position: absolute;
         right: 20px;
@@ -189,9 +189,11 @@ export default {
       color: var(--background-white);
       font-family: var(--font-medium);
       background: var(--color-secondary);
+      transition: background 0.4s;
 
       &:hover {
         color: white;
+        transition: background 0.4s;
 
         background: var(--color-primary);
       }

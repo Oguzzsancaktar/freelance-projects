@@ -2,22 +2,25 @@
   <div class="navbar-fullscreen">
     <div class="navbar-fullscreen-layout">
       <div
+        @click="closeNavbar"
         v-for="(item, index) in FullScreenNavbarData.NavLinks"
         :key="index"
         class="navbar-fullscreen-item"
       >
-        <Navlink
-          :href="item.href"
-          textColor="white"
-          fontSize="20px"
-          :text="item.text"
-          hoverClass="hover-primary"
-        />
+        <router-link :to="item.href">
+          <Navlink
+            :href="item.href"
+            textColor="white"
+            fontSize="20px"
+            :text="item.text"
+            hoverClass="hover-primary"
+          />
+        </router-link>
       </div>
 
       <div class="navbar-fullscreen-item button">
         <router-link to="/add">
-          <a>
+          <a @click="closeNavbar">
             <Button
               family="var(--font-medium)"
               textColor="white"
@@ -124,6 +127,27 @@ export default {
   },
 
   methods: {
+    closeNavbar: function() {
+      if (this.isNavbarOpen) {
+        this.isNavbarOpen = false;
+        this.$root.$refs.FullScreenNavbar.navbarAnimations(
+          "close",
+          this.isNavbarOpen
+        );
+        jquery(".navbar-fullscreen").slideUp(200);
+        jquery("#navbarHamburger").removeClass("open");
+      } else {
+        this.isNavbarOpen = true;
+
+        this.$root.$refs.FullScreenNavbar.navbarAnimations(
+          "open",
+          this.isNavbarOpen
+        );
+        jquery(".navbar-fullscreen").slideDown(200);
+        jquery("#navbarHamburger").addClass("open");
+      }
+    },
+
     languageControl: function() {
       this.$emit("language-control");
     },

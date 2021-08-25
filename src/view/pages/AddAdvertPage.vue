@@ -89,6 +89,8 @@ import NextEdit from "../components/NextEdit.vue";
 import PageHeading from "../components/PageHeading.vue";
 
 export default {
+  name: "AddAdvertPage",
+
   components: {
     TopBar,
     AdvertCategory,
@@ -108,7 +110,6 @@ export default {
 
     PageHeading,
   },
-  name: "AddAdvertPage",
   props: {
     Data: Object,
   },

@@ -14,10 +14,24 @@
             />
           </div>
           <div class="hero__left__search">
-            <HeroSearch :HeroSearchData="HeroSliderData.HeroSearchData" />
+            <HeroSearch
+              @show-advenced="showAdvenced"
+              :HeroSearchData="HeroSliderData.HeroSearchData"
+            />
           </div>
+
+          <div class="hero__left__search__advenced">
+            <AdvencedSettings
+              @close-advenced="closeAdvenced"
+              :AdvencedSettingsData="HeroSliderData.AdvencedSettingsData"
+            />
+          </div>
+
           <div class="hero__left__search__mobile">
-            <HeroSearchMobile :HeroSearchData="HeroSliderData.HeroSearchData" />
+            <HeroSearchMobile
+              @show-advenced="showAdvenced"
+              :HeroSearchData="HeroSliderData.HeroSearchData"
+            />
           </div>
           <div class="hero__left__buttons">
             <SliderButtons
@@ -51,9 +65,12 @@
 import HeroSearch from "./HeroSearch.vue";
 import HeroSliderInfo from "./HeroSliderInfo.vue";
 import SliderButtons from "./SliderButtons.vue";
+import AdvencedSettings from "./AdvencedSettings.vue";
+
 import jquery from "jquery";
 import HeroSearchMobile from "./HeroSearchMobile.vue";
 import ImageView from "../ImageView.vue";
+
 export default {
   name: "HeroSlider",
   components: {
@@ -62,6 +79,7 @@ export default {
     HeroSearch,
     HeroSearchMobile,
     ImageView,
+    AdvencedSettings,
   },
   props: {
     HeroSliderData: Object,
@@ -71,9 +89,26 @@ export default {
       activeCounter: 0,
       activeSliderImage: `../../assets/images/heroBackground-0.png`,
       sliderTimer: 6,
+      isAdvencedOpen: false,
     };
   },
   methods: {
+    closeAdvenced: function() {
+      jquery(".hero__left__search__advenced").removeClass("active");
+      jquery(".hero__left__search").removeClass("active");
+      this.isAdvencedOpen = false;
+    },
+    showAdvenced: function() {
+      if (!this.isAdvencedOpen) {
+        jquery(".hero__left__search__advenced").addClass("active");
+        jquery(".hero__left__search").addClass("active");
+        this.isAdvencedOpen = true;
+      } else {
+        jquery(".hero__left__search__advenced").removeClass("active");
+        jquery(".hero__left__search").removeClass("active");
+        this.isAdvencedOpen = false;
+      }
+    },
     goToSlide(event) {
       if (this.sliderTimer > 2) {
         this.sliderTimer = 0;
@@ -192,6 +227,8 @@ export default {
       }
 
       &__search {
+        transition: 0.7s;
+
         display: flex;
         align-items: center;
         height: 100px;
@@ -208,6 +245,43 @@ export default {
           display: none;
         }
       }
+
+      &__search.active {
+        transition: 0.7s;
+        transform: translateY(100%);
+        bottom: calc(100% - 20px);
+      }
+
+      &__search__advenced {
+        display: flex;
+        align-items: center;
+        width: 800px;
+        background: var(--background-white);
+        z-index: 2;
+        position: absolute;
+        bottom: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px -7px var(--box-shadow-color);
+
+        max-height: 0px;
+        transition: 0.4s;
+        overflow: hidden;
+
+        &__mobile {
+          width: 90%;
+          display: none;
+        }
+      }
+
+      &__search__advenced.active {
+        height: auto;
+        transition: 1s;
+        overflow: hidden;
+        max-height: 500px;
+
+        height: auto;
+      }
+
       &__buttons {
         position: absolute;
         bottom: 40px;
@@ -262,6 +336,23 @@ export default {
           // justify-content: center;
           flex-direction: column;
 
+          &__search__advenced {
+            margin: auto;
+            width: 90%;
+            // height: 100%;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            &__mobile {
+            }
+          }
+
+          &__search__advenced.active {
+            overflow-y: scroll;
+            overflow-x: hidden;
+            height: 100%;
+          }
+
           &__buttons {
             bottom: 40px;
             left: 50%;
@@ -269,13 +360,18 @@ export default {
           }
 
           &__search {
-            margin: auto;
+            margin: 0 auto;
             width: 90%;
             // height: 100%;
-            position: initial;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
             &__mobile {
               margin: 0 auto;
             }
+          }
+          &__search.active {
+            bottom: 450px;
           }
 
           &__info {
@@ -298,6 +394,48 @@ export default {
           .hero__slider__image {
             width: 100%;
           }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  #HeroSlider {
+    .wrapper {
+      .hero__layout {
+      }
+
+      .hero__images {
+        .hero__slider__image {
+          img {
+          }
+        }
+        .hero__slider__image.active {
+        }
+      }
+
+      .hero__left {
+        &__info {
+        }
+
+        &__search {
+          &__mobile {
+          }
+        }
+
+        &__search.active {
+        }
+
+        &__search__advenced {
+          &__mobile {
+          }
+        }
+
+        &__search__advenced.active {
+        }
+
+        &__buttons {
         }
       }
     }

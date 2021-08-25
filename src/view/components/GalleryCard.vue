@@ -160,6 +160,8 @@ export default {
     border-radius: 10px;
 
     &__hover {
+      transition: 0.4s;
+
       border-radius: 10px;
       border-bottom-left-radius: 0;
       border-bottom-right-radius: 0;
@@ -177,6 +179,7 @@ export default {
       opacity: 0;
     }
     &__hover:hover {
+      transition: 0.4s;
       opacity: 1;
 
       cursor: pointer;

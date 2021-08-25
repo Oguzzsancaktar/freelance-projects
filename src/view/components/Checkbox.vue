@@ -23,6 +23,8 @@ export default {
   align-items: center;
   /* custom checkbox */
   input[type="checkbox"] {
+    cursor: pointer;
+
     height: 25px;
     width: 25px;
     margin: 0;
@@ -34,6 +36,10 @@ export default {
     background: #fff;
     position: relative;
     margin-right: 10px;
+  }
+
+  input[type="checkbox"]:hover {
+    border: 2px solid var(--color-primary);
   }
 
   input[type="checkbox"]:checked {
@@ -51,15 +57,15 @@ export default {
 
   input[type="checkbox"]:checked:before {
     width: 8px;
-    top: 11px;
+    top: 12px;
     left: 2px;
     transform: rotate(44deg);
   }
 
   input[type="checkbox"]:checked:after {
     width: 14px;
-    top: 8px;
-    left: 5px;
+    top: 9px;
+    left: 6px;
     transform: rotate(-55deg);
   }
 

@@ -125,7 +125,7 @@ export default {
 <style lang="scss" scoped>
 .SelectBox {
   margin: 5px 0;
-  padding: 0 15px;
+  padding: 0 5px;
   h1 {
     color: #f9f9f9;
     text-align: center;
@@ -162,6 +162,7 @@ export default {
       position: relative;
       width: 100%;
       cursor: pointer;
+      transition: 0.4s;
 
       .arrow {
         position: absolute;
@@ -195,6 +196,11 @@ export default {
         }
       }
     }
+
+    .selector:hover {
+      transition: 0.4s;
+      border-color: var(--color-secondary);
+    }
     ul {
       background: var(--background-white);
       width: 100%;
@@ -220,15 +226,18 @@ export default {
       text-align: center;
       font-family: var(--font-medium);
       // background: var(--color-secondary);
+      transition: background 0.4s;
 
       &:hover {
+        transition: background 0.4s;
         color: white;
         background: var(--color-secondary);
         cursor: pointer;
       }
     }
     .current {
-      background: #eaeaea;
+      color: var(--background-white);
+      background: var(--color-secondary);
     }
     .hidden {
       visibility: hidden;
