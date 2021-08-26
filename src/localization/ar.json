@@ -22,35 +22,35 @@
           "BeforeText": "Find Your Next Perfect1",
           "PrimaryText": " Place1",
           "AfterText": "to Live1",
-          "Image": "heroBackground-0.png"
+          "Image": "heroBackground-0.jpg"
         },
         {
           "Title": "New Project2",
           "BeforeText": "Find Your Next Perfect255",
           "PrimaryText": " Place2",
           "AfterText": "to Live2",
-          "Image": "heroBackground-1.png"
+          "Image": "heroBackground-1.jpg"
         },
         {
           "Title": "New Project3",
           "BeforeText": "Find Your Next Perfect3",
           "PrimaryText": " Place3",
           "AfterText": "to Live3",
-          "Image": "heroBackground-2.png"
+          "Image": "heroBackground-2.jpg"
         },
         {
           "Title": "New Project4",
           "BeforeText": "Find Your Next Perfect4",
           "PrimaryText": " Place4",
           "AfterText": "to Live4",
-          "Image": "heroBackground-3.png"
+          "Image": "heroBackground-3.jpg"
         },
         {
           "Title": "New Project5",
           "BeforeText": "Find Your Next Perfect5",
           "PrimaryText": " Place5",
           "AfterText": "to Live5",
-          "Image": "heroBackground-4.png"
+          "Image": "heroBackground-4.jpg"
         }
       ],
 
@@ -72,13 +72,13 @@
     },
     "CarouselData": {
       "Items": [
-        "refferance-logo-0.png",
-        "refferance-logo-1.png",
-        "refferance-logo-2.png",
-        "refferance-logo-3.png",
-        "refferance-logo-4.png",
-        "refferance-logo-5.png",
-        "refferance-logo-6.png"
+        "refferance-logo-0.jpg",
+        "refferance-logo-1.jpg",
+        "refferance-logo-2.jpg",
+        "refferance-logo-3.jpg",
+        "refferance-logo-4.jpg",
+        "refferance-logo-5.jpg",
+        "refferance-logo-6.jpg"
       ]
     },
     "GridGalleryData": {
@@ -90,7 +90,7 @@
       "GalleryCards": [
         {
           "PropID": "12341234",
-          "Image": "cardImage-1.png",
+          "Image": "cardImage-1.jpg",
           "Header": "Luxury Villa In Alice",
           "Description": "New Build Modern Istanbul Property with Sea View on Bagdat Streetpremium three bed-",
           "Price": "£ 1,150,000",
@@ -98,7 +98,7 @@
         },
         {
           "PropID": "12341234",
-          "Image": "cardImage-2.png",
+          "Image": "cardImage-2.jpg",
           "Header": "Luxury Villa In Alice",
           "Description": "New Build Modern Istanbul Property with Sea View on Bagdat Streetpremium three bed-",
           "Price": "£ 1,150,000",
@@ -106,7 +106,7 @@
         },
         {
           "PropID": "12341234",
-          "Image": "cardImage-3.png",
+          "Image": "cardImage-3.jpg",
           "Header": "Luxury Villa In Alice",
           "Description": "New Build Modern Istanbul Property with Sea View on Bagdat Streetpremium three bed-",
           "Price": "£ 1,150,000",
@@ -114,7 +114,7 @@
         },
         {
           "PropID": "12341234",
-          "Image": "cardImage-4.png",
+          "Image": "cardImage-4.jpg",
           "Header": "Luxury Villa In Alice",
           "Description": "New Build Modern Istanbul Property with Sea View on Bagdat Streetpremium three bed-",
           "Price": "£ 1,150,000",
@@ -122,7 +122,7 @@
         },
         {
           "PropID": "12341234",
-          "Image": "cardImage-5.png",
+          "Image": "cardImage-5.jpg",
           "Header": "Luxury Villa In Alice",
           "Description": "New Build Modern Istanbul Property with Sea View on Bagdat Streetpremium three bed-",
           "Price": "£ 1,150,000",
@@ -130,7 +130,7 @@
         },
         {
           "PropID": "12341234",
-          "Image": "cardImage-6.png",
+          "Image": "cardImage-6.jpg",
           "Header": "Luxury Villa In Alice",
           "Description": "New Build Modern Istanbul Property with Sea View on Bagdat Streetpremium three bed-",
           "Price": "£ 1,150,000",
@@ -165,7 +165,7 @@
       "GalleryCards": [
         {
           "PropID": "12341234",
-          "Image": "cardImage-1.png",
+          "Image": "cardImage-1.jpg",
           "Header": "Luxury Villa In Alice",
           "Description": "New Build Modern Istanbul Property with Sea View on Bagdat Streetpremium three bed-",
           "Price": "£ 1,150,000",
@@ -173,7 +173,7 @@
         },
         {
           "PropID": "12341234",
-          "Image": "cardImage-2.png",
+          "Image": "cardImage-2.jpg",
           "Header": "Luxury Villa In Alice",
           "Description": "New Build Modern Istanbul Property with Sea View on Bagdat Streetpremium three bed-",
           "Price": "£ 1,150,000",
@@ -181,7 +181,7 @@
         },
         {
           "PropID": "12341234",
-          "Image": "cardImage-3.png",
+          "Image": "cardImage-3.jpg",
           "Header": "Luxury Villa In Alice",
           "Description": "New Build Modern Istanbul Property with Sea View on Bagdat Streetpremium three bed-",
           "Price": "£ 1,150,000",
@@ -189,7 +189,7 @@
         },
         {
           "PropID": "12341234",
-          "Image": "cardImage-4.png",
+          "Image": "cardImage-4.jpg",
           "Header": "Luxury Villa In Alice",
           "Description": "New Build Modern Istanbul Property with Sea View on Bagdat Streetpremium three bed-",
           "Price": "£ 1,150,000",
@@ -197,7 +197,7 @@
         },
         {
           "PropID": "12341234",
-          "Image": "cardImage-5.png",
+          "Image": "cardImage-5.jpg",
           "Header": "Luxury Villa In Alice",
           "Description": "New Build Modern Istanbul Property with Sea View on Bagdat Streetpremium three bed-",
           "Price": "£ 1,150,000",
@@ -205,7 +205,7 @@
         },
         {
           "PropID": "12341234",
-          "Image": "cardImage-6.png",
+          "Image": "cardImage-6.jpg",
           "Header": "Luxury Villa In Alice",
           "Description": "New Build Modern Istanbul Property with Sea View on Bagdat Streetpremium three bed-",
           "Price": "£ 1,150,000",

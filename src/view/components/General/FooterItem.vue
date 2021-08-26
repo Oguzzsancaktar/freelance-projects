@@ -82,6 +82,7 @@
               height="22px"
               textAlign="start"
               marginLeft="5px"
+              hoverClass="hover-color-secondary"
             />
           </li>
         </ul>
@@ -234,7 +235,7 @@ export default {
           transition: 0.7s;
 
           color: var(--color-secondary);
-          font-family: var(--font-semibold);
+          // font-family: var(--font-semibold);
         }
       }
     }

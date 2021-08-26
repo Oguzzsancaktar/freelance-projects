@@ -39,7 +39,7 @@
             width="100%"
             height="100%"
             imageType="images"
-            imageName="cardImage-1.png"
+            imageName="cardImage-1.jpg"
           />
         </div>
       </div>
@@ -82,7 +82,7 @@
           <ImageView
             height="100%"
             imageType="images"
-            imageName="cardImage-1.png"
+            imageName="cardImage-1.jpg"
           />
         </div>
       </div>

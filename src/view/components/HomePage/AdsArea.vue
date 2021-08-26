@@ -54,7 +54,7 @@
             width="100%"
             height="100%"
             imageType="images"
-            imageName="AdsImage.png"
+            imageName="AdsImage.jpg"
           />
         </div>
       </div>

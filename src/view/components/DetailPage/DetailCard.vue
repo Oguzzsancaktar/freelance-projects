@@ -24,7 +24,7 @@
             width="100%"
             height="100%"
             imageType="images"
-            imageName="cardImage-1.png"
+            imageName="cardImage-1.jpg"
           />
         </div>
       </a>
@@ -108,7 +108,7 @@
                 width="80%"
                 height="auto"
                 imageType="images"
-                imageName="refferance-logo-0.png"
+                imageName="refferance-logo-0.jpg"
               />
             </div>
           </div>

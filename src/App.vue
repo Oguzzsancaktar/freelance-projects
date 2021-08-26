@@ -366,6 +366,19 @@ export default {
   color: var(--background-white) !important;
 }
 
+.hover-secondary-low:hover {
+  transition: 0.4s !important;
+  background: var(--color-primary-dark) !important;
+}
+.hover-secondary-low:hover g {
+  transition: 0.4s !important;
+  fill: var(--background-white) !important;
+}
+.hover-secondary-low:hover span {
+  transition: 0.4s !important;
+  color: var(--background-white) !important;
+}
+
 .hover-white:hover {
   transition: 0.4s !important;
   background: var(--background-white) !important;
@@ -395,6 +408,15 @@ export default {
 .nav-hover:hover {
   transition: 0.4s !important;
   color: var(--color-primary) !important;
+}
+
+.hover-color-secondary:hover g {
+  transition: 0.4s !important;
+  fill: var(--color-secondary) !important;
+}
+.hover-color-secondary:hover span {
+  transition: 0.4s !important;
+  color: var(--color-secondary) !important;
 }
 
 /* Hover Class */

@@ -87,7 +87,7 @@ export default {
   data: function() {
     return {
       activeCounter: 0,
-      activeSliderImage: `../../assets/images/heroBackground-0.png`,
+      activeSliderImage: `../../assets/images/heroBackground-0.jpg`,
       sliderTimer: 6,
       isAdvencedOpen: false,
     };

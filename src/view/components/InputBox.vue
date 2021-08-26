@@ -97,6 +97,13 @@ export default {
     padding: 10px 25px;
     width: 100%;
     outline: none;
+    transition: 0.4s;
+  }
+  input:hover,
+  input:focus {
+    transition: 0.4s;
+
+    border: 1px solid var(--color-primary);
   }
 }
 

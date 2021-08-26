@@ -13,7 +13,7 @@
           width="100%"
           height="100%"
           imageType="images"
-          imageName="heroBackground-0.png"
+          imageName="heroBackground-0.jpg"
         />
       </div>
       <div class="item">
@@ -21,7 +21,7 @@
           width="100%"
           height="100%"
           imageType="images"
-          imageName="heroBackground-1.png"
+          imageName="heroBackground-1.jpg"
         />
       </div>
       <div class="item">
@@ -29,7 +29,7 @@
           width="100%"
           height="100%"
           imageType="images"
-          imageName="heroBackground-2.png"
+          imageName="heroBackground-2.jpg"
         />
       </div>
       <div class="item">
@@ -37,7 +37,7 @@
           width="100%"
           height="100%"
           imageType="images"
-          imageName="heroBackground-3.png"
+          imageName="heroBackground-3.jpg"
         />
       </div>
     </div>

@@ -125,6 +125,29 @@
       "
       v-if="'together' == type"
     >
+      <span :style="`width:${iconAreaW}`" v-if="'send' == iconType">
+        <Icon
+          :iconColor="iconColor"
+          iconName="send"
+          width="20px"
+          height="20px"
+          :iconWidth="iconWidth"
+          :iconHeight="iconHeight"
+          viewBox="0 0 512.001 512.001"
+        />
+      </span>
+      <span :style="`width:${iconAreaW}`" v-if="'fax' == iconType">
+        <Icon
+          :iconColor="iconColor"
+          iconName="fax"
+          width="20px"
+          height="20px"
+          :iconWidth="iconWidth"
+          :iconHeight="iconHeight"
+          viewBox="0 0 163.15 165.516"
+        />
+      </span>
+
       <span :style="`width:${iconAreaW}`" v-if="'livingRoom' == iconType">
         <Icon
           :iconColor="iconColor"
