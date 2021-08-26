@@ -58,27 +58,28 @@
                 iconAreaW="auto"
                 hoverClass="hover-primary"
               />
-              <Button
-                color="var(--color-primary)"
-                textColor="var(--color-primary)"
-                width="100px"
-                background="var(--color-primary-low-button)"
-                text="For Sale"
-                radius="10px"
-                type="together"
-                border="1px solid var(--color-primary)"
-                iconType="rentSale"
-                height="35px"
-                iconColor="var(--color-primary)"
-                padding="0 10px"
-                margin="0"
-                iconWidth="20px"
-                iconHeight="16px"
-                family="var(--font-medium)"
-                fontSize="14px"
-                iconAreaW="auto"
-                hoverClass="hover-secondary"
-              />
+              <router-link to="/profile">
+                <Button
+                  color="var(--color-primary)"
+                  textColor="var(--color-primary)"
+                  width="100px"
+                  background="var(--color-primary-low-button)"
+                  text="For Sale"
+                  radius="10px"
+                  type="together"
+                  border="1px solid var(--color-primary)"
+                  iconType="rentSale"
+                  height="35px"
+                  iconColor="var(--color-primary)"
+                  padding="0 10px"
+                  margin="0"
+                  iconWidth="20px"
+                  iconHeight="16px"
+                  family="var(--font-medium)"
+                  fontSize="14px"
+                  iconAreaW="auto"
+                />
+              </router-link>
             </div>
           </div>
 

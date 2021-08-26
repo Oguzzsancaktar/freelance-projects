@@ -647,8 +647,173 @@
       ]
     }
   },
+  "ProfilePage": {
+    "LeftNavData": [
+      {
+        "Text": "Profile",
+        "Keyword": "about",
+        "IconType": "home",
+        "Counter": 4
+      },
+      {
+        "Text": "Adverts",
+        "Keyword": "member",
+        "IconType": "resume",
+        "Counter": 1
+      },
+      {
+        "Text": "Fav Adverts",
+        "Keyword": "warn",
+        "IconType": "notification",
+        "Counter": 10
+      },
+      {
+        "Text": "Using Rules",
+        "Keyword": "rules",
+        "IconType": "writing",
+        "Counter": 0
+      },
+      {
+        "Text": "Lightness Text",
+        "Keyword": "light",
+        "IconType": "lamp",
+        "Counter": 5
+      }
+    ]
+  },
+  "AboutUsPage": {
+    "Section": "profile",
 
-  "AboutPage": {},
+    "LeftNavData": [
+      {
+        "Text": "About Us",
+        "Keyword": "about",
+        "IconType": "home"
+      },
+      {
+        "Text": "Membership Agreement ",
+        "Keyword": "member",
+        "IconType": "resume"
+      },
+      {
+        "Text": "Legal Warning",
+        "Keyword": "warn",
+        "IconType": "notification"
+      },
+      {
+        "Text": "Using Rules",
+        "Keyword": "rules",
+        "IconType": "writing"
+      },
+      {
+        "Text": "Lightness Text",
+        "Keyword": "light",
+        "IconType": "lamp"
+      }
+    ],
+    "AboutUs": "About Us",
+
+    "AboutUsData": {
+      "Heading": "About Us",
+      "Paragraphs": [
+        {
+          "Paragraph": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis libero augue, fringilla nec lorem at, interdum viverra est. Cras ornare quam vitae faucibus fermentum. Sed commodo ex non vehicula luctus. Maecenas sit amet condimentum sapien, vitae dictum tortor. Phasellus volutpat libero justo, vel hendrerit ante vehicula volutpat. Nullam euismod nisl vitae ipsum sollicitudin, ac condimentum nulla egestas. Etiam eu semper enim, et fringilla tellus. Duis et lacus ac lorem porta sodales. Nam sed fringilla leo, quis malesuada orci. Integer tincidunt nisi lectus, ut blandit neque varius vitae. Phasellus nec tristique nibh. Pellentesque enim lectus, feugiat eu ultrices in, condimentum sed dui. Vivamus bibendum mi ante, quis congue justo venenatis vel."
+        },
+        {
+          "Paragraph": "Nullam quis rhoncus nisl. Aliquam et commodo dolor, ut accumsan ipsum. Proin posuere a odio blandit pulvinar. In orci tortor, semper vel fringilla sit amet, blandit a elit. Proin eget sapien eget sapien sollicitudin accumsan. Proin ultrices felis faucibus, ultricies turpis id, ullamcorper ex. Suspendisse potenti."
+        },
+        {
+          "Paragraph": "Etiam consectetur odio non risus venenatis rutrum. Pellentesque semper iaculis nisl sed volutpat. Vivamus et lectus ante. Etiam sit amet dapibus mauris. Pellentesque fringilla turpis vitae elit dictum, ac blandit libero hendrerit. Morbi sapien massa, porttitor nec condimentum eget, feugiat in velit. Cras scelerisque vel neque sed tempor. Aenean mollis nec justo ut semper. Fusce in nunc condimentum, semper dolor laoreet, pharetra risus. Curabitur aliquam ac quam eget tempus. Nunc facilisis tempus pulvinar. Fusce pretium diam tellus, vel pellentesque lectus pellentesque ut. Sed risus diam, accumsan id ullamcorper id, eleifend nec eros. Ut ligula elit, consequat et tortor sed, gravida vestibulum lorem."
+        },
+        {
+          "Paragraph": "Phasellus at venenatis turpis. Ut rutrum posuere est, non eleifend dui vehicula sed. Donec turpis urna, posuere ac faucibus mattis, vulputate id ligula. Nunc blandit nulla ex, placerat feugiat tortor accumsan et. Praesent dictum non ipsum in posuere. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas fringilla mattis ante, tempus scelerisque ex placerat eu. Nunc rhoncus pharetra ex, in fringilla neque rutrum vitae. Vivamus cursus consectetur purus non vulputate. Duis finibus dignissim neque, vel porttitor neque facilisis ac. Aenean placerat ornare ligula, pulvinar imperdiet elit bibendum id. Suspendisse at ante mi. Pellentesque auctor ac justo a lobortis."
+        },
+        {
+          "Paragraph": "Vivamus non nisi diam. Interdum et malesuada fames ac ante ipsum primis in faucibus. In at turpis maximus ante facilisis aliquam. Ut vulputate ornare quam at sollicitudin. Morbi nec magna varius, pharetra dolor eget, posuere erat. "
+        }
+      ]
+    },
+    "MembershipData": {
+      "Heading": "Membership Agreement",
+      "Paragraphs": [
+        {
+          "Paragraph": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis libero augue, fringilla nec lorem at, interdum viverra est. Cras ornare quam vitae faucibus fermentum. Sed commodo ex non vehicula luctus. Maecenas sit amet condimentum sapien, vitae dictum tortor. Phasellus volutpat libero justo, vel hendrerit ante vehicula volutpat. Nullam euismod nisl vitae ipsum sollicitudin, ac condimentum nulla egestas. Etiam eu semper enim, et fringilla tellus. Duis et lacus ac lorem porta sodales. Nam sed fringilla leo, quis malesuada orci. Integer tincidunt nisi lectus, ut blandit neque varius vitae. Phasellus nec tristique nibh. Pellentesque enim lectus, feugiat eu ultrices in, condimentum sed dui. Vivamus bibendum mi ante, quis congue justo venenatis vel."
+        },
+        {
+          "Paragraph": "Nullam quis rhoncus nisl. Aliquam et commodo dolor, ut accumsan ipsum. Proin posuere a odio blandit pulvinar. In orci tortor, semper vel fringilla sit amet, blandit a elit. Proin eget sapien eget sapien sollicitudin accumsan. Proin ultrices felis faucibus, ultricies turpis id, ullamcorper ex. Suspendisse potenti."
+        },
+        {
+          "Paragraph": "Etiam consectetur odio non risus venenatis rutrum. Pellentesque semper iaculis nisl sed volutpat. Vivamus et lectus ante. Etiam sit amet dapibus mauris. Pellentesque fringilla turpis vitae elit dictum, ac blandit libero hendrerit. Morbi sapien massa, porttitor nec condimentum eget, feugiat in velit. Cras scelerisque vel neque sed tempor. Aenean mollis nec justo ut semper. Fusce in nunc condimentum, semper dolor laoreet, pharetra risus. Curabitur aliquam ac quam eget tempus. Nunc facilisis tempus pulvinar. Fusce pretium diam tellus, vel pellentesque lectus pellentesque ut. Sed risus diam, accumsan id ullamcorper id, eleifend nec eros. Ut ligula elit, consequat et tortor sed, gravida vestibulum lorem."
+        },
+        {
+          "Paragraph": "Phasellus at venenatis turpis. Ut rutrum posuere est, non eleifend dui vehicula sed. Donec turpis urna, posuere ac faucibus mattis, vulputate id ligula. Nunc blandit nulla ex, placerat feugiat tortor accumsan et. Praesent dictum non ipsum in posuere. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas fringilla mattis ante, tempus scelerisque ex placerat eu. Nunc rhoncus pharetra ex, in fringilla neque rutrum vitae. Vivamus cursus consectetur purus non vulputate. Duis finibus dignissim neque, vel porttitor neque facilisis ac. Aenean placerat ornare ligula, pulvinar imperdiet elit bibendum id. Suspendisse at ante mi. Pellentesque auctor ac justo a lobortis."
+        },
+        {
+          "Paragraph": "Vivamus non nisi diam. Interdum et malesuada fames ac ante ipsum primis in faucibus. In at turpis maximus ante facilisis aliquam. Ut vulputate ornare quam at sollicitudin. Morbi nec magna varius, pharetra dolor eget, posuere erat. "
+        }
+      ]
+    },
+    "LegalWarnData": {
+      "Heading": "Legal Warn",
+      "Paragraphs": [
+        {
+          "Paragraph": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis libero augue, fringilla nec lorem at, interdum viverra est. Cras ornare quam vitae faucibus fermentum. Sed commodo ex non vehicula luctus. Maecenas sit amet condimentum sapien, vitae dictum tortor. Phasellus volutpat libero justo, vel hendrerit ante vehicula volutpat. Nullam euismod nisl vitae ipsum sollicitudin, ac condimentum nulla egestas. Etiam eu semper enim, et fringilla tellus. Duis et lacus ac lorem porta sodales. Nam sed fringilla leo, quis malesuada orci. Integer tincidunt nisi lectus, ut blandit neque varius vitae. Phasellus nec tristique nibh. Pellentesque enim lectus, feugiat eu ultrices in, condimentum sed dui. Vivamus bibendum mi ante, quis congue justo venenatis vel."
+        },
+        {
+          "Paragraph": "Nullam quis rhoncus nisl. Aliquam et commodo dolor, ut accumsan ipsum. Proin posuere a odio blandit pulvinar. In orci tortor, semper vel fringilla sit amet, blandit a elit. Proin eget sapien eget sapien sollicitudin accumsan. Proin ultrices felis faucibus, ultricies turpis id, ullamcorper ex. Suspendisse potenti."
+        },
+        {
+          "Paragraph": "Etiam consectetur odio non risus venenatis rutrum. Pellentesque semper iaculis nisl sed volutpat. Vivamus et lectus ante. Etiam sit amet dapibus mauris. Pellentesque fringilla turpis vitae elit dictum, ac blandit libero hendrerit. Morbi sapien massa, porttitor nec condimentum eget, feugiat in velit. Cras scelerisque vel neque sed tempor. Aenean mollis nec justo ut semper. Fusce in nunc condimentum, semper dolor laoreet, pharetra risus. Curabitur aliquam ac quam eget tempus. Nunc facilisis tempus pulvinar. Fusce pretium diam tellus, vel pellentesque lectus pellentesque ut. Sed risus diam, accumsan id ullamcorper id, eleifend nec eros. Ut ligula elit, consequat et tortor sed, gravida vestibulum lorem."
+        },
+        {
+          "Paragraph": "Phasellus at venenatis turpis. Ut rutrum posuere est, non eleifend dui vehicula sed. Donec turpis urna, posuere ac faucibus mattis, vulputate id ligula. Nunc blandit nulla ex, placerat feugiat tortor accumsan et. Praesent dictum non ipsum in posuere. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas fringilla mattis ante, tempus scelerisque ex placerat eu. Nunc rhoncus pharetra ex, in fringilla neque rutrum vitae. Vivamus cursus consectetur purus non vulputate. Duis finibus dignissim neque, vel porttitor neque facilisis ac. Aenean placerat ornare ligula, pulvinar imperdiet elit bibendum id. Suspendisse at ante mi. Pellentesque auctor ac justo a lobortis."
+        },
+        {
+          "Paragraph": "Vivamus non nisi diam. Interdum et malesuada fames ac ante ipsum primis in faucibus. In at turpis maximus ante facilisis aliquam. Ut vulputate ornare quam at sollicitudin. Morbi nec magna varius, pharetra dolor eget, posuere erat. "
+        }
+      ]
+    },
+    "RulesData": {
+      "Heading": "Using Rules",
+      "Paragraphs": [
+        {
+          "Paragraph": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis libero augue, fringilla nec lorem at, interdum viverra est. Cras ornare quam vitae faucibus fermentum. Sed commodo ex non vehicula luctus. Maecenas sit amet condimentum sapien, vitae dictum tortor. Phasellus volutpat libero justo, vel hendrerit ante vehicula volutpat. Nullam euismod nisl vitae ipsum sollicitudin, ac condimentum nulla egestas. Etiam eu semper enim, et fringilla tellus. Duis et lacus ac lorem porta sodales. Nam sed fringilla leo, quis malesuada orci. Integer tincidunt nisi lectus, ut blandit neque varius vitae. Phasellus nec tristique nibh. Pellentesque enim lectus, feugiat eu ultrices in, condimentum sed dui. Vivamus bibendum mi ante, quis congue justo venenatis vel."
+        },
+        {
+          "Paragraph": "Nullam quis rhoncus nisl. Aliquam et commodo dolor, ut accumsan ipsum. Proin posuere a odio blandit pulvinar. In orci tortor, semper vel fringilla sit amet, blandit a elit. Proin eget sapien eget sapien sollicitudin accumsan. Proin ultrices felis faucibus, ultricies turpis id, ullamcorper ex. Suspendisse potenti."
+        },
+        {
+          "Paragraph": "Etiam consectetur odio non risus venenatis rutrum. Pellentesque semper iaculis nisl sed volutpat. Vivamus et lectus ante. Etiam sit amet dapibus mauris. Pellentesque fringilla turpis vitae elit dictum, ac blandit libero hendrerit. Morbi sapien massa, porttitor nec condimentum eget, feugiat in velit. Cras scelerisque vel neque sed tempor. Aenean mollis nec justo ut semper. Fusce in nunc condimentum, semper dolor laoreet, pharetra risus. Curabitur aliquam ac quam eget tempus. Nunc facilisis tempus pulvinar. Fusce pretium diam tellus, vel pellentesque lectus pellentesque ut. Sed risus diam, accumsan id ullamcorper id, eleifend nec eros. Ut ligula elit, consequat et tortor sed, gravida vestibulum lorem."
+        },
+        {
+          "Paragraph": "Phasellus at venenatis turpis. Ut rutrum posuere est, non eleifend dui vehicula sed. Donec turpis urna, posuere ac faucibus mattis, vulputate id ligula. Nunc blandit nulla ex, placerat feugiat tortor accumsan et. Praesent dictum non ipsum in posuere. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas fringilla mattis ante, tempus scelerisque ex placerat eu. Nunc rhoncus pharetra ex, in fringilla neque rutrum vitae. Vivamus cursus consectetur purus non vulputate. Duis finibus dignissim neque, vel porttitor neque facilisis ac. Aenean placerat ornare ligula, pulvinar imperdiet elit bibendum id. Suspendisse at ante mi. Pellentesque auctor ac justo a lobortis."
+        },
+        {
+          "Paragraph": "Vivamus non nisi diam. Interdum et malesuada fames ac ante ipsum primis in faucibus. In at turpis maximus ante facilisis aliquam. Ut vulputate ornare quam at sollicitudin. Morbi nec magna varius, pharetra dolor eget, posuere erat. "
+        }
+      ]
+    },
+    "LightnessData": {
+      "Heading": "Lightness Text",
+      "Paragraphs": [
+        {
+          "Paragraph": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis libero augue, fringilla nec lorem at, interdum viverra est. Cras ornare quam vitae faucibus fermentum. Sed commodo ex non vehicula luctus. Maecenas sit amet condimentum sapien, vitae dictum tortor. Phasellus volutpat libero justo, vel hendrerit ante vehicula volutpat. Nullam euismod nisl vitae ipsum sollicitudin, ac condimentum nulla egestas. Etiam eu semper enim, et fringilla tellus. Duis et lacus ac lorem porta sodales. Nam sed fringilla leo, quis malesuada orci. Integer tincidunt nisi lectus, ut blandit neque varius vitae. Phasellus nec tristique nibh. Pellentesque enim lectus, feugiat eu ultrices in, condimentum sed dui. Vivamus bibendum mi ante, quis congue justo venenatis vel."
+        },
+        {
+          "Paragraph": "Nullam quis rhoncus nisl. Aliquam et commodo dolor, ut accumsan ipsum. Proin posuere a odio blandit pulvinar. In orci tortor, semper vel fringilla sit amet, blandit a elit. Proin eget sapien eget sapien sollicitudin accumsan. Proin ultrices felis faucibus, ultricies turpis id, ullamcorper ex. Suspendisse potenti."
+        },
+        {
+          "Paragraph": "Etiam consectetur odio non risus venenatis rutrum. Pellentesque semper iaculis nisl sed volutpat. Vivamus et lectus ante. Etiam sit amet dapibus mauris. Pellentesque fringilla turpis vitae elit dictum, ac blandit libero hendrerit. Morbi sapien massa, porttitor nec condimentum eget, feugiat in velit. Cras scelerisque vel neque sed tempor. Aenean mollis nec justo ut semper. Fusce in nunc condimentum, semper dolor laoreet, pharetra risus. Curabitur aliquam ac quam eget tempus. Nunc facilisis tempus pulvinar. Fusce pretium diam tellus, vel pellentesque lectus pellentesque ut. Sed risus diam, accumsan id ullamcorper id, eleifend nec eros. Ut ligula elit, consequat et tortor sed, gravida vestibulum lorem."
+        },
+        {
+          "Paragraph": "Phasellus at venenatis turpis. Ut rutrum posuere est, non eleifend dui vehicula sed. Donec turpis urna, posuere ac faucibus mattis, vulputate id ligula. Nunc blandit nulla ex, placerat feugiat tortor accumsan et. Praesent dictum non ipsum in posuere. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas fringilla mattis ante, tempus scelerisque ex placerat eu. Nunc rhoncus pharetra ex, in fringilla neque rutrum vitae. Vivamus cursus consectetur purus non vulputate. Duis finibus dignissim neque, vel porttitor neque facilisis ac. Aenean placerat ornare ligula, pulvinar imperdiet elit bibendum id. Suspendisse at ante mi. Pellentesque auctor ac justo a lobortis."
+        },
+        {
+          "Paragraph": "Vivamus non nisi diam. Interdum et malesuada fames ac ante ipsum primis in faucibus. In at turpis maximus ante facilisis aliquam. Ut vulputate ornare quam at sollicitudin. Morbi nec magna varius, pharetra dolor eget, posuere erat. "
+        }
+      ]
+    }
+  },
 
   "NavbarData": {
     "Lang": "EN",

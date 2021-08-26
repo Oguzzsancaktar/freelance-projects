@@ -341,6 +341,7 @@ export default {
 
 @media (max-width: 950px) {
   #Navbar {
+    height: 80px;
     .wrapper {
       .layout {
         .area:nth-child(2) {

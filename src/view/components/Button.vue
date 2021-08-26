@@ -125,6 +125,66 @@
       "
       v-if="'together' == type"
     >
+      <span :style="`width:${iconAreaW}`" v-if="'home' == iconType">
+        <Icon
+          :iconColor="iconColor"
+          iconName="home"
+          width="20px"
+          height="20px"
+          :iconWidth="iconWidth"
+          :iconHeight="iconHeight"
+          viewBox="0 1 511 511.999"
+        />
+      </span>
+
+      <span :style="`width:${iconAreaW}`" v-if="'resume' == iconType">
+        <Icon
+          :iconColor="iconColor"
+          iconName="resume"
+          width="20px"
+          height="20px"
+          :iconWidth="iconWidth"
+          :iconHeight="iconHeight"
+          viewBox="0 0 512 512"
+        />
+      </span>
+
+      <span :style="`width:${iconAreaW}`" v-if="'notification' == iconType">
+        <Icon
+          :iconColor="iconColor"
+          iconName="notification"
+          width="20px"
+          height="20px"
+          :iconWidth="iconWidth"
+          :iconHeight="iconHeight"
+          viewBox="0 1 511 511.999"
+        />
+      </span>
+
+      <span :style="`width:${iconAreaW}`" v-if="'writing' == iconType">
+        <Icon
+          :iconColor="iconColor"
+          iconName="writing"
+          width="20px"
+          height="20px"
+          :iconWidth="iconWidth"
+          :iconHeight="iconHeight"
+          viewBox="0 0 512 512"
+        />
+      </span>
+
+      <span :style="`width:${iconAreaW}`" v-if="'lamp' == iconType">
+        <Icon
+          :iconColor="iconColor"
+          iconName="lamp"
+          width="20px"
+          height="20px"
+          :iconWidth="iconWidth"
+          :iconHeight="iconHeight"
+          viewBox="0 0 24 24"
+        />
+      </span>
+
       <span :style="`width:${iconAreaW}`" v-if="'send' == iconType">
         <Icon
           :iconColor="iconColor"
@@ -254,7 +314,12 @@
         />
       </span>
 
-      <span v-if="'profile' == iconType">
+      <span
+        v-if="'profile' == iconType"
+        :style="
+          `width:${iconAreaW} ;color:${textColor};flex-direction:${direction}; font-family:${family};font-size:${fontSize} `
+        "
+      >
         <Icon
           :iconColor="iconColor"
           iconName="profile"
@@ -266,7 +331,12 @@
         />
       </span>
 
-      <span v-if="'list' == iconType">
+      <span
+        v-if="'list' == iconType"
+        :style="
+          `width:${iconAreaW} ;color:${textColor};flex-direction:${direction}; font-family:${family};font-size:${fontSize} `
+        "
+      >
         <Icon
           :iconColor="iconColor"
           iconName="list"
@@ -649,7 +719,6 @@ export default {
 
 <style lang="scss" scoped>
 button {
-  cursor: pointer;
   width: 100%;
   align-items: center;
 }

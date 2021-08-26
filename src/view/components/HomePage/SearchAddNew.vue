@@ -7,7 +7,7 @@
       radius="high"
       color="dark"
       textColor="var(--color-text-gray)"
-      family="medium"
+      family="var(--font-medium)"
       fontSize="17px"
       type="together"
       iconType="advenced"

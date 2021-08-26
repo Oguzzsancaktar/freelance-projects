@@ -7,7 +7,7 @@ import AddAdvertPage from './view/pages/AddAdvertPage.vue'
 import AdvertDetailPage from './view/pages/AdvertDetailPage.vue'
 import CategoryPage from './view/pages/CategoryPage.vue'
 import ProfilePage from './view/pages/ProfilePage.vue'
-import AboutPage from './view/pages/AboutPage.vue'
+import AboutUsPage from './view/pages/AboutUsPage.vue'
 import ContactUsPage from './view/pages/ContactUsPage.vue'
 
 
@@ -21,11 +21,9 @@ const routes = [
   { path: '/add', component: AddAdvertPage },
   { path: '/detail', component: AdvertDetailPage },
   { path: '/contact', component: ContactUsPage },
-
-
   { path: '/category', component: CategoryPage },
   { path: '/profile', component: ProfilePage },
-  { path: '/about', component: AboutPage },
+  { path: '/about', component: AboutUsPage },
 ]
 
 const router = new VueRouter({

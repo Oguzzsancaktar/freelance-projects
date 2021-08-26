@@ -1,5 +1,5 @@
 <template>
-  <div v-if="counter != 0" class="CounterCircle">
+  <div v-if="counter != undefined && counter != 0" class="CounterCircle">
     <span class="count">
       {{ counter }}
     </span>

@@ -434,4 +434,14 @@ export default {
     width: 90%;
   }
 }
+
+@media (max-width: 777px) {
+  .subpage-content {
+    height: 100%;
+    min-height: calc(100vh - 285px);
+    padding-top: 80px;
+    background: var(--background-general);
+    color: var(--color-text-subpage);
+  }
+}
 </style>

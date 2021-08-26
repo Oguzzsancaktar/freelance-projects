@@ -5,7 +5,7 @@
         <div class="layout">
           <div class="section">
             <LeftNav
-              :profileNavList="profileNavList"
+              :profileNavList="Data.ProfilePage.LeftNavData"
               :section="section"
               @update-section="update"
             />
@@ -54,6 +54,9 @@ export default {
     LeftNav,
     ProfileMessages,
     MyProfile,
+  },
+  props: {
+    Data: Object,
   },
   data: function() {
     return {

@@ -9,7 +9,7 @@
           :class="{ active: index == selected }"
           @click="selected = index"
         >
-          <button @click="changeSection(item.keyword)">
+          <button @click="changeSection(item.Keyword)">
             <Button
               margin="auto"
               padding="0px"
@@ -18,22 +18,23 @@
               radius="high"
               color="white"
               type="together"
-              :iconType="item.iconType"
+              :iconType="item.IconType"
               iconAreaW="auto"
-              :text="item.text"
-              iconColor="var(--color-primary)"
+              :text="item.Text"
+              iconColor="var(--color-text-general)"
               iconHeight="20px"
               iconWidth="20px"
               fontSize="13px"
-              textColor="var(--color-primary)"
+              textColor="var(--color-text-general)"
               family="var(--font-light)"
               width="100%"
               textAlign="start"
               marginLeft="5px"
+              textMargin=" 0 0 0 7px!important"
             />
 
             <div class="counter-circle">
-              <CounterCircle :counter="1" />
+              <CounterCircle :counter="item.Counter" />
             </div>
           </button>
         </li>
@@ -75,18 +76,23 @@ export default {
 <style lang="scss" scoped>
 .ProfileNav {
   // overflow: hidden;
+  cursor: pointer;
 
   width: 100%;
   height: auto;
   background: var(--background-white);
   border-radius: 10px;
   .layout {
+    cursor: pointer;
     width: 100%;
     .list {
       width: 100%;
+      cursor: pointer;
 
       list-style: none;
       .item {
+        transition: 0.4s;
+
         padding: 0 20px;
         width: 100%;
         border-bottom: 1px solid var(--background-general);
@@ -108,6 +114,15 @@ export default {
       }
       .item.active {
         border-left: 1px solid var(--color-primary);
+        /deep/ g {
+          fill: var(--color-primary);
+          transition: 0.4s;
+        }
+
+        /deep/ .together-text {
+          transition: 0.4s;
+          color: var(--color-primary) !important;
+        }
       }
     }
   }

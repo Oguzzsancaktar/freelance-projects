@@ -131,7 +131,7 @@ export default {
       border: 1px solid transparent;
       background: transparent;
       position: absolute;
-      width: 100%;
+      width: 60%;
       .arrow {
         position: absolute;
         right: 20px;
@@ -215,6 +215,9 @@ export default {
     .aselect {
       width: auto;
       margin: 45px auto;
+      .selector {
+        width: 100%;
+      }
       li {
         width: 100%;
       }

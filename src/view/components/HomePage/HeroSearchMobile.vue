@@ -17,23 +17,25 @@
       :subText="HeroSearchData.SearchAddNewData.SubText"
     />
     <div class="hero__search__mobile__button">
-      <Button
-        margin="auto"
-        direction="column"
-        background="transparent"
-        radius="high"
-        color="white"
-        type="together"
-        iconType="search"
-        :text="HeroSearchData.Search"
-        iconColor="white"
-        iconHeight="19px"
-        iconWidth="19px"
-        fontSize="16px"
-        textColor="white"
-        family="var(--font-semibold)"
-        iconAreaW="auto"
-      />
+      <router-link to="/category">
+        <Button
+          margin="auto"
+          direction="column"
+          background="transparent"
+          radius="high"
+          color="white"
+          type="together"
+          iconType="search"
+          :text="HeroSearchData.Search"
+          iconColor="white"
+          iconHeight="19px"
+          iconWidth="19px"
+          fontSize="16px"
+          textColor="white"
+          family="var(--font-semibold)"
+          iconAreaW="auto"
+        />
+      </router-link>
     </div>
   </div>
 </template>
