@@ -24,6 +24,7 @@ export default {
   /* custom checkbox */
   input[type="checkbox"] {
     cursor: pointer;
+    transition: 0.4s;
 
     height: 25px;
     width: 25px;
@@ -39,6 +40,7 @@ export default {
   }
 
   input[type="checkbox"]:hover {
+    transition: 0.4s;
     border: 2px solid var(--color-primary);
   }
 

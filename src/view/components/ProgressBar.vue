@@ -46,7 +46,10 @@ export default {
       flex-direction: row;
       justify-content: space-between;
       align-items: center;
+      font-family: var(--font-bold);
       span {
+        font-family: var(--font-bold);
+
         margin: 10px 0;
       }
 

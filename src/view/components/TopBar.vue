@@ -4,19 +4,19 @@
       <div class="layout">
         <div @click="changeSection(0)" class="item">
           <Button
-            family="var(--font-medium) "
+            family="var(--font-bold) "
             color="dark"
             textColor="var(--color-general-dark)"
             :text="TopBarData.AdvertInfo"
             type="together"
-            iconType="edit"
+            iconType="editt"
             iconColor="var(--color-primary)"
             radius="30px"
             width="210px"
             padding="0 0px"
             iconWidth="18px"
             iconHeight="18px"
-            fontSize="15px"
+            fontSize="14px"
             iconAreaW="auto"
             :activeSection="selected"
             height="60px"
@@ -25,7 +25,7 @@
         </div>
         <div @click="changeSection(1)" class="item">
           <Button
-            family="var(--font-medium)"
+            family="var(--font-bold)"
             color="dark"
             textColor="var(--color-general-dark)"
             :text="TopBarData.Preview"
@@ -47,7 +47,7 @@
 
         <div @click="changeSection(2)" class="item">
           <Button
-            family="var(--font-medium)"
+            family="var(--font-bold)"
             color="dark"
             textColor="var(--color-general-dark)"
             :text="TopBarData.Boost"
@@ -97,6 +97,7 @@ export default {
   },
   methods: {
     changeSection(num) {
+      console.log("Num", num);
       let activeSection = this.section;
       activeSection = num;
 

@@ -24,7 +24,11 @@
             <AdvertFeatures
               :AdvertFeaturesData="Data.AddAdvertPage.AdvertFeaturesData"
             />
-            <AdvertNext :AdvertNextData="Data.AddAdvertPage.AdvertNextData" />
+            <AdvertNext
+              @section-control-button="sectionControlButton"
+              :section="section"
+              :AdvertNextData="Data.AddAdvertPage.AdvertNextData"
+            />
           </div>
         </transition>
 
@@ -51,15 +55,23 @@
                 Data.AdvertDetailPage.DetailInternalFeaturesData
               "
             />
-            <NextEdit />
+            <NextEdit
+              @section-control-button="sectionControlButton"
+              :section="section"
+              :NextEditData="Data.AdvertDetailPage.NextEditData"
+            />
           </div>
         </transition>
 
         <transition name="fade">
           <div class="section__item" v-if="section == 2">
             <PageHeading
-              header="İlanı Öne Çıkar Hızlı Sonuçlara Ulaş !"
-              description="İlanınızı öne çıkararak daha çok alıcıya daha hızlı şekilde ulaşabilirsiniz."
+              :PageHeadingData="
+                Data.AdvertDetailPage.BoostPageData.PageHeadingData
+              "
+            />
+            <BoostInfo
+              :BoostInfoData="Data.AdvertDetailPage.BoostPageData.BoostInfoData"
             />
           </div>
         </transition>
@@ -88,6 +100,8 @@ import NextEdit from "../components/NextEdit.vue";
 
 import PageHeading from "../components/PageHeading.vue";
 
+import BoostInfo from "../components/AdvertPage/BoostInfo.vue";
+
 export default {
   name: "AddAdvertPage",
 
@@ -109,6 +123,7 @@ export default {
     DetailDescription,
 
     PageHeading,
+    BoostInfo,
   },
   props: {
     Data: Object,
@@ -121,6 +136,10 @@ export default {
   methods: {
     update(section) {
       this.section = section;
+    },
+    sectionControlButton: function(index) {
+      this.section = index;
+      this.update(index);
     },
   },
 };

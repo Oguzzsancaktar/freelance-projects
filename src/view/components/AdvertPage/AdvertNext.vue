@@ -11,7 +11,7 @@
           >
         </div>
 
-        <button>
+        <button @click="sectionControlButton">
           <span> {{ AdvertNextData.Next }} </span>
         </button>
       </div>
@@ -25,6 +25,12 @@ export default {
   components: { Checkbox },
   props: {
     AdvertNextData: Object,
+    section: Number,
+  },
+  methods: {
+    sectionControlButton: function() {
+      this.$emit("section-control-button", 1);
+    },
   },
 };
 </script>
@@ -63,6 +69,9 @@ export default {
         margin-left: 20px;
         font-size: 25px;
         height: 60px;
+        span {
+          text-transform: uppercase;
+        }
       }
     }
   }

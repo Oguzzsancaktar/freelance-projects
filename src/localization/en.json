@@ -1,5 +1,27 @@
 {
   "AdvertDetailPage": {
+    "BoostPageData": {
+      "PageHeadingData": {
+        "Heading": "İlanı Öne Çıkar Hızlı Sonuçlara Ulaş !",
+        "Description": "İlanınızı öne çıkararak daha çok alıcıya daha hızlı şekilde ulaşabilirsiniz."
+      },
+      "BoostInfoData": {
+        "AdvertType": "Pick your advert type",
+        "PaymentType": "Pick your payment type",
+        "CreditCard": "Pay with credit card",
+
+        "Placeholder": "1 week 199,00£",
+        "List": ["Category1-a", "Category1-b", "Category1-c", "Category1-d"],
+        "Ebilling": "I want to receive my billing information via e-mail",
+        "Checkbox1": "via e-mail",
+        "Checkbox2": "I want to receive "
+      }
+    },
+    "NextEditData": {
+      "Next": "Next",
+      "Edit": "Edit",
+      "Paragraph": "One last check before posting your ad!"
+    },
     "DetailHeroData": {
       "InfoCardData": {
         "Text": "Josef Santana",
@@ -136,6 +158,7 @@
       "Boost": "Boost Advert",
       "Entered": "Entered Information"
     },
+
     "AdvertCategoryData": {
       "InfoText": "The correct selection of the ad category is important so that your ad can be sold/rented faster.",
       "Heading": "Advert Categories",

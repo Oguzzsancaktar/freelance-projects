@@ -4,12 +4,12 @@
       <div class="layout">
         <div class="heading">
           <h3>
-            {{ header }}
+            {{ PageHeadingData.Heading }}
           </h3>
         </div>
 
         <div class="description">
-          <p>{{ description }}</p>
+          <p>{{ PageHeadingData.Description }}</p>
         </div>
       </div>
     </div>
@@ -20,14 +20,7 @@
 export default {
   name: "PageHeading",
   props: {
-    header: {
-      type: String,
-      default: "Default Header",
-    },
-    description: {
-      type: String,
-      default: "Default Description",
-    },
+    PageHeadingData: Object,
   },
 };
 </script>
@@ -40,6 +33,17 @@ export default {
       flex-direction: column;
       justify-content: center;
       align-items: center;
+
+      .heading {
+        h3 {
+          font-size: 25px;
+          font-family: var(--font-bold);
+        }
+      }
+      .description {
+        font-size: 15px;
+        font-family: var(--font-semilight);
+      }
     }
   }
 }

@@ -168,12 +168,12 @@ export default {
         position: absolute;
         right: 20px;
         top: 40%;
-        width: 15px;
-        height: 15px;
-        border-left: 2px solid var(--color-card-border);
-        border-bottom: 2px solid var(--color-card-border);
-        // border-top: 10px solid var(--color-text-gray-light);
-        transform: rotateZ(-45deg) translateY(-10px);
+        width: 0;
+        height: 0;
+        border-left: 7px solid transparent;
+        border-right: 7px solid transparent;
+        border-top: 10px solid var(--color-text-gray-light);
+        transform: rotateZ(0deg) translateY(0px);
         transition-duration: 0.3s;
         transition-timing-function: cubic-bezier(0.59, 1.39, 0.37, 1.01);
       }

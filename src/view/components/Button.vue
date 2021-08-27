@@ -245,6 +245,21 @@
       <span
         :class="{ active: activeSection >= 0 }"
         :style="`width:${iconAreaW}`"
+        v-if="'editt' == iconType"
+      >
+        <Icon
+          :iconColor="iconColor"
+          iconName="editt"
+          width="20px"
+          height="20px"
+          :iconWidth="iconWidth"
+          :iconHeight="iconHeight"
+          viewBox="-31.933 158.066 477.873 477.867"
+        />
+      </span>
+
+      <span
+        :style="`width:${iconAreaW}`"
         v-if="'edit' == iconType"
       >
         <Icon

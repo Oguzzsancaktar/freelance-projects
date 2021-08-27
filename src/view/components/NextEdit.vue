@@ -3,50 +3,55 @@
     <div class="wrapper">
       <div class="layout">
         <p class="text">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo,
-          incidunt.
+          {{ NextEditData.Paragraph }}
         </p>
-        <div class="buttons">
+        <div @click="sectionControlButton(0)" class="buttons">
           <Button
             color="var(--color-primary)"
-            textColor="var(--color-primary)"
-            width="300px"
-            background="var(--color-primary-low-button)"
-            text="For Sale"
+            textColor="var(--color-nav-link)"
+            width="100%"
+            background="var(--background-white)"
+            :text="NextEditData.Edit"
             radius="10px"
             type="together"
-            border="1px solid var(--color-primary)"
-            iconType="rentSale"
-            height="80px"
+            border="1px solid transparent"
+            iconType="edit"
+            height="70px"
             iconColor="var(--color-primary)"
             padding="0 10px"
             margin="0"
-            iconWidth="20px"
-            iconHeight="16px"
-            family="var(--font-medium)"
-            fontSize="14px"
+            iconWidth="30px"
+            iconHeight="28px"
+            family="var(--font-semibold)"
+            fontSize="23px"
+            iconAreaW="auto"
+            hoverClass="hover-secondary"
+            justify="center"
           />
 
-          <Button
-            color="var(--color-primary)"
-            textColor="var(--color-primary)"
-            width="300px"
-            background="var(--color-primary-low-button)"
-            text="For Sale"
-            radius="10px"
-            type="text"
-            border="1px solid var(--color-primary)"
-            iconType="rentSale"
-            height="80px"
-            iconColor="var(--color-primary)"
-            padding="0 10px"
-            margin="10px"
-            iconWidth="20px"
-            iconHeight="16px"
-            family="var(--font-medium)"
-            fontSize="24px"
-            textAlign="center"
-          />
+          <button @click="sectionControlButton(1)">
+            <Button
+              color="var(--color-primary)"
+              textColor="var(--background-white)"
+              width="100%"
+              background="var(--color-primary)"
+              :text="NextEditData.Next"
+              radius="10px"
+              type="text"
+              border="1px solid transparent"
+              height="70px"
+              iconColor="var(--color-primary)"
+              padding="0 10px"
+              margin="10px"
+              iconWidth="30px"
+              iconHeight="28px"
+              family="var(--font-semibold)"
+              fontSize="23px"
+              textAlign="center"
+              justify="center"
+              hoverClass="hover-primary"
+            />
+          </button>
         </div>
       </div>
     </div>
@@ -58,11 +63,21 @@ import Button from "./Button.vue";
 export default {
   components: { Button },
   name: "NextEdit",
+  props: {
+    NextEditData: Object,
+    section: Number,
+  },
+  methods: {
+    sectionControlButton: function(x) {
+      this.$emit("section-control-button", x);
+    },
+  },
 };
 </script>
 
 <style lang="scss" scoped>
 .NextEdit {
+  padding: 20px 0;
   .wrapper {
     .layout {
       width: 100%;
@@ -70,15 +85,39 @@ export default {
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      padding: 35px 45px;
+      // padding: 35px 45px;
       .text {
-        margin: 20px 0;
+        font-size: 22px;
+        font-family: var(--font-bold);
+        margin: 30px 0;
       }
 
       .buttons {
-        width: 60%;
+        button {
+          width: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border: none;
+          outline: none;
+        }
+        width: 100%;
         display: flex;
         align-items: center;
+        justify-content: center;
+        /deep/ button {
+          max-width: 300px;
+          margin: 0 10px;
+          text-transform: uppercase;
+
+          .button-together {
+            justify-content: center;
+          }
+          .together-text {
+            width: auto;
+            text-transform: uppercase;
+          }
+        }
       }
     }
   }
