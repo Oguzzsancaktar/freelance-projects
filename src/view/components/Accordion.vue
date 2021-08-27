@@ -13,15 +13,16 @@
               radius="10px"
               type="together"
               border="1px solid transparent"
-              iconType="maps"
+              iconType="calendar"
               height="35px"
-              iconColor="var(--color-secondary)"
-              padding="0 10px"
+              iconColor="var(--color-primary)"
+              padding="0 0px"
               margin="0"
               iconWidth="20px"
               iconHeight="16px"
               family="var(--font-medium)"
-              fontSize="14px"
+              fontSize="15px"
+              iconAreaW="auto"
             />
           </div>
         </div>
@@ -68,7 +69,7 @@ export default {
 <style lang="scss" scoped>
 .Accordion {
   .layout {
-    border: 1px solid var(--color-text-gray-light);
+    border: 1px solid var(--color-card-border);
     border-radius: 10px;
     display: flex;
     flex-direction: column;
@@ -84,17 +85,43 @@ export default {
         width: 100%;
         justify-content: space-between;
         align-items: center;
+        padding: 20px 30px;
+
+        h3 {
+          text-transform: uppercase;
+
+          font-size: 15px;
+          font-family: var(--color-semibold);
+          color: var(--color-text-general);
+        }
       }
     }
 
     section.hiding-area {
-      height: 0px;
-      transition: 0.4s;
+      padding: 0px 30px;
+
+      max-height: 0px;
+      transition: 0.7s;
+
+      transition-delay: 0;
+      border-top: 2px solid transparent;
+
+      .description {
+        font-size: 15px;
+        font-family: var(--color-semilight);
+        color: var(--color-text-general);
+      }
     }
 
     section.hiding-area.show {
-      height: inherit;
-      transition: 0.4s;
+      border-top: 2px solid var(--background-general);
+
+      padding: 35px 30px;
+      transition-delay: 0;
+
+      max-height: 200px;
+      transition: 0.7s;
+      overflow-y: scroll;
     }
   }
 }

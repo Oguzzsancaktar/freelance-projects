@@ -330,93 +330,115 @@ export default {
 .hover-error:hover {
   transition: 0.4s !important;
   background: rebeccapurple !important;
+  cursor: pointer !important;
 }
 .hover-error:hover g {
   transition: 0.4s !important;
   fill: red !important;
+  cursor: pointer !important;
 }
 .hover-error:hover span {
   transition: 0.4s !important;
   color: violet !important;
+  cursor: pointer !important;
 }
 
 .hover-primary:hover {
   transition: 0.4s !important;
   background: var(--color-secondary) !important;
+  cursor: pointer !important;
 }
 .hover-primary:hover g {
   transition: 0.4s !important;
   fill: var(--background-white) !important;
+  cursor: pointer !important;
 }
 .hover-primary:hover span {
   transition: 0.4s !important;
   color: var(--background-white) !important;
+  cursor: pointer !important;
 }
 
 .hover-secondary:hover {
   transition: 0.4s !important;
   background: var(--color-primary) !important;
+  cursor: pointer !important;
+  border-color: var(--color-primary) !important;
 }
 .hover-secondary:hover g {
   transition: 0.4s !important;
   fill: var(--background-white) !important;
+  cursor: pointer !important;
 }
 .hover-secondary:hover span {
   transition: 0.4s !important;
   color: var(--background-white) !important;
+  cursor: pointer !important;
 }
 
 .hover-secondary-low:hover {
   transition: 0.4s !important;
   background: var(--color-primary-dark) !important;
+  cursor: pointer !important;
 }
 .hover-secondary-low:hover g {
   transition: 0.4s !important;
   fill: var(--background-white) !important;
+  cursor: pointer !important;
 }
 .hover-secondary-low:hover span {
   transition: 0.4s !important;
   color: var(--background-white) !important;
+  cursor: pointer !important;
 }
 
 .hover-white:hover {
   transition: 0.4s !important;
   background: var(--background-white) !important;
+  cursor: pointer !important;
 }
 .hover-white:hover g {
   transition: 0.4s !important;
   fill: var(--color-nav-link) !important;
+  cursor: pointer !important;
 }
 .hover-white:hover span {
   transition: 0.4s !important;
   color: var(--color-nav-link) !important;
+  cursor: pointer !important;
 }
 
 .hover-secondary-dark:hover {
   transition: 0.4s !important;
   background: var(--color-secondary-dark) !important;
+  cursor: pointer !important;
 }
 .hover-secondary-dark:hover g {
   transition: 0.4s !important;
   fill: var(--background-white) !important;
+  cursor: pointer !important;
 }
 .hover-secondary-dark:hover span {
   transition: 0.4s !important;
   color: var(--background-white) !important;
+  cursor: pointer !important;
 }
 
 .nav-hover:hover {
   transition: 0.4s !important;
   color: var(--color-primary) !important;
+  cursor: pointer !important;
 }
 
 .hover-color-secondary:hover g {
   transition: 0.4s !important;
   fill: var(--color-secondary) !important;
+  cursor: pointer !important;
 }
 .hover-color-secondary:hover span {
   transition: 0.4s !important;
   color: var(--color-secondary) !important;
+  cursor: pointer !important;
 }
 
 /* Hover Class */

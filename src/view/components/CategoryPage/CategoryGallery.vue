@@ -1,39 +1,22 @@
 <template>
   <div class="CategoryGallery">
+    <section>
+      <div class="heading">
+        <h3>
+          {{ Heading }}
+        </h3>
+      </div>
+    </section>
+
     <div class="grid__gallery">
       <div class="wrapper">
         <div class="grid__gallery__layout">
-          <DetailCard class="grid__gallery__layout__item" />
-
-          <DetailCard class="grid__gallery__layout__item" />
-
-          <DetailCard class="grid__gallery__layout__item" />
-
-          <DetailCard class="grid__gallery__layout__item" />
-
-          <DetailCard class="grid__gallery__layout__item" />
-
-          <DetailCard class="grid__gallery__layout__item" />
-          <DetailCard class="grid__gallery__layout__item" />
-
-          <DetailCard class="grid__gallery__layout__item" />
-
-          <DetailCard class="grid__gallery__layout__item" />
-          <DetailCard class="grid__gallery__layout__item" />
-
-          <DetailCard class="grid__gallery__layout__item" />
-
-          <DetailCard class="grid__gallery__layout__item" />
-          <DetailCard class="grid__gallery__layout__item" />
-
-          <DetailCard class="grid__gallery__layout__item" />
-
-          <DetailCard class="grid__gallery__layout__item" />
-          <DetailCard class="grid__gallery__layout__item" />
-
-          <DetailCard class="grid__gallery__layout__item" />
-
-          <DetailCard class="grid__gallery__layout__item" />
+          <DetailCard
+            v-for="(item, index) in CategoryGalleryData.CardData"
+            :key="index"
+            :data="item"
+            class="grid__gallery__layout__item"
+          />
         </div>
       </div>
     </div>
@@ -46,20 +29,44 @@ import DetailCard from "../DetailPage/DetailCard.vue";
 export default {
   components: { DetailCard },
   name: "CategoryGallery",
+  props: {
+    CategoryGalleryData: Object,
+    Heading: String,
+  },
 };
 </script>
 
 <style lang="scss" scoped>
 .CategoryGallery {
-  padding: 0 45px;
   border-radius: 10px;
   background: var(--background-white);
   height: 100%;
+  border-radius: 10px;
   width: 100%;
+
+  section {
+    width: 100%;
+
+    .heading {
+      width: 100%;
+      h3 {
+        text-transform: uppercase;
+
+        padding: 20px 45px;
+        display: flex;
+        align-items: center;
+        height: 100%;
+        border-bottom: 2px solid var(--background-general);
+        padding-bottom: 20px;
+        width: 100%;
+      }
+    }
+  }
+
   .grid__gallery {
     min-height: 1200px;
     width: 100%;
-    padding: 45px 0;
+    padding: 45px;
     .wrapper {
     }
 
@@ -91,7 +98,9 @@ export default {
       justify-content: space-between;
       flex-wrap: wrap;
       &__item {
+        width: 30%;
         margin: 20px 0;
+        max-width: 260px;
       }
 
       // &__item:nth-child(2),

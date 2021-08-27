@@ -29,7 +29,7 @@
             justify="center"
           />
 
-          <button @click="sectionControlButton(1)">
+          <button @click="sectionControlButton(2)">
             <Button
               color="var(--color-primary)"
               textColor="var(--background-white)"
@@ -116,6 +116,37 @@ export default {
           .together-text {
             width: auto;
             text-transform: uppercase;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .NextEdit {
+    padding: 20px 0;
+    .wrapper {
+      .layout {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        // padding: 35px 45px;
+        .text {
+          font-size: 22px;
+          font-family: var(--font-bold);
+          margin: 30px 0;
+        }
+
+        .buttons {
+          flex-direction: column;
+          button {
+            border: none;
+            outline: none;
+
+            margin: 5px 0;
           }
         }
       }

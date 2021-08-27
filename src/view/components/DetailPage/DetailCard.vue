@@ -108,7 +108,7 @@
                 width="80%"
                 height="auto"
                 imageType="images"
-                imageName="refferance-logo-0.jpg"
+                imageName="refferance-logo-0.png"
               />
             </div>
           </div>

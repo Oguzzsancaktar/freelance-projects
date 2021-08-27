@@ -34,8 +34,10 @@
             fontSize="15px"
             border="2px solid var(--background-general)"
             iconAreaW="auto"
+            hoverClass="hover-secondary"
           />
           <Button
+            hoverClass="hover-secondary"
             class="btn"
             family="var(--font-medium)"
             color="dark"
@@ -138,6 +140,10 @@ export default {
     .area:last-child {
       height: 50px;
       border-top: 1px solid var(--background-general);
+
+      /deep/ .default-button {
+        cursor: pointer;
+      }
     }
   }
 }

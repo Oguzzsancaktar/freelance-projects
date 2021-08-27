@@ -14,25 +14,33 @@
           <div class="section">
             <transition name="fade">
               <div class="section__item" v-if="section == 'profile'">
-                <MyProfile />
+                <MyProfile :MyProfileData="Data.ProfilePage.MyProfileData" />
               </div>
             </transition>
 
             <transition name="fade">
               <div class="section__item" v-if="section == 'adverts'">
-                <CategoryGallery />
+                <CategoryGallery
+                  :Heading="Data.ProfilePage.CategoryGalleryData.Heading2"
+                  :CategoryGalleryData="Data.ProfilePage.CategoryGalleryData"
+                />
               </div>
             </transition>
 
             <transition name="fade">
               <div class="section__item" v-if="section == 'favs'">
-                <CategoryGallery />
+                <CategoryGallery
+                  :Heading="Data.ProfilePage.CategoryGalleryData.Heading1"
+                  :CategoryGalleryData="Data.ProfilePage.CategoryGalleryData"
+                />
               </div>
             </transition>
 
             <transition name="fade">
               <div class="section__item" v-if="section == 'messages'">
-                <ProfileMessages :messages="messages" />
+                <ProfileMessages
+                  :MyProfileData="Data.ProfilePage.MyProfileData"
+                />
               </div>
             </transition>
           </div>
@@ -61,49 +69,6 @@ export default {
   data: function() {
     return {
       section: "profile",
-      profileNavList: [
-        { text: "Profilim", keyword: "profile", iconType: "profile" },
-        { text: "İlanlarım", keyword: "adverts", iconType: "list" },
-        { text: "Favori İlanlarım", keyword: "favs", iconType: "favorites" },
-        { text: "Mesajlarım", keyword: "messages", iconType: "envelope" },
-      ],
-      messages: [
-        {
-          from: "Kemal TUNCER",
-          date: "02.03.2021",
-          message: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, ut
-          incidunt, iure fugiat cum accusantium repellendus officia dolorem ipsa
-          corporis dolores laborum! Unde soluta, repellendus minus a distinctio,
-          nulla iure alias natus ab quam enim?`,
-        },
-
-        {
-          from: "Kemal TUNCER",
-          date: "02.03.2021",
-          message: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, ut
-          incidunt, iure fugiat cum accusantium repellendus officia dolorem ipsa
-          corporis dolores laborum! Unde soluta, repellendus minus a distinctio,
-          nulla iure alias natus ab quam enim?`,
-        },
-
-        {
-          from: "Kemal TUNCER",
-          date: "02.03.2021",
-          message: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, ut
-          incidunt, iure fugiat cum accusantium repellendus officia dolorem ipsa
-          corporis dolores laborum! Unde soluta, repellendus minus a distinctio,
-          nulla iure alias natus ab quam enim?`,
-        },
-
-        {
-          from: "Kemal TUNCER",
-          date: "02.03.2021",
-          message: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, ut
-          incidunt, iure fugiat cum accusantium repellendus officia dolorem ipsa
-          corporis dolores laborum! Unde soluta, repellendus minus a distinctio,
-          nulla iure alias natus ab quam enim?`,
-        },
-      ],
     };
   },
 
@@ -130,6 +95,7 @@ export default {
     position: relative;
     height: auto;
     .wrapper {
+      padding-bottom: 50px;
       .layout {
         height: auto;
         width: 100%;
@@ -141,6 +107,7 @@ export default {
           position: relative;
 
           margin-top: 60px;
+
           &__item {
           }
         }

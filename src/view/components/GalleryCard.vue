@@ -41,45 +41,46 @@
               <span class="text"> {{ data.PropID }}</span>
             </div>
             <div class="row__item">
-              <Button
-                style="margin:5px"
-                background="var(--color-secondary-low-button)"
-                radius="10px"
-                type="icon"
-                iconType="hearth"
-                width="44px"
-                height="36px"
-                iconColor="var(--color-secondary)"
-                border="1px solid var(--color-secondary)"
-                padding="0 10px"
-                margin="0 10px"
-                iconWidth="19px"
-                iconHeight="18px"
-                iconAreaW="auto"
-                hoverClass="hover-primary"
-              />
               <router-link to="/profile">
                 <Button
-                  color="var(--color-primary)"
-                  textColor="var(--color-primary)"
-                  width="100px"
-                  background="var(--color-primary-low-button)"
-                  text="For Sale"
+                  style="margin:5px"
+                  background="var(--color-secondary-low-button)"
                   radius="10px"
-                  type="together"
-                  border="1px solid var(--color-primary)"
-                  iconType="rentSale"
-                  height="35px"
-                  iconColor="var(--color-primary)"
+                  type="icon"
+                  iconType="hearth"
+                  width="44px"
+                  height="36px"
+                  iconColor="var(--color-secondary)"
+                  border="1px solid var(--color-secondary)"
                   padding="0 10px"
-                  margin="0"
-                  iconWidth="20px"
-                  iconHeight="16px"
-                  family="var(--font-medium)"
-                  fontSize="14px"
+                  margin="0 10px"
+                  iconWidth="19px"
+                  iconHeight="18px"
                   iconAreaW="auto"
+                  hoverClass="hover-primary"
                 />
               </router-link>
+
+              <Button
+                color="var(--color-primary)"
+                textColor="var(--color-primary)"
+                width="100px"
+                background="var(--color-primary-low-button)"
+                text="For Sale"
+                radius="10px"
+                type="together"
+                border="1px solid var(--color-primary)"
+                iconType="rentSale"
+                height="35px"
+                iconColor="var(--color-primary)"
+                padding="0 10px"
+                margin="0"
+                iconWidth="20px"
+                iconHeight="16px"
+                family="var(--font-medium)"
+                fontSize="14px"
+                iconAreaW="auto"
+              />
             </div>
           </div>
 

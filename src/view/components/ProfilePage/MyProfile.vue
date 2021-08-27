@@ -4,7 +4,7 @@
       <section>
         <div class="heading">
           <h3>
-            Headingg
+            {{ MyProfileData.Heading }}
           </h3>
         </div>
       </section>
@@ -12,13 +12,20 @@
       <section>
         <div class="layout">
           <div class="column">
-            <div class="row">
-              <InputBox width="90%" padding="0" text="text" />
-              <InputBox width="90%" padding="0" text="text" />
-            </div>
-            <div class="row">
-              <InputBox padding="0" text="text" />
-              <InputBox padding="0" text="text" />
+            <div
+              v-for="(item, index) in MyProfileData.List1"
+              :key="index"
+              class="row"
+            >
+              <InputBox
+                textColor="var(--color-text-general)"
+                family="var(--font-medium)"
+                v-for="(j, Jindex) in item.List"
+                :key="Jindex"
+                width="90%"
+                padding="0"
+                :text="j.Text"
+              />
             </div>
           </div>
         </div>
@@ -28,9 +35,15 @@
         <div class="layout">
           <div class="column">
             <div class="row">
-              <InputBox padding="0" text="text" />
-              <InputBox padding="0" text="text" />
-              <InputBox padding="0" text="text" />
+              <InputBox
+                textColor="var(--color-text-general)"
+                family="var(--font-medium)"
+                v-for="(item, index) in MyProfileData.List2"
+                :key="index"
+                width="90%"
+                padding="0"
+                :text="item.Text"
+              />
             </div>
           </div>
         </div>
@@ -42,19 +55,18 @@
             <div class="row">
               <div class="btn">
                 <Button
+                  textTransfrom="uppercase"
                   border="1px solid var(--color-secondary)"
                   background="var(--color-secondary)"
-                  text="See All"
-                  radius="10px"
+                  :text="MyProfileData.Save"
+                  radius="28px"
                   type="text"
-                  width="100px"
-                  height="35px"
+                  width="195px"
+                  height="55px"
                   padding="0 10px"
-                  iconWidth="13px"
-                  iconHeight="13px"
                   textColor="var(--background-white)"
-                  family="var(--font-semilight)"
-                  fontSize="15px"
+                  family="var(--font-bold)"
+                  fontSize="16px"
                   textAlign="center"
                   justify="center"
                 />
@@ -71,12 +83,17 @@
 import Button from "../Button.vue";
 import InputBox from "../InputBox.vue";
 export default {
+  name: "MyProfile",
+  props: {
+    MyProfileData: Object,
+  },
   components: { InputBox, Button },
 };
 </script>
 
 <style lang="scss" scoped>
 .MyProfile {
+  border-radius: 10px;
   width: 100%;
   background: var(--background-white);
   .layout {
@@ -90,13 +107,17 @@ export default {
       width: 100%;
 
       .heading {
+        width: 100%;
         h3 {
-          padding: 20px 40px;
+          text-transform: uppercase;
+
+          padding: 20px 45px;
           display: flex;
           align-items: center;
           height: 100%;
-          border-bottom: 1px solid var(--background-general);
-          color: var(--color-primary);
+          border-bottom: 2px solid var(--background-general);
+          padding-bottom: 20px;
+          width: 100%;
         }
       }
       .column {
@@ -108,11 +129,15 @@ export default {
         border-top: 1px solid var(--background-general);
 
         .row {
-          padding: 30px 40px;
+          padding: 20px 40px;
           display: flex;
           flex-direction: row;
           width: 100%;
           justify-content: space-between;
+
+          /deep/ .aselect {
+            margin: auto;
+          }
 
           .btn {
             width: 100%;

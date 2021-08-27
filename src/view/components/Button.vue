@@ -8,7 +8,7 @@
     <!-- type TEXT -->
     <div
       :style="
-        `color:${textColor}; font-size:${fontSize}; font-family:${family}; justify-content:${justify}; text-align:${textAlign}`
+        `color:${textColor}; font-size:${fontSize}; font-family:${family}; justify-content:${justify}; text-align:${textAlign} ;text-transform:${textTransfrom}`
       "
       v-if="'text' == type"
     >
@@ -71,7 +71,7 @@
         />
       </span>
 
-      <span v-if="'hearth' == iconType">
+      <span class="hearth-icon" v-if="'hearth' == iconType">
         <Icon
           iconName="hearth"
           width="20px"
@@ -134,6 +134,18 @@
           :iconWidth="iconWidth"
           :iconHeight="iconHeight"
           viewBox="0 1 511 511.999"
+        />
+      </span>
+
+      <span :style="`width:${iconAreaW}`" v-if="'calendar' == iconType">
+        <Icon
+          :iconColor="iconColor"
+          iconName="calendar"
+          width="20px"
+          height="20px"
+          :iconWidth="iconWidth"
+          :iconHeight="iconHeight"
+          viewBox="0 0 512 512"
         />
       </span>
 
@@ -258,10 +270,7 @@
         />
       </span>
 
-      <span
-        :style="`width:${iconAreaW}`"
-        v-if="'edit' == iconType"
-      >
+      <span :style="`width:${iconAreaW}`" v-if="'edit' == iconType">
         <Icon
           :iconColor="iconColor"
           iconName="edit"
@@ -744,6 +753,9 @@ button div {
 }
 .button-icon {
   justify-content: center;
+  .hearth-icon {
+    margin-top: 5px;
+  }
 }
 button span {
   width: 100%;

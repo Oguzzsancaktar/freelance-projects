@@ -60,35 +60,61 @@
               </div>
               <div class="row">
                 <div class="input">
-                  <span> Kart sahibi </span>
+                  <span> {{ BoostInfoData.CardUser }} </span>
                   <InputBox />
                 </div>
               </div>
 
-              <div class="row four-input">
-                <div class="input">
-                  <InputBox />
-                </div>
-                <div class="input">
-                  <InputBox />
-                </div>
-                <div class="input">
-                  <InputBox />
-                </div>
-                <div class="input">
-                  <InputBox />
+              <div class="row col">
+                <span class="card-nums"> {{ BoostInfoData.CardUser }} </span>
+                <div class="four-input">
+                  <div class="input">
+                    <InputBox />
+                  </div>
+                  <div class="input">
+                    <InputBox />
+                  </div>
+                  <div class="input">
+                    <InputBox />
+                  </div>
+                  <div class="input">
+                    <InputBox />
+                  </div>
                 </div>
               </div>
 
-              <div class="row">
-                <div class="select">
-                  <SelectBox />
-                </div>
-                <div class="select">
-                  <SelectBox />
+              <div class="row col">
+                <span class="card-nums">
+                  {{ BoostInfoData.ExpirationDate }}
+                </span>
+
+                <div class="two-select">
+                  <div class="select">
+                    <SelectBox
+                      family="var(--font-semibold)"
+                      :List="BoostInfoData.Months"
+                      height="auto"
+                      width="100%"
+                      textColor="var(--color-nav-link)"
+                      placeholder=""
+                    />
+                  </div>
+                  <div class="select">
+                    <SelectBox
+                      family="var(--font-semibold)"
+                      :List="BoostInfoData.Years"
+                      height="auto"
+                      width="100%"
+                      textColor="var(--color-nav-link)"
+                      placeholder=""
+                    />
+                  </div>
                 </div>
               </div>
-              <div class="row">
+              <div class="row col">
+                <span class="card-nums">
+                  {{ BoostInfoData.SecCode }}
+                </span>
                 <div class="input">
                   <InputBox />
                 </div>
@@ -96,7 +122,20 @@
             </div>
 
             <div class="item">
-              <Button />
+              <Button
+                type="text"
+                width="100%"
+                height="100%"
+                background="var(--color-primary)"
+                hoverClass="hover-primary"
+                :text="BoostInfoData.FinishPayment"
+                fontSize="19px"
+                family="var(--font-semibold)"
+                radius="10px"
+                padding="25px 0"
+                justify="center"
+                textColor="white"
+              />
             </div>
           </div>
         </section>
@@ -122,6 +161,7 @@ export default {
 <style lang="scss" scoped>
 .BoostInfo {
   .wrapper {
+    padding: 20px 0;
     .layout {
       display: flex;
       margin: 20px 0;
@@ -139,12 +179,18 @@ export default {
           width: 100%;
           display: flex;
           flex-direction: column;
+
           .item {
             border-radius: 10px;
             background: var(--background-white);
             margin: 10px 0;
+
+            /deep/ button {
+              cursor: pointer;
+            }
             .heading {
               width: 100%;
+              margin-bottom: 20px;
               h3 {
                 padding: 20px 45px;
                 display: flex;
@@ -156,11 +202,13 @@ export default {
               }
             }
             .select {
+              width: 100%;
               padding: 10px 45px;
-              border-bottom: 2px solid var(--background-general);
+              border-bottom: 2px solid transparent;
             }
             .padding {
               padding: 20px 0;
+              border-top: 1px solid var(--background-general);
               .checkbox {
                 padding: 5px 45px;
 
@@ -171,19 +219,77 @@ export default {
             .row {
               display: flex;
               width: 100%;
+              padding: 10px 0;
 
+              .card-nums {
+                padding: 0px 45px;
+              }
               .input {
                 width: 100%;
                 padding: 10px 45px;
               }
+              .four-input {
+                display: flex;
+                padding: 0px 45px;
+
+                .input {
+                  padding: 0 5px;
+                }
+              }
+
+              .two-select {
+                width: 100%;
+                display: flex;
+                padding: 0px 45px;
+                margin: auto;
+                height: 40px;
+
+                .select {
+                  padding: 0;
+                  height: 100% !important;
+
+                  /deep/ .SelectBox {
+                    height: 100%;
+                    padding: 0;
+                    margin: 0;
+                    .aselect {
+                      margin: 0;
+                      height: 100% !important;
+
+                      p {
+                      }
+                      .selector {
+                        padding: 0;
+                        height: 100% !important;
+
+                        .label {
+                          span {
+                            margin-left: 30px;
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+
+                .input {
+                  padding: 0 5px;
+                }
+              }
             }
 
-            .row.four-input {
-              padding: 10px 45px;
-
+            .row.col {
+              flex-direction: column;
               .input {
-                padding: 0 5px;
+                padding-top: 0;
               }
+            }
+
+            .row:first-child {
+              padding-top: 20px;
+            }
+            .row:last-child {
+              padding-bottom: 40px !important;
             }
           }
         }
@@ -193,6 +299,51 @@ export default {
 
           display: flex;
           flex-direction: column;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .BoostInfo {
+    .wrapper {
+      .layout {
+        flex-direction: column;
+
+        section {
+          width: 100%;
+          .col {
+            .item {
+              border-radius: 10px;
+              background: var(--background-white);
+              margin: 10px 0;
+              .heading {
+                width: 100%;
+                h3 {
+                }
+              }
+              .select {
+              }
+              .padding {
+                .checkbox {
+                }
+              }
+
+              .row {
+                .input {
+                }
+
+                .four-input {
+                  .input {
+                  }
+                }
+              }
+            }
+          }
+
+          .col {
+          }
         }
       }
     }

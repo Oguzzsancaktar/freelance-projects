@@ -97,7 +97,6 @@ export default {
   },
   methods: {
     changeSection(num) {
-      console.log("Num", num);
       let activeSection = this.section;
       activeSection = num;
 
@@ -131,12 +130,13 @@ export default {
         display: flex;
         justify-content: center;
         height: 100%;
-
         background: var(--background-white);
         width: 100%;
         border-right: 1px solid var(--background-general);
 
         /deep/.button-together {
+          cursor: pointer;
+
           span:first-child {
             width: 35px !important;
           }
@@ -162,10 +162,47 @@ export default {
         height: 100%;
 
         flex-wrap: wrap;
+
         .item {
+          justify-content: flex-start;
+          border-right: transparent;
+          /deep/ button {
+            width: 100% !important;
+            padding: 0 !important;
+
+            .together-text {
+              justify-content: start !important;
+              text-align: start !important;
+              margin: 0 0 0 20px !important;
+            }
+          }
         }
         .item.progress {
           min-width: 180px;
+          padding: 0;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .TopBar {
+    height: auto;
+    .wrapper {
+      height: 100%;
+      .layout {
+        padding: 30px 25px;
+
+        .item {
+          /deep/ button {
+            .together-text {
+            }
+          }
+        }
+        .item.progress {
+          min-width: 180px;
+          padding: 0;
         }
       }
     }
