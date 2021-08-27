@@ -202,7 +202,8 @@ export default {
       border-color: var(--color-secondary);
     }
     ul {
-      background: var(--background-white);
+      overflow: hidden;
+      // background: var(--background-white);
       width: 100%;
       list-style-type: none;
       padding: 0;
@@ -214,18 +215,18 @@ export default {
       left: 0;
       top: 50px;
       border-radius: 10px;
+      border: 1px solid var(--color-card-border);
     }
     li {
-      border: 1px solid var(--color-card-border);
+      border-bottom: 1px solid var(--color-card-border);
       width: 100%;
-      margin: 10px 0;
-      border-radius: 50px;
+      // margin: 10px 0;
       padding: 12px;
       font-size: 17px;
       color: var(--color-text-gray-light);
-      text-align: center;
+      text-align: start;
       font-family: var(--font-medium);
-      // background: var(--color-secondary);
+      background: var(--background-white);
       transition: background 0.4s;
 
       &:hover {
@@ -235,9 +236,12 @@ export default {
         cursor: pointer;
       }
     }
+    li:last-child {
+      border-bottom: transparent;
+    }
     .current {
-      color: var(--background-white);
-      background: var(--color-secondary);
+      border-left: 1px solid var(--color-secondary);
+      color: var(--color-secondary);
     }
     .hidden {
       visibility: hidden;
