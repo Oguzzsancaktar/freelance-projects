@@ -67,26 +67,28 @@
         </section>
         <section>
           <div class="button">
-            <Button
-              margin="auto"
-              direction="row"
-              background="var(--color-secondary)"
-              radius="high"
-              color="white"
-              type="together"
-              iconType="search"
-              :text="AdvencedSettingsData.Search"
-              iconColor="white"
-              iconHeight="19px"
-              iconWidth="19px"
-              fontSize="16px"
-              textColor="white"
-              family="var(--font-semibold)"
-              iconAreaW="80px"
-              justify="center"
-              hoverClass="hover-secondary"
-              height="60px"
-            />
+            <router-link to="/category">
+              <Button
+                margin="auto"
+                direction="row"
+                background="var(--color-secondary)"
+                radius="high"
+                color="white"
+                type="together"
+                iconType="search"
+                :text="AdvencedSettingsData.Search"
+                iconColor="white"
+                iconHeight="19px"
+                iconWidth="19px"
+                fontSize="16px"
+                textColor="white"
+                family="var(--font-semibold)"
+                iconAreaW="80px"
+                justify="center"
+                hoverClass="hover-secondary"
+                height="60px"
+              />
+            </router-link>
           </div>
         </section>
       </div>

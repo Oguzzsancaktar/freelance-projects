@@ -10,7 +10,7 @@
           <div class="area__left">
             <div class="row">
               <div
-                v-for="(item, index) in CategoriesData.SelectBoxData"
+                v-for="(item, index) in AdvertAdressData.SelectBoxData"
                 :key="index"
                 class="item"
               >

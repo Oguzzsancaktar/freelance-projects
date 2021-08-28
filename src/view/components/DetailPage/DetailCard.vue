@@ -73,21 +73,24 @@
                 fontSize="14px"
               />
 
-              <Button
-                style="margin:5px"
-                background="var(--color-secondary-low-button)"
-                radius="10px"
-                type="icon"
-                iconType="hearth"
-                width="40px"
-                height="36px"
-                iconColor="var(--color-secondary)"
-                border="1px solid var(--color-secondary)"
-                padding="0 10px"
-                margin="0 10px"
-                iconWidth="19px"
-                iconHeight="18px"
-              />
+              <router-link to="/profile">
+                <Button
+                  style="margin:5px"
+                  background="var(--color-secondary-low-button)"
+                  radius="10px"
+                  type="icon"
+                  iconType="hearth"
+                  width="40px"
+                  height="36px"
+                  iconColor="var(--color-secondary)"
+                  border="1px solid var(--color-secondary)"
+                  padding="0 10px"
+                  margin="0 10px"
+                  iconWidth="19px"
+                  iconHeight="18px"
+                  hoverClass="hover-primary"
+                />
+              </router-link>
             </div>
           </div>
 
@@ -170,6 +173,10 @@ export default {
       left: 0;
       background: var(--color-primary-low);
       opacity: 0;
+
+      /deep/ .default-button {
+        cursor: pointer;
+      }
     }
     &__hover:hover {
       opacity: 1;

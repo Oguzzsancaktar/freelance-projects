@@ -11,28 +11,29 @@
               <div class="heading">
                 <h2>{{ text }}</h2>
               </div>
-
-              <Button
-                color="var(--background-white)"
-                textColor="var(--background-white)"
-                width="230px"
-                background="var(--color-primary-low-button)"
-                :text="text2"
-                radius="28px"
-                type="together"
-                border="1px solid var(--background-white)"
-                iconType="nearLocation"
-                height="55px"
-                iconColor="var(--background-white)"
-                padding="0 30px"
-                margin="0"
-                iconWidth="30px"
-                iconHeight="30px"
-                family="var(--font-light)"
-                fontSize="14px"
-                iconAreaW="auto"
-                hoverClass="hover-white"
-              />
+              <router-link to="/category">
+                <Button
+                  color="var(--background-white)"
+                  textColor="var(--background-white)"
+                  width="230px"
+                  background="var(--color-primary-low-button)"
+                  :text="text2"
+                  radius="28px"
+                  type="together"
+                  border="1px solid var(--background-white)"
+                  iconType="nearLocation"
+                  height="55px"
+                  iconColor="var(--background-white)"
+                  padding="0 30px"
+                  margin="0"
+                  iconWidth="30px"
+                  iconHeight="30px"
+                  family="var(--font-light)"
+                  fontSize="14px"
+                  iconAreaW="auto"
+                  hoverClass="hover-white"
+                />
+              </router-link>
             </div>
           </div>
           <ImageView
@@ -56,27 +57,29 @@
               <div class="heading">
                 <h2>{{ text }}</h2>
               </div>
-              <Button
-                color="var(--background-white)"
-                textColor="var(--background-white)"
-                width="230px"
-                background="var(--color-primary-low-button)"
-                text="Show nearby areas"
-                radius="28px"
-                type="together"
-                border="1px solid var(--background-white)"
-                iconType="nearLocation"
-                height="55px"
-                iconColor="var(--background-white)"
-                padding="0 30px"
-                margin="0"
-                iconWidth="30px"
-                iconHeight="30px"
-                family="var(--font-light)"
-                fontSize="14px"
-                iconAreaW="auto"
-                hoverClass="hover-white"
-              />
+              <router-link to="/category">
+                <Button
+                  color="var(--background-white)"
+                  textColor="var(--background-white)"
+                  width="230px"
+                  background="var(--color-primary-low-button)"
+                  :text="text2"
+                  radius="28px"
+                  type="together"
+                  border="1px solid var(--background-white)"
+                  iconType="nearLocation"
+                  height="55px"
+                  iconColor="var(--background-white)"
+                  padding="0 30px"
+                  margin="0"
+                  iconWidth="30px"
+                  iconHeight="30px"
+                  family="var(--font-light)"
+                  fontSize="14px"
+                  iconAreaW="auto"
+                  hoverClass="hover-white"
+                />
+              </router-link>
             </div>
           </div>
           <ImageView

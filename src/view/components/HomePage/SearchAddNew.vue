@@ -1,26 +1,29 @@
 <template>
   <div @click="showAdvenced" class="search__add__new">
     <p>{{ text }}</p>
-    <Button
-      background="transparent"
-      :text="subText"
-      radius="high"
-      color="dark"
-      textColor="var(--color-text-gray)"
-      family="var(--font-medium)"
-      fontSize="17px"
-      type="together"
-      iconType="advenced"
-      width="100%"
-      iconWidth="22px"
-      iconHeight="22px"
-      iconColor="var(--color-secondary)"
-      height="30px"
-      textAlign="left"
-      iconAreaW="auto"
-      justify="start"
-      textMargin="0 0 0 3px"
-    />
+    <div class="add-new-button">
+      <Button
+        background="transparent"
+        :text="subText"
+        radius="high"
+        color="dark"
+        textColor="var(--color-text-gray)"
+        family="var(--font-medium)"
+        fontSize="17px"
+        type="together"
+        iconType="advenced"
+        width="100%"
+        iconWidth="22px"
+        iconHeight="22px"
+        iconColor="var(--color-secondary)"
+        height="30px"
+        textAlign="left"
+        iconAreaW="auto"
+        justify="start"
+        textMargin="0 0 0 3px"
+        specialStyle="cursor:pointer;"
+      />
+    </div>
   </div>
 </template>
 
@@ -43,12 +46,23 @@ export default {
 
 <style lang="scss" scoped>
 .search__add__new {
+  cursor: pointer;
   padding: 0 0px;
   text-align: start;
   // margin: 20px auto;
   width: 90%;
   margin: 10px auto !important;
 
+  .add-new-button {
+    cursor: pointer;
+    /deep/ .default-button {
+      cursor: pointer;
+    }
+  }
+
+  .add-new-button:hover {
+    cursor: pointer;
+  }
   p {
     font-size: 14px;
     color: var(--color-text-gray-light);

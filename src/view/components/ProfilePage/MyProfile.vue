@@ -69,6 +69,7 @@
                   fontSize="16px"
                   textAlign="center"
                   justify="center"
+                  hoverClass="hover-secondary"
                 />
               </div>
             </div>

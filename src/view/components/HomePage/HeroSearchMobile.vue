@@ -16,8 +16,8 @@
       :text="HeroSearchData.SearchAddNewData.Text"
       :subText="HeroSearchData.SearchAddNewData.SubText"
     />
-    <div class="hero__search__mobile__button">
-      <router-link to="/category">
+    <router-link to="/category">
+      <div class="hero__search__mobile__button">
         <Button
           margin="auto"
           direction="column"
@@ -35,8 +35,8 @@
           family="var(--font-semibold)"
           iconAreaW="auto"
         />
-      </router-link>
-    </div>
+      </div>
+    </router-link>
   </div>
 </template>
 
@@ -81,6 +81,23 @@ export default {
     height: 60px;
     border-bottom-right-radius: 10px;
     border-bottom-left-radius: 10px;
+    cursor: pointer;
+    transition: 0.4s;
+    text-decoration: none;
+
+    /deep/ button {
+      text-decoration: none;
+      cursor: pointer;
+      .together-text {
+        text-decoration: none !important;
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &__button:hover {
+    transition: 0.4s;
+    background: var(--color-primary);
   }
 }
 
@@ -97,6 +114,21 @@ export default {
     }
     &__button {
       background: var(--color-secondary);
+      transition: 0.4s;
+      cursor: pointer;
+
+      /deep/ button {
+        text-decoration: none;
+        cursor: pointer;
+        .together-text {
+          text-decoration: none !important;
+          margin-bottom: 0;
+        }
+      }
+    }
+    &__button:hover {
+      transition: 0.4s;
+      background: var(--color-primary);
     }
   }
 }

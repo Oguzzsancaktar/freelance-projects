@@ -24,27 +24,29 @@
               />
             </div>
             <div class="info__section__item">
-              <Button
-                style="margin-left:20px"
-                background="var(--color-secondary)"
-                radius="30px"
-                type="together"
-                iconType="maps"
-                width="120px"
-                height="55px"
-                iconColor="white"
-                border="1px solid var(--color-secondary)"
-                padding="0 20px"
-                margin="0 10px"
-                iconWidth="22px"
-                iconHeight="27px"
-                :text="AdsAreaData.Search"
-                fontSize="14px"
-                family="var(--font-semibold)"
-                textColor="white"
-                hoverClass="hover-secondary-dark"
-                iconAreaW="auto"
-              />
+              <router-link to="/category">
+                <Button
+                  style="margin-left:20px"
+                  background="var(--color-secondary)"
+                  radius="30px"
+                  type="together"
+                  iconType="maps"
+                  width="120px"
+                  height="55px"
+                  iconColor="white"
+                  border="1px solid var(--color-secondary)"
+                  padding="0 20px"
+                  margin="0 10px"
+                  iconWidth="22px"
+                  iconHeight="27px"
+                  :text="AdsAreaData.Search"
+                  fontSize="14px"
+                  family="var(--font-semibold)"
+                  textColor="white"
+                  hoverClass="hover-secondary-dark"
+                  iconAreaW="auto"
+                />
+              </router-link>
             </div>
           </div>
         </div>

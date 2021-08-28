@@ -3,28 +3,30 @@
     <div class="wrapper">
       <div class="layout">
         <div class="area">
-          <a class="home-button" href="./">
-            <Button
-              background="transparent"
-              family="var(--font-medium)"
-              radius="30px"
-              color="white"
-              type="icon"
-              iconType="house"
-              width="60px"
-              padding="0 10px"
-              iconColor="var(--color-primary)"
-              iconWidth="30px"
-              iconHeight="26px"
-              fontSize="15px"
-              direction="center"
-            />
-          </a>
+          <div class="home-button">
+            <router-link to="/">
+              <Button
+                background="transparent"
+                family="var(--font-medium)"
+                radius="30px"
+                color="white"
+                type="icon"
+                iconType="house"
+                width="60px"
+                padding="0 10px"
+                iconColor="var(--color-primary)"
+                iconWidth="30px"
+                iconHeight="26px"
+                fontSize="15px"
+                direction="center"
+              />
+            </router-link>
+          </div>
           <span> {{ DetailTopData.Header }}</span>
         </div>
 
         <div class="area">
-          <a href="">
+          <div>
             <Button
               family="var(--font-medium)"
               color="dark"
@@ -44,8 +46,9 @@
               iconAreaW="auto"
               direction="center"
             />
-          </a>
-          <a href="">
+          </div>
+
+          <div>
             <Button
               family="var(--font-medium)"
               color="dark"
@@ -64,28 +67,30 @@
               fontSize="15px"
               iconAreaW="25px"
             />
-          </a>
+          </div>
 
-          <a href="">
-            <Button
-              family="var(--font-medium)"
-              color="dark"
-              textColor="var(--color-general-dark)"
-              :text="DetailTopData.Btn3"
-              textAlign="left"
-              type="together"
-              iconType="favorites"
-              iconColor="var(--color-primary)"
-              background="transparent"
-              radius="0"
-              width="110px"
-              padding="0 0px"
-              iconWidth="22px"
-              iconHeight="21px"
-              fontSize="15px"
-              iconAreaW="auto"
-            />
-          </a>
+          <div>
+            <router-link to="/profile">
+              <Button
+                family="var(--font-medium)"
+                color="dark"
+                textColor="var(--color-general-dark)"
+                :text="DetailTopData.Btn3"
+                textAlign="left"
+                type="together"
+                iconType="favorites"
+                iconColor="var(--color-primary)"
+                background="transparent"
+                radius="0"
+                width="110px"
+                padding="0 0px"
+                iconWidth="22px"
+                iconHeight="21px"
+                fontSize="15px"
+                iconAreaW="auto"
+              />
+            </router-link>
+          </div>
         </div>
       </div>
     </div>
@@ -125,7 +130,7 @@ export default {
         align-items: center;
         // justify-content: space-between;
 
-        a {
+        div {
           height: 100%;
           text-decoration: none;
           width: 150px;
@@ -134,6 +139,10 @@ export default {
           justify-content: center;
           border-right: 1px solid var(--background-general);
           border-left: 1px solid var(--background-general);
+          cursor: pointer;
+          /deep/ button {
+            cursor: pointer;
+          }
         }
 
         span {
@@ -149,20 +158,23 @@ export default {
       .area:first-child {
         // width: 60%;
         max-width: 600px;
-        a {
+        div {
           width: 80px;
+          /deep/ button {
+            cursor: pointer;
+          }
         }
       }
       .area:last-child {
         // width: 40%;
         justify-content: flex-end;
 
-        a {
+        div {
           border-bottom: 2px solid transparent;
           transition: 0.4s;
         }
 
-        a:hover {
+        div:hover {
           transition: 0.4s;
           background-image: linear-gradient(
             to top,
@@ -230,7 +242,7 @@ export default {
           margin: 10px 0;
           border: transparent;
 
-          a {
+          div {
             border: transparent;
           }
 

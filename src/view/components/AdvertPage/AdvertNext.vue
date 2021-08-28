@@ -11,7 +11,7 @@
           >
         </div>
 
-        <button @click="sectionControlButton">
+        <button class="hover-primary" @click="sectionControlButton">
           <span> {{ AdvertNextData.Next }} </span>
         </button>
       </div>
@@ -69,6 +69,8 @@ export default {
         margin-left: 20px;
         font-size: 25px;
         height: 60px;
+        transition: 0.4s;
+        cursor: pointer;
         span {
           text-transform: uppercase;
         }

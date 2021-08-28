@@ -75,6 +75,11 @@ export default {
     border-bottom-right-radius: 10px;
     background: var(--color-secondary);
     transition: 0.4s;
+    cursor: pointer;
+
+    /deep/ .default-button {
+      cursor: pointer;
+    }
   }
 
   &__button:hover {

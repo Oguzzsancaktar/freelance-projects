@@ -38,7 +38,7 @@
                   {{ BoostInfoData.PaymentType }}
                 </h3>
               </div>
-              <div class="padding">
+              <div class="padding checkboxes">
                 <div class="checkbox">
                   <Checkbox />
 
@@ -214,6 +214,10 @@ export default {
 
                 display: flex;
               }
+            }
+
+            .padding.checkboxes {
+              border-top: transparent;
             }
 
             .row {

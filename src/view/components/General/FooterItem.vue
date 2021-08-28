@@ -21,7 +21,13 @@
     <div v-if="type == 'normal'" class="footer-item">
       <div class="section">
         <ul v-for="(text, index) in texts" :key="index" class="list">
-          <li class="list__item">{{ text }}</li>
+          <li class="list__item">
+            <router-link to="/about">
+              <span>
+                {{ text }}
+              </span>
+            </router-link>
+          </li>
         </ul>
       </div>
       <div class="section">
@@ -120,7 +126,13 @@
           :key="index"
           class="list"
         >
-          <li class="list__item">{{ text }}</li>
+          <li class="list__item">
+            <router-link to="/about">
+              <span>
+                {{ text }}
+              </span>
+            </router-link>
+          </li>
         </ul>
 
         <ul
@@ -230,12 +242,29 @@ export default {
           font-size: 14px;
           font-family: var(--font-light);
           cursor: pointer;
+          text-decoration: none;
+          color: var(--background-white);
+          a {
+            text-decoration: none;
+
+            span {
+              text-decoration: none;
+              color: var(--background-white);
+            }
+          }
         }
         &__item:hover {
           transition: 0.7s;
 
           color: var(--color-secondary);
-          // font-family: var(--font-semibold);
+
+          span {
+            transition: 0.7s;
+
+            color: var(--color-secondary);
+
+            text-decoration: none;
+          }
         }
       }
     }

@@ -54,6 +54,7 @@ export default {
       arData,
     };
   },
+
   mounted() {
     if (localStorage.ApplicationLanguage) {
       this.ApplicationLanguage = localStorage.ApplicationLanguage;
@@ -224,6 +225,16 @@ export default {
   box-sizing: border-box;
   font-family: "Branding-Medium";
 }
+.before-enter {
+  opacity: 0 !important;
+  transform: translateY(-100px);
+  transition: 1s;
+}
+.enter {
+  transition: 1s;
+  opacity: 1 !important;
+  transform: translateY(0px);
+}
 
 ::-webkit-scrollbar {
   width: 4px;
@@ -257,7 +268,9 @@ export default {
   width: 100vw;
   overflow-x: hidden;
 }
-
+a {
+  text-decoration: none;
+}
 .subpage-content {
   height: 100%;
   min-height: calc(100vh - 285px);

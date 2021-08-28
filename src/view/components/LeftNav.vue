@@ -91,6 +91,7 @@ export default {
 
       list-style: none;
       .item {
+        cursor: pointer;
         transition: 0.4s;
 
         padding: 0 20px;
@@ -106,6 +107,7 @@ export default {
           flex-direction: row;
           align-items: center;
           justify-content: space-between;
+          cursor: pointer;
 
           .counter-circle {
             width: 25px;

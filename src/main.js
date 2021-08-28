@@ -10,6 +10,9 @@ import ProfilePage from './view/pages/ProfilePage.vue'
 import AboutUsPage from './view/pages/AboutUsPage.vue'
 import ContactUsPage from './view/pages/ContactUsPage.vue'
 
+import ScrollAnimation from './directives/scrollAnimation'
+
+Vue.directive('scrollanimation', ScrollAnimation)
 
 
 Vue.config.productionTip = false
@@ -30,6 +33,7 @@ const router = new VueRouter({
   routes,
   mode: 'history'
 })
+
 
 new Vue({
 

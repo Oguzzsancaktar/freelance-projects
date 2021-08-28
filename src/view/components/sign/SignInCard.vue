@@ -222,6 +222,7 @@ export default {
     }
 
     .forget {
+      cursor: pointer;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -229,6 +230,12 @@ export default {
       font-size: 14px;
       font-family: var(--font-medium);
       color: var(--color-card-id);
+      transition: 0.4s;
+    }
+
+    .forget:hover {
+      transition: 0.4s;
+      color: var(--color-primary);
     }
 
     .divider {
@@ -267,6 +274,8 @@ export default {
         width: 135px;
         line-height: 14px;
         font-size: 13px;
+        cursor: pointer;
+        transition: 0.4s;
 
         .icon {
           width: 25px;
@@ -282,6 +291,11 @@ export default {
       }
       .area:first-child {
         margin-right: 10px;
+      }
+
+      .area:hover {
+        transition: 0.4s;
+        border: 1px solid var(--color-secondary);
       }
     }
   }

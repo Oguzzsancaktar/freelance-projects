@@ -1,5 +1,5 @@
 <template>
-  <div class="card">
+  <div v-scrollanimation class="card">
     <div class="card__layout">
       <div class="card__image">
         <router-link to="detail">
@@ -66,11 +66,11 @@
                 textColor="var(--color-primary)"
                 width="100px"
                 background="var(--color-primary-low-button)"
-                text="For Sale"
+                :text="data.AdvertType"
                 radius="10px"
                 type="together"
                 border="1px solid var(--color-primary)"
-                :iconType="data.ForSale"
+                iconType="rentSale"
                 height="35px"
                 iconColor="var(--color-primary)"
                 padding="0 10px"
@@ -179,6 +179,10 @@ export default {
       left: 0;
       background: var(--color-primary-low);
       opacity: 0;
+
+      /deep/ .default-button {
+        cursor: pointer;
+      }
     }
     &__hover:hover {
       transition: 0.4s;
