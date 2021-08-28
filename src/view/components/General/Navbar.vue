@@ -311,7 +311,7 @@ export default {
               border-radius: 20px;
               position: absolute;
               top: 60px;
-              opacity: 1;
+              pointer-events: none;
               transition: 0.4s;
               opacity: 0;
 
@@ -321,6 +321,8 @@ export default {
             }
             &__collapse.active {
               opacity: 1;
+              pointer-events: all;
+
               transition: 0.4s;
             }
           }

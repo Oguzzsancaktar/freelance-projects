@@ -11,7 +11,7 @@
           </div>
 
           <div class="section">
-            <TopInfo />
+            <TopInfo :TopInfoData="Data.CategoryPage.TopInfoData" />
             <CategoryGallery
               :Heading="Data.ProfilePage.CategoryGalleryData.Heading2"
               :CategoryGalleryData="Data.ProfilePage.CategoryGalleryData"

@@ -137,6 +137,18 @@
         />
       </span>
 
+      <span :style="`width:${iconAreaW}`" v-if="'transfer' == iconType">
+        <Icon
+          :iconColor="iconColor"
+          iconName="transfer"
+          width="20px"
+          height="20px"
+          :iconWidth="iconWidth"
+          :iconHeight="iconHeight"
+          viewBox="0 0 128 128"
+        />
+      </span>
+
       <span :style="`width:${iconAreaW}`" v-if="'calendar' == iconType">
         <Icon
           :iconColor="iconColor"

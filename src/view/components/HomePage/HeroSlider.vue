@@ -389,7 +389,7 @@ export default {
           height: 60%;
           width: 100%;
 
-          filter: blur(3px) brightness(1.2);
+          filter: brightness(1.2);
 
           .hero__slider__image {
             width: 100%;

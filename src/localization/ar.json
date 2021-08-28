@@ -1,5 +1,11 @@
 {
   "CategoryPage": {
+    "TopInfoData": {
+      "Before": "Search result",
+      "Count": "132.455",
+      "After": "advert finded",
+      "ButtonText": "Reduced Price"
+    },
     "ButtonSelectData": [{ "Text": "For Sale" }, { "Text": "For Rent" }],
     "CategoriesData": [
       {
@@ -569,6 +575,8 @@
       "Counter": "765",
       "CounterAfter": "ads waiting for you.",
       "SeeAll": "See All",
+      "ForSale": "For Sale",
+
       "GalleryCards": [
         {
           "PropID": "12341234",
@@ -705,17 +713,21 @@
         {
           "Background": "var(--color-other-2)",
           "Text": "Al Mansour Mall / Baghdad",
+          "Text2": "Show nearby areas",
+
           "Type": "short",
           "Class": ""
         },
         {
           "Background": "var(--color-other-4)",
+          "Text2": "Show nearby areas",
           "Text": "Supreme Judicial Council",
           "Type": "long",
           "Class": "vertical"
         },
         {
           "Background": "var(--color-other-5)",
+          "Text2": "Show nearby areas",
           "Text": "Baghdad Railway/ Baghdad",
           "Type": "short",
           "Class": ""
@@ -723,12 +735,14 @@
         {
           "Background": "var(--color-other-3)",
           "Text": "Al Mansour Mall / Baghdad",
+          "Text2": "Show nearby areas",
           "Type": "short",
           "Class": ""
         },
         {
           "Background": "var(--color-other-1)",
           "Text": "Baghdad International  Airport",
+          "Text2": "Show nearby areas",
           "Type": "short",
           "Class": ""
         }
@@ -1019,7 +1033,7 @@
   },
 
   "NavbarData": {
-    "Lang": "EN",
+    "Lang": "AR",
     "Lang1": "EN",
     "Lang2": "AR",
 
@@ -1067,6 +1081,9 @@
     "AddProperty": "Add Property",
     "LoginSignup": "Login / Signup",
     "Lang": "EN",
+    "Lang1": "EN",
+    "Lang2": "AR",
+
     "NavLinks": [
       { "text": "Self/Rent", "href": "/add" },
       { "text": "About Us", "href": "/about" },

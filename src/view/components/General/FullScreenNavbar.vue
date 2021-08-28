@@ -70,7 +70,7 @@
       </div>
 
       <div class="navbar-fullscreen-item button">
-        <button @click="languageControl" class="language-control">
+        <div @click="toggleLangControl" class="language-control">
           <Button
             family="var(--font-medium)"
             textColor="white"
@@ -85,7 +85,38 @@
             justify="center"
             hoverClass="hover-secondary"
           />
-        </button>
+
+          <div class="language-control__collapse">
+            <div @click="languageControl('en')" class="item">
+              <Button
+                family="var(--font-medium)"
+                textColor="var(--color-text-gray)"
+                fontSize="15px"
+                color="white"
+                background="transparent"
+                :text="FullScreenNavbarData.Lang1"
+                radius="0"
+                type="text"
+                width="60px"
+                hoverClass="hover-text-primary"
+              />
+            </div>
+            <div @click="languageControl('ar')" class="item">
+              <Button
+                family="var(--font-medium)"
+                textColor="var(--color-text-gray)"
+                fontSize="15px"
+                color="white"
+                background="transparent"
+                :text="FullScreenNavbarData.Lang2"
+                radius="0px"
+                type="text"
+                width="60px"
+                hoverClass="hover-text-primary"
+              />
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -145,6 +176,16 @@ export default {
         );
         jquery(".navbar-fullscreen").slideDown(200);
         jquery("#navbarHamburger").addClass("open");
+      }
+    },
+
+    toggleLangControl: function() {
+      if (this.isLangControlOpen) {
+        jquery(".language-control__collapse").removeClass("active");
+        this.isLangControlOpen = false;
+      } else {
+        jquery(".language-control__collapse").addClass("active");
+        this.isLangControlOpen = true;
       }
     },
 
@@ -222,7 +263,7 @@ export default {
   left: -100vw;
   width: 220px;
   transform: translateX(-50%);
-  margin: 20px 0;
+  margin: 10px 0;
   padding: 10px 20px;
   border-radius: 30px;
   background: var(--color-primary);
@@ -241,6 +282,33 @@ export default {
     border: none;
 
     text-decoration: none;
+  }
+
+  .language-control {
+    position: relative;
+    &__collapse {
+      overflow: hidden;
+      border: 1px solid var(--color-card-border);
+      background: var(--background-general);
+      width: 120px;
+      border-radius: 20px;
+      position: absolute;
+      top: 60px;
+      pointer-events: none;
+      transition: 0.4s;
+      opacity: 0;
+      display: flex;
+
+      .item:first-child {
+        border-bottom: 1px solid var(--color-card-border);
+      }
+    }
+    &__collapse.active {
+      opacity: 1;
+      pointer-events: all;
+
+      transition: 0.4s;
+    }
   }
 }
 

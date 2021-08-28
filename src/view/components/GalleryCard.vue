@@ -70,7 +70,7 @@
                 radius="10px"
                 type="together"
                 border="1px solid var(--color-primary)"
-                iconType="rentSale"
+                :iconType="data.ForSale"
                 height="35px"
                 iconColor="var(--color-primary)"
                 padding="0 10px"

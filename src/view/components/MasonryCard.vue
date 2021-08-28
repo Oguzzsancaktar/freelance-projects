@@ -17,7 +17,7 @@
                 textColor="var(--background-white)"
                 width="230px"
                 background="var(--color-primary-low-button)"
-                text="Show nearby areas"
+                :text="text2"
                 radius="28px"
                 type="together"
                 border="1px solid var(--background-white)"
@@ -106,6 +106,10 @@ export default {
       default: "red",
     },
     text: {
+      type: String,
+      default: " Empty",
+    },
+    text2: {
       type: String,
       default: " Empty",
     },

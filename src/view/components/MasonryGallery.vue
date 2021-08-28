@@ -45,6 +45,7 @@
         >
           <MasonryCard
             :text="item.Text"
+            :text2="item.Text2"
             :background="item.Background"
             :type="item.Type"
           />

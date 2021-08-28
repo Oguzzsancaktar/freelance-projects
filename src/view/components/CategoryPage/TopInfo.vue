@@ -3,24 +3,25 @@
     <div class="layout">
       <div class="section">
         <span>
-          Lorem ipsum dolor, sit amet consectetur adipisicing.
+          {{ TopInfoData.Before }} <b>{{ TopInfoData.Count }} </b>
+          {{ TopInfoData.After }}
         </span>
       </div>
       <div class="section">
         <Button
           background="transparent"
-          text="yaz"
+          :text="TopInfoData.ButtonText"
           radius="high"
           color="dark"
           textColor="var(--color-text-gray)"
           family="var(--font-medium)"
           fontSize="17px"
           type="together"
-          iconType="advenced"
+          iconType="transfer"
           width="100%"
           iconWidth="22px"
           iconHeight="22px"
-          iconColor="var(--color-secondary)"
+          iconColor="var(--color-primary)"
           height="30px"
           textAlign="left"
           iconAreaW="auto"
@@ -37,6 +38,9 @@ import Button from "../Button.vue";
 export default {
   components: { Button },
   name: "TopInfo",
+  props: {
+    TopInfoData: Object,
+  },
 };
 </script>
 
@@ -55,6 +59,17 @@ export default {
     height: 65px;
     .section {
       padding: 25px 35px;
+
+      span {
+        font-size: 15px;
+        font-family: var(--font-semilight);
+        color: var(--color-text-gray);
+
+        b {
+          font-family: var(--font-semibold);
+          color: var(--color-primary);
+        }
+      }
     }
   }
 }
