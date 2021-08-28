@@ -149,4 +149,33 @@ export default {
     }
   }
 }
+
+@media (max-width: 850px) {
+  .MyProfile {
+    .layout {
+      section {
+        .heading {
+          h3 {
+          }
+        }
+        .column {
+          padding: 20px 0;
+
+          .row {
+            padding: 20px;
+            flex-direction: column;
+            /deep/ .aselect {
+            }
+
+            .btn {
+            }
+          }
+          .row:last-child {
+            padding: 0 20px !important;
+          }
+        }
+      }
+    }
+  }
+}
 </style>

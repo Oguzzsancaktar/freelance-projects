@@ -347,6 +347,8 @@ export default {
   transition: 0.4s !important;
   background: var(--color-secondary) !important;
   cursor: pointer !important;
+  color: var(--background-white) !important;
+  border: 1px solid var(--color-secondary) !important;
 }
 .hover-primary:hover g {
   transition: 0.4s !important;
@@ -364,6 +366,16 @@ export default {
   background: var(--color-primary) !important;
   cursor: pointer !important;
   border-color: var(--color-primary) !important;
+  color: var(--background-white) !important;
+}
+.hover-secondary div {
+  transition: 0.4s !important;
+}
+.hover-secondary:hover div {
+  transition: 0.4s !important;
+  cursor: pointer !important;
+  border-color: var(--color-primary) !important;
+  color: var(--background-white) !important;
 }
 .hover-secondary:hover g {
   transition: 0.4s !important;
@@ -374,6 +386,7 @@ export default {
   transition: 0.4s !important;
   color: var(--background-white) !important;
   cursor: pointer !important;
+  color: var(--background-white) !important;
 }
 
 .hover-secondary-low:hover {

@@ -124,4 +124,30 @@ export default {
     }
   }
 }
+
+@media (max-width: 700px) {
+  .ProfilePage {
+    .subpage-content {
+      .wrapper {
+        .layout {
+          flex-direction: column;
+          .section {
+            &__item {
+            }
+          }
+
+          .section:first-child {
+            margin-top: 60px;
+            width: 100%;
+          }
+          .section:last-child {
+            margin-top: 0px;
+
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}
 </style>

@@ -110,13 +110,107 @@ export default {
     }
   }
 }
+@media (max-width: 1300px) {
+  .CategoryGallery {
+    section {
+      .heading {
+        h3 {
+        }
+      }
+    }
 
-@media (max-width: 660px) {
+    .grid__gallery {
+      .wrapper {
+        width: 100%;
+      }
+
+      &__nav {
+        .section {
+          span {
+          }
+        }
+
+        .section:last-child {
+        }
+      }
+      &__layout {
+        &__item {
+        }
+      }
+    }
+  }
+}
+@media (max-width: 1270px) {
+  .CategoryGallery {
+    section {
+      .heading {
+        h3 {
+        }
+      }
+    }
+
+    .grid__gallery {
+      .wrapper {
+        width: 100%;
+      }
+
+      &__nav {
+        .section {
+          span {
+          }
+        }
+
+        .section:last-child {
+        }
+      }
+      &__layout {
+        &__item {
+          max-width: none;
+          width: 48%;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1000px) {
+  .CategoryGallery {
+    section {
+      .heading {
+        h3 {
+        }
+      }
+    }
+
+    .grid__gallery {
+      .wrapper {
+        width: 100%;
+      }
+
+      &__nav {
+        .section {
+          span {
+          }
+        }
+
+        .section:last-child {
+        }
+      }
+      &__layout {
+        &__item {
+          max-width: none;
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 400px) {
   .CategoryGallery {
     .grid__gallery {
-      min-height: 1200px;
       width: 100%;
-      padding: 70px 0;
+      padding: 20px 10px;
       .wrapper {
       }
 

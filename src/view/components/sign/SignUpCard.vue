@@ -16,6 +16,7 @@
           iconWidth="25px"
           iconHeight="25px"
           fontSize="15px"
+          hoverClass="hover-secondary"
         />
       </div>
       <div class="section">
@@ -43,7 +44,7 @@
           >
         </div>
 
-        <div class="button">
+        <div @click="this.showSignin" class="button">
           <Button
             color="var(--background-white)"
             textColor="var(--background-white)"
@@ -87,7 +88,10 @@
             </div>
 
             <span>
-              {{ SignUpData.Facebook }}
+              {{ SignUpData.SignWith }}
+              <b>
+                {{ SignUpData.Facebook }}
+              </b>
             </span>
           </div>
 
@@ -96,7 +100,10 @@
               <ImageView width="21px" imageType="svg" imageName="google.svg" />
             </div>
             <span>
-              {{ SignUpData.Google }}
+              {{ SignUpData.SignWith }}
+              <b>
+                {{ SignUpData.Google }}
+              </b>
             </span>
           </div>
         </div>
@@ -118,6 +125,9 @@ export default {
   methods: {
     hideSign: function() {
       this.$emit("hideSign");
+    },
+    showSignin: function() {
+      this.$emit("showSignin");
     },
   },
 };
@@ -157,10 +167,14 @@ export default {
       width: 100%;
       .header {
         margin: 20px 0;
+        font-size: 19px;
+        font-family: var(--font-bold);
+        text-transform: uppercase;
+        margin-bottom: 40px;
       }
 
       .input {
-        border: 1px solid var(--color-text-gray-light);
+        border: 1px solid var(--color-card-border);
         border-radius: 25px;
         margin: 10px 0;
         overflow: hidden;
@@ -175,6 +189,7 @@ export default {
         display: flex;
         align-items: center;
         justify-content: start;
+        margin: 30px 10px;
         span {
           display: flex;
           align-items: center;
@@ -197,6 +212,9 @@ export default {
       align-items: center;
       justify-content: center;
       margin: 20px 0;
+      font-size: 14px;
+      font-family: var(--font-medium);
+      color: var(--color-card-id);
     }
 
     .divider {
@@ -205,21 +223,30 @@ export default {
       justify-content: space-between;
       align-items: center;
       margin: 20px 0;
+      font-size: 13px;
+      font-family: var(--font-medium);
+      color: var(--color-card-id);
 
       hr {
-        width: calc(100% - 160px);
+        width: calc(100% - 170px);
         height: 1px;
         border-width: 1px;
         border-color: var(--color-text-gray-light);
+        color: var(--color-text-gray-light);
+        border-bottom: transparent;
+        border-left: transparent;
+        border-right: transparent;
+        border-top: 1px solid var(--color-card-border);
       }
     }
     .social {
-      display: flex;
       padding-bottom: 20px;
+      display: flex;
+      justify-content: center;
 
       .area {
         display: flex;
-        border: 1px solid var(--color-text-gray-light);
+        border: 1px solid var(--color-card-border);
         border-radius: 25px;
         padding: 10px 15px;
         height: 50px;
@@ -230,10 +257,94 @@ export default {
         .icon {
           width: 25px;
           margin-right: 6px;
+          font-size: 13px;
+        }
+        span {
+          b {
+            color: var(--color-card-id);
+            font-family: var(--font-bold);
+          }
         }
       }
       .area:first-child {
         margin-right: 10px;
+      }
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .SignUpCard {
+    width: 90%;
+    max-width: 600px;
+    margin: auto;
+    .layout {
+      flex-direction: column;
+      .close-button {
+        transform: translate(0%, 0%) rotate(45deg);
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        transition: 0.4s;
+      }
+      .close-button:hover {
+      }
+
+      .section {
+        padding: 10px 15px;
+        .text {
+          text-align: center;
+          padding-bottom: 15px;
+        }
+        .header {
+          text-align: center;
+        }
+
+        .input {
+          input {
+          }
+        }
+
+        .checkbox {
+          font-size: 12px;
+          display: flex;
+          align-items: center;
+          justify-content: start;
+          margin: 15px 10px;
+          span {
+            display: flex;
+            align-items: center;
+            justify-content: start;
+
+            a {
+              text-decoration: none;
+              color: var(--color-primary);
+            }
+          }
+        }
+        .button {
+        }
+      }
+
+      .forget {
+        margin: 20px 0;
+      }
+
+      .divider {
+        hr {
+        }
+      }
+      .social {
+        .area {
+          .icon {
+          }
+          span {
+            b {
+            }
+          }
+        }
+        .area:first-child {
+        }
       }
     }
   }

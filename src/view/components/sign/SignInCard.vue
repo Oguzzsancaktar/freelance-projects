@@ -13,9 +13,10 @@
           height="50px"
           padding="0"
           iconColor="var(--background-white)"
-          iconWidth="25px"
-          iconHeight="25px"
+          iconWidth="30px"
+          iconHeight="30px"
           fontSize="15px"
+          hoverClass="hover-secondary"
         />
       </div>
       <div class="section">
@@ -43,12 +44,12 @@
             iconColor="var(--color-primary)"
             padding="0 10px"
             margin="auto"
-            iconWidth="20px"
-            iconHeight="16px"
-            family="var(--font-medium)"
-            fontSize="24px"
+            family="var(--font-bold)"
+            fontSize="16px"
             textAlign="center"
             justify="center"
+            hoverClass="hover-primary"
+            textTransfrom="uppercase"
           />
         </div>
 
@@ -73,7 +74,10 @@
             </div>
 
             <span>
-              {{ SignInData.Facebook }}
+              {{ SignInData.SignWith }}
+              <b>
+                {{ SignInData.Facebook }}
+              </b>
             </span>
           </div>
 
@@ -82,7 +86,10 @@
               <ImageView width="21px" imageType="svg" imageName="google.svg" />
             </div>
             <span>
-              {{ SignInData.Google }}
+              {{ SignInData.SignWith }}
+              <b>
+                {{ SignInData.Google }}
+              </b>
             </span>
           </div>
         </div>
@@ -108,10 +115,12 @@
             margin="auto"
             iconWidth="20px"
             iconHeight="16px"
-            family="var(--font-medium)"
-            fontSize="24px"
+            family="var(--font-bold)"
+            fontSize="16px"
             textAlign="center"
+            hoverClass="hover-secondary"
             justify="center"
+            textTransfrom="uppercase"
           />
         </div>
 
@@ -178,12 +187,21 @@ export default {
     .section {
       padding: 25px 35px;
       width: 100%;
+
+      .text {
+        font-size: 14px;
+        font-family: var(--font-medium);
+        color: var(--color-card-id);
+      }
       .header {
-        margin: 20px 0;
+        margin: 40px 0;
+        font-size: 19px;
+        font-family: var(--font-bold);
+        text-transform: uppercase;
       }
 
       .input {
-        border: 1px solid var(--color-text-gray-light);
+        border: 1px solid var(--color-card-border);
         border-radius: 25px;
         margin: 10px 0;
         overflow: hidden;
@@ -200,14 +218,17 @@ export default {
     }
 
     .section:last-child {
-      border-left: 1px solid var(--color-text-gray);
+      border-left: 1px solid var(--color-card-border);
     }
 
     .forget {
       display: flex;
       align-items: center;
       justify-content: center;
-      margin: 20px 0;
+      margin: 40px 0;
+      font-size: 14px;
+      font-family: var(--font-medium);
+      color: var(--color-card-id);
     }
 
     .divider {
@@ -216,21 +237,30 @@ export default {
       justify-content: space-between;
       align-items: center;
       margin: 20px 0;
+      font-size: 13px;
+      font-family: var(--font-medium);
+      color: var(--color-card-id);
 
       hr {
-        width: calc(100% - 160px);
+        width: calc(100% - 170px);
         height: 1px;
         border-width: 1px;
         border-color: var(--color-text-gray-light);
+        color: var(--color-text-gray-light);
+        border-bottom: transparent;
+        border-left: transparent;
+        border-right: transparent;
+        border-top: 1px solid var(--color-card-border);
       }
     }
     .social {
       padding-bottom: 20px;
       display: flex;
+      justify-content: center;
 
       .area {
         display: flex;
-        border: 1px solid var(--color-text-gray-light);
+        border: 1px solid var(--color-card-border);
         border-radius: 25px;
         padding: 10px 15px;
         height: 50px;
@@ -241,10 +271,84 @@ export default {
         .icon {
           width: 25px;
           margin-right: 6px;
+          font-size: 13px;
+        }
+        span {
+          b {
+            color: var(--color-card-id);
+            font-family: var(--font-bold);
+          }
         }
       }
       .area:first-child {
         margin-right: 10px;
+      }
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .SignInCard {
+    width: 90%;
+    max-width: 600px;
+    margin: auto;
+    .layout {
+      flex-direction: column;
+      .close-button {
+        transform: translate(0%, 0%) rotate(45deg);
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        transition: 0.4s;
+      }
+      .close-button:hover {
+      }
+
+      .section {
+        padding: 10px 15px;
+        .text {
+          text-align: center;
+          padding-bottom: 15px;
+        }
+        .header {
+          text-align: center;
+        }
+
+        .input {
+          input {
+          }
+        }
+        .button {
+        }
+      }
+
+      .section:last-child {
+        border: none;
+        .header {
+          display: none;
+          margin-top: 0px;
+        }
+      }
+
+      .forget {
+        margin: 20px 0;
+      }
+
+      .divider {
+        hr {
+        }
+      }
+      .social {
+        .area {
+          .icon {
+          }
+          span {
+            b {
+            }
+          }
+        }
+        .area:first-child {
+        }
       }
     }
   }

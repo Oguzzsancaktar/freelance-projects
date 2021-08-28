@@ -5,6 +5,7 @@
         <div class="signup-card">
           <SignUpCard
             :SignUpData="SignInUpData.SignUpData"
+            @showSignin="showSignin"
             @hideSign="hideSign"
           />
         </div>
@@ -36,7 +37,7 @@ export default {
       jquery(".SignInUp").animate({ top: "0" });
       setTimeout(() => {
         jquery(".signin-card").addClass("active");
-      }, 600);
+      }, 100);
     },
     hideSign() {
       jquery(".signin-card").removeClass("active");
@@ -44,12 +45,17 @@ export default {
 
       setTimeout(() => {
         jquery(".SignInUp").animate({ top: "-100vh" });
-      }, 1000);
+      }, 600);
     },
     showSignup() {
       jquery(".signin-card").removeClass("active");
 
       jquery(".signup-card").addClass("active");
+    },
+    showSignin() {
+      jquery(".signin-card").addClass("active");
+
+      jquery(".signup-card").removeClass("active");
     },
   },
 };

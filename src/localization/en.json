@@ -978,8 +978,9 @@
       "ForgetPassword": "I forget my password",
       "LogIn": "Log In",
       "Or": "Or",
-      "Facebook": "Sign In With Facebook",
-      "Google": "Sign In With Google",
+      "SignWith": "Sign In With",
+      "Facebook": "Facebook",
+      "Google": "Google",
       "NewUser": "Create New User",
       "CreateAccount": "Create Account",
       "Description": "If you dont have account, please enter your informations to form and submit."
@@ -995,8 +996,9 @@
       "ForgetPassword": "I forget my password",
       "LogIn": "Log In",
       "Or": "Or",
-      "Facebook": "Sign In With Facebook",
-      "Google": "Sign In With Google"
+      "SignWith": "Sign In With",
+      "Facebook": "Facebook",
+      "Google": "Google"
     }
   },
   "FullScreenNavbarData": {
