@@ -106,7 +106,8 @@ export default {
 
 <style lang="scss" scoped>
 .CategorySelectBox {
-  padding: 0 15px;
+  margin: 5px 0;
+  padding: 0 5px;
   h1 {
     color: #f9f9f9;
     text-align: center;
@@ -126,26 +127,35 @@ export default {
       color: var(--color-text-gray-light);
       font-family: var(--font-medium);
       margin-bottom: 5px;
+
+      b {
+        margin-top: 10px;
+        color: var(--color-primary);
+        font-size: 20px;
+      }
     }
     width: 140px;
-    // margin: 20px auto;
+    margin: 20px auto;
     .selector {
-      border: 1px solid var(--color-text-gray-light);
+      border: 1px solid var(--color-card-border);
       padding: 10px 25px;
       border-radius: 25px;
       background: transparent;
       position: relative;
-      z-index: 1;
+      width: 100%;
+      cursor: pointer;
+      transition: 0.4s;
+
       .arrow {
         position: absolute;
-        right: 10px;
+        right: 20px;
         top: 40%;
-        width: 0;
-        height: 0;
-        border-left: 7px solid transparent;
-        border-right: 7px solid transparent;
-        border-top: 10px solid var(--color-text-gray-light);
-        transform: rotateZ(0deg) translateY(0px);
+        width: 15px;
+        height: 15px;
+        border-left: 2px solid var(--color-primary);
+        border-bottom: 2px solid var(--color-primary);
+        // border-top: 10px solid var(--color-text-gray-light);
+        transform: rotateZ(-45deg) translateY(-10px);
         transition-duration: 0.3s;
         transition-timing-function: cubic-bezier(0.59, 1.39, 0.37, 1.01);
       }
@@ -162,14 +172,20 @@ export default {
 
         span {
           margin-top: 5px;
-
           font-size: 17px;
           color: var(--color-text-gray);
           font-family: var(--font-medium);
         }
       }
     }
+
+    .selector:hover {
+      transition: 0.4s;
+      border-color: var(--color-secondary);
+    }
     ul {
+      overflow: hidden;
+      // background: var(--background-white);
       width: 100%;
       list-style-type: none;
       padding: 0;
@@ -178,26 +194,36 @@ export default {
       border: 1px solid transparent;
       position: absolute;
       z-index: 1;
-      background: #fff;
       left: 0;
       top: 50px;
+      border-radius: 10px;
+      border: 1px solid var(--color-card-border);
     }
     li {
-      margin-top: 5px;
-
+      border-bottom: 1px solid var(--color-card-border);
+      width: 100%;
+      // margin: 10px 0;
       padding: 12px;
       font-size: 17px;
-      color: var(--color-text-gray);
+      color: var(--color-text-gray-light);
+      text-align: start;
       font-family: var(--font-medium);
       background: var(--background-white);
+      transition: background 0.4s;
 
       &:hover {
+        transition: background 0.4s;
         color: white;
         background: var(--color-secondary);
+        cursor: pointer;
       }
     }
+    li:last-child {
+      border-bottom: transparent;
+    }
     .current {
-      background: #eaeaea;
+      border-left: 1px solid var(--color-secondary);
+      color: var(--color-secondary);
     }
     .hidden {
       visibility: hidden;

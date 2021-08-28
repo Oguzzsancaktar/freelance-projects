@@ -70,13 +70,15 @@ export default {
             align-items: center;
             height: 100%;
             border-bottom: 1px solid var(--background-general);
-            padding: 20px 0;
+            padding: 20px;
+
             color: var(--color-primary);
           }
         }
 
         .content {
-          padding: 20px 0;
+          padding: 20px;
+
           width: 100%;
 
           &__list {
@@ -121,6 +123,47 @@ export default {
 
               input[type="number"] {
                 -moz-appearance: textfield; /* Firefox */
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 700px) {
+  .CategoryInput {
+    .list {
+      .item {
+        &__layout {
+          .heading {
+            h3 {
+            }
+          }
+
+          .content {
+            &__list {
+              justify-content: flex-start;
+              &__item {
+                span {
+                }
+                input {
+                }
+                input::-webkit-outer-spin-button,
+                input::-webkit-inner-spin-button {
+                  /* display: none; <- Crashes Chrome on hover */
+                  -webkit-appearance: none;
+                  margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+                }
+
+                input[type="number"] {
+                  -moz-appearance: textfield; /* Firefox */
+                }
+              }
+
+              &__item:first-child {
+                margin-right: 10px;
               }
             }
           }

@@ -1,14 +1,15 @@
 <template>
   <div class="ButtonSelect">
     <div class="buttons">
-      <div class="button active">
+      <div
+        v-for="(item, index) in ButtonSelectData"
+        :key="index"
+        class="button"
+        :class="{ active: index == selected }"
+        @click="selected = index"
+      >
         <span>
-          For Sale
-        </span>
-      </div>
-      <div class="button">
-        <span>
-          For Rent
+          {{ item.Text }}
         </span>
       </div>
     </div>
@@ -18,6 +19,14 @@
 <script>
 export default {
   name: "ButtonSelect",
+  props: {
+    ButtonSelectData: Array,
+  },
+  data: function() {
+    return {
+      selected: 0,
+    };
+  },
 };
 </script>
 
@@ -30,12 +39,15 @@ export default {
     overflow: hidden;
 
     .button {
+      cursor: pointer;
       display: flex;
       align-items: center;
       justify-content: center;
       width: 140px;
       background: var(--background-white);
+      border: 2px solid transparent;
       height: 65px;
+      transition: 0.5s;
 
       span {
         padding: 25px 35px;
@@ -54,6 +66,8 @@ export default {
     }
 
     .button.active {
+      transition: 0.5s;
+
       background-image: linear-gradient(
         to top,
         var(--color-primary-low) -200%,

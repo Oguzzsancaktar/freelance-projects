@@ -15,26 +15,28 @@
             </b>
             {{ GridGalleryData.CounterAfter }}</span
           >
-          <Button
-            iconColor="var(--color-primary)"
-            border="1px solid var(--color-primary)"
-            background="transparent"
-            :text="GridGalleryData.SeeAll"
-            radius="10px"
-            color="--color-text-gray-dark"
-            type="together"
-            iconType="plus"
-            width="100px"
-            height="35px"
-            padding="0 10px"
-            iconWidth="13px"
-            iconHeight="13px"
-            textColor="var(--text-color-gray-dark)"
-            family="var(--font-semilight)"
-            fontSize="15px"
-            iconAreaW="auto"
-            hoverClass="hover-secondary"
-          />
+          <router-link to="/category">
+            <Button
+              iconColor="var(--color-primary)"
+              border="1px solid var(--color-primary)"
+              background="transparent"
+              :text="GridGalleryData.SeeAll"
+              radius="10px"
+              color="--color-text-gray-dark"
+              type="together"
+              iconType="plus"
+              width="100px"
+              height="35px"
+              padding="0 10px"
+              iconWidth="13px"
+              iconHeight="13px"
+              textColor="var(--text-color-gray-dark)"
+              family="var(--font-semilight)"
+              fontSize="15px"
+              iconAreaW="auto"
+              hoverClass="hover-secondary"
+            />
+          </router-link>
         </div>
       </div>
       <div class="grid__gallery__layout">

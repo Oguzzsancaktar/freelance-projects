@@ -1,4 +1,63 @@
 {
+  "CategoryPage": {
+    "ButtonSelectData": [{ "Text": "For Sale" }, { "Text": "For Rent" }],
+    "CategoriesData": [
+      {
+        "Type": "select",
+        "Header": "h1",
+        "List": ["Select City", "Select City", "Select City"]
+      },
+      {
+        "Type": "check",
+        "Header": "h3,",
+        "List": [
+          "Select City",
+          "Select City",
+          "Select City",
+          "Select City",
+          "Select City",
+          "Select City"
+        ]
+      },
+      {
+        "Type": "select",
+        "Header": "h1",
+        "List": ["Select City"]
+      },
+      { "Type": "input", "Header": "h2", "InputType": "dolar" },
+      { "Type": "input", "Header": "h2", "InputType": "m2" },
+      {
+        "Type": "select",
+        "Header": "h1",
+        "List": ["Select City"]
+      },
+      {
+        "Type": "select",
+        "Header": "h1",
+        "List": ["Select City"]
+      },
+      {
+        "Type": "select",
+        "Header": "h1",
+        "List": ["Select City"]
+      },
+      {
+        "Type": "select",
+        "Header": "h1",
+        "List": ["Select City"]
+      },
+      {
+        "Type": "select",
+        "Header": "h1",
+        "List": ["Select City"]
+      },
+      {
+        "Type": "select",
+        "Header": "h1",
+        "List": ["Select City"]
+      }
+    ]
+  },
   "AdvertDetailPage": {
     "BoostPageData": {
       "PageHeadingData": {
@@ -961,6 +1020,9 @@
 
   "NavbarData": {
     "Lang": "EN",
+    "Lang1": "EN",
+    "Lang2": "AR",
+
     "AddProperty": "Add Property",
     "LoginSignup": "Login / Signup",
     "NavLinks": [

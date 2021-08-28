@@ -59,17 +59,19 @@ export default {
 
         .heading {
           h3 {
+            padding: 20px;
+
             display: flex;
             align-items: center;
             height: 100%;
             border-bottom: 1px solid var(--background-general);
-            padding: 20px 0;
             color: var(--color-primary);
           }
         }
 
         .content {
-          padding: 20px 0;
+          padding: 20px;
+          border-bottom: 1px solid var(--background-general);
 
           width: 100%;
 

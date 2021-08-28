@@ -62,10 +62,13 @@ export default {
     }
   },
   methods: {
-    languageControl: function() {
-      this.ApplicationLanguage == "en"
-        ? (this.ApplicationLanguage = "ar")
-        : (this.ApplicationLanguage = "en");
+    languageControl: function(lang) {
+      // this.ApplicationLanguage == "en"
+      //   ? (this.ApplicationLanguage = "ar")
+      //   : (this.ApplicationLanguage = "en");
+
+      this.ApplicationLanguage = lang;
+
       localStorage.setItem("ApplicationLanguage", this.ApplicationLanguage);
     },
     navbarAnimations: function(fromTo) {
@@ -452,6 +455,16 @@ export default {
   transition: 0.4s !important;
   color: var(--color-secondary) !important;
   cursor: pointer !important;
+}
+
+.hover-text-primary {
+  transition: 0.4s !important;
+  cursor: pointer;
+}
+
+.hover-text-primary:hover div {
+  transition: 0.4s !important;
+  color: var(--color-primary) !important;
 }
 
 /* Hover Class */

@@ -117,7 +117,7 @@
                 justify="start"
               />
             </div>
-            <div @click="languageControl" class="language-control">
+            <div @click="toggleLangControl" class="language-control">
               <Button
                 family="var(--font-medium)"
                 textColor="white"
@@ -130,6 +130,37 @@
                 width="60px"
                 hoverClass="hover-primary"
               />
+
+              <div class="language-control__collapse">
+                <div @click="languageControl('en')" class="item">
+                  <Button
+                    family="var(--font-medium)"
+                    textColor="var(--color-text-gray)"
+                    fontSize="15px"
+                    color="white"
+                    background="transparent"
+                    :text="NavbarData.Lang1"
+                    radius="0"
+                    type="text"
+                    width="60px"
+                    hoverClass="hover-text-primary"
+                  />
+                </div>
+                <div @click="languageControl('ar')" class="item">
+                  <Button
+                    family="var(--font-medium)"
+                    textColor="var(--color-text-gray)"
+                    fontSize="15px"
+                    color="white"
+                    background="transparent"
+                    :text="NavbarData.Lang2"
+                    radius="0px"
+                    type="text"
+                    width="60px"
+                    hoverClass="hover-text-primary"
+                  />
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -153,9 +184,15 @@ export default {
   props: {
     NavbarData: Object,
   },
+
+  data: function() {
+    return {
+      isLangControlOpen: false,
+    };
+  },
   methods: {
-    languageControl: function() {
-      this.$emit("language-control");
+    languageControl: function(lang) {
+      this.$emit("language-control", lang);
     },
 
     navbarAnimations: function(fromTo) {
@@ -163,6 +200,15 @@ export default {
     },
     showSignin: function() {
       SignInUp.methods.showSign();
+    },
+    toggleLangControl: function() {
+      if (this.isLangControlOpen) {
+        jquery(".language-control__collapse").removeClass("active");
+        this.isLangControlOpen = false;
+      } else {
+        jquery(".language-control__collapse").addClass("active");
+        this.isLangControlOpen = true;
+      }
     },
   },
 
@@ -254,6 +300,30 @@ export default {
           display: flex;
           max-width: none !important;
           align-items: center;
+
+          .language-control {
+            position: relative;
+            &__collapse {
+              overflow: hidden;
+              border: 1px solid var(--color-card-border);
+              background: var(--background-general);
+              width: 60px;
+              border-radius: 20px;
+              position: absolute;
+              top: 60px;
+              opacity: 1;
+              transition: 0.4s;
+              opacity: 0;
+
+              .item:first-child {
+                border-bottom: 1px solid var(--color-card-border);
+              }
+            }
+            &__collapse.active {
+              opacity: 1;
+              transition: 0.4s;
+            }
+          }
 
           .active {
             color: red;

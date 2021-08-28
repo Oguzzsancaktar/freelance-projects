@@ -4,13 +4,18 @@
       <div class="wrapper">
         <div class="layout">
           <div class="section">
-            <ButtonSelect />
-            <Categories />
+            <ButtonSelect
+              :ButtonSelectData="Data.CategoryPage.ButtonSelectData"
+            />
+            <Categories :CategoriesData="Data.CategoryPage.CategoriesData" />
           </div>
 
           <div class="section">
             <TopInfo />
-            <CategoryGallery />
+            <CategoryGallery
+              :Heading="Data.ProfilePage.CategoryGalleryData.Heading2"
+              :CategoryGalleryData="Data.ProfilePage.CategoryGalleryData"
+            />
           </div>
         </div>
       </div>
@@ -31,6 +36,9 @@ export default {
     TopInfo,
   },
   name: "CategoryPage",
+  props: {
+    Data: Object,
+  },
 };
 </script>
 
@@ -52,6 +60,31 @@ export default {
           width: 275px;
           margin-right: 25px;
           margin-bottom: 25px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 700px) {
+  .CategoryPage {
+    .subpage-content {
+      .wrapper {
+        .layout {
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          .section {
+            display: flex;
+            width: 100%;
+            flex-direction: column;
+          }
+
+          .section:first-child {
+            width: 100%;
+            margin-right: 25px;
+            margin-bottom: 25px;
+          }
         }
       }
     }

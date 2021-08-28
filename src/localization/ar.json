@@ -1,4 +1,63 @@
 {
+  "CategoryPage": {
+    "ButtonSelectData": [{ "Text": "For Sale" }, { "Text": "For Rent" }],
+    "CategoriesData": [
+      {
+        "Type": "select",
+        "Header": "h1",
+        "List": ["Select City", "Select City", "Select City"]
+      },
+      {
+        "Type": "check",
+        "Header": "h3,",
+        "List": [
+          "Select City",
+          "Select City",
+          "Select City",
+          "Select City",
+          "Select City",
+          "Select City"
+        ]
+      },
+      {
+        "Type": "select",
+        "Header": "h1",
+        "List": ["Select City"]
+      },
+      { "Type": "input", "Header": "h2", "InputType": "dolar" },
+      { "Type": "input", "Header": "h2", "InputType": "m2" },
+      {
+        "Type": "select",
+        "Header": "h1",
+        "List": ["Select City"]
+      },
+      {
+        "Type": "select",
+        "Header": "h1",
+        "List": ["Select City"]
+      },
+      {
+        "Type": "select",
+        "Header": "h1",
+        "List": ["Select City"]
+      },
+      {
+        "Type": "select",
+        "Header": "h1",
+        "List": ["Select City"]
+      },
+      {
+        "Type": "select",
+        "Header": "h1",
+        "List": ["Select City"]
+      },
+      {
+        "Type": "select",
+        "Header": "h1",
+        "List": ["Select City"]
+      }
+    ]
+  },
   "AdvertDetailPage": {
     "BoostPageData": {
       "PageHeadingData": {
@@ -6,15 +65,21 @@
         "Description": "İlanınızı öne çıkararak daha çok alıcıya daha hızlı şekilde ulaşabilirsiniz."
       },
       "BoostInfoData": {
+        "FinishPayment": "Finish Payment",
         "AdvertType": "Pick your advert type",
         "PaymentType": "Pick your payment type",
         "CreditCard": "Pay with credit card",
+        "CardUser": "Card User Name",
+        "SecCode": "Security Code",
 
         "Placeholder": "1 week 199,00£",
         "List": ["Category1-a", "Category1-b", "Category1-c", "Category1-d"],
         "Ebilling": "I want to receive my billing information via e-mail",
         "Checkbox1": "via e-mail",
-        "Checkbox2": "I want to receive "
+        "Checkbox2": "I want to receive ",
+        "ExpirationDate": "Expiration Date",
+        "Months": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
+        "Years": [2021, 2022, 2023, 2024, 2025]
       }
     },
     "NextEditData": {
@@ -674,35 +739,150 @@
     "LeftNavData": [
       {
         "Text": "Profile",
-        "Keyword": "about",
-        "IconType": "home",
-        "Counter": 4
-      },
-      {
-        "Text": "Adverts",
-        "Keyword": "member",
-        "IconType": "resume",
-        "Counter": 1
-      },
-      {
-        "Text": "Fav Adverts",
-        "Keyword": "warn",
-        "IconType": "notification",
-        "Counter": 10
-      },
-      {
-        "Text": "Using Rules",
-        "Keyword": "rules",
-        "IconType": "writing",
+        "Keyword": "profile",
+        "IconType": "profile",
         "Counter": 0
       },
       {
-        "Text": "Lightness Text",
-        "Keyword": "light",
-        "IconType": "lamp",
-        "Counter": 5
+        "Text": "Adverts",
+        "Keyword": "adverts",
+        "IconType": "list",
+        "Counter": 0
+      },
+      {
+        "Text": "Fav Adverts",
+        "Keyword": "favs",
+        "IconType": "favorites",
+        "Counter": 10
+      },
+      {
+        "Text": "Messages",
+        "Keyword": "messages",
+        "IconType": "envelope",
+        "Counter": 2
       }
-    ]
+    ],
+
+    "CategoryGalleryData": {
+      "Heading1": "Liked Adverts",
+      "Heading2": "My Adverts",
+
+      "CardData": [
+        {
+          "Header": "Luxury Villa In Alice",
+
+          "Location": "Irak/Erbil",
+          "Type": "Sale",
+          "Description": "New Build Modern Istanbul Property with Sea View on Bagdat Streetpremium three bedroom apartment offers dual aspect south eastern views towards Canary Wharf and the",
+          "Price": "£ 1,150,000"
+        },
+        {
+          "Header": "Luxury Villa In Alice",
+
+          "Location": "Irak/Erbil",
+          "Type": "Sale",
+          "Description": "New Build Modern Istanbul Property with Sea View on Bagdat Streetpremium three bedroom apartment offers dual aspect south eastern views towards Canary Wharf and the",
+          "Price": "£ 1,150,000"
+        },
+
+        {
+          "Header": "Luxury Villa In Alice",
+
+          "Location": "Irak/Erbil",
+          "Type": "Sale",
+          "Description": "New Build Modern Istanbul Property with Sea View on Bagdat Streetpremium three bedroom apartment offers dual aspect south eastern views towards Canary Wharf and the",
+          "Price": "£ 1,150,000"
+        },
+        {
+          "Header": "Luxury Villa In Alice",
+          "Location": "Irak/Erbil",
+          "Type": "Sale",
+          "Description": "New Build Modern Istanbul Property with Sea View on Bagdat Streetpremium three bedroom apartment offers dual aspect south eastern views towards Canary Wharf and the",
+          "Price": "£ 1,150,000"
+        },
+        {
+          "Header": "Luxury Villa In Alice",
+
+          "Location": "Irak/Erbil",
+          "Type": "Sale",
+          "Description": "New Build Modern Istanbul Property with Sea View on Bagdat Streetpremium three bedroom apartment offers dual aspect south eastern views towards Canary Wharf and the",
+          "Price": "£ 1,150,000"
+        },
+        {
+          "Header": "Luxury Villa In Alice",
+
+          "Location": "Irak/Erbil",
+          "Type": "Sale",
+          "Description": "New Build Modern Istanbul Property with Sea View on Bagdat Streetpremium three bedroom apartment offers dual aspect south eastern views towards Canary Wharf and the",
+          "Price": "£ 1,150,000"
+        },
+        {
+          "Header": "Luxury Villa In Alice",
+
+          "Location": "Irak/Erbil",
+          "Type": "Sale",
+          "Description": "New Build Modern Istanbul Property with Sea View on Bagdat Streetpremium three bedroom apartment offers dual aspect south eastern views towards Canary Wharf and the",
+          "Price": "£ 1,150,000"
+        },
+        {
+          "Header": "Luxury Villa In Alice",
+          "Location": "Irak/Erbil",
+          "Type": "Sale",
+          "Description": "New Build Modern Istanbul Property with Sea View on Bagdat Streetpremium three bedroom apartment offers dual aspect south eastern views towards Canary Wharf and the",
+          "Price": "£ 1,150,000"
+        },
+        {
+          "Header": "Luxury Villa In Alice",
+          "Location": "Irak/Erbil",
+          "Type": "Sale",
+          "Description": "New Build Modern Istanbul Property with Sea View on Bagdat Streetpremium three bedroom apartment offers dual aspect south eastern views towards Canary Wharf and the",
+          "Price": "£ 1,150,000"
+        }
+      ]
+    },
+    "MyProfileData": {
+      "Heading": "Profile",
+      "Messages": "Messages",
+
+      "Save": "Save",
+
+      "messages": [
+        {
+          "from": "Kemal TUNCER",
+          "date": "02.03.2021",
+          "message": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, "
+        },
+        {
+          "from": "Kemal TUNCER",
+          "date": "02.03.2021",
+          "message": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, "
+        },
+        {
+          "from": "Kemal TUNCER",
+          "date": "02.03.2021",
+          "message": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, "
+        },
+
+        {
+          "from": "Kemal TUNCER",
+          "date": "02.03.2021",
+          "message": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, "
+        }
+      ],
+
+      "List1": [
+        {
+          "List": [{ "Text": "Name" }, { "Text": "Surname" }]
+        },
+        { "List": [{ "Text": "Phone" }, { "Text": "Email" }] }
+      ],
+
+      "List2": [
+        { "Text": "Current Password" },
+        { "Text": "New Password" },
+        { "Text": "Confirm Password" }
+      ]
+    }
   },
   "AboutUsPage": {
     "Section": "profile",
@@ -839,7 +1019,10 @@
   },
 
   "NavbarData": {
-    "Lang": "AR",
+    "Lang": "EN",
+    "Lang1": "EN",
+    "Lang2": "AR",
+
     "AddProperty": "Add Property",
     "LoginSignup": "Login / Signup",
     "NavLinks": [
@@ -857,8 +1040,9 @@
       "ForgetPassword": "I forget my password",
       "LogIn": "Log In",
       "Or": "Or",
-      "Facebook": "Sign In With Facebook",
-      "Google": "Sign In With Google",
+      "SignWith": "Sign In With",
+      "Facebook": "Facebook",
+      "Google": "Google",
       "NewUser": "Create New User",
       "CreateAccount": "Create Account",
       "Description": "If you dont have account, please enter your informations to form and submit."
@@ -874,14 +1058,15 @@
       "ForgetPassword": "I forget my password",
       "LogIn": "Log In",
       "Or": "Or",
-      "Facebook": "Sign In With Facebook",
-      "Google": "Sign In With Google"
+      "SignWith": "Sign In With",
+      "Facebook": "Facebook",
+      "Google": "Google"
     }
   },
   "FullScreenNavbarData": {
     "AddProperty": "Add Property",
     "LoginSignup": "Login / Signup",
-    "Lang": "AR",
+    "Lang": "EN",
     "NavLinks": [
       { "text": "Self/Rent", "href": "/add" },
       { "text": "About Us", "href": "/about" },

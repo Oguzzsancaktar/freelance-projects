@@ -1,5 +1,5 @@
 <template>
-  <ul class="CategoryInput">
+  <ul class="CategorySelect">
     <li class="item">
       <div class="item__layout">
         <div class="heading">
@@ -33,7 +33,7 @@
 import CategorySelectBox from "./CategorySelectBox.vue";
 
 export default {
-  name: "CategoryInput",
+  name: "CategorySelect",
   components: { CategorySelectBox },
   props: {
     categoryList: Array,
@@ -46,17 +46,24 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.CategoryInput {
+.CategorySelect {
   list-style: none;
   .item {
+    width: 100%;
+
     &__layout {
+      width: 100%;
+
       .heading {
+        width: 100%;
+        height: 100%;
+
         h3 {
           display: flex;
           align-items: center;
-          height: 100%;
+          padding: 20px;
+
           border-bottom: 1px solid var(--background-general);
-          padding: 20px 0;
           color: var(--color-primary);
         }
       }
@@ -64,8 +71,11 @@ export default {
 
     .content {
       padding: 20px 0;
+      border-bottom: 1px solid var(--background-general);
 
       &__list {
+        padding: 0 20px;
+
         list-style: none;
         &__item {
         }

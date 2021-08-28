@@ -2,57 +2,30 @@
   <div class="Categories">
     <div class="layout">
       <ul class="list">
-        <li class="item">
-          <CategorySelect header="Location" :categoryList="this.locationList" />
-        </li>
-
-        <li class="item">
-          <CategoryCheckbox header="Categories" :selectList="selectList" />
-        </li>
-        <li class="item">
+        <li v-for="(item, index) in CategoriesData" :key="index" class="item">
           <CategorySelect
-            header="Housing Type"
-            :categoryList="this.housingType"
+            v-if="item.Type == 'select'"
+            :header="item.Header"
+            :categoryList="item.List"
           />
-        </li>
-        <li class="item">
-          <CategoryInput type="dolar" header="Price" />
-        </li>
-        <li class="item">
-          <CategoryInput type="m2" header="Square Meters" />
-        </li>
-
-        <li class="item">
-          <CategoryCheckbox header="Number Of Rooms" :selectList="selectList" />
-        </li>
-
-        <li class="item">
-          <CategoryCheckbox header="Building Age" :selectList="selectList" />
-        </li>
-
-        <li class="item">
-          <CategoryCheckbox header="Floor Location" :selectList="selectList" />
-        </li>
-
-        <li class="item">
           <CategoryCheckbox
-            header="Number Of Floors In The Building"
-            :selectList="selectList"
+            v-if="item.Type == 'check'"
+            :header="item.Header"
+            :selectList="item.List"
           />
-        </li>
 
-        <li class="item">
-          <CategoryCheckbox header="Title Status" :selectList="selectList" />
-        </li>
-
-        <li class="item">
-          <CategoryCheckbox header="Front" :selectList="selectList" />
+          <CategoryInput
+            v-if="item.Type == 'input'"
+            :header="item.Header"
+            :selectList="item.List"
+            :type="item.InputType"
+          />
         </li>
 
         <li class="item">
           <Button
             margin="auto"
-            direction="column"
+            direction="row"
             background="var(--color-primary)"
             radius="high"
             color="white"
@@ -66,6 +39,7 @@
             textColor="white"
             family="var(--font-semibold)"
             style="border-radius:5px"
+            iconAreaW="80px"
           />
         </li>
       </ul>
@@ -81,19 +55,8 @@ import CategorySelect from "./CategorySelect.vue";
 export default {
   components: { CategorySelect, CategoryCheckbox, CategoryInput, Button },
   name: "Categories",
-  data: function() {
-    return {
-      locationList: ["Select City", "Select City", "Select City"],
-      housingType: ["Select City"],
-      selectList: [
-        "Select City",
-        "Select City",
-        "Select City",
-        "Select City",
-        "Select City",
-        "Select City",
-      ],
-    };
+  props: {
+    CategoriesData: Array,
   },
 };
 </script>
@@ -104,7 +67,6 @@ export default {
 
   background: var(--background-white);
 
-  padding: 0px 20px;
   .layout {
     display: flex;
     flex-direction: column;
@@ -114,7 +76,11 @@ export default {
       list-style: none;
 
       .item:last-child {
-        padding: 20px 0;
+        padding: 20px;
+
+        /deep/ .button-together {
+          margin: auto;
+        }
       }
     }
   }

@@ -9,11 +9,11 @@
       <div class="section">
         <Button
           background="transparent"
-          text="Other options"
+          text="yaz"
           radius="high"
           color="dark"
           textColor="var(--color-text-gray)"
-          family="medium"
+          family="var(--font-medium)"
           fontSize="17px"
           type="together"
           iconType="advenced"
@@ -21,9 +21,11 @@
           iconWidth="22px"
           iconHeight="22px"
           iconColor="var(--color-secondary)"
-          margin="0"
           height="30px"
           textAlign="left"
+          iconAreaW="auto"
+          justify="start"
+          textMargin="0 0 0 3px"
         />
       </div>
     </div>
