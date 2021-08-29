@@ -4,6 +4,7 @@
       <div class="layout">
         <div @click="changeSection(0)" class="item">
           <Button
+            v-scrollanimation
             family="var(--font-bold) "
             color="dark"
             textColor="var(--color-general-dark)"
@@ -25,6 +26,7 @@
         </div>
         <div @click="changeSection(1)" class="item">
           <Button
+            v-scrollanimation
             family="var(--font-bold)"
             color="dark"
             textColor="var(--color-general-dark)"
@@ -47,6 +49,7 @@
 
         <div @click="changeSection(2)" class="item">
           <Button
+            v-scrollanimation
             family="var(--font-bold)"
             color="dark"
             textColor="var(--color-general-dark)"
@@ -70,7 +73,7 @@
         </div>
 
         <div class="item progress">
-          <ProgressBar :data="TopBarData.Entered" />
+          <ProgressBar v-scrollanimation :data="TopBarData.Entered" />
         </div>
       </div>
     </div>

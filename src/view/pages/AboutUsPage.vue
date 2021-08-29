@@ -5,6 +5,7 @@
         <div class="layout">
           <div class="section">
             <LeftNav
+              v-scrollanimation
               :profileNavList="Data.AboutUsPage.LeftNavData"
               :section="section"
               @update-section="update"
@@ -15,6 +16,7 @@
             <transition name="fade">
               <div class="section__item" v-if="section == 'about'">
                 <TextContent
+                  v-scrollanimation
                   :paragraphs="Data.AboutUsPage.AboutUsData.Paragraphs"
                   :heading="Data.AboutUsPage.AboutUsData.Heading"
                 />
@@ -24,6 +26,7 @@
             <transition name="fade">
               <div class="section__item" v-if="section == 'member'">
                 <TextContent
+                  v-scrollanimation
                   :paragraphs="Data.AboutUsPage.MembershipData.Paragraphs"
                   :heading="Data.AboutUsPage.MembershipData.Heading"
                 />
@@ -33,6 +36,7 @@
             <transition name="fade">
               <div class="section__item" v-if="section == 'warn'">
                 <TextContent
+                  v-scrollanimation
                   :paragraphs="Data.AboutUsPage.LegalWarnData.Paragraphs"
                   :heading="Data.AboutUsPage.LegalWarnData.Heading"
                 />
@@ -42,6 +46,7 @@
             <transition name="fade">
               <div class="section__item" v-if="section == 'rules'">
                 <TextContent
+                  v-scrollanimation
                   :paragraphs="Data.AboutUsPage.RulesData.Paragraphs"
                   :heading="Data.AboutUsPage.RulesData.Heading"
                 />
@@ -51,6 +56,7 @@
             <transition name="fade">
               <div class="section__item" v-if="section == 'light'">
                 <TextContent
+                  v-scrollanimation
                   :paragraphs="Data.AboutUsPage.LightnessData.Paragraphs"
                   :heading="Data.AboutUsPage.LightnessData.Heading"
                 />
@@ -82,7 +88,10 @@ export default {
     };
   },
   mounted() {
-    window.scrollTo(0, 0);
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
   },
 
   methods: {

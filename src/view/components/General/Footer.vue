@@ -3,6 +3,7 @@
     <div class="wrapper">
       <div class="footer__layout">
         <FooterItem
+          v-scrollanimation
           v-for="(item, index) in FooterData.FooterItems"
           :data-footer-item="index"
           :key="index"

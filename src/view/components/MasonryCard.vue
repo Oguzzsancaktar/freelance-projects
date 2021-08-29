@@ -8,11 +8,12 @@
             :style="`background:${background}!important`"
           >
             <div class="layout">
-              <div class="heading">
+              <div v-scrollanimation class="heading">
                 <h2>{{ text }}</h2>
               </div>
               <router-link to="/category">
                 <Button
+                  v-scrollanimation
                   color="var(--background-white)"
                   textColor="var(--background-white)"
                   width="230px"

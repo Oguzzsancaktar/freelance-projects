@@ -1,6 +1,6 @@
 <template>
   <div v-scrollanimation class="card">
-    <div class="card__layout">
+    <div v-scrollanimation class="card__layout">
       <div class="card__image">
         <router-link to="detail">
           <a>
@@ -33,16 +33,17 @@
       </div>
       <div class="card__info">
         <div class="info__layout">
-          <div class="info__row">
-            <div class="row__item">
-              <span class="text">
+          <div v-scrollanimation class="info__row">
+            <div v-scrollanimation class="row__item">
+              <span v-scrollanimation class="text">
                 {{ AppLang == "en" ? "Property ID: " : "Ar Prop Id: " }}
               </span>
-              <span class="text"> {{ data.PropID }}</span>
+              <span v-scrollanimation class="text"> {{ data.PropID }}</span>
             </div>
             <div class="row__item">
               <router-link to="/profile">
                 <Button
+                  v-scrollanimation
                   style="margin:5px"
                   background="var(--color-secondary-low-button)"
                   radius="10px"
@@ -62,6 +63,7 @@
               </router-link>
 
               <Button
+                v-scrollanimation
                 color="var(--color-primary)"
                 textColor="var(--color-primary)"
                 width="100px"
@@ -85,17 +87,17 @@
           </div>
 
           <div class="info__col">
-            <h2 class="header">
+            <h2 v-scrollanimation class="header">
               {{ data.Header }}
             </h2>
 
-            <span class="subtitle">
+            <span v-scrollanimation class="subtitle">
               {{ data.Description }}
             </span>
           </div>
 
           <div class="info__row">
-            <h2 class="price">{{ data.Price }}</h2>
+            <h2 v-scrollanimation class="price">{{ data.Price }}</h2>
             <Button
               color="var(--color-secondary)"
               textColor="var(--color-text-general)"

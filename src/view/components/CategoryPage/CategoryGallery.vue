@@ -2,7 +2,7 @@
   <div class="CategoryGallery">
     <section>
       <div class="heading">
-        <h3>
+        <h3 v-scrollanimation>
           {{ Heading }}
         </h3>
       </div>
@@ -12,6 +12,7 @@
       <div class="wrapper">
         <div class="grid__gallery__layout">
           <DetailCard
+            v-scrollanimation
             v-for="(item, index) in CategoryGalleryData.CardData"
             :key="index"
             :data="item"

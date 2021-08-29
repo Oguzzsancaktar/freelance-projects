@@ -3,7 +3,7 @@
     <div class="layout">
       <section>
         <div class="heading">
-          <h3>
+          <h3 v-scrollanimation>
             {{ MyProfileData.Heading }}
           </h3>
         </div>
@@ -13,6 +13,7 @@
         <div class="layout">
           <div class="column">
             <div
+              v-scrollanimation
               v-for="(item, index) in MyProfileData.List1"
               :key="index"
               class="row"
@@ -36,6 +37,7 @@
           <div class="column">
             <div class="row">
               <InputBox
+                v-scrollanimation
                 textColor="var(--color-text-general)"
                 family="var(--font-medium)"
                 v-for="(item, index) in MyProfileData.List2"
@@ -55,6 +57,7 @@
             <div class="row">
               <div class="btn">
                 <Button
+                  v-scrollanimation
                   textTransfrom="uppercase"
                   border="1px solid var(--color-secondary)"
                   background="var(--color-secondary)"

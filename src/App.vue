@@ -227,7 +227,7 @@ export default {
 }
 .before-enter {
   opacity: 0 !important;
-  transform: translateY(-100px);
+  transform: translateY(-100%);
   transition: 1s;
 }
 .enter {
@@ -499,7 +499,7 @@ a {
 @media (max-width: 777px) {
   .subpage-content {
     height: 100%;
-    min-height: calc(100vh - 285px);
+    min-height: calc(100vh - 215px);
     padding-top: 80px;
     background: var(--background-general);
     color: var(--color-text-subpage);

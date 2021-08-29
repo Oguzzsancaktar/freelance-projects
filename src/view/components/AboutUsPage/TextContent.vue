@@ -3,13 +3,13 @@
     <div class="layout">
       <section>
         <div class="heading">
-          <h3>{{ heading }}</h3>
+          <h3 v-scrollanimation>{{ heading }}</h3>
         </div>
       </section>
 
       <section>
         <div class="paragraph" v-for="(item, index) in paragraphs" :key="index">
-          <p>
+          <p v-scrollanimation>
             {{ item.Paragraph }}
           </p>
           <br />

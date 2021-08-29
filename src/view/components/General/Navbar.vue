@@ -1,12 +1,12 @@
 <template>
-  <div id="Navbar">
+  <div v-scrollanimation id="Navbar">
     <div class="wrapper">
       <div class="layout">
-        <div class="area vertical-center">
+        <div v-scrollanimation class="area vertical-center">
           <!-- <router-link to="/"> -->
-          <a href="/">
+          <router-link to="/">
             <ImageView width="100%" imageType="svg" imageName="logo.svg" />
-          </a>
+          </router-link>
           <!-- </router-link> -->
         </div>
         <div class="area  vertical-center">
@@ -14,6 +14,7 @@
             <div class="area__layout__section ">
               <router-link to="/profile">
                 <Button
+                  v-scrollanimation
                   background="var(--color-secondary)"
                   family="var(--font-medium)"
                   radius="30px"
@@ -33,6 +34,7 @@
               <router-link to="/add">
                 <a>
                   <Button
+                    v-scrollanimation
                     family="var(--font-medium)"
                     textColor="white"
                     iconWidth="17px"
@@ -57,7 +59,7 @@
               </router-link>
             </div>
 
-            <div class="area__layout__section">
+            <div v-scrollanimation class="area__layout__section">
               <Navlink
                 textColor="var(--color-nav-link)"
                 fontSize="16px"
@@ -75,6 +77,7 @@
         <div class="area vertical-center collapse-hidden">
           <router-link to="/profile">
             <Button
+              v-scrollanimation
               background="var(--color-secondary)"
               family="var(--font-medium)"
               radius="30px"
@@ -98,6 +101,7 @@
           <div class="area__layout__section">
             <div v-on:click="this.showSignin" class="control-sign">
               <Button
+                v-scrollanimation
                 family="var(--font-medium)"
                 color="dark"
                 textColor="var(--color-general-dark)"
@@ -119,6 +123,7 @@
             </div>
             <div @click="toggleLangControl" class="language-control">
               <Button
+                v-scrollanimation
                 family="var(--font-medium)"
                 textColor="white"
                 fontSize="15px"
@@ -134,6 +139,7 @@
               <div class="language-control__collapse">
                 <div @click="languageControl('en')" class="item">
                   <Button
+                    v-scrollanimation
                     family="var(--font-medium)"
                     textColor="var(--color-text-gray)"
                     fontSize="15px"
@@ -148,6 +154,7 @@
                 </div>
                 <div @click="languageControl('ar')" class="item">
                   <Button
+                    v-scrollanimation
                     family="var(--font-medium)"
                     textColor="var(--color-text-gray)"
                     fontSize="15px"
@@ -229,6 +236,11 @@ export default {
 
   transition: 0.4s;
 }
+
+#Navbar.enter {
+  // transition-delay: 2s;
+}
+
 #Navbar {
   position: fixed;
   transition: 0.4s;
@@ -279,6 +291,10 @@ export default {
     :last-child {
       max-width: 250px;
       justify-content: flex-end;
+    }
+
+    .area.enter {
+      transition-delay: 0.1s;
     }
 
     .area {

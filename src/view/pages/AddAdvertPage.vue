@@ -2,6 +2,7 @@
   <div id="AddAdvertPage">
     <div class="subpage-content">
       <TopBar
+        v-scrollanimation
         :TopBarData="Data.AddAdvertPage.TopBarData"
         @update-section="update"
       />
@@ -10,21 +11,27 @@
         <transition name="fade">
           <div class="section__item" v-if="section == 0">
             <AdvertCategory
+              v-scrollanimation
               :AdvertCategoryData="Data.AddAdvertPage.AdvertCategoryData"
             />
             <AdvertInformation
+              v-scrollanimation
               :AdvertInformationData="Data.AddAdvertPage.AdvertInformationData"
             />
             <AdvertAdress
+              v-scrollanimation
               :AdvertAdressData="Data.AddAdvertPage.AdvertAdressData"
             />
             <AdvertPhotos
+              v-scrollanimation
               :AdvertPhotosData="Data.AddAdvertPage.AdvertPhotosData"
             />
             <AdvertFeatures
+              v-scrollanimation
               :AdvertFeaturesData="Data.AddAdvertPage.AdvertFeaturesData"
             />
             <AdvertNext
+              v-scrollanimation
               @section-control-button="sectionControlButton"
               :section="section"
               :AdvertNextData="Data.AddAdvertPage.AdvertNextData"
@@ -35,27 +42,36 @@
         <transition name="fade">
           <div class="section__item" v-if="section == 1">
             <DetailHero
+              v-scrollanimation
               :DetailHeroData="Data.AdvertDetailPage.DetailHeroData"
             />
-            <DetailTop :DetailTopData="Data.AdvertDetailPage.DetailTopData" />
+            <DetailTop
+              v-scrollanimation
+              :DetailTopData="Data.AdvertDetailPage.DetailTopData"
+            />
 
             <DetailInfo
+              v-scrollanimation
               :DetailInfoData="Data.AdvertDetailPage.DetailInfoData"
             />
             <DetailDescription
+              v-scrollanimation
               :DetailDescriptionData="
                 Data.AdvertDetailPage.DetailDescriptionData
               "
             />
             <DetailFeatures
+              v-scrollanimation
               :DetailFeaturesData="Data.AdvertDetailPage.DetailFeaturesData"
             />
             <DetailInternalFeatures
+              v-scrollanimation
               :DetailInternalFeaturesData="
                 Data.AdvertDetailPage.DetailInternalFeaturesData
               "
             />
             <NextEdit
+              v-scrollanimation
               @section-control-button="sectionControlButton"
               :section="section"
               :NextEditData="Data.AdvertDetailPage.NextEditData"
@@ -66,11 +82,13 @@
         <transition name="fade">
           <div class="section__item" v-if="section == 2">
             <PageHeading
+              v-scrollanimation
               :PageHeadingData="
                 Data.AdvertDetailPage.BoostPageData.PageHeadingData
               "
             />
             <BoostInfo
+              v-scrollanimation
               :BoostInfoData="Data.AdvertDetailPage.BoostPageData.BoostInfoData"
             />
           </div>
@@ -141,6 +159,12 @@ export default {
       this.section = index;
       this.update(index);
     },
+  },
+  mounted() {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
   },
 };
 </script>

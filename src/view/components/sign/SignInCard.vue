@@ -3,6 +3,7 @@
     <div class="layout">
       <div v-on:click="this.hideSign" class="close-button">
         <Button
+          v-scrollanimation
           background="var(--color-secondary)"
           family="var(--font-medium)"
           radius="25px"
@@ -21,17 +22,26 @@
       </div>
       <div class="section">
         <div class="header">
-          <h3>{{ SignInData.SignIn }}</h3>
+          <h3 v-scrollanimation>{{ SignInData.SignIn }}</h3>
         </div>
 
         <div class="input">
-          <input type="text" :placeholder="SignInData.Email" />
+          <input
+            v-scrollanimation
+            type="text"
+            :placeholder="SignInData.Email"
+          />
         </div>
         <div class="input">
-          <input type="text" :placeholder="SignInData.Password" />
+          <input
+            v-scrollanimation
+            type="text"
+            :placeholder="SignInData.Password"
+          />
         </div>
         <div class="button">
           <Button
+            v-scrollanimation
             color="var(--background-white)"
             textColor="var(--background-white)"
             width="100%"
@@ -54,26 +64,27 @@
         </div>
 
         <div class="forget">
-          <p>{{ SignInData.ForgetPassword }}</p>
+          <p v-scrollanimation>{{ SignInData.ForgetPassword }}</p>
         </div>
 
         <div class="divider">
-          <hr />
-          <p>{{ SignInData.Or }}</p>
-          <hr />
+          <hr v-scrollanimation />
+          <p v-scrollanimation>{{ SignInData.Or }}</p>
+          <hr v-scrollanimation />
         </div>
 
         <div class="social">
           <div class="area">
             <div class="icon">
               <ImageView
+                v-scrollanimation
                 width="21px"
                 imageType="svg"
                 imageName="facebook.svg"
               />
             </div>
 
-            <span>
+            <span v-scrollanimation>
               {{ SignInData.SignWith }}
               <b>
                 {{ SignInData.Facebook }}
@@ -83,9 +94,14 @@
 
           <div class="area">
             <div class="icon">
-              <ImageView width="21px" imageType="svg" imageName="google.svg" />
+              <ImageView
+                v-scrollanimation
+                width="21px"
+                imageType="svg"
+                imageName="google.svg"
+              />
             </div>
-            <span>
+            <span v-scrollanimation>
               {{ SignInData.SignWith }}
               <b>
                 {{ SignInData.Google }}
@@ -97,10 +113,11 @@
 
       <div class="section">
         <div class="header">
-          <h3>{{ SignInData.NewUser }}</h3>
+          <h3 v-scrollanimation>{{ SignInData.NewUser }}</h3>
         </div>
         <div @click="this.showSignup" class="button">
           <Button
+            v-scrollanimation
             color="var(--background-white)"
             textColor="var(--color-primary)"
             width="100%"
@@ -125,7 +142,7 @@
         </div>
 
         <div class="text">
-          <p>
+          <p v-scrollanimation>
             {{ SignInData.Description }}
           </p>
         </div>

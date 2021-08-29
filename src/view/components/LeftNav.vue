@@ -3,6 +3,7 @@
     <div class="layout">
       <ul class="list">
         <li
+          v-scrollanimation
           v-for="(item, index) in profileNavList"
           class="item"
           :key="index"
@@ -11,6 +12,7 @@
         >
           <button @click="changeSection(item.Keyword)">
             <Button
+              v-scrollanimation
               margin="auto"
               padding="0px"
               direction="row"
@@ -33,7 +35,7 @@
               textMargin=" 0 0 0 7px!important"
             />
 
-            <div class="counter-circle">
+            <div v-scrollanimation class="counter-circle">
               <CounterCircle :counter="item.Counter" />
             </div>
           </button>

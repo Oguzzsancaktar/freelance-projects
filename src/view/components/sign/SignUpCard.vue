@@ -3,6 +3,7 @@
     <div class="layout">
       <div @click="this.hideSign" class="close-button">
         <Button
+          v-scrollanimation
           background="var(--color-secondary)"
           family="var(--font-medium)"
           radius="25px"
@@ -21,24 +22,40 @@
       </div>
       <div class="section">
         <div class="header">
-          <h3>{{ SignUpData.NewUser }}</h3>
+          <h3 v-scrollanimation>{{ SignUpData.NewUser }}</h3>
         </div>
         <div class="input">
-          <input type="text" :placeholder="SignUpData.NameSurname" />
+          <input
+            v-scrollanimation
+            type="text"
+            :placeholder="SignUpData.NameSurname"
+          />
         </div>
         <div class="input">
-          <input type="text" :placeholder="SignUpData.Phone" />
+          <input
+            v-scrollanimation
+            type="text"
+            :placeholder="SignUpData.Phone"
+          />
         </div>
         <div class="input">
-          <input type="text" :placeholder="SignUpData.Email" />
+          <input
+            v-scrollanimation
+            type="text"
+            :placeholder="SignUpData.Email"
+          />
         </div>
         <div class="input">
-          <input type="text" :placeholder="SignUpData.Password" />
+          <input
+            v-scrollanimation
+            type="text"
+            :placeholder="SignUpData.Password"
+          />
         </div>
 
         <div class="checkbox">
-          <Checkbox />
-          <span
+          <Checkbox v-scrollanimation />
+          <span v-scrollanimation
             ><a href="">{{ SignUpData.Agree }}</a
             >{{ SignUpData.Terms }}</span
           >
@@ -46,6 +63,7 @@
 
         <div @click="this.showSignin" class="button">
           <Button
+            v-scrollanimation
             color="var(--background-white)"
             textColor="var(--background-white)"
             width="100%"
@@ -69,26 +87,27 @@
         </div>
 
         <div class="forget">
-          <p>{{ SignUpData.ForgetPassword }}</p>
+          <p v-scrollanimation>{{ SignUpData.ForgetPassword }}</p>
         </div>
 
         <div class="divider">
-          <hr />
-          <p>{{ SignUpData.Or }}</p>
-          <hr />
+          <hr v-scrollanimation />
+          <p v-scrollanimation>{{ SignUpData.Or }}</p>
+          <hr v-scrollanimation />
         </div>
 
         <div class="social">
           <div class="area">
             <div class="icon">
               <ImageView
+                v-scrollanimation
                 width="21px"
                 imageType="svg"
                 imageName="facebook.svg"
               />
             </div>
 
-            <span>
+            <span v-scrollanimation>
               {{ SignUpData.SignWith }}
               <b>
                 {{ SignUpData.Facebook }}
@@ -98,9 +117,14 @@
 
           <div class="area">
             <div class="icon">
-              <ImageView width="21px" imageType="svg" imageName="google.svg" />
+              <ImageView
+                v-scrollanimation
+                width="21px"
+                imageType="svg"
+                imageName="google.svg"
+              />
             </div>
-            <span>
+            <span v-scrollanimation>
               {{ SignUpData.SignWith }}
               <b>
                 {{ SignUpData.Google }}

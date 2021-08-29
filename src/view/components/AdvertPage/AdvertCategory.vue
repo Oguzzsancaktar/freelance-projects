@@ -3,7 +3,7 @@
     <div class="wrapper">
       <div class="layout">
         <div class="heading">
-          <h2>{{ AdvertCategoryData.Heading }}</h2>
+          <h2 v-scrollanimation>{{ AdvertCategoryData.Heading }}</h2>
         </div>
         <div class="area ">
           <div class="area__left">
@@ -13,6 +13,7 @@
               class="item"
             >
               <SelectBox
+                v-scrollanimation
                 family="var(--font-semibold)"
                 :text="item.Text"
                 :List="item.List"
@@ -29,6 +30,7 @@
           <div class="area__right">
             <div class="item">
               <Button
+                v-scrollanimation
                 margin="auto"
                 padding="0px"
                 direction="row"

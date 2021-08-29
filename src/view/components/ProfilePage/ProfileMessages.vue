@@ -3,7 +3,7 @@
     <div class="layout">
       <section>
         <div class="heading">
-          <h3>
+          <h3 v-scrollanimation>
             {{ MyProfileData.Messages }}
           </h3>
         </div>
@@ -11,11 +11,12 @@
 
       <ul class="list">
         <li
+          v-scrollanimation
           v-for="(item, index) in MyProfileData.messages"
           :key="index"
           class="item"
         >
-          <Accordion :messages="item" :index="index" />
+          <Accordion v-scrollanimation :messages="item" :index="index" />
         </li>
       </ul>
     </div>

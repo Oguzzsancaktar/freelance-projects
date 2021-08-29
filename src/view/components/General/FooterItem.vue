@@ -3,6 +3,7 @@
     <div v-if="type == 'logo'" class="footer-item">
       <div class="section">
         <ImageView
+          v-scrollanimation
           style="justify-content:flex-start"
           class="footer-item__image"
           width="47px"
@@ -12,7 +13,7 @@
         />
       </div>
       <div class="section">
-        <span class="reserved">
+        <span v-scrollanimation class="reserved">
           <b>{{ FooterData.Borsa }}</b> {{ FooterData.All }}
           {{ FooterData.Rights }} {{ FooterData.Reserved }}
         </span>
@@ -21,7 +22,7 @@
     <div v-if="type == 'normal'" class="footer-item">
       <div class="section">
         <ul v-for="(text, index) in texts" :key="index" class="list">
-          <li class="list__item">
+          <li v-scrollanimation class="list__item">
             <router-link to="/about">
               <span>
                 {{ text }}
@@ -32,6 +33,7 @@
       </div>
       <div class="section">
         <Button
+          v-scrollanimation
           v-if="button"
           margin="auto"
           padding="0px"
@@ -68,6 +70,7 @@
         <ul v-for="(text, index) in texts" :key="index" class="list">
           <li class="list__item">
             <Button
+              v-scrollanimation
               margin="auto"
               padding="0px"
               direction="row"
@@ -95,6 +98,7 @@
       </div>
       <div class="section">
         <ImageView
+          v-scrollanimation
           style="justify-content:flex-start"
           class="footer-item__image"
           width="90px"
@@ -108,6 +112,7 @@
     <div v-if="type == 'mobile'" class="footer-item">
       <div class="section">
         <ImageView
+          v-scrollanimation
           style="justify-content:center"
           class="footer-item__image"
           width="47px"
@@ -115,7 +120,11 @@
           imageType="svg"
           imageName="logo-2.svg"
         />
-        <div style="text-align:center; margin:20px 0;" class="section">
+        <div
+          v-scrollanimation
+          style="text-align:center; margin:20px 0;"
+          class="section"
+        >
           <b>{{ FooterData.Borsa }}</b> {{ FooterData.All }}
           {{ FooterData.Rights }} {{ FooterData.Reserved }}
         </div>
@@ -126,7 +135,7 @@
           :key="index"
           class="list"
         >
-          <li class="list__item">
+          <li v-scrollanimation class="list__item">
             <router-link to="/about">
               <span>
                 {{ text }}
@@ -139,7 +148,12 @@
           class="list"
           style="display:flex; flex-direction:row; justify-content:space-evenly; margin:20px 0;"
         >
-          <li v-for="(text, index) in social" :key="index" class="list__item">
+          <li
+            v-scrollanimation
+            v-for="(text, index) in social"
+            :key="index"
+            class="list__item"
+          >
             <Button
               margin="auto"
               padding="0px"
@@ -166,6 +180,7 @@
         </ul>
 
         <ImageView
+          v-scrollanimation
           style="justify-content:center"
           class="footer-item__image"
           imageType="svg"

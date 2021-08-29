@@ -189,8 +189,8 @@ export default {
       }
     },
 
-    languageControl: function() {
-      this.$emit("language-control");
+    languageControl: function(lang) {
+      this.$emit("language-control", lang);
     },
 
     navbarAnimations(fromTo, navStuation) {

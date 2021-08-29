@@ -1,16 +1,19 @@
 <template>
   <div class="grid__gallery">
     <div class="wrapper">
-      <div class="grid__gallery__nav">
-        <div class="section">
-          <h2 style="color:var(--color-primary)">
+      <div v-scrollanimation class="grid__gallery__nav">
+        <div v-scrollanimation class="section">
+          <h2 v-scrollanimation style="color:var(--color-primary)">
             {{ GridGalleryData.TopHeader }}
           </h2>
         </div>
-        <div class="section">
-          <span class="gallery-description">
+        <div v-scrollanimation class="section">
+          <span v-scrollanimation class="gallery-description">
             {{ GridGalleryData.About }}
-            <b style=" margin:0 5px; color:var(--color-primary)">
+            <b
+              v-scrollanimation
+              style=" margin:0 5px; color:var(--color-primary)"
+            >
               {{ GridGalleryData.Counter }}
             </b>
             {{ GridGalleryData.CounterAfter }}</span

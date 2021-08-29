@@ -4,14 +4,14 @@
       <div class="ads__area__layout">
         <div class="info">
           <div class="info__section">
-            <span>
+            <span v-scrollanimation>
               {{ AdsAreaData.FirstKey }}
               <span class="key-bg">{{ AdsAreaData.BgKey }}</span
               >{{ AdsAreaData.SecondKey }}
             </span>
           </div>
           <div class="info__section">
-            <div class="info__section__item">
+            <div v-scrollanimation class="info__section__item">
               <SearchSelect
                 :list="AdsAreaData.SearchData.List"
                 border="1px solid white"
@@ -23,9 +23,10 @@
                 specialStyle=" width:100%; padding:0 20px; margin-top: 10px;"
               />
             </div>
-            <div class="info__section__item">
+            <div v-scrollanimation class="info__section__item">
               <router-link to="/category">
                 <Button
+                  v-scrollanimation
                   style="margin-left:20px"
                   background="var(--color-secondary)"
                   radius="30px"
@@ -51,7 +52,7 @@
           </div>
         </div>
 
-        <div class="image">
+        <div v-scrollanimation class="image">
           <ImageView
             width="100%"
             height="100%"
@@ -98,6 +99,15 @@ export default {
     width: 100%;
     height: 100%;
   }
+  .image.before-enter {
+    transform: opacity(0);
+    opacity: 0;
+  }
+  .image.enter {
+    transform: opacity(0);
+
+    opacity: 1;
+  }
   .info {
     width: 330px;
     height: 220px;
@@ -115,6 +125,29 @@ export default {
         span.key-bg {
           color: var(--background-white);
           background: var(--color-third);
+        }
+      }
+    }
+  }
+}
+@media (max-width: 700px) {
+  .ads__area {
+    &__layout {
+      justify-content: center;
+    }
+    .image {
+      display: none;
+    }
+    .image.before-enter {
+    }
+    .image.enter {
+    }
+    .info {
+      width: 60%;
+      &__section {
+        span {
+          span.key-bg {
+          }
         }
       }
     }

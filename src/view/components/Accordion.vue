@@ -3,9 +3,10 @@
     <div class="layout">
       <section>
         <div class="heading">
-          <h3>{{ messages.from }}</h3>
+          <h3 v-scrollanimation>{{ messages.from }}</h3>
           <div class="date">
             <Button
+              v-scrollanimation
               color="var(--color-secondary)"
               textColor="var(--color-text-general)"
               width="100px"
@@ -29,7 +30,7 @@
       </section>
 
       <section ref="hidingArea" class="hiding-area">
-        <p class="description">
+        <p v-scrollanimation class="description">
           {{ messages.message }}
         </p>
       </section>

@@ -5,6 +5,7 @@
         <div class="card__image">
           <div class="card__image__hover">
             <Button
+              v-scrollanimation
               style="margin:5px"
               background="transparent"
               radius="0px"
@@ -21,6 +22,7 @@
             />
           </div>
           <ImageView
+            v-scrollanimation
             width="100%"
             height="100%"
             imageType="images"
@@ -33,6 +35,7 @@
           <div class="info__row">
             <div class="row__item">
               <Button
+                v-scrollanimation
                 color="var(--color-secondary)"
                 textColor="var(--color-text-general)"
                 width="70px"
@@ -54,6 +57,7 @@
             </div>
             <div class="row__item">
               <Button
+                v-scrollanimation
                 color="var(--color-primary)"
                 textColor="var(--color-primary)"
                 width="70px"
@@ -75,6 +79,7 @@
 
               <router-link to="/profile">
                 <Button
+                  v-scrollanimation
                   style="margin:5px"
                   background="var(--color-secondary-low-button)"
                   radius="10px"
@@ -95,11 +100,11 @@
           </div>
 
           <div class="info__col">
-            <h2 class="header">
+            <h2 v-scrollanimation class="header">
               {{ data.Header }}
             </h2>
 
-            <span class="subtitle">
+            <span v-scrollanimation class="subtitle">
               {{ data.Description }}
             </span>
           </div>
@@ -108,6 +113,7 @@
             <h2 class="price">{{ data.Price }}</h2>
             <div class="refferance">
               <ImageView
+                v-scrollanimation
                 width="80%"
                 height="auto"
                 imageType="images"

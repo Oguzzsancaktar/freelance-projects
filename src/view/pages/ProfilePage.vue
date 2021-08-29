@@ -3,7 +3,7 @@
     <div class="subpage-content">
       <div class="wrapper">
         <div class="layout">
-          <div class="section">
+          <div v-scrollanimation class="section">
             <LeftNav
               :profileNavList="Data.ProfilePage.LeftNavData"
               :section="section"
@@ -11,7 +11,7 @@
             />
           </div>
 
-          <div class="section">
+          <div v-scrollanimation class="section">
             <transition name="fade">
               <div class="section__item" v-if="section == 'profile'">
                 <MyProfile :MyProfileData="Data.ProfilePage.MyProfileData" />
@@ -76,6 +76,12 @@ export default {
     update(section) {
       this.section = section;
     },
+  },
+  mounted() {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
   },
 };
 </script>

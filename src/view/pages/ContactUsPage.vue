@@ -5,7 +5,7 @@
         <div class="layout">
           <section>
             <div class="heading">
-              <h3>
+              <h3 v-scrollanimation>
                 {{ Data.ContactUsPage.Heading }}
               </h3>
             </div>
@@ -15,11 +15,12 @@
             <div class="area">
               <div class="layout">
                 <div class="text">{{ Data.ContactUsPage.Adress }}</div>
-                <div class="description">
+                <div v-scrollanimation class="description">
                   {{ Data.ContactUsPage.AdressInfo }}
                 </div>
 
                 <Button
+                  v-scrollanimation
                   v-for="(item, index) in Data.ContactUsPage.ButtonsData.List1"
                   :key="index"
                   class="btn"
@@ -48,11 +49,12 @@
             <div class="area">
               <div class="layout">
                 <div class="text">{{ Data.ContactUsPage.Adress }}</div>
-                <div class="description">
+                <div v-scrollanimation class="description">
                   {{ Data.ContactUsPage.AdressInfo }}
                 </div>
 
                 <Button
+                  v-scrollanimation
                   v-for="(item, index) in Data.ContactUsPage.ButtonsData.List2"
                   :key="index"
                   class="btn"
@@ -89,6 +91,7 @@
                   class="item"
                 >
                   <InputBox
+                    v-scrollanimation
                     height="auto"
                     width="100%"
                     :text="item.Text"
@@ -101,6 +104,7 @@
               <div class="row">
                 <div class="item">
                   <InputBox
+                    v-scrollanimation
                     height="auto"
                     width="100%"
                     :text="Data.ContactUsPage.YourMessage"
@@ -114,6 +118,7 @@
 
           <section>
             <Button
+              v-scrollanimation
               class="btn"
               family="var(--font-medium)"
               color="dark"
@@ -151,6 +156,12 @@ export default {
   components: { InputBox, Button },
   props: {
     Data: Object,
+  },
+  mounted() {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
   },
 };
 </script>

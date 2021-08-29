@@ -3,7 +3,7 @@
     <div class="wrapper">
       <div class="hero__layout">
         <div class="hero__left">
-          <div class="hero__left__info">
+          <div v-scrollanimation class="hero__left__info">
             <HeroSliderInfo
               v-for="(item, index) in HeroSliderData.HeroSliderInfos"
               :key="index"
@@ -13,27 +13,28 @@
               :afterText="item.AfterText"
             />
           </div>
-          <div class="hero__left__search">
+          <div v-scrollanimation class="hero__left__search">
             <HeroSearch
+              v-scrollanimation
               @show-advenced="showAdvenced"
               :HeroSearchData="HeroSliderData.HeroSearchData"
             />
           </div>
 
-          <div class="hero__left__search__advenced">
+          <div v-scrollanimation class="hero__left__search__advenced">
             <AdvencedSettings
               @close-advenced="closeAdvenced"
               :AdvencedSettingsData="HeroSliderData.AdvencedSettingsData"
             />
           </div>
 
-          <div class="hero__left__search__mobile">
+          <div v-scrollanimation class="hero__left__search__mobile">
             <HeroSearchMobile
               @show-advenced="showAdvenced"
               :HeroSearchData="HeroSliderData.HeroSearchData"
             />
           </div>
-          <div class="hero__left__buttons">
+          <div v-scrollanimation class="hero__left__buttons">
             <SliderButtons
               :HeroSliderData="HeroSliderData.HeroSliderInfos"
               @goToSlide="goToSlide"
@@ -240,12 +241,24 @@ export default {
         border-radius: 10px;
         box-shadow: 0 0 10px -7px var(--box-shadow-color);
 
+        /deep/ .before-enter {
+          transition-delay: 4s;
+        }
+
         &__mobile {
           width: 90%;
           display: none;
         }
       }
 
+      &__search.before-enter {
+        transition-delay: 3.5s;
+        transform: translateX(-100%);
+      }
+
+      &__search.enter {
+        transform: translateX(0px) !important;
+      }
       &__search.active {
         transition: 0.7s;
         transform: translateY(100%);
@@ -286,6 +299,15 @@ export default {
         position: absolute;
         bottom: 40px;
       }
+
+      &__buttons.before-enter {
+        transition-delay: 2.5s;
+        transform: translateY(100px);
+      }
+
+      &__buttons.enter {
+        transform: translateY(0px) !important;
+      }
     }
   }
 }
@@ -317,6 +339,7 @@ export default {
 
 @media (max-width: 900px) {
   #HeroSlider {
+    padding-top: 80px;
     height: 100vh;
     .wrapper {
       width: 100vw;

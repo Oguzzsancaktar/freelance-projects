@@ -10,12 +10,12 @@
     "CategoriesData": [
       {
         "Type": "select",
-        "Header": "h1",
+        "Header": "Location",
         "List": ["Select City", "Select City", "Select City"]
       },
       {
         "Type": "check",
-        "Header": "h3,",
+        "Header": "Catagories",
         "List": [
           "Select City",
           "Select City",
@@ -27,39 +27,39 @@
       },
       {
         "Type": "select",
-        "Header": "h1",
+        "Header": "Housing Type",
         "List": ["Select City"]
       },
-      { "Type": "input", "Header": "h2", "InputType": "dolar" },
-      { "Type": "input", "Header": "h2", "InputType": "m2" },
+      { "Type": "input", "Header": "Price", "InputType": "dolar" },
+      { "Type": "input", "Header": "Square Meters", "InputType": "m2" },
       {
         "Type": "select",
-        "Header": "h1",
-        "List": ["Select City"]
-      },
-      {
-        "Type": "select",
-        "Header": "h1",
+        "Header": "Number Of Rooms",
         "List": ["Select City"]
       },
       {
         "Type": "select",
-        "Header": "h1",
+        "Header": "Building Age",
         "List": ["Select City"]
       },
       {
         "Type": "select",
-        "Header": "h1",
+        "Header": "Floor Location",
         "List": ["Select City"]
       },
       {
         "Type": "select",
-        "Header": "h1",
+        "Header": "Number of floors in the building",
         "List": ["Select City"]
       },
       {
         "Type": "select",
-        "Header": "h1",
+        "Header": "Title status",
+        "List": ["Select City"]
+      },
+      {
+        "Type": "select",
+        "Header": "Front",
         "List": ["Select City"]
       }
     ]

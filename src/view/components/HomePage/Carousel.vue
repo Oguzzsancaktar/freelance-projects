@@ -1,5 +1,5 @@
 <template>
-  <div class="carousel__general">
+  <div v-scrollanimation class="carousel__general">
     <div id="carousel" class="carousel-wrapper" v-bind:style="carouselStyle">
       <div class="carousel-controls">
         <div class="button button-left" @click="moveLeft">
@@ -150,6 +150,15 @@ export default {
     display: flex;
     align-items: center;
     justify-content: center;
+  }
+
+  &__general.before-enter {
+    transition-delay: 2s;
+    filter: opacity(0);
+  }
+
+  &__general.enter {
+    filter: opacity(1);
   }
   &-wrapper {
     width: 100%;

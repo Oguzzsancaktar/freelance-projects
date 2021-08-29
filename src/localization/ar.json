@@ -10,12 +10,12 @@
     "CategoriesData": [
       {
         "Type": "select",
-        "Header": "h1",
+        "Header": "Location",
         "List": ["Select City", "Select City", "Select City"]
       },
       {
         "Type": "check",
-        "Header": "h3,",
+        "Header": "Catagories",
         "List": [
           "Select City",
           "Select City",
@@ -27,39 +27,39 @@
       },
       {
         "Type": "select",
-        "Header": "h1",
+        "Header": "Housing Type",
         "List": ["Select City"]
       },
-      { "Type": "input", "Header": "h2", "InputType": "dolar" },
-      { "Type": "input", "Header": "h2", "InputType": "m2" },
+      { "Type": "input", "Header": "Price", "InputType": "dolar" },
+      { "Type": "input", "Header": "Square Meters", "InputType": "m2" },
       {
         "Type": "select",
-        "Header": "h1",
-        "List": ["Select City"]
-      },
-      {
-        "Type": "select",
-        "Header": "h1",
+        "Header": "Number Of Rooms",
         "List": ["Select City"]
       },
       {
         "Type": "select",
-        "Header": "h1",
+        "Header": "Building Age",
         "List": ["Select City"]
       },
       {
         "Type": "select",
-        "Header": "h1",
+        "Header": "Floor Location",
         "List": ["Select City"]
       },
       {
         "Type": "select",
-        "Header": "h1",
+        "Header": "Number of floors in the building",
         "List": ["Select City"]
       },
       {
         "Type": "select",
-        "Header": "h1",
+        "Header": "Title status",
+        "List": ["Select City"]
+      },
+      {
+        "Type": "select",
+        "Header": "Front",
         "List": ["Select City"]
       }
     ]
@@ -584,7 +584,8 @@
           "Header": "Luxury Villa In Alice",
           "Description": "New Build Modern Istanbul Property with Sea View on Bagdat Streetpremium three bed-",
           "Price": "£ 1,150,000",
-          "Location": "Irak/Erbil"
+          "Location": "Irak/Erbil",
+          "AdvertType": "For Sale"
         },
         {
           "PropID": "12341234",
@@ -592,7 +593,8 @@
           "Header": "Luxury Villa In Alice",
           "Description": "New Build Modern Istanbul Property with Sea View on Bagdat Streetpremium three bed-",
           "Price": "£ 1,150,000",
-          "Location": "Irak/Erbil"
+          "Location": "Irak/Erbil",
+          "AdvertType": "For Sale"
         },
         {
           "PropID": "12341234",
@@ -600,7 +602,8 @@
           "Header": "Luxury Villa In Alice",
           "Description": "New Build Modern Istanbul Property with Sea View on Bagdat Streetpremium three bed-",
           "Price": "£ 1,150,000",
-          "Location": "Irak/Erbil"
+          "Location": "Irak/Erbil",
+          "AdvertType": "For Sale"
         },
         {
           "PropID": "12341234",
@@ -608,7 +611,8 @@
           "Header": "Luxury Villa In Alice",
           "Description": "New Build Modern Istanbul Property with Sea View on Bagdat Streetpremium three bed-",
           "Price": "£ 1,150,000",
-          "Location": "Irak/Erbil"
+          "Location": "Irak/Erbil",
+          "AdvertType": "For Sale"
         },
         {
           "PropID": "12341234",
@@ -616,7 +620,8 @@
           "Header": "Luxury Villa In Alice",
           "Description": "New Build Modern Istanbul Property with Sea View on Bagdat Streetpremium three bed-",
           "Price": "£ 1,150,000",
-          "Location": "Irak/Erbil"
+          "Location": "Irak/Erbil",
+          "AdvertType": "For Sale"
         },
         {
           "PropID": "12341234",
@@ -624,7 +629,8 @@
           "Header": "Luxury Villa In Alice",
           "Description": "New Build Modern Istanbul Property with Sea View on Bagdat Streetpremium three bed-",
           "Price": "£ 1,150,000",
-          "Location": "Irak/Erbil"
+          "Location": "Irak/Erbil",
+          "AdvertType": "For Sale"
         }
       ]
     },
@@ -659,7 +665,8 @@
           "Header": "Luxury Villa In Alice",
           "Description": "New Build Modern Istanbul Property with Sea View on Bagdat Streetpremium three bed-",
           "Price": "£ 1,150,000",
-          "Location": "Irak/Erbil"
+          "Location": "Irak/Erbil",
+          "AdvertType": "For Sale"
         },
         {
           "PropID": "12341234",
@@ -667,7 +674,8 @@
           "Header": "Luxury Villa In Alice",
           "Description": "New Build Modern Istanbul Property with Sea View on Bagdat Streetpremium three bed-",
           "Price": "£ 1,150,000",
-          "Location": "Irak/Erbil"
+          "Location": "Irak/Erbil",
+          "AdvertType": "For Sale"
         },
         {
           "PropID": "12341234",
@@ -675,7 +683,8 @@
           "Header": "Luxury Villa In Alice",
           "Description": "New Build Modern Istanbul Property with Sea View on Bagdat Streetpremium three bed-",
           "Price": "£ 1,150,000",
-          "Location": "Irak/Erbil"
+          "Location": "Irak/Erbil",
+          "AdvertType": "For Sale"
         },
         {
           "PropID": "12341234",
@@ -683,7 +692,8 @@
           "Header": "Luxury Villa In Alice",
           "Description": "New Build Modern Istanbul Property with Sea View on Bagdat Streetpremium three bed-",
           "Price": "£ 1,150,000",
-          "Location": "Irak/Erbil"
+          "Location": "Irak/Erbil",
+          "AdvertType": "For Sale"
         },
         {
           "PropID": "12341234",
@@ -691,7 +701,8 @@
           "Header": "Luxury Villa In Alice",
           "Description": "New Build Modern Istanbul Property with Sea View on Bagdat Streetpremium three bed-",
           "Price": "£ 1,150,000",
-          "Location": "Irak/Erbil"
+          "Location": "Irak/Erbil",
+          "AdvertType": "For Sale"
         },
         {
           "PropID": "12341234",
@@ -699,7 +710,8 @@
           "Header": "Luxury Villa In Alice",
           "Description": "New Build Modern Istanbul Property with Sea View on Bagdat Streetpremium three bed-",
           "Price": "£ 1,150,000",
-          "Location": "Irak/Erbil"
+          "Location": "Irak/Erbil",
+          "AdvertType": "For Sale"
         }
       ]
     },
@@ -1080,7 +1092,7 @@
   "FullScreenNavbarData": {
     "AddProperty": "Add Property",
     "LoginSignup": "Login / Signup",
-    "Lang": "EN",
+    "Lang": "AR",
     "Lang1": "EN",
     "Lang2": "AR",
 

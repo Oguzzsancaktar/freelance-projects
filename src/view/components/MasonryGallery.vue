@@ -1,7 +1,7 @@
 <template>
   <div class="masonry__gallery">
     <div class="wrapper">
-      <div class="grid__gallery__nav">
+      <div v-scrollanimation class="grid__gallery__nav">
         <div class="section">
           <h2 style="color:var(--color-primary)">
             {{ MasonryGalleryData.TopHeader }}
@@ -17,6 +17,7 @@
           >
           <router-link to="/category">
             <Button
+              v-scrollanimation
               iconColor="var(--color-primary)"
               border="1px solid var(--color-primary)"
               background="transparent"
@@ -47,6 +48,7 @@
           :class="item.Class"
         >
           <MasonryCard
+            v-scrollanimation
             :text="item.Text"
             :text2="item.Text2"
             :background="item.Background"

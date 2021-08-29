@@ -3,11 +3,12 @@
     <div class="wrapper">
       <div class="layout">
         <div class="heading">
-          <h2>{{ AdvertInformationData.Heading }}</h2>
+          <h2 v-scrollanimation>{{ AdvertInformationData.Heading }}</h2>
         </div>
         <div class="area">
           <div class="item input">
             <InputBox
+              v-scrollanimation
               height="auto"
               width="100%"
               :text="AdvertInformationData.AdvertHeading"
@@ -20,6 +21,7 @@
 
           <div class="item icon">
             <Button
+              v-scrollanimation
               margin="auto"
               padding="0px"
               direction="row"
@@ -46,6 +48,7 @@
 
         <div class="area">
           <TextEditorArea
+            v-scrollanimation
             :text="AdvertInformationData.AdvertDescription"
             family="var(--font-semibold)"
             textColor="var(--color-nav-link)"
@@ -62,6 +65,7 @@
             >
               <div v-for="(child, i) in item" :key="i" class="item">
                 <SelectBox
+                  v-scrollanimation
                   family="var(--font-semibold)"
                   :text="child.Text"
                   :List="child.List"
