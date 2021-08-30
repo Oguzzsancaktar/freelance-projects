@@ -1,11 +1,13 @@
 <template>
   <div id="App">
     <SignInUp
+      :ApplicationLanguage="ApplicationLanguage"
       :SignInUpData="
         ApplicationLanguage == 'en' ? enData.SignInUpData : arData.SignInUpData
       "
     />
     <FullScreenNavbar
+      :ApplicationLanguage="ApplicationLanguage"
       @language-control="languageControl"
       :FullScreenNavbarData="
         ApplicationLanguage == 'en'
@@ -16,6 +18,7 @@
       @navbar-animations="navbarAnimations"
     />
     <Navbar
+      :ApplicationLanguage="ApplicationLanguage"
       :NavbarData="
         ApplicationLanguage == 'en' ? enData.NavbarData : arData.NavbarData
       "
@@ -23,9 +26,14 @@
       @language-control="languageControl"
     />
 
-    <router-view :Data="ApplicationLanguage == 'en' ? enData : arData" to="/">
+    <router-view
+      :ApplicationLanguage="ApplicationLanguage"
+      :Data="ApplicationLanguage == 'en' ? enData : arData"
+      to="/"
+    >
     </router-view>
     <Footer
+      :ApplicationLanguage="ApplicationLanguage"
       :FooterData="
         ApplicationLanguage == 'en' ? enData.FooterData : arData.FooterData
       "
@@ -227,13 +235,11 @@ export default {
 }
 .before-enter {
   opacity: 0 !important;
-  transform: translateY(-100%);
   transition: 1s;
 }
 .enter {
   transition: 1s;
   opacity: 1 !important;
-  transform: translateY(0px);
 }
 
 ::-webkit-scrollbar {

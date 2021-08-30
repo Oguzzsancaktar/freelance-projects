@@ -1,5 +1,5 @@
 <template>
-  <div class="search__input">
+  <div :class="`search__input ${ApplicationLanguage == 'ar' ? 'rtl' : ''}`">
     <p>{{ text }}</p>
     <input :value="subText" :placeholder="subText" />
   </div>
@@ -11,6 +11,12 @@ export default {
   props: {
     text: String,
     subText: String,
+    ApplicationLanguage: String,
+  },
+  data: function() {
+    return {
+      activeTab: 0,
+    };
   },
 };
 </script>
@@ -49,6 +55,23 @@ export default {
     font-size: 17px;
     color: var(--color-text-gray);
     font-family: var(--font-medium);
+  }
+}
+
+.search__input.rtl {
+  p {
+    text-align: right;
+  }
+  input {
+    text-align: right;
+  }
+
+  input:focus {
+    text-align: right;
+  }
+
+  input::placeholder {
+    text-align: right;
   }
 }
 

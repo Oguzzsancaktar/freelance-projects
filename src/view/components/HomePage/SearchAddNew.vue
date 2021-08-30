@@ -1,5 +1,8 @@
 <template>
-  <div @click="showAdvenced" class="search__add__new">
+  <div
+    @click="showAdvenced"
+    :class="`search__add__new ${ApplicationLanguage == 'ar' ? 'rtl' : ''}`"
+  >
     <p>{{ text }}</p>
     <div class="add-new-button">
       <Button
@@ -35,6 +38,7 @@ export default {
   props: {
     text: String,
     subText: String,
+    ApplicationLanguage: String,
   },
   methods: {
     showAdvenced: function() {
@@ -77,6 +81,24 @@ export default {
   }
   button {
     padding: 0 !important;
+  }
+}
+
+.search__add__new.rtl {
+  .add-new-button {
+    /deep/ .default-button {
+    }
+  }
+
+  .add-new-button:hover {
+  }
+  p {
+    text-align: right;
+  }
+
+  input {
+  }
+  button {
   }
 }
 </style>

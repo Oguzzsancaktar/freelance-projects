@@ -1,9 +1,10 @@
 <template>
-  <div class="SignInUp">
+  <div :class="`SignInUp ${ApplicationLanguage == 'ar' ? 'rtl' : ''}`">
     <div class="wrapper">
       <div class="layout">
         <div class="signup-card">
           <SignUpCard
+            :ApplicationLanguage="ApplicationLanguage"
             :SignUpData="SignInUpData.SignUpData"
             @showSignin="showSignin"
             @hideSign="hideSign"
@@ -11,6 +12,7 @@
         </div>
         <div class="signin-card">
           <SignInCard
+            :ApplicationLanguage="ApplicationLanguage"
             :SignInData="SignInUpData.SignInData"
             @showSignup="showSignup"
             @hideSign="hideSign"
@@ -31,6 +33,7 @@ export default {
   name: "SignInUp",
   props: {
     SignInUpData: Object,
+    ApplicationLanguage: String,
   },
   methods: {
     showSign: function() {

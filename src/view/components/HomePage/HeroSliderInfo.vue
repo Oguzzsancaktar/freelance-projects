@@ -28,6 +28,7 @@ export default {
       type: String,
       default: "Default Info After Text!",
     },
+    ApplicationLanguage: String,
   },
 };
 </script>

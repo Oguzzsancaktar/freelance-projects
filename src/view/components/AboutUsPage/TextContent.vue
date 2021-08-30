@@ -1,5 +1,5 @@
 <template>
-  <div class="TextContent">
+  <div :class="`TextContent ${ApplicationLanguage == 'ar' ? 'rtl' : ''}`">
     <div class="layout">
       <section>
         <div class="heading">
@@ -23,6 +23,7 @@
 export default {
   name: "TextContent",
   props: {
+    ApplicationLanguage: String,
     paragraphs: Array,
     heading: String,
   },
@@ -60,6 +61,25 @@ export default {
   }
   section:last-child {
     padding: 30px 0;
+  }
+}
+
+.TextContent.rtl {
+  .layout {
+    section {
+      .heading {
+        h3 {
+          justify-content: flex-end;
+          text-align: right;
+        }
+      }
+      .paragraph {
+        justify-content: flex-end;
+        text-align: right;
+      }
+    }
+  }
+  section:last-child {
   }
 }
 </style>

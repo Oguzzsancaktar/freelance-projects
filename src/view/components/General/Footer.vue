@@ -1,8 +1,9 @@
 <template>
-  <div class="footer">
+  <div :class="`footer ${ApplicationLanguage == 'ar' ? 'rtl' : ''}  `">
     <div class="wrapper">
       <div class="footer__layout">
         <FooterItem
+          :ApplicationLanguage="ApplicationLanguage"
           v-scrollanimation
           v-for="(item, index) in FooterData.FooterItems"
           :data-footer-item="index"
@@ -24,6 +25,7 @@ export default {
   name: "Footer",
   props: {
     FooterData: Object,
+    ApplicationLanguage: String,
   },
 };
 </script>
@@ -47,6 +49,16 @@ export default {
 
       [data-footer-item="6"] {
         display: none;
+      }
+    }
+  }
+}
+
+.footer.rtl {
+  .wrapper {
+    .footer__layout {
+      flex-direction: row-reverse;
+      [data-footer-item="6"] {
       }
     }
   }

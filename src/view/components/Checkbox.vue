@@ -1,5 +1,5 @@
 <template>
-  <div class="Checkbox">
+  <div :class="`Checkbox ${ApplicationLanguage == 'ar' ? 'rtl' : ''}`">
     <input type="checkbox" :name="item" />
     <label for="check"> {{ item }} </label>
   </div>
@@ -9,6 +9,7 @@
 export default {
   name: "Chexkbox",
   props: {
+    ApplicationLanguage: String,
     item: {
       type: String,
       default: " ",
@@ -73,6 +74,13 @@ export default {
 
   input[type="checkbox"]:focus {
     outline: none;
+  }
+}
+
+.Checkbox.rtl {
+  flex-direction: row-reverse;
+  input {
+    margin-left: 10px;
   }
 }
 </style>

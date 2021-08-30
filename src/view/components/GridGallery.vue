@@ -1,5 +1,5 @@
 <template>
-  <div class="grid__gallery">
+  <div :class="`grid__gallery ${ApplicationLanguage == 'ar' ? 'rtl' : ''}`">
     <div class="wrapper">
       <div v-scrollanimation class="grid__gallery__nav">
         <div v-scrollanimation class="section">
@@ -44,6 +44,7 @@
       </div>
       <div class="grid__gallery__layout">
         <GalleryCard
+          :ApplicationLanguage="ApplicationLanguage"
           v-for="(data, index) in GridGalleryData.GalleryCards"
           :key="index"
           class="grid__gallery__layout__item"
@@ -62,6 +63,7 @@ export default {
   name: "GridGallery",
   props: {
     GridGalleryData: Object,
+    ApplicationLanguage: String,
   },
 };
 </script>
@@ -108,6 +110,31 @@ export default {
     // &__item:nth-child(5) {
     //   margin: auto 20px;
     // }
+  }
+}
+
+.grid__gallery.rtl {
+  .wrapper {
+    .grid__gallery__nav {
+      flex-direction: row-reverse;
+      .section {
+        justify-content: flex-end;
+        span {
+          text-align: right;
+        }
+      }
+
+      .section:last-child {
+        flex-direction: row-reverse;
+        justify-content: flex-end;
+      }
+    }
+    &__layout {
+      // &__item:nth-child(2),
+      // &__item:nth-child(5) {
+      //   margin: auto 20px;
+      // }
+    }
   }
 }
 

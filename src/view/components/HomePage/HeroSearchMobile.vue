@@ -48,7 +48,7 @@ import SearchSelect from "./SearchSelect.vue";
 export default {
   components: { SearchSelect, SearchInput, Button, SearchAddNew },
   name: "HeroSearch",
-  props: { HeroSearchData: Object },
+  props: { HeroSearchData: Object, ApplicationLanguage: String },
   methods: {
     showAdvenced: function() {
       this.$emit("show-advenced");

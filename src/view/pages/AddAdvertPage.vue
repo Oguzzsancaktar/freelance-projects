@@ -2,6 +2,7 @@
   <div id="AddAdvertPage">
     <div class="subpage-content">
       <TopBar
+        :ApplicationLanguage="ApplicationLanguage"
         v-scrollanimation
         :TopBarData="Data.AddAdvertPage.TopBarData"
         @update-section="update"
@@ -11,26 +12,32 @@
         <transition name="fade">
           <div class="section__item" v-if="section == 0">
             <AdvertCategory
+              :ApplicationLanguage="ApplicationLanguage"
               v-scrollanimation
               :AdvertCategoryData="Data.AddAdvertPage.AdvertCategoryData"
             />
             <AdvertInformation
+              :ApplicationLanguage="ApplicationLanguage"
               v-scrollanimation
               :AdvertInformationData="Data.AddAdvertPage.AdvertInformationData"
             />
             <AdvertAdress
               v-scrollanimation
+              :ApplicationLanguage="ApplicationLanguage"
               :AdvertAdressData="Data.AddAdvertPage.AdvertAdressData"
             />
             <AdvertPhotos
+              :ApplicationLanguage="ApplicationLanguage"
               v-scrollanimation
               :AdvertPhotosData="Data.AddAdvertPage.AdvertPhotosData"
             />
             <AdvertFeatures
+              :ApplicationLanguage="ApplicationLanguage"
               v-scrollanimation
               :AdvertFeaturesData="Data.AddAdvertPage.AdvertFeaturesData"
             />
             <AdvertNext
+              :ApplicationLanguage="ApplicationLanguage"
               v-scrollanimation
               @section-control-button="sectionControlButton"
               :section="section"
@@ -42,35 +49,42 @@
         <transition name="fade">
           <div class="section__item" v-if="section == 1">
             <DetailHero
+              :ApplicationLanguage="ApplicationLanguage"
               v-scrollanimation
               :DetailHeroData="Data.AdvertDetailPage.DetailHeroData"
             />
             <DetailTop
+              :ApplicationLanguage="ApplicationLanguage"
               v-scrollanimation
               :DetailTopData="Data.AdvertDetailPage.DetailTopData"
             />
 
             <DetailInfo
+              :ApplicationLanguage="ApplicationLanguage"
               v-scrollanimation
               :DetailInfoData="Data.AdvertDetailPage.DetailInfoData"
             />
             <DetailDescription
+              :ApplicationLanguage="ApplicationLanguage"
               v-scrollanimation
               :DetailDescriptionData="
                 Data.AdvertDetailPage.DetailDescriptionData
               "
             />
             <DetailFeatures
+              :ApplicationLanguage="ApplicationLanguage"
               v-scrollanimation
               :DetailFeaturesData="Data.AdvertDetailPage.DetailFeaturesData"
             />
             <DetailInternalFeatures
+              :ApplicationLanguage="ApplicationLanguage"
               v-scrollanimation
               :DetailInternalFeaturesData="
                 Data.AdvertDetailPage.DetailInternalFeaturesData
               "
             />
             <NextEdit
+              :ApplicationLanguage="ApplicationLanguage"
               v-scrollanimation
               @section-control-button="sectionControlButton"
               :section="section"
@@ -82,12 +96,14 @@
         <transition name="fade">
           <div class="section__item" v-if="section == 2">
             <PageHeading
+              :ApplicationLanguage="ApplicationLanguage"
               v-scrollanimation
               :PageHeadingData="
                 Data.AdvertDetailPage.BoostPageData.PageHeadingData
               "
             />
             <BoostInfo
+              :ApplicationLanguage="ApplicationLanguage"
               v-scrollanimation
               :BoostInfoData="Data.AdvertDetailPage.BoostPageData.BoostInfoData"
             />
@@ -145,6 +161,7 @@ export default {
   },
   props: {
     Data: Object,
+    ApplicationLanguage: String,
   },
   data: function() {
     return {

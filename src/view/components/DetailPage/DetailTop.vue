@@ -1,5 +1,5 @@
 <template>
-  <div class="DetailTop">
+  <div :class="`DetailTop ${ApplicationLanguage == 'ar' ? 'rtl' : ''}`">
     <div class="wrapper">
       <div class="layout">
         <div class="area">
@@ -65,7 +65,7 @@
               iconWidth="30px"
               iconHeight="30px"
               fontSize="15px"
-              iconAreaW="25px"
+              iconAreaW="auto"
             />
           </div>
 
@@ -104,6 +104,7 @@ export default {
   components: { Button },
   props: {
     DetailTopData: Object,
+    ApplicationLanguage: String,
   },
 };
 </script>
@@ -192,7 +193,48 @@ export default {
   }
 }
 
-@media (max-width: 800px) {
+.DetailTop.rtl {
+  .wrapper {
+    .layout {
+      flex-direction: row-reverse;
+      .area {
+        flex-direction: row-reverse;
+
+        div {
+          /deep/ button {
+            cursor: pointer;
+
+            .together-text {
+              margin-left: 0 !important;
+            }
+          }
+        }
+
+        span {
+          margin-right: 10px;
+        }
+
+        .home-button {
+        }
+      }
+      .area:first-child {
+        div {
+          /deep/ button {
+          }
+        }
+      }
+      .area:last-child {
+        div {
+        }
+
+        div:hover {
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 900px) {
   .DetailTop {
     height: auto;
     .wrapper {
@@ -222,6 +264,47 @@ export default {
           }
 
           a:hover {
+          }
+        }
+      }
+    }
+  }
+
+  .DetailTop.rtl {
+    .wrapper {
+      .layout {
+        flex-direction: column;
+        .area {
+          flex-direction: row-reverse;
+
+          div {
+            /deep/ button {
+              cursor: pointer;
+
+              .together-text {
+                margin-left: 0 !important;
+              }
+            }
+          }
+
+          span {
+            margin-right: 10px;
+          }
+
+          .home-button {
+          }
+        }
+        .area:first-child {
+          div {
+            /deep/ button {
+            }
+          }
+        }
+        .area:last-child {
+          div {
+          }
+
+          div:hover {
           }
         }
       }
@@ -264,6 +347,47 @@ export default {
           }
 
           a:hover {
+          }
+        }
+      }
+    }
+  }
+
+  .DetailTop.rtl {
+    .wrapper {
+      .layout {
+        flex-direction: column;
+        .area {
+          flex-direction: column;
+
+          div {
+            /deep/ button {
+              cursor: pointer;
+
+              .together-text {
+                margin-left: 0 !important;
+              }
+            }
+          }
+
+          span {
+            margin-right: 10px;
+          }
+
+          .home-button {
+          }
+        }
+        .area:first-child {
+          div {
+            /deep/ button {
+            }
+          }
+        }
+        .area:last-child {
+          div {
+          }
+
+          div:hover {
           }
         }
       }

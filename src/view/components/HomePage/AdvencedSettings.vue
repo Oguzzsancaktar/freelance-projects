@@ -106,6 +106,7 @@ export default {
   name: "AdvencedSettings",
   props: {
     AdvencedSettingsData: Object,
+    ApplicationLanguage: String,
   },
   methods: {
     closeAdvenced() {

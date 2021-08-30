@@ -1,5 +1,9 @@
 <template>
-  <div class="DetailInternalFeatures">
+  <div
+    :class="
+      `DetailInternalFeatures ${ApplicationLanguage == 'ar' ? 'rtl' : ''}`
+    "
+  >
     <div class="wrapper">
       <div class="layout">
         <div class="area">
@@ -121,6 +125,7 @@ export default {
   name: "DetailInternalFeatures",
   props: {
     DetailInternalFeaturesData: Object,
+    ApplicationLanguage: String,
   },
   data: function() {
     return {
@@ -136,8 +141,6 @@ export default {
 
   .wrapper {
     .layout {
-      padding: 35px 45px;
-
       background: var(--background-white);
 
       width: 100%;
@@ -152,12 +155,13 @@ export default {
             align-items: center;
             height: 100%;
             border-bottom: 1px solid var(--background-general);
-            padding-bottom: 20px;
+            padding: 35px 45px;
           }
         }
 
         .list {
           list-style: none;
+          padding: 35px 45px;
 
           &__item {
             // padding: 0 20px;
@@ -167,6 +171,30 @@ export default {
           }
           &__item:nth-child(odd) {
             background: var(--background-general);
+          }
+        }
+      }
+    }
+  }
+}
+
+.DetailInternalFeatures.rtl {
+  .wrapper {
+    .layout {
+      .area {
+        .heading {
+          h3 {
+            text-align: right;
+            justify-content: flex-end;
+          }
+        }
+
+        .list {
+          &__item {
+          }
+          &__item:nth-child(even) {
+          }
+          &__item:nth-child(odd) {
           }
         }
       }
@@ -203,6 +231,7 @@ export default {
           }
 
           .list {
+            padding: 0px 0;
             list-style: none;
 
             &__item {

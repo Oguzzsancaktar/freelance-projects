@@ -1,5 +1,5 @@
 <template>
-  <div class="NextEdit">
+  <div :class="`NextEdit ${ApplicationLanguage == 'ar' ? 'rtl' : ''}`">
     <div class="wrapper">
       <div class="layout">
         <p class="text">
@@ -116,6 +116,27 @@ export default {
           .together-text {
             width: auto;
             text-transform: uppercase;
+          }
+        }
+      }
+    }
+  }
+}
+
+.NextEdit {
+  .wrapper {
+    .layout {
+      .text {
+      }
+
+      .buttons {
+        flex-direction: row-reverse;
+        button {
+        }
+        /deep/ button {
+          .button-together {
+          }
+          .together-text {
           }
         }
       }

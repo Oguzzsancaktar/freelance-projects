@@ -1,5 +1,5 @@
 <template>
-  <div class="DetailFeatures">
+  <div :class="`DetailFeatures ${ApplicationLanguage == 'ar' ? 'rtl' : ''}`">
     <div class="wrapper">
       <div class="layout">
         <div class="area">
@@ -51,6 +51,7 @@ export default {
   },
   props: {
     DetailFeaturesData: Object,
+    ApplicationLanguage: String,
   },
 };
 </script>
@@ -62,8 +63,6 @@ export default {
 
   .wrapper {
     .layout {
-      padding: 35px 45px;
-
       background: var(--background-white);
 
       width: 100%;
@@ -77,6 +76,8 @@ export default {
         .heading {
           width: 100%;
           h3 {
+            padding: 35px 45px;
+
             display: flex;
             align-items: center;
             height: 100%;
@@ -91,7 +92,7 @@ export default {
           display: flex;
           flex-direction: column;
           list-style: none;
-          padding: 20px 0;
+          padding: 35px 45px;
 
           &__item {
             width: 100%;
@@ -123,6 +124,41 @@ export default {
         }
         .list:last-child {
           margin-left: 15px;
+        }
+      }
+    }
+  }
+}
+
+.DetailFeatures.rtl {
+  .wrapper {
+    .layout {
+      .area {
+        .heading {
+          h3 {
+            text-align: right;
+            justify-content: flex-end;
+          }
+        }
+
+        .list {
+          &__item {
+            .content {
+              flex-direction: row-reverse;
+              .key {
+              }
+              .value {
+              }
+            }
+          }
+          &__item:nth-child(even) {
+          }
+          &__item:nth-child(odd) {
+          }
+        }
+        .list:first-child {
+        }
+        .list:last-child {
         }
       }
     }

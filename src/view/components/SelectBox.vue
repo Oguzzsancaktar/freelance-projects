@@ -1,5 +1,8 @@
 <template>
-  <div class="SelectBox" :style="`padding:${padding}!important`">
+  <div
+    :class="`SelectBox ${ApplicationLanguage == 'ar' ? 'rtl' : ''}`"
+    :style="`padding:${padding}!important`"
+  >
     <div
       :style="
         `border:${border};  height:${height} ; margin:${margin}; width:${width} ;  `
@@ -9,7 +12,8 @@
       :data-list="list"
     >
       <p :style="`font-family:${family}; color:${textColor}`">
-        {{ text }} <b v-if="isRequired">*</b>
+        <b v-if="isRequired && ApplicationLanguage == 'ar'">*</b> {{ text }}
+        <b v-if="isRequired && ApplicationLanguage == 'en'">*</b>
       </p>
 
       <div
@@ -46,6 +50,7 @@
 export default {
   name: "SelectBox",
   props: {
+    ApplicationLanguage: String,
     text: {
       type: String,
       default: " ",
@@ -145,6 +150,7 @@ export default {
       color: var(--color-text-gray-light);
       font-family: var(--font-medium);
       margin-bottom: 5px;
+      margin-left: 18px;
 
       b {
         margin-top: 10px;
@@ -248,6 +254,54 @@ export default {
     }
     .visible {
       visibility: visible;
+    }
+  }
+}
+
+.SelectBox.rtl {
+  h1 {
+    text-align: right;
+  }
+
+  .aselect {
+    p {
+      margin-right: 18px;
+      text-align: right;
+      flex-direction: row-reverse;
+      b {
+      }
+    }
+    .selector {
+      .arrow {
+        left: 30px;
+      }
+      .expanded {
+      }
+      .label {
+        text-align: right;
+
+        span {
+          text-align: right;
+        }
+      }
+    }
+
+    .selector:hover {
+    }
+    ul {
+    }
+    li {
+      text-align: right;
+      &:hover {
+      }
+    }
+    li:last-child {
+    }
+    .current {
+    }
+    .hidden {
+    }
+    .visible {
     }
   }
 }

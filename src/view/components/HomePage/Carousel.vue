@@ -50,6 +50,7 @@ export default {
   components: { ImageView },
   props: {
     CarouselData: Object,
+    ApplicationLanguage: String,
   },
   data: function() {
     return {

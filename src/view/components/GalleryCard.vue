@@ -1,5 +1,8 @@
 <template>
-  <div v-scrollanimation class="card">
+  <div
+    v-scrollanimation
+    :class="`card ${ApplicationLanguage == 'ar' ? 'rtl' : ''}`"
+  >
     <div v-scrollanimation class="card__layout">
       <div class="card__image">
         <router-link to="detail">
@@ -131,6 +134,7 @@ export default {
   name: "GalleryCard",
   props: {
     data: Object,
+    ApplicationLanguage: String,
   },
   components: { ImageView, Button },
   data: function() {
@@ -241,6 +245,44 @@ export default {
           color: var(--color-text-gray-dark);
           font-size: 15px;
           font-family: var(--font-semilight);
+        }
+      }
+    }
+  }
+}
+
+.card.rtl {
+  .card__layout {
+  }
+  .card__image {
+    &__hover {
+      /deep/ .default-button {
+        cursor: pointer;
+      }
+    }
+    &__hover:hover {
+    }
+  }
+  .card__info {
+    .info__layout {
+      .info__row {
+        flex-direction: row-reverse;
+        .price {
+        }
+        .row__item {
+          flex-direction: row-reverse;
+
+          .text {
+          }
+        }
+      }
+
+      .info__col {
+        .header {
+          text-align: right;
+        }
+        .subtitle {
+          text-align: right;
         }
       }
     }

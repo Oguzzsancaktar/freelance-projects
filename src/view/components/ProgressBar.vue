@@ -1,5 +1,5 @@
 <template>
-  <div class="ProgressBar">
+  <div :class="`ProgressBar ${ApplicationLanguage == 'ar' ? 'rtl' : ''}`">
     <div class="layout">
       <div class="area">
         <span>{{ data }}</span>
@@ -20,6 +20,8 @@ export default {
   props: {
     data: {
       type: String,
+
+      ApplicationLanguage: String,
     },
   },
 };
@@ -70,6 +72,21 @@ export default {
           margin: auto;
           border-radius: 5px;
           clip-path: polygon(0 0, 100% 0%, 95% 100%, 0% 100%);
+        }
+      }
+    }
+  }
+}
+
+.ProgressBar {
+  .layout {
+    .area {
+      flex-direction: row-reverse;
+      span {
+      }
+
+      .line {
+        &__percentage {
         }
       }
     }

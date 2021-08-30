@@ -1,10 +1,11 @@
 <template>
   <div id="HeroSlider">
-    <div class="wrapper">
+    <div :class="`wrapper ${ApplicationLanguage == 'ar' ? 'rtl' : ''}`">
       <div class="hero__layout">
         <div class="hero__left">
           <div v-scrollanimation class="hero__left__info">
             <HeroSliderInfo
+              :ApplicationLanguage="ApplicationLanguage"
               v-for="(item, index) in HeroSliderData.HeroSliderInfos"
               :key="index"
               :title="item.Title"
@@ -15,6 +16,7 @@
           </div>
           <div v-scrollanimation class="hero__left__search">
             <HeroSearch
+              :ApplicationLanguage="ApplicationLanguage"
               v-scrollanimation
               @show-advenced="showAdvenced"
               :HeroSearchData="HeroSliderData.HeroSearchData"
@@ -23,6 +25,7 @@
 
           <div v-scrollanimation class="hero__left__search__advenced">
             <AdvencedSettings
+              :ApplicationLanguage="ApplicationLanguage"
               @close-advenced="closeAdvenced"
               :AdvencedSettingsData="HeroSliderData.AdvencedSettingsData"
             />
@@ -30,12 +33,14 @@
 
           <div v-scrollanimation class="hero__left__search__mobile">
             <HeroSearchMobile
+              :ApplicationLanguage="ApplicationLanguage"
               @show-advenced="showAdvenced"
               :HeroSearchData="HeroSliderData.HeroSearchData"
             />
           </div>
           <div v-scrollanimation class="hero__left__buttons">
             <SliderButtons
+              :ApplicationLanguage="ApplicationLanguage"
               :HeroSliderData="HeroSliderData.HeroSliderInfos"
               @goToSlide="goToSlide"
               activeSlide="slideCounter"
@@ -50,6 +55,7 @@
             class="hero__slider__image"
           >
             <ImageView
+              :ApplicationLanguage="ApplicationLanguage"
               width="auto"
               height="720px"
               :imageName="item.Image"
@@ -84,6 +90,7 @@ export default {
   },
   props: {
     HeroSliderData: Object,
+    ApplicationLanguage: String,
   },
   data: function() {
     return {
@@ -253,12 +260,11 @@ export default {
 
       &__search.before-enter {
         transition-delay: 3.5s;
-        transform: translateX(-100%);
       }
 
-      &__search.enter {
-        transform: translateX(0px) !important;
-      }
+      // &__search.enter {
+
+      // }
       &__search.active {
         transition: 0.7s;
         transform: translateY(100%);
@@ -302,11 +308,35 @@ export default {
 
       &__buttons.before-enter {
         transition-delay: 2.5s;
-        transform: translateY(100px);
       }
 
-      &__buttons.enter {
-        transform: translateY(0px) !important;
+      // &__buttons.enter {
+      //   transform: translateY(0px) !important;
+      // }
+    }
+  }
+
+  .wrapper.rtl {
+    justify-content: flex-end;
+
+    .hero__left__info {
+      text-align: right;
+    }
+    .hero__slider__image {
+      left: 0;
+    }
+    .hero__left__search {
+      right: 0;
+
+      .hero__search {
+        flex-direction: row-reverse;
+      }
+    }
+
+    .hero__left__buttons {
+      right: 0;
+      .slider__buttons {
+        flex-direction: row-reverse;
       }
     }
   }

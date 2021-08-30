@@ -1,5 +1,5 @@
 <template>
-  <div class="AdvertFeatures">
+  <div :class="`AdvertFeatures ${ApplicationLanguage == 'ar' ? 'rtl' : ''}`">
     <div class="wrapper">
       <div class="heading">
         <h2>{{ AdvertFeaturesData.Heading }}</h2>
@@ -16,7 +16,7 @@
 
           <ul v-for="(j, index) in item.List" class="area__list" :key="index">
             <li class="area__list__item">
-              <Checkbox :item="j" />
+              <Checkbox :ApplicationLanguage="ApplicationLanguage" :item="j" />
             </li>
           </ul>
         </div>
@@ -32,6 +32,7 @@ export default {
   name: "AdvertFeatures",
   props: {
     AdvertFeaturesData: Object,
+    ApplicationLanguage: String,
     featuresList1: {
       type: Array,
     },
@@ -85,6 +86,34 @@ export default {
             margin: 15px 0;
             display: flex;
             align-items: center;
+          }
+        }
+      }
+    }
+  }
+}
+
+.AdvertFeatures {
+  .wrapper {
+    .heading {
+      h2 {
+        text-align: right;
+        justify-content: flex-end;
+      }
+    }
+    .layout {
+      .area {
+        width: 100%;
+        &__header {
+          h3 {
+            text-align: right;
+            justify-content: flex-end;
+          }
+        }
+        &__list {
+          &__item {
+            text-align: right;
+            justify-content: flex-end;
           }
         }
       }

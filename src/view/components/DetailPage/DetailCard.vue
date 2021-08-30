@@ -1,5 +1,5 @@
 <template>
-  <div class="card">
+  <div :class="`card ${ApplicationLanguage == 'ar' ? 'rtl' : ''}`">
     <div class="card__layout">
       <a href="/detail">
         <div class="card__image">
@@ -75,6 +75,7 @@
                 iconHeight="16px"
                 family="var(--font-medium)"
                 fontSize="14px"
+                iconAreaW="auto"
               />
 
               <router-link to="/profile">
@@ -134,6 +135,8 @@ export default {
   name: "DetailCard",
   components: { ImageView, Button },
   props: {
+    ApplicationLanguage: String,
+
     data: Object,
   },
 };
@@ -256,6 +259,43 @@ export default {
           line-height: 16px;
           max-height: 50px;
           overflow: hidden;
+        }
+      }
+    }
+  }
+}
+
+.card.rtl {
+  .card__layout {
+  }
+  &__image {
+    &__hover {
+    }
+    &__hover:hover {
+    }
+  }
+  .card__info {
+    .info__layout {
+      .info__row {
+        flex-direction: row-reverse;
+
+        .price {
+          border-left: 1px solid var(--color-card-border);
+          padding: 15px;
+        }
+        .row__item {
+          padding: 15px 10px;
+          .text {
+          }
+        }
+      }
+
+      .info__col {
+        .header {
+          text-align: right;
+        }
+        .subtitle {
+          text-align: right;
         }
       }
     }

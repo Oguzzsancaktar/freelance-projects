@@ -1,5 +1,5 @@
 <template>
-  <ul class="CategorySelect">
+  <ul :class="`CategorySelect ${ApplicationLanguage == 'ar' ? 'rtl' : ''}`">
     <li class="item">
       <div class="item__layout">
         <div class="heading">
@@ -15,6 +15,7 @@
               class="content__list__item"
             >
               <CategorySelectBox
+                :ApplicationLanguage="ApplicationLanguage"
                 height="auto"
                 width="100%"
                 :placeholder="item"
@@ -36,6 +37,7 @@ export default {
   name: "CategorySelect",
   components: { CategorySelectBox },
   props: {
+    ApplicationLanguage: String,
     categoryList: Array,
     header: {
       type: String,
@@ -65,6 +67,32 @@ export default {
 
           border-bottom: 1px solid var(--background-general);
           color: var(--color-primary);
+        }
+      }
+    }
+
+    .content {
+      padding: 20px 0;
+      border-bottom: 1px solid var(--background-general);
+
+      &__list {
+        padding: 0 20px;
+
+        list-style: none;
+        &__item {
+        }
+      }
+    }
+  }
+}
+
+.CategorySelect.rtl {
+  .item {
+    &__layout {
+      .heading {
+        h3 {
+          text-align: right;
+          justify-content: flex-end;
         }
       }
     }

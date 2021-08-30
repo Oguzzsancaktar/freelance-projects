@@ -1,5 +1,5 @@
 <template>
-  <div class="DetailDescription">
+  <div :class="`DetailDescription ${ApplicationLanguage == 'ar' ? 'rtl' : ''}`">
     <div class="wrapper">
       <div class="layout">
         <div class="heading">
@@ -23,6 +23,7 @@ export default {
   name: "DetailDescription",
   props: {
     DetailDescriptionData: Object,
+    ApplicationLanguage: String,
   },
 };
 </script>
@@ -33,8 +34,6 @@ export default {
 
   .wrapper {
     .layout {
-      padding: 35px 45px;
-
       background: var(--background-white);
 
       width: 100%;
@@ -42,6 +41,8 @@ export default {
       flex-direction: column;
       .heading {
         h3 {
+          padding: 35px 45px;
+
           display: flex;
           align-items: center;
           height: 100%;
@@ -53,11 +54,31 @@ export default {
       }
 
       .description {
-        padding: 15px 0;
+        padding: 15px 40px;
         p {
           font-size: 15px;
           font-family: var(--font-semilight);
           margin: 10px 0;
+        }
+      }
+    }
+  }
+}
+
+.DetailDescription.rtl {
+  .wrapper {
+    .layout {
+      .heading {
+        h3 {
+          text-align: right;
+          justify-content: flex-end;
+        }
+      }
+
+      .description {
+        p {
+          text-align: right;
+          justify-content: flex-end;
         }
       }
     }

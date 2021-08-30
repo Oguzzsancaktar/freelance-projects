@@ -1,5 +1,5 @@
 <template>
-  <div class="AdvertInformation">
+  <div :class="`AdvertInformation ${ApplicationLanguage == 'ar' ? 'rtl' : ''}`">
     <div class="wrapper">
       <div class="layout">
         <div class="heading">
@@ -8,6 +8,7 @@
         <div class="area">
           <div class="item input">
             <InputBox
+              :ApplicationLanguage="ApplicationLanguage"
               v-scrollanimation
               height="auto"
               width="100%"
@@ -48,6 +49,7 @@
 
         <div class="area">
           <TextEditorArea
+            :ApplicationLanguage="ApplicationLanguage"
             v-scrollanimation
             :text="AdvertInformationData.AdvertDescription"
             family="var(--font-semibold)"
@@ -65,6 +67,7 @@
             >
               <div v-for="(child, i) in item" :key="i" class="item">
                 <SelectBox
+                  :ApplicationLanguage="ApplicationLanguage"
                   v-scrollanimation
                   family="var(--font-semibold)"
                   :text="child.Text"
@@ -97,6 +100,7 @@ export default {
   components: { InputBox, Button, TextEditorArea, SelectBox },
   props: {
     AdvertInformationData: Object,
+    ApplicationLanguage: String,
   },
 };
 </script>
@@ -175,6 +179,43 @@ export default {
   }
 }
 
+.AdvertInformation.rtl {
+  .wrapper {
+    .layout {
+      .heading {
+        h2 {
+          text-align: right;
+          justify-content: flex-end;
+        }
+      }
+
+      .area {
+        flex-direction: row-reverse;
+
+        &__left {
+          .row {
+            .item {
+            }
+          }
+
+          .SelectBox {
+          }
+        }
+        .item {
+          /deep/ button {
+          }
+        }
+        .item.icon {
+        }
+        .item.input {
+        }
+      }
+      .area:last-child {
+      }
+    }
+  }
+}
+
 @media (max-width: 900px) {
   .AdvertInformation {
     .wrapper {
@@ -218,6 +259,46 @@ export default {
           }
           .item.input {
             width: 100%;
+          }
+        }
+        .area:last-child {
+        }
+      }
+    }
+  }
+
+  .AdvertInformation.rtl {
+    .wrapper {
+      .layout {
+        .heading {
+          h2 {
+            text-align: right;
+            justify-content: flex-end;
+          }
+        }
+
+        .area {
+          flex-direction: column;
+
+          &__left {
+            .row {
+              .item {
+              }
+            }
+
+            .SelectBox {
+            }
+          }
+          .item {
+            /deep/ button {
+              .together-text {
+                justify-content: flex-end !important;
+              }
+            }
+          }
+          .item.icon {
+          }
+          .item.input {
           }
         }
         .area:last-child {

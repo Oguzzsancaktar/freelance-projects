@@ -1,14 +1,30 @@
 <template>
   <div id="Homepage">
-    <HeroSlider :HeroSliderData="Data.HomePage.HeroSliderData" />
+    <HeroSlider
+      :ApplicationLanguage="ApplicationLanguage"
+      :HeroSliderData="Data.HomePage.HeroSliderData"
+    />
     <Carousel
+      :ApplicationLanguage="ApplicationLanguage"
       :CarouselData="Data.HomePage.CarouselData"
       class="homepage__carrousel"
     />
-    <GridGallery :GridGalleryData="Data.HomePage.GridGalleryData" />
-    <AdsArea :AdsAreaData="Data.HomePage.AdsAreaData" />
-    <GridGallery :GridGalleryData="Data.HomePage.GridGallery2Data" />
-    <MasonryGallery :MasonryGalleryData="Data.HomePage.MasonryGalleryData" />
+    <GridGallery
+      :ApplicationLanguage="ApplicationLanguage"
+      :GridGalleryData="Data.HomePage.GridGalleryData"
+    />
+    <AdsArea
+      :ApplicationLanguage="ApplicationLanguage"
+      :AdsAreaData="Data.HomePage.AdsAreaData"
+    />
+    <GridGallery
+      :ApplicationLanguage="ApplicationLanguage"
+      :GridGalleryData="Data.HomePage.GridGallery2Data"
+    />
+    <MasonryGallery
+      :ApplicationLanguage="ApplicationLanguage"
+      :MasonryGalleryData="Data.HomePage.MasonryGalleryData"
+    />
   </div>
 </template>
 
@@ -30,6 +46,7 @@ export default {
   name: "Homepage",
   props: {
     Data: Object,
+    ApplicationLanguage: String,
   },
   mounted() {
     window.scrollTo({

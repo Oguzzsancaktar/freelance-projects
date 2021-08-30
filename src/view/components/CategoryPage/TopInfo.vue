@@ -1,5 +1,5 @@
 <template>
-  <div class="TopInfo">
+  <div :class="`TopInfo ${ApplicationLanguage == 'ar' ? 'rtl' : ''}`">
     <div class="layout">
       <div class="section">
         <span>
@@ -39,6 +39,8 @@ export default {
   components: { Button },
   name: "TopInfo",
   props: {
+    ApplicationLanguage: String,
+
     TopInfoData: Object,
   },
 };
@@ -68,6 +70,18 @@ export default {
         b {
           font-family: var(--font-semibold);
           color: var(--color-primary);
+        }
+      }
+    }
+  }
+}
+
+.TopInfo.rtl {
+  .layout {
+    flex-direction: row-reverse;
+    .section {
+      span {
+        b {
         }
       }
     }

@@ -1,5 +1,8 @@
 <template>
-  <div class="hero__search__select" :style="`padding:${padding}!important`">
+  <div
+    :class="`hero__search__select ${ApplicationLanguage == 'ar' ? 'rtl' : ''}`"
+    :style="`padding:${padding}!important`"
+  >
     <div
       :style="
         `border:${border}; border-radius:30px; height:${height} ; margin:${margin}; width:${width} ; `
@@ -79,6 +82,7 @@ export default {
     return {
       value: "Select ",
       visible: false,
+      ApplicationLanguage: localStorage.ApplicationLanguage,
     };
   },
   methods: {
@@ -214,6 +218,53 @@ export default {
     }
     .visible {
       visibility: visible;
+    }
+  }
+}
+
+.hero__search__select.rtl {
+  h1 {
+    text-align: right;
+  }
+
+  .aselect {
+    p {
+      text-align: right;
+      justify-content: flex-end;
+
+      i {
+      }
+    }
+    .selector {
+      right: 20px;
+      .arrow {
+        left: 20px;
+      }
+      .expanded {
+      }
+      .label {
+        justify-content: flex-end;
+        text-align: right;
+        span {
+        }
+      }
+    }
+    ul {
+    }
+    li {
+      text-align: right;
+      &:hover {
+      }
+    }
+    li:last-child {
+    }
+    .current {
+      border-left: transparent;
+      border-right: 1px solid var(--color-secondary);
+    }
+    .hidden {
+    }
+    .visible {
     }
   }
 }

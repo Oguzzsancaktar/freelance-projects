@@ -18,7 +18,7 @@
 <script>
 export default {
   name: "SliderButtons",
-  props: { HeroSliderData: Array },
+  props: { HeroSliderData: Array, ApplicationLanguage: String },
   methods: {
     goToSlide(event) {
       this.$emit("goToSlide", event);

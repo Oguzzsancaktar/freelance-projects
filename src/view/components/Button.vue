@@ -119,7 +119,11 @@
     <!-- type TOGETHER -->
 
     <div
-      class="button-together"
+      :class="
+        `button-together ${
+          ApplicationLanguage == 'ar' && direction != 'column' ? 'rtl' : ''
+        }`
+      "
       :style="
         `width:${iconAreaW} ;color:${textColor};flex-direction:${direction}; font-family:${family};font-size:${fontSize} `
       "
@@ -676,8 +680,10 @@ export default {
   data: function() {
     return {
       activeTab: 0,
+      ApplicationLanguage: localStorage.ApplicationLanguage,
     };
   },
+
   components: { Icon },
   props: {
     margin: { type: String, default: "0 10px 0 0" },
@@ -826,6 +832,17 @@ button span {
 
   span:first-child {
     // margin-right: 10px;
+  }
+}
+
+.button-together.rtl {
+  flex-direction: row-reverse !important;
+  text-align: right !important;
+  justify-content: right !important;
+  .together-text {
+    text-align: right !important;
+    justify-content: flex-end !important;
+    margin-right: 5px !important;
   }
 }
 </style>

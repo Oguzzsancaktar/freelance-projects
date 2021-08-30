@@ -1,5 +1,5 @@
 <template>
-  <div class="CategoryInput">
+  <div :class="`CategoryInput ${ApplicationLanguage == 'ar' ? 'rtl' : ''}`">
     <ul class="list">
       <li class="item">
         <div class="item__layout">
@@ -33,6 +33,7 @@
 export default {
   name: "CategoryInput",
   props: {
+    ApplicationLanguage: String,
     selectList: {
       type: Array,
     },
@@ -124,6 +125,47 @@ export default {
               input[type="number"] {
                 -moz-appearance: textfield; /* Firefox */
               }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.CategoryInput.rtl {
+  .list {
+    .item {
+      &__layout {
+        .heading {
+          h3 {
+            text-align: right;
+            justify-content: flex-end;
+          }
+        }
+
+        .content {
+          &__list {
+            &__item {
+              span {
+              }
+              input {
+                text-align: right;
+              }
+              input::-webkit-outer-spin-button,
+              input::-webkit-inner-spin-button {
+                /* display: none; <- Crashes Chrome on hover */
+                -webkit-appearance: none;
+                margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+              }
+
+              input[type="number"] {
+                -moz-appearance: textfield; /* Firefox */
+              }
+            }
+
+            &__item:first-child {
+              margin-right: 10px;
             }
           }
         }

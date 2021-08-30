@@ -1,5 +1,5 @@
 <template>
-  <div class="CategoryCheckbox">
+  <div :class="`CategoryCheckbox ${ApplicationLanguage == 'ar' ? 'rtl' : ''}`">
     <ul class="list">
       <li class="item">
         <div class="item__layout">
@@ -30,6 +30,8 @@
 export default {
   name: "CategoryCheckbox",
   props: {
+    ApplicationLanguage: String,
+
     selectList: {
       type: Array,
     },
@@ -142,6 +144,48 @@ export default {
 
               input[type="checkbox"]:focus {
                 outline: none;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.CategoryCheckbox.rtl {
+  .list {
+    .item {
+      &__layout {
+        .heading {
+          h3 {
+            text-align: right;
+            justify-content: flex-end;
+          }
+        }
+
+        .content {
+          &__list {
+            &__item {
+              flex-direction: row-reverse;
+              label {
+                font-size: 13px;
+                margin-right: 8px;
+              }
+              input[type="checkbox"] {
+              }
+
+              input[type="checkbox"]:checked {
+              }
+
+              input[type="checkbox"]:checked:before,
+              input[type="checkbox"]:checked:after {
+              }
+
+              input[type="checkbox"]:checked:after {
+              }
+
+              input[type="checkbox"]:focus {
               }
             }
           }

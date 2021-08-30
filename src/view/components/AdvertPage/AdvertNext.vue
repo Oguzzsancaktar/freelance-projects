@@ -1,5 +1,5 @@
 <template>
-  <div class="AdvertNext">
+  <div :class="`AdvertNext ${ApplicationLanguage == 'ar' ? 'rtl' : ''}`">
     <div class="wrapper">
       <div class="layout">
         <div class="check-terms">
@@ -26,6 +26,7 @@ export default {
   props: {
     AdvertNextData: Object,
     section: Number,
+    ApplicationLanguage: String,
   },
   methods: {
     sectionControlButton: function() {
@@ -79,6 +80,27 @@ export default {
   }
 }
 
+.AdvertNext.rtl {
+  .wrapper {
+    .layout {
+      flex-direction: row-reverse;
+      .check-terms {
+        flex-direction: row-reverse;
+
+        span {
+          margin-right: 5px;
+          b {
+          }
+        }
+      }
+      button {
+        span {
+        }
+      }
+    }
+  }
+}
+
 @media (max-width: 700px) {
   .AdvertNext {
     padding: 40px 0px;
@@ -101,6 +123,28 @@ export default {
           margin-top: 20px;
           max-width: none;
           width: 100%;
+        }
+      }
+    }
+  }
+
+  .AdvertNext.rtl {
+    .wrapper {
+      .layout {
+        flex-direction: column;
+        .check-terms {
+          flex-direction: row-reverse;
+          justify-content: flex-end;
+          text-align: right;
+          span {
+            margin-right: 5px;
+            b {
+            }
+          }
+        }
+        button {
+          span {
+          }
         }
       }
     }

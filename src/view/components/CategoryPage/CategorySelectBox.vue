@@ -1,5 +1,8 @@
 <template>
-  <div class="CategorySelectBox" :style="`padding:${padding}!important`">
+  <div
+    :class="`CategorySelectBox ${ApplicationLanguage == 'ar' ? 'rtl' : ''}`"
+    :style="`padding:${padding}!important`"
+  >
     <div
       :style="
         `border:${border};  height:${height} ; margin:${margin}; width:${width} ; `
@@ -44,6 +47,7 @@
 export default {
   name: "CategorySelectBox",
   props: {
+    ApplicationLanguage: String,
     text: {
       type: String,
       default: " ",
@@ -230,6 +234,52 @@ export default {
     }
     .visible {
       visibility: visible;
+    }
+  }
+}
+
+.CategorySelectBox.rtl {
+  h1 {
+  }
+
+  .aselect {
+    p {
+      text-align: right;
+      justify-content: flex-end;
+      b {
+      }
+    }
+    .selector {
+      .arrow {
+        left: 30px;
+      }
+      .expanded {
+      }
+      .label {
+        span {
+          text-align: right !important;
+          justify-content: flex-end;
+        }
+      }
+    }
+
+    .selector:hover {
+    }
+    ul {
+    }
+    li {
+      text-align: right !important;
+      justify-content: flex-end;
+      &:hover {
+      }
+    }
+    li:last-child {
+    }
+    .current {
+    }
+    .hidden {
+    }
+    .visible {
     }
   }
 }

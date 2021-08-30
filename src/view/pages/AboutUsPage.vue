@@ -1,10 +1,11 @@
 <template>
-  <div class="AboutUsPage">
+  <div :class="`AboutUsPage ${ApplicationLanguage == 'ar' ? 'rtl' : ''}`">
     <div class="subpage-content">
       <div class="wrapper">
         <div class="layout">
           <div class="section">
             <LeftNav
+              :ApplicationLanguage="ApplicationLanguage"
               v-scrollanimation
               :profileNavList="Data.AboutUsPage.LeftNavData"
               :section="section"
@@ -16,6 +17,7 @@
             <transition name="fade">
               <div class="section__item" v-if="section == 'about'">
                 <TextContent
+                  :ApplicationLanguage="ApplicationLanguage"
                   v-scrollanimation
                   :paragraphs="Data.AboutUsPage.AboutUsData.Paragraphs"
                   :heading="Data.AboutUsPage.AboutUsData.Heading"
@@ -26,6 +28,7 @@
             <transition name="fade">
               <div class="section__item" v-if="section == 'member'">
                 <TextContent
+                  :ApplicationLanguage="ApplicationLanguage"
                   v-scrollanimation
                   :paragraphs="Data.AboutUsPage.MembershipData.Paragraphs"
                   :heading="Data.AboutUsPage.MembershipData.Heading"
@@ -36,6 +39,7 @@
             <transition name="fade">
               <div class="section__item" v-if="section == 'warn'">
                 <TextContent
+                  :ApplicationLanguage="ApplicationLanguage"
                   v-scrollanimation
                   :paragraphs="Data.AboutUsPage.LegalWarnData.Paragraphs"
                   :heading="Data.AboutUsPage.LegalWarnData.Heading"
@@ -46,6 +50,7 @@
             <transition name="fade">
               <div class="section__item" v-if="section == 'rules'">
                 <TextContent
+                  :ApplicationLanguage="ApplicationLanguage"
                   v-scrollanimation
                   :paragraphs="Data.AboutUsPage.RulesData.Paragraphs"
                   :heading="Data.AboutUsPage.RulesData.Heading"
@@ -56,6 +61,7 @@
             <transition name="fade">
               <div class="section__item" v-if="section == 'light'">
                 <TextContent
+                  :ApplicationLanguage="ApplicationLanguage"
                   v-scrollanimation
                   :paragraphs="Data.AboutUsPage.LightnessData.Paragraphs"
                   :heading="Data.AboutUsPage.LightnessData.Heading"
@@ -81,6 +87,7 @@ export default {
 
   props: {
     Data: Object,
+    ApplicationLanguage: String,
   },
   data: function() {
     return {
@@ -146,6 +153,27 @@ export default {
   }
 }
 
+.AboutUsPage.rtl {
+  .subpage-content {
+    .wrapper {
+      .layout {
+        flex-direction: row-reverse;
+        .section {
+          &__item {
+          }
+        }
+
+        .section:first-child {
+          margin-right: 0px;
+          margin-left: 25px;
+        }
+        .section:last-child {
+        }
+      }
+    }
+  }
+}
+
 @media (max-width: 700px) {
   .AboutUsPage {
     .fade-enter {
@@ -170,6 +198,27 @@ export default {
           }
           .section:last-child {
             width: 100%;
+          }
+        }
+      }
+    }
+  }
+
+  .AboutUsPage.rtl {
+    .subpage-content {
+      .wrapper {
+        .layout {
+          flex-direction: column;
+          .section {
+            &__item {
+            }
+          }
+
+          .section:first-child {
+            margin-right: 0px;
+            margin-left: 0px;
+          }
+          .section:last-child {
           }
         }
       }

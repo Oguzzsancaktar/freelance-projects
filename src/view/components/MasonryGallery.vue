@@ -1,5 +1,7 @@
 <template>
-  <div class="masonry__gallery">
+  <div
+    :class="`masonry__gallery ${ApplicationLanguage == 'ar' ? 'rtl' : ''}  `"
+  >
     <div class="wrapper">
       <div v-scrollanimation class="grid__gallery__nav">
         <div class="section">
@@ -48,6 +50,7 @@
           :class="item.Class"
         >
           <MasonryCard
+            :ApplicationLanguage="ApplicationLanguage"
             v-scrollanimation
             :text="item.Text"
             :text2="item.Text2"
@@ -68,6 +71,7 @@ export default {
   name: "MasonryGallery",
   props: {
     MasonryGalleryData: Object,
+    ApplicationLanguage: String,
   },
 };
 </script>
@@ -130,6 +134,33 @@ export default {
 
     .vertical {
       grid-row: span 2;
+    }
+  }
+}
+.masonry__gallery.rtl {
+  .wrapper {
+    .grid__gallery {
+      &__nav {
+        flex-direction: row-reverse;
+        .section {
+          justify-content: flex-end;
+          span {
+          }
+        }
+
+        .section:last-child {
+          flex-direction: row-reverse;
+          justify-content: flex-end;
+        }
+      }
+    }
+    .container {
+    }
+
+    div {
+    }
+
+    .vertical {
     }
   }
 

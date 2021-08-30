@@ -1,14 +1,14 @@
 <template>
   <div class="PreviewPage">
     <div class="subpage-content">
-      <TopBar />
-      <DetailHero />
-      <DetailTop />
-      <DetailInfo />
-      <DetailDescription />
-      <DetailFeatures />
-      <DetailInternalFeatures />
-      <NextEdit />
+      <TopBar :ApplicationLanguage="ApplicationLanguage" />
+      <DetailHero :ApplicationLanguage="ApplicationLanguage" />
+      <DetailTop :ApplicationLanguage="ApplicationLanguage" />
+      <DetailInfo :ApplicationLanguage="ApplicationLanguage" />
+      <DetailDescription :ApplicationLanguage="ApplicationLanguage" />
+      <DetailFeatures :ApplicationLanguage="ApplicationLanguage" />
+      <DetailInternalFeatures :ApplicationLanguage="ApplicationLanguage" />
+      <NextEdit :ApplicationLanguage="ApplicationLanguage" />
     </div>
   </div>
 </template>

@@ -1,10 +1,11 @@
 <template>
-  <div class="ProfilePage">
+  <div :class="`ProfilePage ${ApplicationLanguage == 'ar' ? 'rtl' : ''}`">
     <div class="subpage-content">
       <div class="wrapper">
         <div class="layout">
           <div v-scrollanimation class="section">
             <LeftNav
+              :ApplicationLanguage="ApplicationLanguage"
               :profileNavList="Data.ProfilePage.LeftNavData"
               :section="section"
               @update-section="update"
@@ -14,13 +15,17 @@
           <div v-scrollanimation class="section">
             <transition name="fade">
               <div class="section__item" v-if="section == 'profile'">
-                <MyProfile :MyProfileData="Data.ProfilePage.MyProfileData" />
+                <MyProfile
+                  :ApplicationLanguage="ApplicationLanguage"
+                  :MyProfileData="Data.ProfilePage.MyProfileData"
+                />
               </div>
             </transition>
 
             <transition name="fade">
               <div class="section__item" v-if="section == 'adverts'">
                 <CategoryGallery
+                  :ApplicationLanguage="ApplicationLanguage"
                   :Heading="Data.ProfilePage.CategoryGalleryData.Heading2"
                   :CategoryGalleryData="Data.ProfilePage.CategoryGalleryData"
                 />
@@ -30,6 +35,7 @@
             <transition name="fade">
               <div class="section__item" v-if="section == 'favs'">
                 <CategoryGallery
+                  :ApplicationLanguage="ApplicationLanguage"
                   :Heading="Data.ProfilePage.CategoryGalleryData.Heading1"
                   :CategoryGalleryData="Data.ProfilePage.CategoryGalleryData"
                 />
@@ -39,6 +45,7 @@
             <transition name="fade">
               <div class="section__item" v-if="section == 'messages'">
                 <ProfileMessages
+                  :ApplicationLanguage="ApplicationLanguage"
                   :MyProfileData="Data.ProfilePage.MyProfileData"
                 />
               </div>
@@ -65,6 +72,7 @@ export default {
   },
   props: {
     Data: Object,
+    ApplicationLanguage: String,
   },
   data: function() {
     return {
@@ -131,6 +139,27 @@ export default {
   }
 }
 
+.ProfilePage.rtl {
+  .subpage-content {
+    .wrapper {
+      .layout {
+        flex-direction: row-reverse;
+        .section {
+          &__item {
+          }
+        }
+
+        .section:first-child {
+          margin-left: 25px;
+          margin-right: 0;
+        }
+        .section:last-child {
+        }
+      }
+    }
+  }
+}
+
 @media (max-width: 700px) {
   .ProfilePage {
     .subpage-content {
@@ -150,6 +179,27 @@ export default {
             margin-top: 0px;
 
             width: 100%;
+          }
+        }
+      }
+    }
+  }
+
+  .ProfilePage.rtl {
+    .subpage-content {
+      .wrapper {
+        .layout {
+          flex-direction: column;
+          .section {
+            &__item {
+            }
+          }
+
+          .section:first-child {
+            margin-left: 0px;
+            margin-right: 0px;
+          }
+          .section:last-child {
           }
         }
       }

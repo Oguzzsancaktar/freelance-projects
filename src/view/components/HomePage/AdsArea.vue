@@ -1,5 +1,5 @@
 <template>
-  <div class="ads__area">
+  <div :class="`ads__area ${ApplicationLanguage == 'ar' ? 'rtl' : ''}  `">
     <div class="wrapper">
       <div class="ads__area__layout">
         <div class="info">
@@ -73,7 +73,7 @@ import ImageView from "../ImageView.vue";
 export default {
   components: { SearchSelect, Button, ImageView },
   name: "AdsArea",
-  props: { AdsAreaData: Object },
+  props: { AdsAreaData: Object, ApplicationLanguage: String },
 };
 </script>
 
@@ -125,6 +125,38 @@ export default {
         span.key-bg {
           color: var(--background-white);
           background: var(--color-third);
+        }
+      }
+    }
+  }
+}
+
+.ads__area.rtl {
+  .ads__area__layout {
+    flex-direction: row-reverse;
+  }
+  .image {
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+  }
+  .image.before-enter {
+  }
+  .image.enter {
+  }
+  .info {
+    text-align: right;
+    &__section {
+      flex-direction: row-reverse;
+      &__item {
+        margin: 0 10px;
+
+        /deep/.selector {
+          z-index: 999;
+          left: 0;
+        }
+      }
+      span {
+        span.key-bg {
         }
       }
     }

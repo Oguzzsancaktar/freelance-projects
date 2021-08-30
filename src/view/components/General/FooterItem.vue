@@ -1,6 +1,9 @@
 <template>
-  <div class="footers">
-    <div v-if="type == 'logo'" class="footer-item">
+  <div :class="`footers ${ApplicationLanguage == 'ar' ? 'rtl' : ''}  `">
+    <div
+      v-if="type == 'logo'"
+      :class="`footer-item ${ApplicationLanguage == 'ar' ? 'rtl' : ''}  `"
+    >
       <div class="section">
         <ImageView
           v-scrollanimation
@@ -200,6 +203,7 @@ export default {
   name: "FooterItem",
   components: { Button, ImageView },
   props: {
+    ApplicationLanguage: String,
     texts: {
       type: Array,
     },
@@ -279,6 +283,41 @@ export default {
             color: var(--color-secondary);
 
             text-decoration: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+.footers.rtl {
+  .footer-item {
+    align-items: flex-end;
+    &__image {
+      justify-content: flex-end !important;
+    }
+    .section {
+      text-align: right;
+      .reserved {
+        text-align: right;
+      }
+
+      b {
+        text-align: right;
+      }
+      .list {
+        &__item {
+          text-align: right;
+          a {
+            text-align: right;
+
+            span {
+              text-align: right;
+            }
+          }
+        }
+        &__item:hover {
+          span {
           }
         }
       }

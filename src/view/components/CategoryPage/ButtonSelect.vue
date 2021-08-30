@@ -1,5 +1,5 @@
 <template>
-  <div class="ButtonSelect">
+  <div :class="`ButtonSelect ${ApplicationLanguage == 'ar' ? 'rtl' : ''}`">
     <div class="buttons">
       <div
         v-for="(item, index) in ButtonSelectData"
@@ -21,6 +21,7 @@ export default {
   name: "ButtonSelect",
   props: {
     ButtonSelectData: Array,
+    ApplicationLanguage: String,
   },
   data: function() {
     return {
@@ -78,6 +79,24 @@ export default {
       border-bottom-right-radius: 0;
 
       border-bottom: 2px solid var(--color-primary);
+    }
+  }
+}
+
+.ButtonSelect.rtl {
+  .buttons {
+    // flex-direction: row-reverse;
+    .button {
+      span {
+      }
+    }
+
+    .button:first-child {
+    }
+    .button:last-child {
+    }
+
+    .button.active {
     }
   }
 }

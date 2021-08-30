@@ -1,18 +1,26 @@
 <template>
-  <div class="CategoryPage">
+  <div :class="`CategoryPage ${ApplicationLanguage == 'ar' ? 'rtl' : ''}`">
     <div class="subpage-content">
       <div class="wrapper">
         <div class="layout">
           <div class="section">
             <ButtonSelect
+              :ApplicationLanguage="ApplicationLanguage"
               :ButtonSelectData="Data.CategoryPage.ButtonSelectData"
             />
-            <Categories :CategoriesData="Data.CategoryPage.CategoriesData" />
+            <Categories
+              :ApplicationLanguage="ApplicationLanguage"
+              :CategoriesData="Data.CategoryPage.CategoriesData"
+            />
           </div>
 
           <div class="section">
-            <TopInfo :TopInfoData="Data.CategoryPage.TopInfoData" />
+            <TopInfo
+              :ApplicationLanguage="ApplicationLanguage"
+              :TopInfoData="Data.CategoryPage.TopInfoData"
+            />
             <CategoryGallery
+              :ApplicationLanguage="ApplicationLanguage"
               :Heading="Data.ProfilePage.CategoryGalleryData.Heading2"
               :CategoryGalleryData="Data.ProfilePage.CategoryGalleryData"
             />
@@ -38,6 +46,7 @@ export default {
   name: "CategoryPage",
   props: {
     Data: Object,
+    ApplicationLanguage: String,
   },
   mounted() {
     window.scrollTo({
@@ -66,6 +75,24 @@ export default {
           width: 275px;
           margin-right: 25px;
           margin-bottom: 25px;
+        }
+      }
+    }
+  }
+}
+
+.CategoryPage {
+  .subpage-content {
+    .wrapper {
+      .layout {
+        flex-direction: row-reverse;
+        .section {
+        }
+
+        .section:first-child {
+          width: 275px;
+          margin-right: 0px;
+          margin-left: 25px;
         }
       }
     }

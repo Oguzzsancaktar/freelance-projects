@@ -1,5 +1,5 @@
 <template>
-  <div class="BoostInfo">
+  <div :class="`BoostInfo ${ApplicationLanguage == 'ar' ? 'rtl' : ''}`">
     <div class="wrapper">
       <div class="layout">
         <section>
@@ -12,6 +12,7 @@
               </div>
               <div class="select">
                 <SelectBox
+                  :ApplicationLanguage="ApplicationLanguage"
                   family="var(--font-semibold)"
                   :List="BoostInfoData.List"
                   height="auto"
@@ -22,7 +23,7 @@
               </div>
               <div class="padding">
                 <div class="checkbox">
-                  <Checkbox />
+                  <Checkbox :ApplicationLanguage="ApplicationLanguage" />
 
                   <span> {{ BoostInfoData.Ebilling }} </span>
                 </div>
@@ -40,12 +41,12 @@
               </div>
               <div class="padding checkboxes">
                 <div class="checkbox">
-                  <Checkbox />
+                  <Checkbox :ApplicationLanguage="ApplicationLanguage" />
 
                   <span> {{ BoostInfoData.Checkbox1 }} </span>
                 </div>
                 <div class="checkbox">
-                  <Checkbox />
+                  <Checkbox :ApplicationLanguage="ApplicationLanguage" />
 
                   <span> {{ BoostInfoData.Checkbox2 }} </span>
                 </div>
@@ -61,7 +62,7 @@
               <div class="row">
                 <div class="input">
                   <span> {{ BoostInfoData.CardUser }} </span>
-                  <InputBox />
+                  <InputBox :ApplicationLanguage="ApplicationLanguage" />
                 </div>
               </div>
 
@@ -69,16 +70,16 @@
                 <span class="card-nums"> {{ BoostInfoData.CardUser }} </span>
                 <div class="four-input">
                   <div class="input">
-                    <InputBox />
+                    <InputBox :ApplicationLanguage="ApplicationLanguage" />
                   </div>
                   <div class="input">
-                    <InputBox />
+                    <InputBox :ApplicationLanguage="ApplicationLanguage" />
                   </div>
                   <div class="input">
-                    <InputBox />
+                    <InputBox :ApplicationLanguage="ApplicationLanguage" />
                   </div>
                   <div class="input">
-                    <InputBox />
+                    <InputBox :ApplicationLanguage="ApplicationLanguage" />
                   </div>
                 </div>
               </div>
@@ -91,6 +92,7 @@
                 <div class="two-select">
                   <div class="select">
                     <SelectBox
+                      :ApplicationLanguage="ApplicationLanguage"
                       family="var(--font-semibold)"
                       :List="BoostInfoData.Months"
                       height="auto"
@@ -101,6 +103,7 @@
                   </div>
                   <div class="select">
                     <SelectBox
+                      :ApplicationLanguage="ApplicationLanguage"
                       family="var(--font-semibold)"
                       :List="BoostInfoData.Years"
                       height="auto"
@@ -116,7 +119,7 @@
                   {{ BoostInfoData.SecCode }}
                 </span>
                 <div class="input">
-                  <InputBox />
+                  <InputBox :ApplicationLanguage="ApplicationLanguage" />
                 </div>
               </div>
             </div>
@@ -155,6 +158,7 @@ export default {
   name: "BoostInfo",
   props: {
     BoostInfoData: Object,
+    ApplicationLanguage: String,
   },
 };
 </script>
@@ -309,6 +313,58 @@ export default {
   }
 }
 
+.BoostInfo.rtl {
+  .wrapper {
+    .layout {
+      flex-direction: row-reverse;
+      section {
+        .col {
+          .item {
+            .heading {
+              h3 {
+                text-align: right;
+                justify-content: flex-end;
+              }
+            }
+            .select {
+            }
+            .padding {
+              .checkbox {
+                flex-direction: row-reverse;
+
+                justify-content: flex-start;
+              }
+            }
+
+            .row {
+              .input {
+                text-align: right;
+                justify-content: flex-end;
+              }
+
+              .four-input {
+                text-align: right;
+                justify-content: flex-end;
+                .input {
+                  text-align: right;
+                  justify-content: flex-end;
+                }
+              }
+            }
+          }
+        }
+
+        .col {
+          .card-nums {
+            text-align: right;
+            justify-content: flex-end;
+          }
+        }
+      }
+    }
+  }
+}
+
 @media (max-width: 900px) {
   .BoostInfo {
     .wrapper {
@@ -347,6 +403,58 @@ export default {
           }
 
           .col {
+          }
+        }
+      }
+    }
+  }
+
+  .BoostInfo.rtl {
+    .wrapper {
+      .layout {
+        flex-direction: column;
+        section {
+          .col {
+            .item {
+              .heading {
+                h3 {
+                  text-align: right;
+                  justify-content: flex-end;
+                }
+              }
+              .select {
+              }
+              .padding {
+                .checkbox {
+                  flex-direction: row-reverse;
+
+                  justify-content: flex-start;
+                }
+              }
+
+              .row {
+                .input {
+                  text-align: right;
+                  justify-content: flex-end;
+                }
+
+                .four-input {
+                  text-align: right;
+                  justify-content: flex-end;
+                  .input {
+                    text-align: right;
+                    justify-content: flex-end;
+                  }
+                }
+              }
+            }
+          }
+
+          .col {
+            .card-nums {
+              text-align: right;
+              justify-content: flex-end;
+            }
           }
         }
       }

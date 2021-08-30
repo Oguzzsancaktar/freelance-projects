@@ -1,5 +1,5 @@
 <template>
-  <div class="layout">
+  <div :class="`layout ${ApplicationLanguage == 'ar' ? 'rtl' : ''}`">
     <p :style="`font-family:${family}; color:${textColor}`">
       {{ text }} <b v-if="isRequired">*</b>
     </p>
@@ -37,6 +37,7 @@ export default {
       type: Boolean,
       default: false,
     },
+    ApplicationLanguage: String,
   },
 
   data: function() {
@@ -112,6 +113,31 @@ export default {
       width: 100%;
       border: transparent;
       height: 200px;
+    }
+  }
+}
+
+.layout.rtl {
+  p {
+    text-align: right;
+    b {
+    }
+  }
+
+  .quillEditor {
+    display: flex;
+    align-self: flex-end;
+    text-align: right;
+    /deep/ .quill-editor {
+      * {
+        text-align: right;
+      }
+    }
+
+    /deep/ .ql-toolbar.ql-snow {
+    }
+
+    /deep/ .ql-container {
     }
   }
 }

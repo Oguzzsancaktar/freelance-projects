@@ -1,9 +1,12 @@
 <template>
-  <div class="DetailHero">
+  <div :class="`DetailHero  ${ApplicationLanguage == 'ar' ? 'rtl' : ''}`">
     <div class="wrapper">
       <div class="wrapper__relative">
         <div class="card">
-          <InfoCard :InfoCardData="DetailHeroData.InfoCardData" />
+          <InfoCard
+            :ApplicationLanguage="ApplicationLanguage"
+            :InfoCardData="DetailHeroData.InfoCardData"
+          />
         </div>
       </div>
     </div>
@@ -84,6 +87,20 @@ export default {
       top: 50%;
       right: 0;
       transform: translateY(-50%);
+    }
+  }
+}
+
+.DetailHero {
+  .layout {
+    .item {
+    }
+  }
+  .wrapper {
+    &__relative {
+    }
+    .card {
+      left: 0;
     }
   }
 }

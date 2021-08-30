@@ -1,5 +1,5 @@
 <template>
-  <div class="SignInCard">
+  <div :class="`SignInCard ${ApplicationLanguage == 'ar' ? 'rtl' : ''}`">
     <div class="layout">
       <div v-on:click="this.hideSign" class="close-button">
         <Button
@@ -159,6 +159,7 @@ export default {
   components: { Button, ImageView },
   props: {
     SignInData: Object,
+    ApplicationLanguage: String,
   },
   methods: {
     hideSign: function() {
@@ -313,6 +314,67 @@ export default {
       .area:hover {
         transition: 0.4s;
         border: 1px solid var(--color-secondary);
+      }
+    }
+  }
+}
+
+.SignInCard.rtl {
+  .layout {
+    .close-button {
+    }
+    .close-button:hover {
+    }
+
+    .section {
+      .text {
+        text-align: right;
+      }
+      .header {
+        // text-align: right;
+      }
+
+      .input {
+        input {
+          text-align: right;
+        }
+      }
+      .button {
+      }
+    }
+
+    .section:last-child {
+    }
+
+    .forget {
+      text-align: right;
+    }
+
+    .forget:hover {
+    }
+
+    .divider {
+      hr {
+      }
+    }
+    .social {
+      text-align: right;
+
+      .area {
+        flex-direction: row-reverse;
+        .icon {
+          margin-right: 0;
+          margin-left: 6px;
+        }
+        span {
+          b {
+          }
+        }
+      }
+      .area:first-child {
+      }
+
+      .area:hover {
       }
     }
   }

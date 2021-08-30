@@ -1,5 +1,5 @@
 <template>
-  <div class="ProfileNav">
+  <div :class="`ProfileNav ${ApplicationLanguage == 'ar' ? 'rtl' : ''}`">
     <div class="layout">
       <ul class="list">
         <li
@@ -32,7 +32,7 @@
               width="100%"
               textAlign="start"
               marginLeft="5px"
-              textMargin=" 0 0 0 7px!important"
+              textMargin=" 0 0 0 7px"
             />
 
             <div v-scrollanimation class="counter-circle">
@@ -57,6 +57,7 @@ export default {
       default: "profile",
     },
     profileNavList: Array,
+    ApplicationLanguage: String,
   },
   data: function() {
     return {
@@ -127,6 +128,39 @@ export default {
           transition: 0.4s;
           color: var(--color-primary) !important;
         }
+      }
+    }
+  }
+}
+
+.ProfileNav.rtl {
+  .layout {
+    .list {
+      .item {
+        justify-content: flex-end;
+        display: flex;
+
+        button {
+          width: 100%;
+          text-align: right;
+          align-self: flex-end;
+          display: flex;
+          flex-direction: row-reverse;
+
+          /deep/button {
+            justify-content: flex-start !important;
+          }
+          .counter-circle {
+          }
+
+          /deep/ .default-button {
+            justify-content: flex-end;
+          }
+        }
+      }
+      .item.active {
+        border-left: transparent;
+        border-right: 1px solid var(--color-primary);
       }
     }
   }

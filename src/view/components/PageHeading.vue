@@ -1,5 +1,5 @@
 <template>
-  <div class="PageHeading">
+  <div :class="`PageHeading ${ApplicationLanguage == 'ar' ? 'rtl' : ''}`">
     <div class="wrapper">
       <div class="layout">
         <div class="heading">
@@ -43,6 +43,23 @@ export default {
       .description {
         font-size: 15px;
         font-family: var(--font-semilight);
+      }
+    }
+  }
+}
+
+.PageHeading.rtl {
+  .wrapper {
+    .layout {
+      .heading {
+        h3 {
+          text-align: right;
+          justify-content: flex-end;
+        }
+      }
+      .description {
+        text-align: right;
+        justify-content: flex-end;
       }
     }
   }

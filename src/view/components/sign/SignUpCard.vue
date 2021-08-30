@@ -1,5 +1,5 @@
 <template>
-  <div class="SignUpCard">
+  <div :class="`SignUpCard ${ApplicationLanguage == 'ar' ? 'rtl' : ''}`">
     <div class="layout">
       <div @click="this.hideSign" class="close-button">
         <Button
@@ -146,6 +146,7 @@ export default {
   components: { Button, ImageView, Checkbox },
   props: {
     SignUpData: Object,
+    ApplicationLanguage: String,
   },
   methods: {
     hideSign: function() {
@@ -306,6 +307,70 @@ export default {
       .area:hover {
         transition: 0.4s;
         border: 1px solid var(--color-secondary);
+      }
+    }
+  }
+}
+
+.SignUpCard.rtl {
+  .layout {
+    .close-button {
+    }
+    .close-button:hover {
+    }
+
+    .section {
+      .header {
+        // text-align: right;
+      }
+
+      .input {
+        input {
+          text-align: right;
+        }
+      }
+      .checkbox {
+        justify-content: flex-start;
+        flex-direction: row-reverse;
+        span {
+          margin-right: 6px;
+          text-align: right;
+          a {
+          }
+        }
+      }
+      .button {
+      }
+    }
+
+    .forget {
+      text-align: right;
+    }
+    .forget:hover {
+    }
+
+    .divider {
+      hr {
+      }
+    }
+    .social {
+      text-align: right;
+
+      .area {
+        flex-direction: row-reverse;
+        .icon {
+          margin-right: 0;
+          margin-left: 6px;
+        }
+        span {
+          b {
+          }
+        }
+      }
+      .area:first-child {
+      }
+
+      .area:hover {
       }
     }
   }

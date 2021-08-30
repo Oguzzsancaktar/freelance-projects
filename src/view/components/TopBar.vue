@@ -1,5 +1,5 @@
 <template>
-  <div class="TopBar">
+  <div :class="`TopBar ${ApplicationLanguage == 'ar' ? 'rtl' : ''}`">
     <div class="wrapper">
       <div class="layout">
         <div @click="changeSection(0)" class="item">
@@ -73,7 +73,11 @@
         </div>
 
         <div class="item progress">
-          <ProgressBar v-scrollanimation :data="TopBarData.Entered" />
+          <ProgressBar
+            :ApplicationLanguage="ApplicationLanguage"
+            v-scrollanimation
+            :data="TopBarData.Entered"
+          />
         </div>
       </div>
     </div>
@@ -87,6 +91,7 @@ export default {
   name: "TopBar",
   components: { Button, ProgressBar },
   props: {
+    ApplicationLanguage: String,
     section: {
       type: Number,
       default: 0,
@@ -151,6 +156,24 @@ export default {
       .item.progress {
         padding: 0 25px;
         border-right: none;
+      }
+    }
+  }
+}
+
+.TopBar.rtl {
+  .wrapper {
+    .layout {
+      flex-direction: row-reverse;
+      .item {
+        /deep/.button-together {
+          span:first-child {
+          }
+          span:last-child {
+          }
+        }
+      }
+      .item.progress {
       }
     }
   }

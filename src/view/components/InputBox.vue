@@ -1,5 +1,8 @@
 <template>
-  <div class="InputBox" :style="`padding:${padding}!important`">
+  <div
+    :class="`InputBox ${ApplicationLanguage == 'ar' ? 'rtl' : ''}`"
+    :style="`padding:${padding}!important`"
+  >
     <div
       :style="
         `border:${border}; border-radius:30px; height:${height} ; margin:${margin}; width:${width}; `
@@ -70,6 +73,7 @@ export default {
       type: Boolean,
       default: false,
     },
+    ApplicationLanguage: String,
   },
 };
 </script>
@@ -104,6 +108,23 @@ export default {
     transition: 0.4s;
 
     border: 1px solid var(--color-primary);
+  }
+}
+
+.InputBox.rtl {
+  p {
+    text-align: right;
+    margin-right: 8px;
+
+    b {
+    }
+  }
+
+  input {
+    text-align: right;
+  }
+  input:hover,
+  input:focus {
   }
 }
 

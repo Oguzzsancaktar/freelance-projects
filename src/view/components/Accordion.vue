@@ -1,5 +1,8 @@
 <template>
-  <div @click="collapseAccordion()" class="Accordion">
+  <div
+    @click="collapseAccordion()"
+    :class="`Accordion ${ApplicationLanguage == 'ar' ? 'rtl' : ''}`"
+  >
     <div class="layout">
       <section>
         <div class="heading">
@@ -48,6 +51,7 @@ export default {
   props: {
     messages: Object,
     index: Number,
+    ApplicationLanguage: String,
   },
 
   methods: {
@@ -123,6 +127,27 @@ export default {
       max-height: 200px;
       transition: 0.7s;
       overflow-y: scroll;
+    }
+  }
+}
+
+.Accordion {
+  .layout {
+    section {
+      .heading {
+        flex-direction: row-reverse;
+        h3 {
+        }
+      }
+    }
+
+    section.hiding-area {
+      .description {
+        text-align: right;
+      }
+    }
+
+    section.hiding-area.show {
     }
   }
 }

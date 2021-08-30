@@ -1,5 +1,5 @@
 <template>
-  <div class="AdvertCategory">
+  <div :class="`AdvertCategory ${ApplicationLanguage == 'ar' ? 'rtl' : ''}`">
     <div class="wrapper">
       <div class="layout">
         <div class="heading">
@@ -13,6 +13,7 @@
               class="item"
             >
               <SelectBox
+                :ApplicationLanguage="ApplicationLanguage"
                 v-scrollanimation
                 family="var(--font-semibold)"
                 :text="item.Text"
@@ -69,6 +70,7 @@ export default {
   components: { SelectBox, Button },
   props: {
     AdvertCategoryData: Object,
+    ApplicationLanguage: String,
   },
 };
 </script>
@@ -130,6 +132,33 @@ export default {
   }
 }
 
+.AdvertCategory.rtl {
+  .wrapper {
+    .layout {
+      .heading {
+        h2 {
+          text-align: right;
+          justify-content: flex-end;
+        }
+      }
+
+      .area {
+        flex-direction: row-reverse;
+
+        &__left {
+        }
+        &__right {
+        }
+
+        .item {
+          /deep/ button {
+          }
+        }
+      }
+    }
+  }
+}
+
 @media (max-width: 900px) {
   .AdvertCategory {
     margin: 30px 0;
@@ -162,6 +191,36 @@ export default {
                 .together-text {
                   justify-content: start !important;
                 }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .AdvertCategory.rtl {
+    .wrapper {
+      .layout {
+        .heading {
+          h2 {
+            text-align: right;
+            justify-content: flex-end;
+          }
+        }
+
+        .area {
+          flex-direction: column;
+
+          &__left {
+          }
+          &__right {
+          }
+
+          .item {
+            /deep/ button {
+              .together-text {
+                justify-content: flex-end !important;
               }
             }
           }

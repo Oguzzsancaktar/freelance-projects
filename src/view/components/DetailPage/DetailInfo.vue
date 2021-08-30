@@ -1,5 +1,5 @@
 <template>
-  <div class="DetailInfo">
+  <div :class="`DetailInfo ${ApplicationLanguage == 'ar' ? 'rtl' : ''}`">
     <div class="wrapper">
       <div class="layout">
         <div class="area">
@@ -29,7 +29,7 @@
             <Button
               color="var(--color-secondary)"
               textColor="var(--color-text-general)"
-              width="100px"
+              width="105px"
               :text="DetailInfoData.Feature2"
               radius="10px"
               type="together"
@@ -100,6 +100,7 @@
             iconWidth="22px"
             iconHeight="21px"
             fontSize="25px"
+            iconAreaW="auto"
             justify="center"
           />
         </div>
@@ -115,6 +116,7 @@ export default {
   components: { Button },
   props: {
     DetailInfoData: Object,
+    ApplicationLanguage: String,
   },
 };
 </script>
@@ -150,6 +152,28 @@ export default {
   }
 }
 
+.DetailInfo.rtl {
+  .wrapper {
+    .layout {
+      flex-direction: row-reverse;
+      .area {
+        .section {
+          display: flex;
+          flex-direction: row-reverse;
+          justify-content: flex-start;
+
+          /deep/.together-text {
+            margin-left: 0 !important;
+            margin-right: 5px;
+          }
+          h3 {
+          }
+        }
+      }
+    }
+  }
+}
+
 @media (max-width: 900px) {
   .DetailInfo {
     margin: 20px 0;
@@ -170,9 +194,27 @@ export default {
       }
     }
   }
+
+  .DetailInfo.rtl {
+    .wrapper {
+      .layout {
+        flex-direction: column;
+        .area {
+          .section {
+            flex-direction: row-reverse;
+
+            /deep/.together-text {
+            }
+            h3 {
+            }
+          }
+        }
+      }
+    }
+  }
 }
 
-@media (max-width: 900px) {
+@media (max-width: 500px) {
   .DetailInfo {
     margin: 20px 0;
 
@@ -184,10 +226,28 @@ export default {
 
           .section {
             flex-direction: column;
-            display: flex;
-            justify-content: space-between;
+            justify-content: center;
+            align-items: center;
+            h3 {
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .DetailInfo.rtl {
+    .wrapper {
+      .layout {
+        flex-direction: column;
+        .area {
+          .section {
+            flex-direction: column;
+            justify-content: center;
             align-items: center;
 
+            /deep/.together-text {
+            }
             h3 {
             }
           }

@@ -1,5 +1,5 @@
 <template>
-  <div class="CategoryGallery">
+  <div :class="`CategoryGallery ${ApplicationLanguage == 'ar' ? 'rtl' : ''}`">
     <section>
       <div class="heading">
         <h3 v-scrollanimation>
@@ -12,6 +12,7 @@
       <div class="wrapper">
         <div class="grid__gallery__layout">
           <DetailCard
+            :ApplicationLanguage="ApplicationLanguage"
             v-scrollanimation
             v-for="(item, index) in CategoryGalleryData.CardData"
             :key="index"
@@ -31,6 +32,7 @@ export default {
   components: { DetailCard },
   name: "CategoryGallery",
   props: {
+    ApplicationLanguage: String,
     CategoryGalleryData: Object,
     Heading: String,
   },
@@ -111,6 +113,38 @@ export default {
     }
   }
 }
+
+.CategoryGallery.rtl {
+  section {
+    .heading {
+      h3 {
+        text-align: right;
+        justify-content: flex-end;
+      }
+    }
+  }
+
+  .grid__gallery {
+    .wrapper {
+      width: 100%;
+    }
+
+    &__nav {
+      .section {
+        span {
+        }
+      }
+
+      .section:last-child {
+      }
+    }
+    &__layout {
+      &__item {
+      }
+    }
+  }
+}
+
 @media (max-width: 1300px) {
   .CategoryGallery {
     section {

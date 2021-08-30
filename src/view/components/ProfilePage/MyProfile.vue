@@ -1,5 +1,5 @@
 <template>
-  <div class="MyProfile">
+  <div :class="`MyProfile ${ApplicationLanguage == 'ar' ? 'rtl' : ''}`">
     <div class="layout">
       <section>
         <div class="heading">
@@ -19,6 +19,7 @@
               class="row"
             >
               <InputBox
+                :ApplicationLanguage="ApplicationLanguage"
                 textColor="var(--color-text-general)"
                 family="var(--font-medium)"
                 v-for="(j, Jindex) in item.List"
@@ -37,6 +38,7 @@
           <div class="column">
             <div class="row">
               <InputBox
+                :ApplicationLanguage="ApplicationLanguage"
                 v-scrollanimation
                 textColor="var(--color-text-general)"
                 family="var(--font-medium)"
@@ -90,6 +92,7 @@ export default {
   name: "MyProfile",
   props: {
     MyProfileData: Object,
+    ApplicationLanguage: String,
   },
   components: { InputBox, Button },
 };
@@ -154,12 +157,71 @@ export default {
   }
 }
 
+.MyProfile.rtl {
+  .layout {
+    section {
+      .heading {
+        h3 {
+          text-align: right;
+          justify-content: flex-end;
+        }
+      }
+      .column {
+        padding: 20px 0;
+
+        .row {
+          padding: 20px;
+          flex-direction: row-reverse;
+          /deep/ .aselect {
+          }
+
+          .btn {
+          }
+        }
+        .row:last-child {
+          padding: 0 20px !important;
+        }
+      }
+    }
+  }
+}
+
 @media (max-width: 850px) {
   .MyProfile {
     .layout {
       section {
         .heading {
           h3 {
+          }
+        }
+        .column {
+          padding: 20px 0;
+
+          .row {
+            padding: 20px;
+            flex-direction: column;
+            /deep/ .aselect {
+            }
+
+            .btn {
+              justify-content: center;
+            }
+          }
+          .row:last-child {
+            padding: 0 20px !important;
+          }
+        }
+      }
+    }
+  }
+
+  .MyProfile.rtl {
+    .layout {
+      section {
+        .heading {
+          h3 {
+            text-align: right;
+            justify-content: flex-end;
           }
         }
         .column {

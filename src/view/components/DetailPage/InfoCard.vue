@@ -1,5 +1,5 @@
 <template>
-  <div class="InfoCard">
+  <div :class="`InfoCard ${ApplicationLanguage == 'ar' ? 'rtl' : ''}`">
     <div class="layout">
       <div class="area">
         <ImageView
@@ -90,6 +90,7 @@ export default {
   components: { Button, ImageView },
   props: {
     InfoCardData: Object,
+    ApplicationLanguage: String,
   },
 };
 </script>
@@ -123,6 +124,43 @@ export default {
         justify-content: space-between;
       }
       .buttons {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        .btn {
+          margin: 3px 0;
+        }
+      }
+    }
+
+    .area:first-child {
+      height: 100px;
+      border-bottom: 1px solid var(--background-general);
+    }
+    .area:last-child {
+      height: 50px;
+      border-top: 1px solid var(--background-general);
+
+      /deep/ .default-button {
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.InfoCard.rtl {
+  .layout {
+    .area {
+      .texts {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        text-align: right;
+      }
+      .buttons {
+        text-align: right;
         display: flex;
         flex-direction: column;
         align-items: center;

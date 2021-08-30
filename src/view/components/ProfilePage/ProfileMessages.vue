@@ -1,5 +1,5 @@
 <template>
-  <div class="ProfileMessages">
+  <div :class="`ProfileMessages ${ApplicationLanguage == 'ar' ? 'rtl' : ''}`">
     <div class="layout">
       <section>
         <div class="heading">
@@ -16,7 +16,12 @@
           :key="index"
           class="item"
         >
-          <Accordion v-scrollanimation :messages="item" :index="index" />
+          <Accordion
+            :ApplicationLanguage="ApplicationLanguage"
+            v-scrollanimation
+            :messages="item"
+            :index="index"
+          />
         </li>
       </ul>
     </div>
@@ -29,6 +34,7 @@ export default {
   components: { Accordion },
   props: {
     MyProfileData: Object,
+    ApplicationLanguage: String,
   },
 };
 </script>
@@ -71,6 +77,23 @@ export default {
       .item {
         margin: 20px 0;
         width: 100%;
+      }
+    }
+  }
+}
+
+.ProfileMessages.rtl {
+  .layout {
+    section {
+      .heading {
+        h3 {
+          text-align: right;
+          justify-content: flex-end;
+        }
+      }
+    }
+    .list {
+      .item {
       }
     }
   }

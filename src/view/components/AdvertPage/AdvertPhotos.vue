@@ -1,5 +1,5 @@
 <template>
-  <div class="AdvertPhotos">
+  <div :class="`AdvertPhotos ${ApplicationLanguage == 'ar' ? 'rtl' : ''}`">
     <div class="wrapper">
       <div class="heading">
         <h2>{{ AdvertPhotosData.Heading }}</h2>
@@ -42,6 +42,7 @@ export default {
   components: { Button },
   props: {
     AdvertPhotosData: Object,
+    ApplicationLanguage: String,
   },
 };
 </script>
@@ -85,6 +86,23 @@ export default {
 
         /deep/ .default-button {
           cursor: pointer;
+        }
+      }
+    }
+  }
+}
+.AdvertPhotos {
+  .wrapper {
+    .heading {
+      h2 {
+        text-align: right;
+        justify-content: flex-end;
+      }
+    }
+    .photos {
+      flex-direction: row-reverse;
+      .photo {
+        /deep/ .default-button {
         }
       }
     }

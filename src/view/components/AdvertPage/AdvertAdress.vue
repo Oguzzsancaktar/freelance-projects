@@ -1,5 +1,5 @@
 <template>
-  <div class="AdvertAdress">
+  <div :class="`AdvertAdress ${ApplicationLanguage == 'ar' ? 'rtl' : ''}`">
     <div class="wrapper">
       <div class="layout">
         <div class="heading">
@@ -15,6 +15,7 @@
                 class="item"
               >
                 <SelectBox
+                  :ApplicationLanguage="ApplicationLanguage"
                   family="var(--font-semibold)"
                   :text="item.Text"
                   :List="item.List"
@@ -68,6 +69,7 @@ export default {
   components: { Button, SelectBox },
   props: {
     AdvertAdressData: Object,
+    ApplicationLanguage: String,
   },
 };
 </script>
@@ -123,6 +125,37 @@ export default {
         }
         &__right {
           width: 25%;
+        }
+        .item {
+        }
+      }
+    }
+  }
+}
+
+.AdvertAdress.rtl {
+  .wrapper {
+    .layout {
+      .heading {
+        h2 {
+          text-align: right;
+          justify-content: flex-end;
+        }
+      }
+      .area {
+        flex-direction: row-reverse;
+        padding: 20px 40px;
+
+        &__left {
+          .row {
+            .item {
+            }
+          }
+
+          .SelectBox {
+          }
+        }
+        &__right {
         }
         .item {
         }
@@ -196,6 +229,42 @@ export default {
                 .together-text {
                   justify-content: start !important;
                 }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .AdvertAdress.rtl {
+    .wrapper {
+      .layout {
+        .heading {
+          h2 {
+            text-align: right;
+            justify-content: flex-end;
+          }
+        }
+        .area {
+          flex-direction: column;
+          padding: 20px 40px;
+
+          &__left {
+            .row {
+              .item {
+              }
+            }
+
+            .SelectBox {
+            }
+          }
+          &__right {
+          }
+          .item {
+            /deep/ button {
+              .together-text {
+                justify-content: flex-end !important;
               }
             }
           }

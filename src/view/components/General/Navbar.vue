@@ -1,16 +1,16 @@
 <template>
   <div v-scrollanimation id="Navbar">
     <div class="wrapper">
-      <div class="layout">
+      <div :class="`layout ${ApplicationLanguage == 'ar' ? 'rtl' : ''}  `">
         <div v-scrollanimation class="area vertical-center">
-          <!-- <router-link to="/"> -->
           <router-link to="/">
             <ImageView width="100%" imageType="svg" imageName="logo.svg" />
           </router-link>
-          <!-- </router-link> -->
         </div>
         <div class="area  vertical-center">
-          <div class="area__layout">
+          <div
+            :class="`area__layout ${ApplicationLanguage == 'ar' ? 'rtl' : ''}`"
+          >
             <div class="area__layout__section ">
               <router-link to="/profile">
                 <Button
@@ -59,7 +59,14 @@
               </router-link>
             </div>
 
-            <div v-scrollanimation class="area__layout__section">
+            <div
+              v-scrollanimation
+              :class="
+                `area__layout__section ${
+                  ApplicationLanguage == 'ar' ? 'rtl' : ''
+                }`
+              "
+            >
               <Navlink
                 textColor="var(--color-nav-link)"
                 fontSize="16px"
@@ -98,7 +105,13 @@
         </div>
 
         <div class="area vertical-center login-language">
-          <div class="area__layout__section">
+          <div
+            :class="
+              `area__layout__section ${
+                ApplicationLanguage == 'ar' ? 'rtl' : ''
+              }`
+            "
+          >
             <div v-on:click="this.showSignin" class="control-sign">
               <Button
                 v-scrollanimation
@@ -138,34 +151,38 @@
 
               <div class="language-control__collapse">
                 <div @click="languageControl('en')" class="item">
-                  <Button
-                    v-scrollanimation
-                    family="var(--font-medium)"
-                    textColor="var(--color-text-gray)"
-                    fontSize="15px"
-                    color="white"
-                    background="transparent"
-                    :text="NavbarData.Lang1"
-                    radius="0"
-                    type="text"
-                    width="60px"
-                    hoverClass="hover-text-primary"
-                  />
+                  <a href="">
+                    <Button
+                      v-scrollanimation
+                      family="var(--font-medium)"
+                      textColor="var(--color-text-gray)"
+                      fontSize="15px"
+                      color="white"
+                      background="transparent"
+                      :text="NavbarData.Lang1"
+                      radius="0"
+                      type="text"
+                      width="60px"
+                      hoverClass="hover-text-primary"
+                    />
+                  </a>
                 </div>
                 <div @click="languageControl('ar')" class="item">
-                  <Button
-                    v-scrollanimation
-                    family="var(--font-medium)"
-                    textColor="var(--color-text-gray)"
-                    fontSize="15px"
-                    color="white"
-                    background="transparent"
-                    :text="NavbarData.Lang2"
-                    radius="0px"
-                    type="text"
-                    width="60px"
-                    hoverClass="hover-text-primary"
-                  />
+                  <a href="">
+                    <Button
+                      v-scrollanimation
+                      family="var(--font-medium)"
+                      textColor="var(--color-text-gray)"
+                      fontSize="15px"
+                      color="white"
+                      background="transparent"
+                      :text="NavbarData.Lang2"
+                      radius="0px"
+                      type="text"
+                      width="60px"
+                      hoverClass="hover-text-primary"
+                    />
+                  </a>
                 </div>
               </div>
             </div>
@@ -190,6 +207,7 @@ export default {
   name: "Navbar",
   props: {
     NavbarData: Object,
+    ApplicationLanguage: String,
   },
 
   data: function() {
@@ -353,8 +371,19 @@ export default {
             margin: 0 15px;
           }
         }
+        &__section.rtl {
+          flex-direction: row-reverse;
+        }
+      }
+
+      &__layout.rtl {
+        flex-direction: row-reverse;
       }
     }
+  }
+
+  .layout.rtl {
+    flex-direction: row-reverse;
   }
 }
 
