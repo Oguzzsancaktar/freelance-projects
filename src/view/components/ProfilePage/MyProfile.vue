@@ -59,6 +59,7 @@
             <div class="row">
               <div class="btn">
                 <Button
+                  :ApplicationLanguage="ApplicationLanguage"
                   v-scrollanimation
                   textTransfrom="uppercase"
                   border="1px solid var(--color-secondary)"

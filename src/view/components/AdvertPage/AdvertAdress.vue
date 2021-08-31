@@ -31,6 +31,7 @@
           <div class="area__right">
             <div class="item icon">
               <Button
+                :ApplicationLanguage="ApplicationLanguage"
                 margin="auto"
                 padding="0px"
                 direction="row"

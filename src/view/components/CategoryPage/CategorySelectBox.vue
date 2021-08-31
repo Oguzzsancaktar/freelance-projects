@@ -214,12 +214,17 @@ export default {
       font-family: var(--font-medium);
       background: var(--background-white);
       transition: background 0.4s;
+      border-left: 1px solid transparent;
+      border-right: 1px solid transparent;
+
+      transition: border 0.4s, color 0.4s;
 
       &:hover {
-        transition: background 0.4s;
-        color: white;
-        background: var(--color-secondary);
+        transition: border 0.4s, color 0.4s;
+
         cursor: pointer;
+        color: var(--color-secondary);
+        border-left: 1px solid var(--color-secondary);
       }
     }
     li:last-child {
@@ -271,11 +276,19 @@ export default {
       text-align: right !important;
       justify-content: flex-end;
       &:hover {
+        transition: 0.4s;
+
+        border-left: 1px solid transparent;
+        border-right: 1px solid var(--color-secondary);
       }
     }
     li:last-child {
     }
     .current {
+      transition: 0.4s;
+
+      border-left: 1px solid transparent;
+      border-right: 1px solid var(--color-secondary);
     }
     .hidden {
     }

@@ -77,12 +77,12 @@ export default {
     zIndex: {
       type: Number,
     },
+    ApplicationLanguage: String,
   },
   data: function() {
     return {
       value: "Select ",
       visible: false,
-      ApplicationLanguage: localStorage.ApplicationLanguage,
     };
   },
   methods: {
@@ -197,13 +197,15 @@ export default {
       font-family: var(--font-medium);
       background: var(--background-white);
 
-      transition: background 0.4s;
+      transition: border 0.4s, color 0.4s;
 
       &:hover {
-        color: white;
-        transition: background 0.4s;
+        color: var(--color-secondary);
+        transition: border 0.4s, color 0.4s;
 
-        background: var(--color-secondary);
+        border-left: 1px solid var(--color-secondary);
+
+        // background: var(--color-secondary);
       }
     }
     li:last-child {
@@ -252,8 +254,16 @@ export default {
     ul {
     }
     li {
-      text-align: right;
+      border-right: 1px solid transparent;
+
+      text-align: right !important;
+      transition: border 0.4s, color 0.4s;
+
       &:hover {
+        transition: border 0.4s, color 0.4s;
+
+        border-left: transparent;
+        border-right: 1px solid var(--color-secondary);
       }
     }
     li:last-child {

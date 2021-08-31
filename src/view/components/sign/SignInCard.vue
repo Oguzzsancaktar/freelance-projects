@@ -3,6 +3,7 @@
     <div class="layout">
       <div v-on:click="this.hideSign" class="close-button">
         <Button
+          :ApplicationLanguage="ApplicationLanguage"
           v-scrollanimation
           background="var(--color-secondary)"
           family="var(--font-medium)"
@@ -41,6 +42,7 @@
         </div>
         <div class="button">
           <Button
+            :ApplicationLanguage="ApplicationLanguage"
             v-scrollanimation
             color="var(--background-white)"
             textColor="var(--background-white)"
@@ -117,6 +119,7 @@
         </div>
         <div @click="this.showSignup" class="button">
           <Button
+            :ApplicationLanguage="ApplicationLanguage"
             v-scrollanimation
             color="var(--background-white)"
             textColor="var(--color-primary)"

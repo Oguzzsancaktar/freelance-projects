@@ -13,6 +13,7 @@
               </div>
               <router-link to="/category">
                 <Button
+                  :ApplicationLanguage="ApplicationLanguage"
                   v-scrollanimation
                   color="var(--background-white)"
                   textColor="var(--background-white)"
@@ -60,6 +61,7 @@
               </div>
               <router-link to="/category">
                 <Button
+                  :ApplicationLanguage="ApplicationLanguage"
                   color="var(--background-white)"
                   textColor="var(--background-white)"
                   width="230px"
@@ -101,6 +103,7 @@ export default {
   name: "masonryCard",
   components: { ImageView, Button },
   props: {
+    ApplicationLanguage: String,
     type: {
       type: String,
       default: "short",

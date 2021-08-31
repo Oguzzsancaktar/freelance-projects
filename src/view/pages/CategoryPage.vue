@@ -81,7 +81,7 @@ export default {
   }
 }
 
-.CategoryPage {
+.CategoryPage.rtl {
   .subpage-content {
     .wrapper {
       .layout {
@@ -117,6 +117,24 @@ export default {
             width: 100%;
             margin-right: 25px;
             margin-bottom: 25px;
+          }
+        }
+      }
+    }
+  }
+
+  .CategoryPage.rtl {
+    .subpage-content {
+      .wrapper {
+        .layout {
+          flex-direction: column;
+          .section {
+          }
+
+          .section:first-child {
+            width: 100%;
+            margin-right: 0px;
+            margin-left: 0px;
           }
         }
       }

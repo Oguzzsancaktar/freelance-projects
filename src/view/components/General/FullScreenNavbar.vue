@@ -22,6 +22,7 @@
         <router-link to="/add">
           <a @click="closeNavbar">
             <Button
+              :ApplicationLanguage="ApplicationLanguage"
               family="var(--font-medium)"
               textColor="white"
               iconWidth="17px"
@@ -46,8 +47,9 @@
       </div>
 
       <div class="navbar-fullscreen-item button">
-        <button v-on:click="this.showSignin">
+        <button @click="closeNavbar" v-on:click="this.showSignin">
           <Button
+            :ApplicationLanguage="ApplicationLanguage"
             family="var(--font-medium)"
             color="dark"
             textColor="var(--color-general-dark)"
@@ -72,6 +74,7 @@
       <div class="navbar-fullscreen-item button">
         <div @click="toggleLangControl" class="language-control">
           <Button
+            :ApplicationLanguage="ApplicationLanguage"
             family="var(--font-medium)"
             textColor="white"
             fontSize="15px"
@@ -89,6 +92,7 @@
           <div class="language-control__collapse">
             <div @click="languageControl('en')" class="item">
               <Button
+                :ApplicationLanguage="ApplicationLanguage"
                 family="var(--font-medium)"
                 textColor="var(--color-text-gray)"
                 fontSize="15px"
@@ -103,6 +107,7 @@
             </div>
             <div @click="languageControl('ar')" class="item">
               <Button
+                :ApplicationLanguage="ApplicationLanguage"
                 family="var(--font-medium)"
                 textColor="var(--color-text-gray)"
                 fontSize="15px"
@@ -132,6 +137,7 @@ export default {
   name: "FullScreenNavbar",
   props: {
     FullScreenNavbarData: Object,
+    ApplicationLanguage: String,
   },
   data: function() {
     return {
@@ -159,24 +165,10 @@ export default {
 
   methods: {
     closeNavbar: function() {
-      if (this.isNavbarOpen) {
-        this.isNavbarOpen = false;
-        this.$root.$refs.FullScreenNavbar.navbarAnimations(
-          "close",
-          this.isNavbarOpen
-        );
-        jquery(".navbar-fullscreen").slideUp(200);
-        jquery("#navbarHamburger").removeClass("open");
-      } else {
-        this.isNavbarOpen = true;
-
-        this.$root.$refs.FullScreenNavbar.navbarAnimations(
-          "open",
-          this.isNavbarOpen
-        );
-        jquery(".navbar-fullscreen").slideDown(200);
-        jquery("#navbarHamburger").addClass("open");
-      }
+      this.isNavbarOpen = false;
+      this.$root.$refs.FullScreenNavbar.navbarAnimations("close", false);
+      jquery(".navbar-fullscreen").slideUp(200);
+      jquery("#navbarHamburger").removeClass("open");
     },
 
     toggleLangControl: function() {
@@ -191,6 +183,7 @@ export default {
 
     languageControl: function(lang) {
       this.$emit("language-control", lang);
+      this.closeNavbar();
     },
 
     navbarAnimations(fromTo, navStuation) {
@@ -264,7 +257,7 @@ export default {
   width: 220px;
   transform: translateX(-50%);
   margin: 10px 0;
-  padding: 10px 20px;
+  // padding: 10px 20px;
   border-radius: 30px;
   background: var(--color-primary);
 
@@ -275,12 +268,16 @@ export default {
   cursor: pointer;
   text-align: center;
 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   button,
   a {
     text-align: center;
     background: transparent;
     border: none;
-
+    padding: 15px 60px;
     text-decoration: none;
   }
 

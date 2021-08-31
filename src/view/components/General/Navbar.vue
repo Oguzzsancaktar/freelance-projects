@@ -14,6 +14,7 @@
             <div class="area__layout__section ">
               <router-link to="/profile">
                 <Button
+                  :ApplicationLanguage="ApplicationLanguage"
                   v-scrollanimation
                   background="var(--color-secondary)"
                   family="var(--font-medium)"
@@ -34,6 +35,7 @@
               <router-link to="/add">
                 <a>
                   <Button
+                    :ApplicationLanguage="ApplicationLanguage"
                     v-scrollanimation
                     family="var(--font-medium)"
                     textColor="white"
@@ -84,6 +86,7 @@
         <div class="area vertical-center collapse-hidden">
           <router-link to="/profile">
             <Button
+              :ApplicationLanguage="ApplicationLanguage"
               v-scrollanimation
               background="var(--color-secondary)"
               family="var(--font-medium)"
@@ -114,6 +117,7 @@
           >
             <div v-on:click="this.showSignin" class="control-sign">
               <Button
+                :ApplicationLanguage="ApplicationLanguage"
                 v-scrollanimation
                 family="var(--font-medium)"
                 color="dark"
@@ -136,6 +140,7 @@
             </div>
             <div @click="toggleLangControl" class="language-control">
               <Button
+                :ApplicationLanguage="ApplicationLanguage"
                 v-scrollanimation
                 family="var(--font-medium)"
                 textColor="white"
@@ -151,38 +156,36 @@
 
               <div class="language-control__collapse">
                 <div @click="languageControl('en')" class="item">
-                  <a href="">
-                    <Button
-                      v-scrollanimation
-                      family="var(--font-medium)"
-                      textColor="var(--color-text-gray)"
-                      fontSize="15px"
-                      color="white"
-                      background="transparent"
-                      :text="NavbarData.Lang1"
-                      radius="0"
-                      type="text"
-                      width="60px"
-                      hoverClass="hover-text-primary"
-                    />
-                  </a>
+                  <Button
+                    :ApplicationLanguage="ApplicationLanguage"
+                    v-scrollanimation
+                    family="var(--font-medium)"
+                    textColor="var(--color-text-gray)"
+                    fontSize="15px"
+                    color="white"
+                    background="transparent"
+                    :text="NavbarData.Lang1"
+                    radius="0"
+                    type="text"
+                    width="60px"
+                    hoverClass="hover-text-primary"
+                  />
                 </div>
                 <div @click="languageControl('ar')" class="item">
-                  <a href="">
-                    <Button
-                      v-scrollanimation
-                      family="var(--font-medium)"
-                      textColor="var(--color-text-gray)"
-                      fontSize="15px"
-                      color="white"
-                      background="transparent"
-                      :text="NavbarData.Lang2"
-                      radius="0px"
-                      type="text"
-                      width="60px"
-                      hoverClass="hover-text-primary"
-                    />
-                  </a>
+                  <Button
+                    :ApplicationLanguage="ApplicationLanguage"
+                    v-scrollanimation
+                    family="var(--font-medium)"
+                    textColor="var(--color-text-gray)"
+                    fontSize="15px"
+                    color="white"
+                    background="transparent"
+                    :text="NavbarData.Lang2"
+                    radius="0px"
+                    type="text"
+                    width="60px"
+                    hoverClass="hover-text-primary"
+                  />
                 </div>
               </div>
             </div>

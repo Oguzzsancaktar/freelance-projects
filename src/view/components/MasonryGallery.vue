@@ -19,6 +19,7 @@
           >
           <router-link to="/category">
             <Button
+              :ApplicationLanguage="ApplicationLanguage"
               v-scrollanimation
               iconColor="var(--color-primary)"
               border="1px solid var(--color-primary)"
@@ -163,18 +164,25 @@ export default {
     .vertical {
     }
   }
+}
 
-  @media (max-width: 676px) {
+@media (max-width: 676px) {
+  .masonry__gallery {
+    padding: 50px 0;
+
     .wrapper {
       .grid__gallery {
         min-height: 1200px;
         width: 100%;
-        padding: 70px 0;
         .wrapper {
         }
 
         &__nav {
+          padding: 40px 0;
           .section {
+            h2 {
+              font-size: 20px;
+            }
             .gallery-description {
               display: none;
             }

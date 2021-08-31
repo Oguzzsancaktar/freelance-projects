@@ -20,6 +20,7 @@
               :key="index"
             >
               <Button
+                :ApplicationLanguage="ApplicationLanguage"
                 family="var(--font-medium)"
                 textColor="var(--color-text-gray)"
                 iconWidth="40px"
@@ -56,6 +57,7 @@
               :key="index"
             >
               <Button
+                :ApplicationLanguage="ApplicationLanguage"
                 family="var(--font-medium)"
                 textColor="var(--color-text-gray)"
                 iconWidth="40px"
@@ -92,6 +94,7 @@
               :key="index"
             >
               <Button
+                :ApplicationLanguage="ApplicationLanguage"
                 family="var(--font-medium)"
                 textColor="var(--color-text-gray)"
                 iconWidth="40px"
@@ -155,7 +158,7 @@ export default {
             align-items: center;
             height: 100%;
             border-bottom: 1px solid var(--background-general);
-            padding: 35px 45px;
+            padding: 20px 0px;
           }
         }
 
@@ -186,6 +189,7 @@ export default {
           h3 {
             text-align: right;
             justify-content: flex-end;
+            padding: 20px 0;
           }
         }
 
@@ -208,7 +212,7 @@ export default {
 
     .wrapper {
       .layout {
-        padding: 35px 45px;
+        padding: 5px 45px;
 
         background: var(--background-white);
 

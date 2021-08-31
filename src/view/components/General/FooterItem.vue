@@ -36,6 +36,7 @@
       </div>
       <div class="section">
         <Button
+          :ApplicationLanguage="ApplicationLanguage"
           v-scrollanimation
           v-if="button"
           margin="auto"
@@ -73,6 +74,7 @@
         <ul v-for="(text, index) in texts" :key="index" class="list">
           <li class="list__item">
             <Button
+              :ApplicationLanguage="ApplicationLanguage"
               v-scrollanimation
               margin="auto"
               padding="0px"
@@ -158,6 +160,7 @@
             class="list__item"
           >
             <Button
+              :ApplicationLanguage="ApplicationLanguage"
               margin="auto"
               padding="0px"
               direction="row"

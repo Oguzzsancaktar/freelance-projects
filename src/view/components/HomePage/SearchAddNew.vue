@@ -6,6 +6,7 @@
     <p>{{ text }}</p>
     <div class="add-new-button">
       <Button
+        :ApplicationLanguage="ApplicationLanguage"
         background="transparent"
         :text="subText"
         radius="high"

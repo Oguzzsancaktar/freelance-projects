@@ -9,6 +9,7 @@
       </div>
       <div class="section">
         <Button
+          :ApplicationLanguage="ApplicationLanguage"
           background="transparent"
           :text="TopInfoData.ButtonText"
           radius="high"
@@ -60,7 +61,10 @@ export default {
 
     height: 65px;
     .section {
-      padding: 25px 35px;
+      padding: 0px 15px;
+      height: 100%;
+      display: flex;
+      align-items: center;
 
       span {
         font-size: 15px;

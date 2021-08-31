@@ -20,6 +20,7 @@
           >
           <router-link to="/category">
             <Button
+              :ApplicationLanguage="ApplicationLanguage"
               iconColor="var(--color-primary)"
               border="1px solid var(--color-primary)"
               background="transparent"
@@ -148,6 +149,9 @@ export default {
 
     &__nav {
       .section {
+        h2 {
+          font-size: 20px;
+        }
         .gallery-description {
           display: none;
         }

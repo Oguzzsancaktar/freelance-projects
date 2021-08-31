@@ -22,6 +22,7 @@
 
           <div class="item icon">
             <Button
+              :ApplicationLanguage="ApplicationLanguage"
               v-scrollanimation
               margin="auto"
               padding="0px"
@@ -255,6 +256,7 @@ export default {
             }
           }
           .item.icon {
+            margin-top: 15px;
             width: 100%;
           }
           .item.input {

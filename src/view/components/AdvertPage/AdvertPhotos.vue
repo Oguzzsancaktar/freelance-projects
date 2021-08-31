@@ -12,6 +12,7 @@
           class="photo"
         >
           <Button
+            :ApplicationLanguage="ApplicationLanguage"
             margin="auto"
             direction="column"
             background="transparent"
@@ -27,7 +28,9 @@
             textColor="var(--color-nav-link)"
             family="var(--font-semibold)"
             iconAreaW="auto"
-            textMargin="10px 0"
+            textMargin="10px 0!important"
+            height="auto"
+            columnCenter="center"
           />
         </div>
       </div>
@@ -91,7 +94,7 @@ export default {
     }
   }
 }
-.AdvertPhotos {
+.AdvertPhotos.rtl {
   .wrapper {
     .heading {
       h2 {

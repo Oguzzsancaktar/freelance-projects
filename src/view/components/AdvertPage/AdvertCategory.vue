@@ -31,6 +31,7 @@
           <div class="area__right">
             <div class="item">
               <Button
+                :ApplicationLanguage="ApplicationLanguage"
                 v-scrollanimation
                 margin="auto"
                 padding="0px"

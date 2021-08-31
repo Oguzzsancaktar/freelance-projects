@@ -6,6 +6,7 @@
           <div class="home-button">
             <router-link to="/">
               <Button
+                :ApplicationLanguage="ApplicationLanguage"
                 background="transparent"
                 family="var(--font-medium)"
                 radius="30px"
@@ -28,6 +29,7 @@
         <div class="area">
           <div>
             <Button
+              :ApplicationLanguage="ApplicationLanguage"
               family="var(--font-medium)"
               color="dark"
               textColor="var(--color-general-dark)"
@@ -50,6 +52,7 @@
 
           <div>
             <Button
+              :ApplicationLanguage="ApplicationLanguage"
               family="var(--font-medium)"
               color="dark"
               textColor="var(--color-general-dark)"
@@ -72,6 +75,7 @@
           <div>
             <router-link to="/profile">
               <Button
+                :ApplicationLanguage="ApplicationLanguage"
                 family="var(--font-medium)"
                 color="dark"
                 textColor="var(--color-general-dark)"

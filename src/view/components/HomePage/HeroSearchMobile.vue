@@ -1,6 +1,7 @@
 <template>
   <div class="hero__search__mobile">
     <SearchSelect
+      :ApplicationLanguage="ApplicationLanguage"
       v-for="(item, index) in HeroSearchData.SearchSelectData"
       :key="index"
       :text="item.Text"
@@ -8,10 +9,12 @@
       :zIndex="index"
     />
     <SearchInput
+      :ApplicationLanguage="ApplicationLanguage"
       :text="HeroSearchData.SearchInputData.Text"
       :subText="HeroSearchData.SearchInputData.SubText"
     />
     <SearchAddNew
+      :ApplicationLanguage="ApplicationLanguage"
       @show-advenced="showAdvenced"
       :text="HeroSearchData.SearchAddNewData.Text"
       :subText="HeroSearchData.SearchAddNewData.SubText"
@@ -19,6 +22,7 @@
     <router-link to="/category">
       <div class="hero__search__mobile__button">
         <Button
+          :ApplicationLanguage="ApplicationLanguage"
           margin="auto"
           direction="column"
           background="transparent"
@@ -34,6 +38,7 @@
           textColor="white"
           family="var(--font-semibold)"
           iconAreaW="auto"
+          columnCenter="center"
         />
       </div>
     </router-link>

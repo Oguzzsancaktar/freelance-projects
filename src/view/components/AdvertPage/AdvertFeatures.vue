@@ -93,7 +93,7 @@ export default {
   }
 }
 
-.AdvertFeatures {
+.AdvertFeatures.rtl {
   .wrapper {
     .heading {
       h2 {
@@ -134,12 +134,12 @@ export default {
           width: 100%;
           &__header {
             h3 {
-              justify-content: center;
+              // justify-content: center;
             }
           }
           &__list {
             &__item {
-              justify-content: center;
+              // justify-content: center;
             }
           }
         }

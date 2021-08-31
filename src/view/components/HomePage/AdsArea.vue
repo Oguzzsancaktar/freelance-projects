@@ -26,6 +26,7 @@
             <div v-scrollanimation class="info__section__item">
               <router-link to="/category">
                 <Button
+                  :ApplicationLanguage="ApplicationLanguage"
                   v-scrollanimation
                   style="margin-left:20px"
                   background="var(--color-secondary)"
@@ -175,7 +176,7 @@ export default {
     .image.enter {
     }
     .info {
-      width: 60%;
+      width: 90%;
       &__section {
         span {
           span.key-bg {

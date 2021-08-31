@@ -22,6 +22,8 @@ export default {
 .Checkbox {
   display: flex;
   align-items: center;
+  background: #fff;
+
   /* custom checkbox */
   input[type="checkbox"] {
     cursor: pointer;
@@ -43,6 +45,7 @@ export default {
   input[type="checkbox"]:hover {
     transition: 0.4s;
     border: 2px solid var(--color-primary);
+    background: #fff;
   }
 
   input[type="checkbox"]:checked {

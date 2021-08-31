@@ -76,7 +76,8 @@ export default {
         .heading {
           width: 100%;
           h3 {
-            padding: 35px 45px;
+            text-align: center;
+            // padding: 35px 45px;
 
             display: flex;
             align-items: center;
@@ -194,6 +195,7 @@ export default {
               border-bottom: 2px solid var(--background-general);
               padding-bottom: 20px;
               width: 100%;
+              text-align: center;
             }
           }
 

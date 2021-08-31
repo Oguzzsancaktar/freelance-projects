@@ -17,6 +17,7 @@
 
         <div class="buttons">
           <Button
+            :ApplicationLanguage="ApplicationLanguage"
             class="btn"
             family="var(--font-medium)"
             color="dark"
@@ -37,6 +38,7 @@
             hoverClass="hover-secondary"
           />
           <Button
+            :ApplicationLanguage="ApplicationLanguage"
             hoverClass="hover-secondary"
             class="btn"
             family="var(--font-medium)"
@@ -61,6 +63,7 @@
 
       <div class="area">
         <Button
+          :ApplicationLanguage="ApplicationLanguage"
           family="var(--font-medium)"
           color="dark"
           textColor="var(--color-general-dark)"

@@ -8,6 +8,7 @@
           </div>
           <div class="section">
             <Button
+              :ApplicationLanguage="ApplicationLanguage"
               color="var(--color-secondary)"
               textColor="var(--color-text-general)"
               width="120px"
@@ -27,6 +28,7 @@
               iconAreaW="auto"
             />
             <Button
+              :ApplicationLanguage="ApplicationLanguage"
               color="var(--color-secondary)"
               textColor="var(--color-text-general)"
               width="105px"
@@ -46,6 +48,7 @@
               iconAreaW="auto"
             />
             <Button
+              :ApplicationLanguage="ApplicationLanguage"
               color="var(--color-primary)"
               textColor="var(--color-text-general)"
               width="100px"
@@ -65,6 +68,7 @@
               iconAreaW="auto"
             />
             <Button
+              :ApplicationLanguage="ApplicationLanguage"
               color="var(--color-primary)"
               textColor="var(--color-text-general)"
               width="80px"
@@ -87,6 +91,7 @@
         </div>
         <div class="area">
           <Button
+            :ApplicationLanguage="ApplicationLanguage"
             class="btn"
             family="var(--font-medium)"
             color="dark"
@@ -145,6 +150,7 @@ export default {
             align-items: center;
             height: 100%;
             padding-bottom: 20px;
+            text-align: center;
           }
         }
       }

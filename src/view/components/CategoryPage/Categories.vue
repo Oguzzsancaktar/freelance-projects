@@ -27,6 +27,7 @@
 
         <li class="item">
           <Button
+            :ApplicationLanguage="ApplicationLanguage"
             margin="auto"
             direction="row"
             background="var(--color-primary)"

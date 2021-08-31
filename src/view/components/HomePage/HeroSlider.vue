@@ -259,7 +259,7 @@ export default {
       }
 
       &__search.before-enter {
-        transition-delay: 3.5s;
+        transition-delay: 2.5s;
       }
 
       // &__search.enter {
@@ -331,6 +331,9 @@ export default {
       .hero__search {
         flex-direction: row-reverse;
       }
+    }
+    .hero__left__search__advenced {
+      right: 0;
     }
 
     .hero__left__buttons {

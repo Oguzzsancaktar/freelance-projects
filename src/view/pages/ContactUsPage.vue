@@ -27,6 +27,7 @@
                     :key="index"
                   >
                     <Button
+                      :ApplicationLanguage="ApplicationLanguage"
                       v-scrollanimation
                       class="btn"
                       family="var(--font-medium)"
@@ -67,6 +68,7 @@
                     :key="index"
                   >
                     <Button
+                      :ApplicationLanguage="ApplicationLanguage"
                       v-scrollanimation
                       class="btn"
                       family="var(--font-medium)"
@@ -133,6 +135,7 @@
 
           <section>
             <Button
+              :ApplicationLanguage="ApplicationLanguage"
               v-scrollanimation
               class="btn"
               family="var(--font-medium)"
@@ -151,7 +154,7 @@
               fontSize="15px"
               iconAreaW="auto"
               border="1px solid var(--color-primary)"
-              hoverClass="hover-secondary-low"
+              hoverClass="hover-primary"
               justify="center"
               textAlign="start"
             />

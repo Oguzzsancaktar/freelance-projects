@@ -1,6 +1,11 @@
 <template>
   <button
-    :class="['default-button', `text-color-${color}`, `${hoverClass}`]"
+    :class="[
+      'default-button',
+      `text-color-${color}`,
+      `${hoverClass}`,
+      `${ApplicationLanguage == 'ar' ? 'rtl' : ''}`,
+    ]"
     :style="
       `width:${width} ;padding:${padding} ; height:${height}; background:${background}; border-radius:${radius} ; border:${border} `
     "
@@ -125,7 +130,7 @@
         }`
       "
       :style="
-        `width:${iconAreaW} ;color:${textColor};flex-direction:${direction}; font-family:${family};font-size:${fontSize} `
+        `width:${iconAreaW} ;color:${textColor};flex-direction:${direction}!important; font-family:${family};font-size:${fontSize} `
       "
       v-if="'together' == type"
     >
@@ -357,7 +362,7 @@
       <span
         v-if="'profile' == iconType"
         :style="
-          `width:${iconAreaW} ;color:${textColor};flex-direction:${direction}; font-family:${family};font-size:${fontSize} `
+          `width:${iconAreaW} ;color:${textColor};flex-direction:${direction}!important; font-family:${family};font-size:${fontSize} `
         "
       >
         <Icon
@@ -374,7 +379,7 @@
       <span
         v-if="'list' == iconType"
         :style="
-          `width:${iconAreaW} ;color:${textColor};flex-direction:${direction}; font-family:${family};font-size:${fontSize} `
+          `width:${iconAreaW} ;color:${textColor};flex-direction:${direction}!important; font-family:${family};font-size:${fontSize} `
         "
       >
         <Icon
@@ -391,7 +396,7 @@
       <span
         v-if="'confirm' == iconType"
         :style="
-          `width:${iconAreaW} ;color:${textColor};flex-direction:${direction}; font-family:${family};font-size:${fontSize} `
+          `width:${iconAreaW} ;color:${textColor};flex-direction:${direction}!important; font-family:${family};font-size:${fontSize} `
         "
       >
         <Icon
@@ -407,7 +412,7 @@
 
       <span
         :style="
-          `width:${iconAreaW} ;color:${textColor};flex-direction:${direction}; font-family:${family};font-size:${fontSize} `
+          `width:${iconAreaW} ;color:${textColor};flex-direction:${direction}!important; font-family:${family};font-size:${fontSize} `
         "
         v-if="'gallery' == iconType"
       >
@@ -424,7 +429,7 @@
 
       <span
         :style="
-          `width:${iconAreaW} ;color:${textColor};flex-direction:${direction}; font-family:${family};font-size:${fontSize} `
+          `width:${iconAreaW} ;color:${textColor};flex-direction:${direction}!important; font-family:${family};font-size:${fontSize} `
         "
         v-if="'favorites' == iconType"
       >
@@ -441,7 +446,7 @@
 
       <span
         :style="
-          `width:${iconAreaW} ;color:${textColor};flex-direction:${direction}; font-family:${family};font-size:${fontSize} `
+          `width:${iconAreaW} ;color:${textColor};flex-direction:${direction}!important; font-family:${family};font-size:${fontSize} `
         "
         v-if="'share' == iconType"
       >
@@ -459,7 +464,7 @@
       <span
         v-if="'phone' == iconType"
         :style="
-          `width:${iconAreaW} ;color:${textColor};flex-direction:${direction}; font-family:${family};font-size:${fontSize} `
+          `width:${iconAreaW} ;color:${textColor};flex-direction:${direction}!important; font-family:${family};font-size:${fontSize} `
         "
       >
         <Icon
@@ -476,7 +481,7 @@
       <span
         v-if="'house' == iconType"
         :style="
-          `width:${iconAreaW} ;color:${textColor};flex-direction:${direction}; font-family:${family};font-size:${fontSize} `
+          `width:${iconAreaW} ;color:${textColor};flex-direction:${direction}!important; font-family:${family};font-size:${fontSize} `
         "
       >
         <Icon
@@ -493,7 +498,7 @@
       <span
         v-if="'envelope' == iconType"
         :style="
-          `width:${iconAreaW} ;color:${textColor};flex-direction:${direction}; font-family:${family};font-size:${fontSize} `
+          `width:${iconAreaW} ;color:${textColor};flex-direction:${direction}!important; font-family:${family};font-size:${fontSize} `
         "
       >
         <Icon
@@ -509,7 +514,7 @@
 
       <span
         :style="
-          `width:${iconAreaW} ;color:${textColor};flex-direction:${direction}; font-family:${family};font-size:${fontSize} `
+          `width:${iconAreaW} ;color:${textColor};flex-direction:${direction}!important; font-family:${family};font-size:${fontSize} `
         "
         v-if="'search' == iconType"
       >
@@ -526,7 +531,7 @@
 
       <span
         :style="
-          `width:${iconAreaW} ;color:${textColor};flex-direction:${direction}; font-family:${family};font-size:${fontSize} `
+          `width:${iconAreaW} ;color:${textColor};flex-direction:${direction}!important; font-family:${family};font-size:${fontSize} `
         "
         v-if="'advenced' == iconType"
       >
@@ -543,7 +548,7 @@
 
       <span
         :style="
-          `width:${iconAreaW} ;color:${textColor};flex-direction:${direction}; font-family:${family};font-size:${fontSize} `
+          `width:${iconAreaW} ;color:${textColor};flex-direction:${direction}!important; font-family:${family};font-size:${fontSize} `
         "
         v-if="'login' == iconType"
       >
@@ -560,7 +565,7 @@
 
       <span
         :style="
-          `width:${iconAreaW} ;color:${textColor};flex-direction:${direction}; font-family:${family};font-size:${fontSize} `
+          `width:${iconAreaW} ;color:${textColor};flex-direction:${direction}!important; font-family:${family};font-size:${fontSize} `
         "
         v-if="'plus' == iconType"
       >
@@ -576,7 +581,7 @@
       </span>
       <span
         :style="
-          `width:${iconAreaW} ;color:${textColor};flex-direction:${direction}; font-family:${family};font-size:${fontSize} `
+          `width:${iconAreaW} ;color:${textColor};flex-direction:${direction}!important; font-family:${family};font-size:${fontSize} `
         "
         v-if="'rentSale' == iconType"
       >
@@ -593,7 +598,7 @@
 
       <span
         :style="
-          `width:${iconAreaW} ;color:${textColor};flex-direction:${direction}; font-family:${family};font-size:${fontSize} `
+          `width:${iconAreaW} ;color:${textColor};flex-direction:${direction}!important; font-family:${family};font-size:${fontSize} `
         "
         v-if="'maps' == iconType"
       >
@@ -610,7 +615,7 @@
 
       <span
         :style="
-          `width:${iconAreaW} ;color:${textColor};flex-direction:${direction}; font-family:${family};font-size:${fontSize} `
+          `width:${iconAreaW} ;color:${textColor};flex-direction:${direction}!important; font-family:${family};font-size:${fontSize} `
         "
         v-if="'message' == iconType"
       >
@@ -664,7 +669,7 @@
       <span
         class="together-text"
         :style="
-          `color:${textColor}; font-family:${family};font-size:${fontSize} ;text-align:${textAlign}; margin-left:${marginLeft}; justify-content:${justify}; margin:${textMargin} ; text-transform:${textTransfrom}`
+          `color:${textColor}; font-family:${family};font-size:${fontSize} ;text-align:${textAlign}; margin-left:${marginLeft}; justify-content:${justify}; margin:${textMargin} ; text-transform:${textTransfrom}; justify-content:${columnCenter}!important`
         "
         >{{ text }}</span
       >
@@ -680,12 +685,12 @@ export default {
   data: function() {
     return {
       activeTab: 0,
-      ApplicationLanguage: localStorage.ApplicationLanguage,
     };
   },
 
   components: { Icon },
   props: {
+    ApplicationLanguage: String,
     margin: { type: String, default: "0 10px 0 0" },
     textMargin: { type: String },
 
@@ -738,7 +743,7 @@ export default {
     },
     direction: {
       type: String,
-      default: "row",
+      default: " ",
     },
     justify: {
       type: String,
@@ -755,6 +760,7 @@ export default {
     textTransfrom: {
       type: String,
     },
+    columnCenter: String,
   },
 };
 </script>
@@ -835,14 +841,18 @@ button span {
   }
 }
 
-.button-together.rtl {
-  flex-direction: row-reverse !important;
-  text-align: right !important;
-  justify-content: right !important;
-  .together-text {
-    text-align: right !important;
-    justify-content: flex-end !important;
-    margin-right: 5px !important;
+.default-button.rtl {
+  .button-together {
+    flex-direction: row-reverse !important;
+    .together-text {
+      justify-content: flex-end !important;
+      margin: 0px !important;
+
+      margin-right: 8px !important;
+      [data-v-ea6093cc] {
+        justify-content: center !important;
+      }
+    }
   }
 }
 </style>

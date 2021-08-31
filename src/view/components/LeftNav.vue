@@ -12,10 +12,10 @@
         >
           <button @click="changeSection(item.Keyword)">
             <Button
+              :ApplicationLanguage="ApplicationLanguage"
               v-scrollanimation
               margin="auto"
               padding="0px"
-              direction="row"
               background="transparent"
               radius="high"
               color="white"
@@ -96,7 +96,7 @@ export default {
       .item {
         cursor: pointer;
         transition: 0.4s;
-
+        border: 1px solid transparent;
         padding: 0 20px;
         width: 100%;
         border-bottom: 1px solid var(--background-general);
@@ -114,6 +114,22 @@ export default {
 
           .counter-circle {
             width: 25px;
+          }
+        }
+      }
+      .item:hover {
+        transition: 0.5s;
+        border-right: transparent;
+        border-left: 1px solid var(--color-primary);
+
+        /deep/button {
+          g {
+            transition: 0.4s;
+            fill: var(--color-primary) !important;
+          }
+          .together-text {
+            transition: 0.4s;
+            color: var(--color-primary) !important;
           }
         }
       }
@@ -137,6 +153,9 @@ export default {
   .layout {
     .list {
       .item {
+        transition: 0.5s;
+        border-right: 1px solid transparent;
+
         justify-content: flex-end;
         display: flex;
 
@@ -157,6 +176,12 @@ export default {
             justify-content: flex-end;
           }
         }
+      }
+
+      .item:hover {
+        transition: 0.5s;
+        border-left: transparent;
+        border-right: 1px solid var(--color-primary);
       }
       .item.active {
         border-left: transparent;

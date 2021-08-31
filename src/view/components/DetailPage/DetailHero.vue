@@ -55,6 +55,7 @@ export default {
   components: { InfoCard, ImageView },
   props: {
     DetailHeroData: Object,
+    ApplicationLanguage: String,
   },
 };
 </script>

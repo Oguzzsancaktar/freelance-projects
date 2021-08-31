@@ -1,5 +1,5 @@
 <template>
-  <div class="AdvencedSettings">
+  <div :class="`AdvencedSettings ${ApplicationLanguage == 'ar' ? 'rtl' : ''}`">
     <div class="wrapper">
       <div class="layout">
         <section>
@@ -8,6 +8,7 @@
 
             <button @click="closeAdvenced" class="close-button">
               <Button
+                :ApplicationLanguage="ApplicationLanguage"
                 margin="auto"
                 direction="row"
                 background="var(--color-primary)"
@@ -39,6 +40,7 @@
               class="item"
             >
               <SelectBox
+                :ApplicationLanguage="ApplicationLanguage"
                 family="var(--font-semibold)"
                 :text="item.Text"
                 :List="item.List"
@@ -61,7 +63,10 @@
               :key="index"
               class="item checkbox"
             >
-              <CheckBox :item="item.Text" />
+              <CheckBox
+                :ApplicationLanguage="ApplicationLanguage"
+                :item="item.Text"
+              />
             </div>
           </div>
         </section>
@@ -69,6 +74,7 @@
           <div class="button">
             <router-link to="/category">
               <Button
+                :ApplicationLanguage="ApplicationLanguage"
                 margin="auto"
                 direction="row"
                 background="var(--color-secondary)"
@@ -191,6 +197,30 @@ export default {
         /deep/ .default-button {
           display: flex;
           justify-content: center;
+        }
+      }
+    }
+  }
+}
+
+.AdvencedSettings.rtl {
+  .wrapper {
+    .layout {
+      section {
+        .heading {
+          h3 {
+          }
+        }
+      }
+      .flex-grid {
+        .item {
+        }
+        .item.checkbox {
+        }
+      }
+
+      .button {
+        /deep/ .default-button {
         }
       }
     }

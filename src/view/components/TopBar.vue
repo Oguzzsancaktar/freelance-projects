@@ -4,6 +4,7 @@
       <div class="layout">
         <div @click="changeSection(0)" class="item">
           <Button
+            :ApplicationLanguage="ApplicationLanguage"
             v-scrollanimation
             family="var(--font-bold) "
             color="dark"
@@ -26,6 +27,7 @@
         </div>
         <div @click="changeSection(1)" class="item">
           <Button
+            :ApplicationLanguage="ApplicationLanguage"
             v-scrollanimation
             family="var(--font-bold)"
             color="dark"
@@ -49,6 +51,7 @@
 
         <div @click="changeSection(2)" class="item">
           <Button
+            :ApplicationLanguage="ApplicationLanguage"
             v-scrollanimation
             family="var(--font-bold)"
             color="dark"
@@ -144,6 +147,7 @@ export default {
 
         /deep/.button-together {
           cursor: pointer;
+          margin-left: 10px;
 
           span:first-child {
             width: 35px !important;

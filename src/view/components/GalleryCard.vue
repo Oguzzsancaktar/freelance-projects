@@ -9,6 +9,7 @@
           <a>
             <div class="card__image__hover">
               <Button
+                :ApplicationLanguage="ApplicationLanguage"
                 style="margin:5px"
                 background="transparent"
                 radius="0px"
@@ -46,6 +47,7 @@
             <div class="row__item">
               <router-link to="/profile">
                 <Button
+                  :ApplicationLanguage="ApplicationLanguage"
                   v-scrollanimation
                   style="margin:5px"
                   background="var(--color-secondary-low-button)"
@@ -66,6 +68,7 @@
               </router-link>
 
               <Button
+                :ApplicationLanguage="ApplicationLanguage"
                 v-scrollanimation
                 color="var(--color-primary)"
                 textColor="var(--color-primary)"
@@ -102,6 +105,7 @@
           <div class="info__row">
             <h2 v-scrollanimation class="price">{{ data.Price }}</h2>
             <Button
+              :ApplicationLanguage="ApplicationLanguage"
               color="var(--color-secondary)"
               textColor="var(--color-text-general)"
               width="100px"

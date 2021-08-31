@@ -25,6 +25,7 @@
     >
       <router-link to="/category">
         <Button
+          :ApplicationLanguage="ApplicationLanguage"
           margin="auto"
           direction="column"
           background="transparent"

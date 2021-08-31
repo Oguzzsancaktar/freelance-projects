@@ -126,6 +126,7 @@
 
             <div class="item">
               <Button
+                :ApplicationLanguage="ApplicationLanguage"
                 type="text"
                 width="100%"
                 height="100%"

@@ -20,9 +20,8 @@ export default {
   props: {
     data: {
       type: String,
-
-      ApplicationLanguage: String,
     },
+    ApplicationLanguage: String,
   },
 };
 </script>
@@ -78,7 +77,7 @@ export default {
   }
 }
 
-.ProgressBar {
+.ProgressBar.rtl {
   .layout {
     .area {
       flex-direction: row-reverse;

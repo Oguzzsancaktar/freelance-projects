@@ -5,6 +5,7 @@
         <div class="card__image">
           <div class="card__image__hover">
             <Button
+              :ApplicationLanguage="ApplicationLanguage"
               v-scrollanimation
               style="margin:5px"
               background="transparent"
@@ -35,10 +36,11 @@
           <div class="info__row">
             <div class="row__item">
               <Button
+                :ApplicationLanguage="ApplicationLanguage"
                 v-scrollanimation
                 color="var(--color-secondary)"
                 textColor="var(--color-text-general)"
-                width="70px"
+                width="100%"
                 :text="data.Location"
                 radius="10px"
                 type="together"
@@ -57,6 +59,7 @@
             </div>
             <div class="row__item">
               <Button
+                :ApplicationLanguage="ApplicationLanguage"
                 v-scrollanimation
                 color="var(--color-primary)"
                 textColor="var(--color-primary)"
@@ -80,6 +83,7 @@
 
               <router-link to="/profile">
                 <Button
+                  :ApplicationLanguage="ApplicationLanguage"
                   v-scrollanimation
                   style="margin:5px"
                   background="var(--color-secondary-low-button)"

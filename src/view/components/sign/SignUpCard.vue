@@ -3,6 +3,7 @@
     <div class="layout">
       <div @click="this.hideSign" class="close-button">
         <Button
+          :ApplicationLanguage="ApplicationLanguage"
           v-scrollanimation
           background="var(--color-secondary)"
           family="var(--font-medium)"
@@ -63,6 +64,7 @@
 
         <div @click="this.showSignin" class="button">
           <Button
+            :ApplicationLanguage="ApplicationLanguage"
             v-scrollanimation
             color="var(--background-white)"
             textColor="var(--background-white)"

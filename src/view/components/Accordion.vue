@@ -9,6 +9,7 @@
           <h3 v-scrollanimation>{{ messages.from }}</h3>
           <div class="date">
             <Button
+              :ApplicationLanguage="ApplicationLanguage"
               v-scrollanimation
               color="var(--color-secondary)"
               textColor="var(--color-text-general)"
@@ -131,7 +132,7 @@ export default {
   }
 }
 
-.Accordion {
+.Accordion.rtl {
   .layout {
     section {
       .heading {

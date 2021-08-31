@@ -7,6 +7,7 @@
         </p>
         <div @click="sectionControlButton(0)" class="buttons">
           <Button
+            :ApplicationLanguage="ApplicationLanguage"
             color="var(--color-primary)"
             textColor="var(--color-nav-link)"
             width="100%"
@@ -31,6 +32,7 @@
 
           <button @click="sectionControlButton(2)">
             <Button
+              :ApplicationLanguage="ApplicationLanguage"
               color="var(--color-primary)"
               textColor="var(--background-white)"
               width="100%"
@@ -66,6 +68,7 @@ export default {
   props: {
     NextEditData: Object,
     section: Number,
+    ApplicationLanguage: String,
   },
   methods: {
     sectionControlButton: function(x) {
