@@ -142,7 +142,7 @@ export default {
       border-bottom: 1px solid var(--background-general);
     }
     .area:last-child {
-      height: 50px;
+      height: auto;
       border-top: 1px solid var(--background-general);
 
       /deep/ .default-button {
@@ -179,7 +179,7 @@ export default {
       border-bottom: 1px solid var(--background-general);
     }
     .area:last-child {
-      height: 50px;
+      height: auto;
       border-top: 1px solid var(--background-general);
 
       /deep/ .default-button {
@@ -228,7 +228,7 @@ export default {
         border-bottom: 1px solid var(--background-general);
       }
       .area:last-child {
-        height: 50px;
+        height: auto;
         border-top: 1px solid var(--background-general);
       }
     }

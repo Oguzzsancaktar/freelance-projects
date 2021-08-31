@@ -334,6 +334,10 @@ export default {
                 flex-direction: row-reverse;
 
                 justify-content: flex-start;
+
+                span {
+                  text-align: right;
+                }
               }
             }
 

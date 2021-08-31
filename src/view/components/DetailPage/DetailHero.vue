@@ -124,5 +124,19 @@ export default {
       }
     }
   }
+
+  .DetailHero.rtl {
+    .layout {
+      .item {
+      }
+    }
+    .wrapper {
+      &__relative {
+      }
+      .card {
+        left: 50%;
+      }
+    }
+  }
 }
 </style>

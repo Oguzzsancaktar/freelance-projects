@@ -232,7 +232,23 @@ export default {
   padding: 0;
   box-sizing: border-box;
   font-family: "Branding-Medium";
+
+  -webkit-user-select: none; /* Chrome all / Safari all */
+  -moz-user-select: none; /* Firefox all */
+  -ms-user-select: none; /* IE 10+ */
+  user-select: none;
+
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
+
+input,
+textarea,
+button,
+select,
+a {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
 .before-enter {
   opacity: 0 !important;
   transition: 1s;

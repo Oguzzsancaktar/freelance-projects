@@ -34,7 +34,6 @@
                 :ApplicationLanguage="ApplicationLanguage"
                 margin="auto"
                 padding="0px"
-                direction="row"
                 background="transparent"
                 radius="high"
                 color="white"
@@ -159,6 +158,11 @@ export default {
         &__right {
         }
         .item {
+          /deep/ button {
+            .together-text {
+              text-align: right !important;
+            }
+          }
         }
       }
     }

@@ -79,6 +79,8 @@ export default {
 
         .content {
           padding: 20px;
+          border-top: 1px solid var(--background-general);
+          border-bottom: 1px solid var(--background-general);
 
           width: 100%;
 
@@ -146,6 +148,7 @@ export default {
 
         .content {
           &__list {
+            justify-content: flex-end;
             &__item {
               span {
               }

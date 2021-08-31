@@ -23,7 +23,7 @@
           iconWidth="22px"
           iconHeight="22px"
           iconColor="var(--color-primary)"
-          height="30px"
+          height="auto"
           textAlign="left"
           iconAreaW="auto"
           justify="start"

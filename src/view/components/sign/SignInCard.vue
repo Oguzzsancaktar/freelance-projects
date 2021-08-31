@@ -331,7 +331,7 @@ export default {
 
     .section {
       .text {
-        text-align: right;
+        text-align: center;
       }
       .header {
         // text-align: right;

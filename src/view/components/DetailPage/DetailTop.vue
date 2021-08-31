@@ -40,7 +40,7 @@
               iconColor="var(--color-primary)"
               background="transparent"
               radius="0"
-              width="110px"
+              width="115px"
               padding="0 0px"
               iconWidth="22px"
               iconHeight="21px"

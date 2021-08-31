@@ -344,5 +344,40 @@ export default {
       }
     }
   }
+
+  .footers.rtl {
+    .footer-item {
+      align-items: center;
+      &__image {
+        justify-content: center !important;
+      }
+      .section {
+        text-align: center;
+        .reserved {
+          text-align: center;
+        }
+
+        b {
+          text-align: center;
+        }
+        .list {
+          &__item {
+            text-align: center;
+            a {
+              text-align: center;
+
+              span {
+                text-align: center;
+              }
+            }
+          }
+          &__item:hover {
+            span {
+            }
+          }
+        }
+      }
+    }
+  }
 }
 </style>

@@ -39,6 +39,7 @@
               fontSize="15px"
               iconAreaW="auto"
               hoverClass="hover-secondary"
+              textMargin="0 0 0 0"
             />
           </router-link>
         </div>

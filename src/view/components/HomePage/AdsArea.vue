@@ -13,6 +13,7 @@
           <div class="info__section">
             <div v-scrollanimation class="info__section__item">
               <SearchSelect
+                :ApplicationLanguage="ApplicationLanguage"
                 :list="AdsAreaData.SearchData.List"
                 border="1px solid white"
                 height="55px"

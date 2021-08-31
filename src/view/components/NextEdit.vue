@@ -126,10 +126,11 @@ export default {
   }
 }
 
-.NextEdit {
+.NextEdit.rtl {
   .wrapper {
     .layout {
       .text {
+        text-align: right;
       }
 
       .buttons {
@@ -171,6 +172,28 @@ export default {
             outline: none;
 
             margin: 5px 0;
+          }
+        }
+      }
+    }
+  }
+
+  .NextEdit.rtl {
+    .wrapper {
+      .layout {
+        .text {
+          text-align: right;
+        }
+
+        .buttons {
+          flex-direction: column;
+          button {
+          }
+          /deep/ button {
+            .button-together {
+            }
+            .together-text {
+            }
           }
         }
       }

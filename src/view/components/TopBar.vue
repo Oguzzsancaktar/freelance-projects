@@ -146,8 +146,10 @@ export default {
         border-right: 1px solid var(--background-general);
 
         /deep/.button-together {
+          padding: 5px 0;
           cursor: pointer;
           margin-left: 10px;
+          margin-right: 10px;
 
           span:first-child {
             width: 35px !important;

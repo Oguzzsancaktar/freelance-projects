@@ -111,6 +111,7 @@ export default {
 
         .check-terms {
           width: 100%;
+          margin-left: 0;
 
           span {
             width: 100%;
@@ -121,6 +122,7 @@ export default {
         button {
           cursor: pointer;
           margin-top: 20px;
+          margin-left: 0;
           max-width: none;
           width: 100%;
         }

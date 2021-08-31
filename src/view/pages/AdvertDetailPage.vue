@@ -59,6 +59,12 @@ export default {
     ApplicationLanguage: String,
   },
   name: "AdvertDetailPage",
+  mounted() {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  },
 };
 </script>
 

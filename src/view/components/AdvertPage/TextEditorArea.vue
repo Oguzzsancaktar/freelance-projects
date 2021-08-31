@@ -127,13 +127,12 @@ export default {
   .quillEditor {
     display: flex;
     align-self: flex-end;
-    text-align: right;
+    // text-align: right;
     /deep/ .quill-editor {
-      * {
-        text-align: right;
-      }
+      //   * {
+      //     text-align: right;
+      //   }
     }
-
     /deep/ .ql-toolbar.ql-snow {
     }
 
