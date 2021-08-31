@@ -213,7 +213,6 @@ export default {
       text-align: start;
       font-family: var(--font-medium);
       background: var(--background-white);
-      transition: background 0.4s;
       border-left: 1px solid transparent;
       border-right: 1px solid transparent;
 
@@ -276,7 +275,7 @@ export default {
       text-align: right !important;
       justify-content: flex-end;
       &:hover {
-        transition: 0.4s;
+        transition: border 0.4s, color 0.4s;
 
         border-left: 1px solid transparent;
         border-right: 1px solid var(--color-secondary);
@@ -285,7 +284,7 @@ export default {
     li:last-child {
     }
     .current {
-      transition: 0.4s;
+      transition: border 0.4s, color 0.4s;
 
       border-left: 1px solid transparent;
       border-right: 1px solid var(--color-secondary);

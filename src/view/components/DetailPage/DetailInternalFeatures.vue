@@ -158,7 +158,7 @@ export default {
             align-items: center;
             height: 100%;
             border-bottom: 1px solid var(--background-general);
-            padding: 20px 0px;
+            padding: 35px 45px;
           }
         }
 
@@ -189,7 +189,7 @@ export default {
           h3 {
             text-align: right;
             justify-content: flex-end;
-            padding: 20px 0;
+            padding: 35px 45px;
           }
         }
 

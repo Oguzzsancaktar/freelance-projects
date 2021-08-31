@@ -10,7 +10,10 @@
             :key="index"
             class="item"
           >
-            <DetailCard :data="item" />
+            <DetailCard
+              :ApplicationLanguage="ApplicationLanguage"
+              :data="item"
+            />
           </li>
         </ul>
       </div>
@@ -25,6 +28,7 @@ export default {
   name: "DetailCards",
   props: {
     DetailCardsData: Object,
+    ApplicationLanguage: String,
   },
 };
 </script>

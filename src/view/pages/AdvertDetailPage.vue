@@ -1,21 +1,36 @@
 <template>
   <div id="AdvertDetailPage">
     <div class="subpage-content">
-      <DetailHero :DetailHeroData="Data.AdvertDetailPage.DetailHeroData" />
-      <DetailTop :DetailTopData="Data.AdvertDetailPage.DetailTopData" />
-      <DetailInfo :DetailInfoData="Data.AdvertDetailPage.DetailInfoData" />
+      <DetailHero
+        :ApplicationLanguage="ApplicationLanguage"
+        :DetailHeroData="Data.AdvertDetailPage.DetailHeroData"
+      />
+      <DetailTop
+        :ApplicationLanguage="ApplicationLanguage"
+        :DetailTopData="Data.AdvertDetailPage.DetailTopData"
+      />
+      <DetailInfo
+        :ApplicationLanguage="ApplicationLanguage"
+        :DetailInfoData="Data.AdvertDetailPage.DetailInfoData"
+      />
       <DetailDescription
+        :ApplicationLanguage="ApplicationLanguage"
         :DetailDescriptionData="Data.AdvertDetailPage.DetailDescriptionData"
       />
       <DetailFeatures
+        :ApplicationLanguage="ApplicationLanguage"
         :DetailFeaturesData="Data.AdvertDetailPage.DetailFeaturesData"
       />
       <DetailInternalFeatures
+        :ApplicationLanguage="ApplicationLanguage"
         :DetailInternalFeaturesData="
           Data.AdvertDetailPage.DetailInternalFeaturesData
         "
       />
-      <DetailCards :DetailCardsData="Data.AdvertDetailPage.DetailCardsData" />
+      <DetailCards
+        :ApplicationLanguage="ApplicationLanguage"
+        :DetailCardsData="Data.AdvertDetailPage.DetailCardsData"
+      />
     </div>
   </div>
 </template>
@@ -41,6 +56,7 @@ export default {
   },
   props: {
     Data: Object,
+    ApplicationLanguage: String,
   },
   name: "AdvertDetailPage",
 };

@@ -92,7 +92,7 @@ export default {
   }
 }
 
-.DetailHero {
+.DetailHero.rtl {
   .layout {
     .item {
     }

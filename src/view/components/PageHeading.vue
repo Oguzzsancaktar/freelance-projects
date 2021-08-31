@@ -21,6 +21,7 @@ export default {
   name: "PageHeading",
   props: {
     PageHeadingData: Object,
+    ApplicationLanguage: String,
   },
 };
 </script>

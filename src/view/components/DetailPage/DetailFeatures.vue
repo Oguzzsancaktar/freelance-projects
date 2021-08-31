@@ -74,6 +74,8 @@ export default {
         display: flex;
 
         .heading {
+          padding: 35px 45px;
+
           width: 100%;
           h3 {
             text-align: center;

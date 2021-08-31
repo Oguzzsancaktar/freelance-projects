@@ -5,7 +5,7 @@
         @click="closeNavbar"
         v-for="(item, index) in FullScreenNavbarData.NavLinks"
         :key="index"
-        class="navbar-fullscreen-item"
+        class="navbar-fullscreen-item navLink"
       >
         <router-link :to="item.href">
           <Navlink
@@ -20,7 +20,7 @@
 
       <div class="navbar-fullscreen-item button">
         <router-link to="/add">
-          <a @click="closeNavbar">
+          <button @click="closeNavbar">
             <Button
               :ApplicationLanguage="ApplicationLanguage"
               family="var(--font-medium)"
@@ -42,7 +42,7 @@
               textMargin="0"
               padding="0 35px"
             />
-          </a>
+          </button>
         </router-link>
       </div>
 
@@ -272,12 +272,15 @@ export default {
   align-items: center;
   justify-content: center;
 
-  button,
+  button {
+    background: transparent;
+    border: none;
+  }
   a {
     text-align: center;
     background: transparent;
     border: none;
-    padding: 15px 60px;
+    padding: 0px 60px;
     text-decoration: none;
   }
 
@@ -309,6 +312,12 @@ export default {
   }
 }
 
+.navLink {
+  a {
+    padding: 12px 60px !important;
+  }
+}
+
 .navbar-fullscreen-item.button {
   padding: 0px 0px;
   background: transparent;
@@ -316,7 +325,6 @@ export default {
 
 .navbar-fullscreen-item:hover {
   transition: 0.3s;
-  letter-spacing: 1px;
   background: var(--color-secondary);
 }
 

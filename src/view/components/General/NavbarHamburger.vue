@@ -41,7 +41,6 @@ export default {
         jquery(".navbar-fullscreen").slideDown(200);
         jquery("#navbarHamburger").addClass("open");
       }
-      console.log(this.isNavbarOpen);
     },
   },
 };
