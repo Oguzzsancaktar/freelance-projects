@@ -5,30 +5,32 @@
         <p class="text">
           {{ NextEditData.Paragraph }}
         </p>
-        <div @click="sectionControlButton(0)" class="buttons">
-          <Button
-            :ApplicationLanguage="ApplicationLanguage"
-            color="var(--color-primary)"
-            textColor="var(--color-nav-link)"
-            width="100%"
-            background="var(--background-white)"
-            :text="NextEditData.Edit"
-            radius="10px"
-            type="together"
-            border="1px solid transparent"
-            iconType="edit"
-            height="70px"
-            iconColor="var(--color-primary)"
-            padding="0 10px"
-            margin="0"
-            iconWidth="30px"
-            iconHeight="28px"
-            family="var(--font-semibold)"
-            fontSize="23px"
-            iconAreaW="auto"
-            hoverClass="hover-secondary"
-            justify="center"
-          />
+        <div class="buttons">
+          <button @click="sectionControlButton(0)">
+            <Button
+              :ApplicationLanguage="ApplicationLanguage"
+              color="var(--color-primary)"
+              textColor="var(--color-nav-link)"
+              width="100%"
+              background="var(--background-white)"
+              :text="NextEditData.Edit"
+              radius="10px"
+              type="together"
+              border="1px solid transparent"
+              iconType="edit"
+              height="70px"
+              iconColor="var(--color-primary)"
+              padding="0 10px"
+              margin="0"
+              iconWidth="30px"
+              iconHeight="28px"
+              family="var(--font-semibold)"
+              fontSize="23px"
+              iconAreaW="auto"
+              hoverClass="hover-secondary"
+              justify="center"
+            />
+          </button>
 
           <button @click="sectionControlButton(2)">
             <Button

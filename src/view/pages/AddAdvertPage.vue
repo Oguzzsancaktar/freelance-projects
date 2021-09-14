@@ -172,11 +172,13 @@ export default {
     update(section) {
       this.section = section;
     },
+
     sectionControlButton: function(index) {
       this.section = index;
       this.update(index);
     },
   },
+
   mounted() {
     window.scrollTo({
       top: 0,
