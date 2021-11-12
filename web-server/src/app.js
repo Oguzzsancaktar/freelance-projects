@@ -1,6 +1,8 @@
 const path = require('path');
 const express = require('express');
 const hbs = require('hbs');
+const forecast = require('./utils/forecast');
+const geocode = require('./utils/geocode');
 
 const app = express();
 
@@ -12,7 +14,7 @@ const partialsPath = path.join(__dirname, '/../templates/partials');
 // Setup handlebars engine and views location
 app.set('view engine', 'hbs');
 app.set('views', viewsPath);
-hbs.registerPartials(partialsPath)
+hbs.registerPartials(partialsPath);
 
 // Setup static directory to serve
 app.use(express.static(publicDirectoryPath));
@@ -23,6 +25,36 @@ app.get('', (req, res) => {
     name: 'Weather name',
     message: 'Weather message',
   });
+});
+
+app.get('/weather', (req, res) => {
+  if (!req.query.address) {
+    return res.send({
+      error: 'You must provide a address',
+    });
+  }
+
+  geocode(
+    req.query.address,
+    (error, { latitude, longitude, location } = {}) => {
+      if (error) {
+        return res.send({
+          error,
+        });
+      }
+
+      forecast(latitude, longitude, (err, forecastData) => {
+        if (err) {
+          return res.send({ error: err });
+        }
+        res.send({
+          forecast: forecastData,
+          location: location,
+          address: req.query.address,
+        });
+      });
+    }
+  );
 });
 
 app.get('/help', (req, res) => {
@@ -40,7 +72,6 @@ app.get('/about', (req, res) => {
     message: 'About message',
   });
 });
-
 
 app.get('/about/*', (req, res) => {
   res.render('404', {
@@ -64,8 +95,7 @@ app.get('*', (req, res) => {
     name: '404 name',
     errorMessage: 'Page not found',
   });
-})
-
+});
 
 app.listen(3000, () => {
   console.log('App running on port 3000');
