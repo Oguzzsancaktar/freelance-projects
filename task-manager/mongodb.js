@@ -103,19 +103,52 @@ MongoClient.connect(
     //   console.log("error" , error);
     // })
 
+    // db.collection('users').updateOne({
+    //    _id: new ObjectId('61911222b83c19b6f9d3e136'),
+    // }, {
+    //   $set: {
+    //     name:"oguzz"
+    //   }
+    // }).then((result) => {
+    //   console.log(  "success" , result);
+    // }).catch((err) => {
+    //   console.log("error", err);
+    // });
 
+    // db.collection('tasks').updateOne({
+    //   completed:false
+    // }, {
+    //   $set: {
+    //   completed:true
+    //   }
+    // }).then((result) => {
+    //   console.log(  "success" , result);
+    // }).catch((err) => {
+    //   console.log("error", err);
+    // });
 
-    db.collection('users').updateOne({
-       _id: new ObjectId('61911222b83c19b6f9d3e136'),
-    }, {
-      $set: {
-        name:"oguzz"
-      }
-    }).then((result) => {
-      console.log(  "success" , result);
-    }).catch((err) => {
-      console.log("error", err);
-    });
+    // db.collection('tasks')
+    //   .updateMany(
+    //     { completed: false },
+    //     {
+    //       $set: {
+    //         completed: true,
+    //       },
+    //     }
+    //   )
+    //   .then((result) => {
+    //     console.log('success', result);
+    //   })
+    //   .catch((err) => {
+    //     console.log('error', err);
+    //   });
+
+    db.collection('tasks').deleteMany({completed:true}).then((result) => {
+        console.log('success', result);
+      })
+      .catch((err) => {
+        console.log('error', err);
+      });
 
     console.log('Connect Success');
   }
