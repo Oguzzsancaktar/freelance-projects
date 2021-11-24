@@ -1,6 +1,8 @@
 const mongoose = require('mongoose');
 const validator = require('validator');
 const bcrypt = require('bcryptjs');
+const jwt = require('jsonwebtoken');
+const Task = require('./task');
 
 const userSchema = mongoose.Schema({
   name: {
@@ -21,7 +23,7 @@ const userSchema = mongoose.Schema({
   email: {
     type: String,
     required: true,
-    unique:true,
+    unique: true,
     trim: true,
     lowercase: true,
     validate(value) {
@@ -42,24 +44,58 @@ const userSchema = mongoose.Schema({
       }
     },
   },
+  tokens: [
+    {
+      token: {
+        type: String,
+        required: true,
+      },
+    },
+  ],
 });
 
+userSchema.virtual('tasks', {
+  ref: 'Task',
+  localField:"_id",
+  foreignField:"owner"
+})
+
+userSchema.methods.toJSON = function () {
+  const user = this;
+  const userObject = user.toObject();
+
+  delete userObject.password;
+  delete userObject.tokens;
+
+  return userObject;
+};
+
+ 
+userSchema.methods.generateAuthToken = async function () {
+  const user = this;
+  const token = jwt.sign({_id:user._id.toString()}, 'userAuthToken');
+  
+  user.tokens = user.tokens.concat({ token })
+  await user.save()
+
+  return token;
+};
+
+
 userSchema.statics.findByCredentials = async (email, password) => {
-  
-  const user = await User.findOne({ email })
-  
+  const user = await User.findOne({ email });
+
   if (!user) {
     throw new Error('user not found with that email');
   }
 
-  const isMatch = await bcrypt.compare(password , user.password)
+  const isMatch = await bcrypt.compare(password, user.password);
   if (!isMatch) {
-   throw new Error('user not found with that email');
+    throw new Error('user not found with that email');
   }
-  
-  return user
-}
 
+  return user;
+};
 
 // hash the plain password before saving
 userSchema.pre('save', async function (next) {
@@ -69,6 +105,11 @@ userSchema.pre('save', async function (next) {
   }
   next();
 });
+
+userSchema.pre('remove', async function () {
+  const user = this
+  await Task.deleteMany({owner:user._id  })
+})
 
 const User = mongoose.model('User', userSchema);
 
