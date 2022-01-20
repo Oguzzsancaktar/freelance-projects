@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, EventEmitter, Output } from "@angular/core";
 
 @Component({
   selector: 'app-header',
@@ -6,5 +6,12 @@ import { Component } from "@angular/core";
 })
 
 export class HeaderComponent{
+  @Output() onSwitchTab: EventEmitter<{name:string}> = new EventEmitter();
 
+
+  switchTab(tabName){
+    this.onSwitchTab.emit({
+      name:tabName
+    })
+  }
 }
