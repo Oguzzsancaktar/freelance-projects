@@ -5,13 +5,13 @@ import { Component, EventEmitter, Output } from "@angular/core";
   templateUrl: './header.component.html'
 })
 
-export class HeaderComponent{
-  @Output() onSwitchTab: EventEmitter<{name:string}> = new EventEmitter();
+export class HeaderComponent {
+  @Output() featureSelected = new EventEmitter<string>();
 
 
-  switchTab(tabName){
-    this.onSwitchTab.emit({
-      name:tabName
-    })
+  onSelect(feature: string) {
+    this.featureSelected.emit(
+      feature
+    )
   }
 }

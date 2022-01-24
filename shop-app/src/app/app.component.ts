@@ -6,10 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'shop-app';
-  activeTab = ''
+  loadedFeature:string = 'recipe'
 
-  onSwitchTab(name:string) {
-    
+  onNavigate(feature:string) {
+    this.loadedFeature = feature;
   }
 }
