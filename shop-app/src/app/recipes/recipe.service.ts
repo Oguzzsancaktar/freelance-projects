@@ -26,6 +26,10 @@ export class RecipeService {
     return this.recipes.slice()
   }
 
+  getRecipe(index:number):Recipe{
+    return this.recipes[index]
+  }
+
   addIngredientsToShopList(ingredients: Ingredient[]): void {
     ingredients.every(ingredient => {
       this.shoppingListService.onIngredientAdded(ingredient)
