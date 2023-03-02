@@ -1,0 +1,4 @@
+.footer {
+    @apply flex;
+    background: theme('colors.darkBg');
+}
