@@ -1,0 +1,11 @@
+.nav {
+  @apply 
+  bg-carara
+  h-[104px]
+  fixed
+  flex
+  items-center
+  inset-0
+  w-full
+  z-[9]
+}

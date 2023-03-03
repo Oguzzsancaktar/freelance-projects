@@ -1,6 +1,6 @@
 import React, { FC } from 'react'
-import { Navbar } from '@/components/navbar/Navbar'
-import { Footer } from '@/components/footer/Footer'
+import { Navbar } from '@/widgets/navbar/Navbar'
+import { Footer } from '@/widgets/footer/Footer'
 
 interface Props {
   children?: React.ReactNode

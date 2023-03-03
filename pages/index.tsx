@@ -7,6 +7,8 @@ const lato = Lato({ subsets: ['latin'], weight: '400' })
 //NEXT
 import Head from 'next/head'
 import NavFooterLayout from '@/layouts/NavFooterLayout'
+import Welcome from '@/components/home/Welcome'
+import Features from '@/components/home/Features'
 
 const Home: NextPageWithLayout = () => {
   return (
@@ -18,7 +20,8 @@ const Home: NextPageWithLayout = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
-        <h1 className={"text-3xl " + lato.className}>HOME</h1>
+        <Welcome />
+        <Features />
       </main>
     </>
   )

@@ -1,0 +1,5 @@
+.footer {
+    @apply flex;
+    background: theme('colors.heavyMetal');
+    color:  theme('colors.desertStorm');
+}

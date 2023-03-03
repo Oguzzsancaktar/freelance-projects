@@ -6,7 +6,7 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx}",
     "./widgets/**/*.{js,ts,jsx,tsx}",
   ],
-  darkMode:"class", // or 'media' or 'class',
+  darkMode: "class", // or 'media' or 'class',
   theme: {
     extend: {
       fontFamily: {
@@ -16,37 +16,30 @@ module.exports = {
     },
 
     colors: {
+      // -------
       white: "#FFFFFF",
-      gallery: "#F0F0F0",
+      desertStorm: "#F8F8F7",
+      carara: '#F2F2EF',
+
 
       //darks
-      mineShaft: "#3D3D3D",
-      shark: "#21242B",
-      corduroy: "#525F60",
-      tundora: "#444444",
-      darkBg: "#1F1F1F",
+      heavyMetal: "#2A2B2A",
+
       //blues
-      catskillWhite: "#F4FAFA",
-      edgeWater: "#C9E0DF",
-      jungleMist: "#BCD7D9",
+   
 
       //colurfuls
 
       //blue
-      matisse: "#1F78B4",
-      easternBlue: "#21ADA9",
-      regentStBlue: "#A6CEE3",
+ 
 
       //orange
-      gamboge: "#EE9310",
-      macaroniAndCheese: "#FFC674",
-
+      sunsetOrange:"#FC5A40",
+  
       //green
-      forestGreen: "#21AD3C",
-      feijoa: "#B2DF8A",
-
+  
       //red
-      roofTerracotta: "#A93C21",
+
     },
   },
   plugins: [],
