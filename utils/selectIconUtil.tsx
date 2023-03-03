@@ -1,5 +1,5 @@
 import { MessageIcon } from "@/components/icons";
-import WorldIcon from "@/components/icons/default/WorldIcon";
+import WorldIcon from "@/components/icons/WorldIcon";
 
 export const selectIcon = (iconName: string, size?: string, color?: string) => {
   if (!size) size = '3rem';
