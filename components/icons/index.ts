@@ -1,3 +1,3 @@
-export { default as BorderedIcon } from './BorderedIcon';
-export * from './backgrounded';
-export * from './default';
+export { default as MessageIcon } from './MessageIcon';
+export { default as WorldIcon } from './WorldIcon';
+
