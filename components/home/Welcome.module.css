@@ -1,0 +1,4 @@
+.container{
+  @apply h-screen w-screen bg-cover bg-center relative;
+  background-image: url('/assets/images/welcome-background-image.png');
+}
