@@ -5,7 +5,12 @@ import { CompanyLogoPath } from '@/constant/imagePaths'
 //Libs.
 import { Disclosure } from '@headlessui/react'
 // Styles.
+import buttonStyles from '@/styles/button.module.css'
+import layoutStyles from '@/styles/layout.module.css'
+import textStyles from '@/styles/text.module.css'
 import styles from './Navbar.module.css'
+// Utils.
+import { incorporateClasses } from '@/utils/cssUtils'
 
 
 
@@ -37,7 +42,7 @@ const Navbar = () => {
       {({ open }) => (
         <>
           <div className="w-full px-[48px] mx-auto">
-            <div className="flex h-16 items-center justify-between">
+            <div className={incorporateClasses([layoutStyles.x__between]) + " h-16 "}>
               <div className="flex items-center">
                 <Image
                   src={CompanyLogoPath}
@@ -54,17 +59,17 @@ const Navbar = () => {
                     <a
                       key={item.name}
                       href={item.href}
-                      className={classNames(
-                        item.current ? 'bg-gray-900 text-sunsetOrange' : 'text-gray-300 hover:bg-gray-700 hover:text-sunsetOrange',
-                        'px-[24px] py-2 rounded-md text-sm font-medium text-[24px] leading-[30px]'
-                      )}
+                      className={incorporateClasses([
+                        (item.current ? 'text-sunsetOrange' : 'text-heavyMetal hover:text-sunsetOrange'),
+                        'px-[24px] ', textStyles.text__24,
+                      ])}
                       aria-current={item.current ? 'page' : undefined}
                     >
                       {item.name}
                     </a>
                   ))}
 
-                  <button className='border-l-[1px] border-t-[1px] border-r-[5px] border-b-[5px]  h-[62px] w-[268px] border-heavyMetal border-solid text-[26px] leading-[30px] rounded-[40px] ml-[24px]'>
+                  <button className={incorporateClasses([buttonStyles.button__white, textStyles.text__26]) + ' h-[62px] w-[268px] rounded-[40px] ml-[24px]'}>
                     Get Appointment
                   </button>
                 </div>
@@ -98,21 +103,6 @@ const Navbar = () => {
               ))}
             </div>
             <div className="border-t border-gray-700 pt-4 pb-3">
-              <div className="flex items-center px-5">
-                <div className="flex-shrink-0">
-                  <img className="h-10 w-10 rounded-full" src={user.imageUrl} alt="" />
-                </div>
-                <div className="ml-3">
-                  <div className="text-base font-medium leading-none text-white">{user.name}</div>
-                  <div className="text-sm font-medium leading-none text-gray-400">{user.email}</div>
-                </div>
-                <button
-                  type="button"
-                  className="ml-auto flex-shrink-0 rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
-                >
-                  <span className="sr-only">View notifications</span>
-                </button>
-              </div>
               <div className="mt-3 space-y-1 px-2">
                 {userNavigation.map((item) => (
                   <Disclosure.Button
@@ -128,8 +118,9 @@ const Navbar = () => {
             </div>
           </Disclosure.Panel>
         </>
-      )}
-    </Disclosure>
+      )
+      }
+    </Disclosure >
   )
 }
 

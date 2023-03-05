@@ -1,0 +1,22 @@
+.button__orange{
+  @apply 
+  bg-sunsetOrange 
+  
+  border-solid 
+  border-heavyMetal 
+  border-l-[1px] 
+  border-t-[1px] 
+  border-r-[5px] 
+  border-b-[5px] 
+}
+
+.button__white{
+  @apply 
+
+  border-solid 
+  border-heavyMetal 
+  border-l-[1px] 
+  border-t-[1px] 
+  border-r-[5px] 
+  border-b-[5px] 
+}
