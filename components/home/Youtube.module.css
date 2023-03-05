@@ -1,0 +1,7 @@
+.container{
+  @apply bg-cover bg-center relative bg-carara py-[96px] px-[140px];
+}
+
+.text__container{
+  max-width: 900px;
+}

@@ -1,14 +1,17 @@
 import React from 'react'
-// Styles.
-import styles from './features.module.css'
-import { selectIcon } from '@/utils/selectIconUtil'
+// Components
 import FeatureCard from '../FeatureCard'
+// Styles.
+import textStyles from '@/styles/text.module.css'
+import styles from './Features.module.css'
+// Utils
+import { incorporateClasses } from '@/utils/cssUtils'
 
 const Features = () => {
 
   return (
     <div className={styles.container}>
-      <h3 className='text-[44px] leading-[60px] text-center text-white pb-[72px]' >
+      <h3 className={incorporateClasses([textStyles.text__44]) + 'text-center text-white pb-[72px]'} >
         What can we help you about?
       </h3>
 

@@ -6,9 +6,17 @@ import { Lato } from '@next/font/google'
 const lato = Lato({ subsets: ['latin'], weight: '400' })
 //NEXT
 import Head from 'next/head'
+// Layouts.
 import NavFooterLayout from '@/layouts/NavFooterLayout'
+// Components.
 import Welcome from '@/components/home/Welcome'
 import Features from '@/components/home/Features'
+import About from '@/components/home/About'
+import Testimonials from '@/components/home/Testimonials'
+import Contact from '@/components/home/Contact'
+import FAQ from '@/components/home/FAQ'
+import Youtube from '@/components/home/Youtube'
+
 
 const Home: NextPageWithLayout = () => {
   return (
@@ -21,7 +29,12 @@ const Home: NextPageWithLayout = () => {
       </Head>
       <main>
         <Welcome />
+        <About />
         <Features />
+        <Testimonials />,
+        <Contact />
+        <FAQ />
+        <Youtube />
       </main>
     </>
   )
