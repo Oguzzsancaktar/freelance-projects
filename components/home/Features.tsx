@@ -1,6 +1,6 @@
 import React from 'react'
 // Components
-import FeatureCard from '../FeatureCard'
+import FeatureCard from '../feature/FeatureCard'
 // Styles.
 import textStyles from '@/styles/text.module.css'
 import styles from './Features.module.css'

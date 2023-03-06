@@ -31,7 +31,7 @@ const Home: NextPageWithLayout = () => {
         <Welcome />
         <About />
         <Features />
-        <Testimonials />,
+        <Testimonials />
         <Contact />
         <FAQ />
         <Youtube />

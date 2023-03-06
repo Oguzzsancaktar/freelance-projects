@@ -22,22 +22,24 @@ module.exports = {
       carara: '#F2F2EF',
 
 
+      westar: "#E2E2DB",
+
       //darks
       heavyMetal: "#2A2B2A",
-
+      violet: "#0F0D48",
       //blues
-   
+
 
       //colurfuls
 
       //blue
- 
+
 
       //orange
-      sunsetOrange:"#FC5A40",
-  
+      sunsetOrange: "#FC5A40",
+
       //green
-  
+
       //red
 
     },

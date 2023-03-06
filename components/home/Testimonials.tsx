@@ -14,13 +14,11 @@ import { incorporateClasses } from '@/utils/cssUtils'
 const Testimonials = () => {
 
   return (
-    <div className={styles.container}>
+    <div className={incorporateClasses([styles.container, "bg-gradient-to-b from-[#E2E2DB33] to-[#0F0D4833] "])} >
       <h4 className={incorporateClasses([textStyles.text__44, 'text-center text-heavyMetal pb-[32px]'])} >
         Our clients love us
       </h4>
-
       <Slider />
-
       <div className="absolute left-0 bottom-0">
         <Image
           src={TestimonialsIllustrationPath}

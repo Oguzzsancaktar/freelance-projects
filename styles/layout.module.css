@@ -1,7 +1,21 @@
+
 .xy__center{
   @apply flex items-center justify-center
+}
+
+.x__center{
+  @apply flex justify-center
+}
+
+.y__center{
+  @apply flex flex-col justify-center
 }
 
 .x__between{
   @apply flex items-center justify-between
 }
+
+.y__between{
+  @apply flex flex-col items-center justify-between
+}
+

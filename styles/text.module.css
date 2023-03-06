@@ -10,6 +10,11 @@
   @apply text-[32px] leading-[46px]
 }
 
+
+.text__30{
+  @apply text-[30px] leading-[40px]
+}
+
 .text__26{
   @apply text-[26px] leading-[30px]
 }
