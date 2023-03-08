@@ -1,3 +1,7 @@
+.text__100{
+  @apply text-[100px] leading-[120px]
+}
+
 .text__74{
   @apply text-[74px] leading-[84px]
 }
@@ -20,4 +24,14 @@
 }
 .text__24{
   @apply text-[24px] leading-[30px]
+}
+
+
+.text__24{
+  @apply text-[20px] leading-[22px]
+}
+
+
+.text__14{
+  @apply text-[14px] leading-[18px]
 }

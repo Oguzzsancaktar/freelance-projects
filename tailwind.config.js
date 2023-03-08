@@ -16,32 +16,14 @@ module.exports = {
     },
 
     colors: {
-      // -------
+      black: "#000000",
+      mineShaft:"#2A2A2A",
+      codGray:'#0A0A0A',
+      silver:"#C4C4C4",
+      gray:"#888888",
       white: "#FFFFFF",
-      desertStorm: "#F8F8F7",
-      carara: '#F2F2EF',
 
-
-      westar: "#E2E2DB",
-
-      //darks
-      heavyMetal: "#2A2B2A",
-      violet: "#0F0D48",
-      //blues
-
-
-      //colurfuls
-
-      //blue
-
-
-      //orange
-      sunsetOrange: "#FC5A40",
-
-      //green
-
-      //red
-
+      blueRibbon:"#3739FF"
     },
   },
   plugins: [],

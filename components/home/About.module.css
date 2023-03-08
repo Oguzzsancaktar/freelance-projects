@@ -1,5 +1,5 @@
 .container{
-  @apply bg-cover bg-center relative bg-carara py-[96px] px-[140px];
+  @apply flex bg-black bg-center relative py-[96px] px-[140px];
 }
 
 .text__container{

@@ -15,7 +15,7 @@ const FAQ = () => {
 
   return (
     <div className={styles.container}>
-      <h4 className={incorporateClasses([textStyles.text__44, 'underline text-center text-heavyMetal pb-[32px]'])} >
+      <h4 className={incorporateClasses([textStyles.text__44, 'underline text-center text-white pb-[32px]'])} >
         Frequently Asked Questions
       </h4>
 

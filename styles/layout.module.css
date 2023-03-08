@@ -8,7 +8,7 @@
 }
 
 .y__center{
-  @apply flex flex-col justify-center
+  @apply flex flex-col items-center
 }
 
 .x__between{

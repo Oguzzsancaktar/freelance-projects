@@ -1,5 +1,5 @@
 .container{
-  @apply  bg-cover bg-center relative bg-desertStorm py-[96px] px-[140px];
+  @apply  bg-cover bg-center relative py-[96px] px-[140px];
 }
 
 .text__container{

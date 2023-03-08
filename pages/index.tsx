@@ -29,12 +29,12 @@ const Home: NextPageWithLayout = () => {
       </Head>
       <main>
         <Welcome />
+        <Youtube />
         <About />
         <Features />
         <Testimonials />
         <Contact />
         <FAQ />
-        <Youtube />
       </main>
     </>
   )

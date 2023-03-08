@@ -1,6 +1,7 @@
 .nav {
   @apply 
-  bg-carara
+
+  bg-black
   h-[104px]
   fixed
   flex

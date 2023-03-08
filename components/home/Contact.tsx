@@ -13,7 +13,7 @@ const Contact = () => {
 
   return (
     <div className={styles.container}>
-      <h4 className={incorporateClasses([textStyles.text__44, 'text-center text-heavyMetal mb-[115px]'])} >
+      <h4 className={incorporateClasses([textStyles.text__44, 'text-center text-white mb-[115px]'])} >
         We would like to hear from you
       </h4>
 
@@ -34,7 +34,7 @@ const Contact = () => {
           or
         </span>
 
-        <button className={incorporateClasses([textStyles.text__32, buttonStyles.button__white, " w-[268px] h-[62px] rounded-[40px] "])}>
+        <button className={incorporateClasses([textStyles.text__32, buttonStyles.button__primary, " w-[268px] h-[62px] rounded-[40px] "])}>
           Get Appointment
         </button>
       </div>

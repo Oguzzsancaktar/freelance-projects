@@ -1,22 +1,7 @@
-.button__orange{
+.button__primary{
   @apply 
-  bg-sunsetOrange 
   
-  border-solid 
-  border-heavyMetal 
-  border-l-[1px] 
-  border-t-[1px] 
-  border-r-[5px] 
-  border-b-[5px] 
+  bg-blueRibbon
+  text-white
 }
 
-.button__white{
-  @apply 
-
-  border-solid 
-  border-heavyMetal 
-  border-l-[1px] 
-  border-t-[1px] 
-  border-r-[5px] 
-  border-b-[5px] 
-}

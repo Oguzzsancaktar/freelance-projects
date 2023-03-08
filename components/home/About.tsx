@@ -15,32 +15,29 @@ const About = () => {
 
   return (
     <div className={styles.container}>
-      <h4 className={incorporateClasses([textStyles.text__44, 'text-heavyMetal pb-[32px]'])} >
-        Why you should trust us
-      </h4>
 
-      <div className={styles.text__container}>
-        <h5 className={incorporateClasses([textStyles.text__32])}>
-          New clients often come to us in a state of crisis, responding to circumstances that they believe are beyond their control.
-          <br />
-          <b className='underline'>  We pay close attention.</b>
-        </h5>
-        <h5 className={incorporateClasses([textStyles.text__32, "my-[48px]"])}>
-          We collaborate with you to create a constructive case plan that aligns with your objectives in an ethical and efficient manner.
-        </h5>
-      </div>
-
-      <button className={incorporateClasses([textStyles.text__32, buttonStyles.button__white, " w-[268px] h-[62px] rounded-[40px] "])}>
-        About us
-      </button>
-
-      <div className="absolute right-0 bottom-0">
+      <div className='flex-1 bg-white rounded-3xl' >
         <Image
           src={AboutIllustrationPath}
           alt="Picture of the author"
           width={575}
           height={416}
         />
+      </div>
+
+      <div className='flex-1 flex-col' >
+        <h4 className={incorporateClasses([textStyles.text__74, 'text-white pb-[32px]'])} >
+          Let's Introduce Ourself
+        </h4>
+
+        <h5 className={incorporateClasses([textStyles.text__44, 'text-white pb-[32px]'])} >
+          We are a team of
+        </h5>
+
+        <h6 className={incorporateClasses([textStyles.text__26, 'text-gray pb-[32px]'])}>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis autem sint rerum. Ullam, assumenda. Veritatis nam dolorem eius minus recusandae, distinctio error ipsa, impedit deserunt, odit omnis doloremque quia id amet consequatur cupiditate suscipit ea tempore commodi iusto dolores sit.
+        </h6>
+
       </div>
 
     </div>

@@ -9,11 +9,11 @@ const ContactCard = () => {
         {selectIcon('telephone')}
       </div>
 
-      <h2 className='text-[26px] leading-[32px] text-heavyMetal mb-[21px]'>
+      <h2 className='text-[26px] leading-[32px] text-white mb-[21px]'>
         Immigrant Law
       </h2>
 
-      <p className='text-[24px] leading-[32px] text-heavyMetal mb-[12px]'>
+      <p className='text-[24px] leading-[32px] text-white mb-[12px]'>
         Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
       </p>
     </div>

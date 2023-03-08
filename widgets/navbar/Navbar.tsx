@@ -11,15 +11,10 @@ import textStyles from '@/styles/text.module.css'
 import styles from './Navbar.module.css'
 // Utils.
 import { incorporateClasses } from '@/utils/cssUtils'
+import { selectIcon } from '@/utils/selectIconUtil'
 
 
 
-const user = {
-  name: 'Tom Cook',
-  email: 'tom@example.com',
-  imageUrl:
-    'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
-}
 const navigation = [
   { name: 'Our Services', href: '#', current: true },
   { name: 'About Us', href: '#', current: false },
@@ -44,12 +39,8 @@ const Navbar = () => {
           <div className="w-full px-[48px] mx-auto">
             <div className={incorporateClasses([layoutStyles.x__between]) + " h-16 "}>
               <div className="flex items-center">
-                <Image
-                  src={CompanyLogoPath}
-                  alt="Picture of the author"
-                  width={192}
-                  height={80}
-                />
+                {selectIcon('logo')}
+
               </div>
 
 
@@ -60,7 +51,7 @@ const Navbar = () => {
                       key={item.name}
                       href={item.href}
                       className={incorporateClasses([
-                        (item.current ? 'text-sunsetOrange' : 'text-heavyMetal hover:text-sunsetOrange'),
+                        (item.current ? 'text-white' : 'text-white hover:text-white'),
                         'px-[24px] ', textStyles.text__24,
                       ])}
                       aria-current={item.current ? 'page' : undefined}
@@ -69,11 +60,13 @@ const Navbar = () => {
                     </a>
                   ))}
 
-                  <button className={incorporateClasses([buttonStyles.button__white, textStyles.text__26]) + ' h-[62px] w-[268px] rounded-[40px] ml-[24px]'}>
-                    Get Appointment
-                  </button>
+
                 </div>
               </div>
+
+              <button className={incorporateClasses([buttonStyles.button__primary, textStyles.text__26]) + 'text-white h-[62px] w-[268px] rounded-[40px]'}>
+                Get Appointment
+              </button>
 
               <div className="-mr-2 flex md:hidden">
                 {/* Mobile menu button */}
