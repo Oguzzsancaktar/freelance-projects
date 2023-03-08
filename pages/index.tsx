@@ -16,6 +16,7 @@ import Testimonials from '@/components/home/Testimonials'
 import Contact from '@/components/home/Contact'
 import FAQ from '@/components/home/FAQ'
 import Youtube from '@/components/home/Youtube'
+import Blogs from '@/components/home/Blogs'
 
 
 const Home: NextPageWithLayout = () => {
@@ -32,6 +33,7 @@ const Home: NextPageWithLayout = () => {
         <Youtube />
         <About />
         <Features />
+        <Blogs />
         <Testimonials />
         <Contact />
         <FAQ />

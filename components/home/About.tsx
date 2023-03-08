@@ -2,8 +2,6 @@ import React from 'react'
 import Image from 'next/image'
 // Constants.
 import { AboutIllustrationPath } from '@/constant/imagePaths'
-// Components.
-import FeatureCard from '../feature/FeatureCard'
 // Styles.
 import buttonStyles from '@/styles/button.module.css'
 import textStyles from '@/styles/text.module.css'
