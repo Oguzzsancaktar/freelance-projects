@@ -2,7 +2,7 @@
 const nextConfig = {
   reactStrictMode: true,
   images: {
-    domains: ["dummyimage.com"],
+    domains: ["dummyimage.com", "source.unsplash.com"],
   },
   webpack(config) {
     config.module.rules.push({
@@ -10,7 +10,7 @@ const nextConfig = {
       use: ["@svgr/webpack"]
     });
 
-    
+
 
     return config;
   }

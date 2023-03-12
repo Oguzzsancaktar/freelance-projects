@@ -11,9 +11,9 @@ import { incorporateClasses } from '@/utils/cssUtils'
 
 const ContactInteraction = () => {
   return (
-    <div className={incorporateClasses([textStyles.text__26, layoutStyles.x__between, 'flex p-[10px] rounded-[40px] w-full bg-mineShaft'])}>
-      <p className={incorporateClasses([textStyles.text__14, layoutStyles.y__center, 'flex text-gray  bg-mineShaft'])} >Your email address for law support</p>
-      <button className={incorporateClasses([buttonStyles.button__primary, textStyles.text__24]) + ' h-[62px] w-[150px] rounded-[40px]'}>
+    <div className={incorporateClasses([textStyles.text__26, layoutStyles.x__between, 'flex p-[10px] rounded-[40px] w-full bg-mineShaft pl-[30px]'])}>
+      <input type='email' placeholder='Your email address for law support' className={incorporateClasses([textStyles.text__14, layoutStyles.y__center, 'flex text-gray  bg-mineShaft outline-none w-full'])} />
+      <button className={incorporateClasses([buttonStyles.button__primary__solid, textStyles.text__24]) + ' h-[62px] w-[150px] rounded-[40px]'}>
         Let's Talk
       </button>
     </div>

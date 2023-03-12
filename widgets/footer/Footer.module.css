@@ -1,3 +1,4 @@
 .footer {
-  @apply bg-black 
+  @apply bg-black relative py-[96px] px-[140px];
 }
+ 

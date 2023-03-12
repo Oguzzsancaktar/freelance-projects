@@ -1,0 +1,10 @@
+.container{
+  @apply   bg-black  relative py-[96px] px-[140px];
+  
+}
+
+.wrapper{
+  @apply w-full bg-no-repeat bg-cover h-[1000px] ;
+  
+  background-image: url('/assets/images/background-line.png');
+}

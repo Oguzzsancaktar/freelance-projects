@@ -7,7 +7,7 @@ import { selectIcon } from '@/utils/selectIconUtil'
 import textStyles from '@/styles/text.module.css'
 import buttonStyles from '@/styles/button.module.css'
 
-const FeatureSliderItem = () => {
+const ReviewItem = () => {
   return (
     <li className='flex-1 bg-codGray border-[1px] border-mineShaft rounded-[32px] hover:bg-mineShaft'>
       <div className=' px-[32px] pt-[22px] '>
@@ -31,4 +31,4 @@ const FeatureSliderItem = () => {
   )
 }
 
-export default FeatureSliderItem
+export default ReviewItem

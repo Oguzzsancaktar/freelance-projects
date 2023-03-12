@@ -1,7 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
 // Constants.
-import { AboutIllustrationPath } from '@/constant/imagePaths'
+import { AboutIllustrationPath, WomanImagePath } from '@/constant/imagePaths'
 // Styles.
 import buttonStyles from '@/styles/button.module.css'
 import textStyles from '@/styles/text.module.css'
@@ -14,12 +14,13 @@ const About = () => {
   return (
     <div className={styles.container}>
 
-      <div className='flex-1 bg-white rounded-3xl' >
+      <div className='h-[700px] flex-1  bg-white mr-[50px]  rounded-[40%] overflow-hidden' >
         <Image
-          src={AboutIllustrationPath}
+          src={WomanImagePath}
           alt="Picture of the author"
-          width={575}
-          height={416}
+          width={275}
+          height={216}
+          className='w-full h-full'
         />
       </div>
 

@@ -1,7 +1,36 @@
-.button__primary{
+.button__primary__solid{
   @apply 
   
   bg-blueRibbon
   text-white
 }
 
+.button__primary__solid:hover{
+  @apply 
+  
+  bg-opacity-0
+
+  border-[2px]
+  border-blueRibbon
+  text-blueRibbon
+}
+
+
+.button__primary__outlined{
+  @apply 
+  
+  border-[1px]
+  border-blueRibbon
+  text-blueRibbon
+}
+
+
+
+.button__primary__outlined:hover{
+  @apply 
+  transition-all
+  border-[1px]
+  bg-blueRibbon
+  border-blueRibbon
+  text-white
+}

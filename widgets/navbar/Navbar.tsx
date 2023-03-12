@@ -64,7 +64,7 @@ const Navbar = () => {
                 </div>
               </div>
 
-              <button className={incorporateClasses([buttonStyles.button__primary, textStyles.text__26]) + 'text-white h-[62px] w-[268px] rounded-[40px]'}>
+              <button className={incorporateClasses([buttonStyles.button__primary__solid, textStyles.text__26]) + 'text-white h-[62px] w-[268px] rounded-[40px]'}>
                 Get Appointment
               </button>
 

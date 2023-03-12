@@ -1,6 +1,6 @@
 
 .item{
-  @apply w-[350px] h-[350px] bg-white rounded-full mx-[20px] transition-all
+  @apply w-[350px] h-[350px] bg-white rounded-full mx-[20px] transition-all overflow-hidden
 }
 
 

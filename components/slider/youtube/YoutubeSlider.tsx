@@ -1,6 +1,5 @@
-import { AboutIllustrationPath } from '@/constant/imagePaths'
-import Image from 'next/image'
 import React from 'react'
+// Components.
 import YoutubeSliderItem from './YoutubeSliderItem'
 
 const YoutubeSlider = () => {
