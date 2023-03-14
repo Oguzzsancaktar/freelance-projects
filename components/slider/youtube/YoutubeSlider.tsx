@@ -19,7 +19,6 @@ const YoutubeSlider = () => {
   const [sliderWidth, setSliderWidth] = React.useState(0)
   const [windowWidth, setWindowWidth] = React.useState(0)
 
-  const isInView = useInView(sliderRef)
 
   const diff = useMemo(() => {
     return sliderWidth - windowWidth

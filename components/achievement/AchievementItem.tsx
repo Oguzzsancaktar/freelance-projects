@@ -4,21 +4,32 @@ import { incorporateClasses } from '@/utils/cssUtils'
 import textStyles from '@/styles/text.module.css'
 import layoutStyles from '@/styles/layout.module.css'
 import { selectIcon } from '@/utils/selectIconUtil'
-import { useAnimationFrame } from '@/hooks/useAnimationFrame'
+
+import { useAnimationFrame, useInView } from 'framer-motion'
 
 const AchievementItem = () => {
   const x = Math.random() * 2000
+
+  console.log(x);
   const [count, setCount] = useState(0)
 
+  const ref = useRef<HTMLDivElement>(null)
+  const isInView = useInView(ref)
 
-  useAnimationFrame(deltaTime => {
-    setCount(prevCount => (prevCount + deltaTime))
-  }, x)
+  useAnimationFrame(() => {
+    if (isInView) {
+      if (count < x) {
+        setCount((prev) => prev + 1)
+      }
+    } else {
+      setCount(0)
+    }
+  })
 
 
 
   return (
-    <div className="flex flex-col items-center w-[400px]">
+    <div ref={ref} className="flex flex-col items-center w-[400px]">
       <div className={incorporateClasses([layoutStyles.xy__center, "w-[60px] h-[60px] border rounded-full border-white bg-black"])}>
         {selectIcon("case")}
       </div>

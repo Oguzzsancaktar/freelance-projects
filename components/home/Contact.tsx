@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import Image from 'next/image'
 // Contact.
 import { AboutIllustrationPath, WomanImagePath } from '@/constant/imagePaths'
@@ -6,25 +6,35 @@ import { AboutIllustrationPath, WomanImagePath } from '@/constant/imagePaths'
 import { selectIcon } from '@/utils/selectIconUtil'
 import { incorporateClasses } from '@/utils/cssUtils'
 // Styles. 
+import animation from '@/styles/animation.module.css'
 import styles from './Contact.module.css'
 import buttonStyles from '@/styles/button.module.css'
 import textStyles from '@/styles/text.module.css'
+import { useInView } from 'framer-motion'
 
 
 const Contact = () => {
+  const textsRef = useRef<any>();
+  const formRef = useRef<any>();
+  const imageRef = useRef<any>();
+
+  const isTextInView = useInView(textsRef)
+  const isFormInView = useInView(formRef)
+  const isImageInView = useInView(imageRef)
+
   return (
     <div className={incorporateClasses([styles.container, 'relative  border-[1px]   px-[32px] pt-[22px] '])}>
-      <h3 className={incorporateClasses([textStyles.text__74]) + 'text-center text-white pb-[40px]'} >
+      <h3 ref={textsRef} className={incorporateClasses([(isTextInView ? animation.animate__in__top : animation.animate__out__top), textStyles.text__74, 'text-center text-white pb-[40px]'])} >
         Free Consultation
       </h3>
 
-      <h6 className={incorporateClasses([textStyles.text__22]) + 'text-center text-gray pb-[72px] max-w-[600px] mx-auto'} >
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Incidunt voluptate, cupiditate autem nam ipsa ad voluptatum dicta saepe sunt quibusdam atque blanditiis provident?
-      </h6>
+      <h6 className={incorporateClasses([(isTextInView ? animation.animate__in__top : animation.animate__out__top), textStyles.text__22, 'text-center text-gray pb-[72px] max-w-[600px] mx-auto'])} >
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit.Incidunt voluptate, cupiditate autem nam ipsa ad voluptatum dicta saepe sunt quibusdam atque blanditiis provident ?
+      </h6 >
 
 
       <div className="flex h-[500px]">
-        <div className=' w-[500px] bg-white rounded-[40%] overflow-hidden' >
+        <div ref={imageRef} className={incorporateClasses([(isImageInView ? animation.animate__in__left : animation.animate__out__left), ' w-[500px] bg-white rounded-[40%] overflow-hidden'])}>
           <Image
             src={WomanImagePath}
             alt="Picture of the author"
@@ -34,7 +44,7 @@ const Contact = () => {
           />
         </div>
 
-        <div className='flex flex-col h-full justify-between  w-[calc(100%-500px)] pl-[50px] relative' >
+        <div ref={formRef} className={incorporateClasses([(isFormInView ? animation.animate__in__right : animation.animate__out__right), 'flex flex-col h-full justify-between  w-[calc(100%-500px)] pl-[50px] relative'])} >
           <div className="flex ">
             <div className="flex-1 mr-[20px]">
               <label htmlFor="your_name" className="block mb-[15px] text-sm font-medium text-gray-900 text-white">Your Name</label>
@@ -75,7 +85,7 @@ const Contact = () => {
         </div>
       </div>
 
-    </div>
+    </div >
 
   )
 }

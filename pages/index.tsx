@@ -32,10 +32,6 @@ const Home: NextPageWithLayout = () => {
   const contactRef = useRef<any>();
 
 
-
-
-
-
   const router = useRouter();
 
   useEffect(() => {
@@ -61,7 +57,7 @@ const Home: NextPageWithLayout = () => {
         case '/#achivements':
           tempRef = achivementsRef;
           break;
-        case '/#faq':
+        case '/#faqs':
           tempRef = faqRef;
           break;
         case '/#contact':

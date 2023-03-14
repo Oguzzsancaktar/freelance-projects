@@ -1,10 +1,13 @@
 import { incorporateClasses } from '@/utils/cssUtils'
 // Styles.
 import layoutStyles from '@/styles/layout.module.css'
+import animation from '@/styles/animation.module.css'
 import textStyles from '@/styles/text.module.css'
 import styles from './Footer.module.css'
 import dynamic from 'next/dynamic'
 import { selectIcon } from '@/utils/selectIconUtil'
+import { useRef } from 'react'
+import { useInView } from 'framer-motion'
 
 // Dynamic import.
 const FooterMap = dynamic(
@@ -13,8 +16,11 @@ const FooterMap = dynamic(
 )
 
 const Footer = () => {
-  return <footer className={styles.footer}>
-    <div className="flex-col justify-center">
+  const footerRef = useRef(null)
+  const isFooterInView = useInView(footerRef)
+
+  return <footer ref={footerRef} className={styles.footer}>
+    <div className={incorporateClasses([(isFooterInView ? animation.scale__in : animation.scale__out), "flex-col justify-center"])}>
       <h3 className={incorporateClasses([textStyles.text__74]) + 'text-center text-white pb-[30px]'} >
         Contact Our Team
       </h3>

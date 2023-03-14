@@ -1,3 +1,19 @@
 .container{
   @apply  bg-black relative py-[96px] px-[140px];
 }
+
+.blog__big{
+  @apply w-2/3 p-[15px] h-[450px] relative
+}
+.blog__small{
+  @apply w-1/3 p-[15px] h-[450px] relative
+}
+
+.blog__text{
+  @apply absolute -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 z-[1] w-full h-full flex items-center justify-center text-white
+}
+
+
+.blog__img{
+  @apply block h-full w-full rounded-lg object-cover object-center grayscale
+}

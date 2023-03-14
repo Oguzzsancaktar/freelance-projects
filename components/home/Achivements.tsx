@@ -9,7 +9,10 @@ import positionStyles from '@/styles/position.module.css'
 import styles from './Achivements.module.css'
 // Utils
 import { incorporateClasses } from '@/utils/cssUtils'
-import { AchievementItem } from '../achievement'
+// Dynamic imports.
+import dynamic from 'next/dynamic'
+const AchievementItem = dynamic(() => import('@/components/achievement/AchievementItem'))
+
 
 const Achivements = () => {
 
