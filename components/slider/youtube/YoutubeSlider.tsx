@@ -36,7 +36,6 @@ const YoutubeSlider = () => {
     const direction = step % 2 === 0 ? Direction.LEFT : Direction.RIGHT
 
     if (sliderRef.current) {
-
       if (direction) {
         const x = Math.floor(timeInSec % diff)
         sliderRef.current.style.right = -x + "px"
