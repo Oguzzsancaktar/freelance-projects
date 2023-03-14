@@ -19,7 +19,7 @@ const FAQ = () => {
 
       <ul>
         {Array(5).fill(0).map((_, index) => (
-          <li className='mb-[30px]'>
+          <li className='mb-[30px]' key={index}>
             <Accordeon head={"What questions immigration lawyer will ask me?"} body={"An immigration attorney will ask you questions about your entries into the United States, your criminal background, information about family members and their immigration status, if you have ever been granted immigration benefits in the past, and other similar questions."} />
           </li>
         ))}

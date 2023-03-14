@@ -10,7 +10,7 @@ const NavFooterLayout: FC<Props> = ({ children }) => {
   return (
     <>
       <Navbar />
-      <main className="bg-amber-700">{children}</main>
+      <main className="bg-black">{children}</main>
       <Footer />
     </>
   )

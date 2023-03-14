@@ -5,7 +5,6 @@ export const useAnimationFrame = (callback: (deltatime: number) => void, maxValu
   const previousTimeRef = useRef(0);
 
   const countUp = (time: number) => {
-    console.log(previousTimeRef.current, maxValue);
     if (previousTimeRef.current > maxValue) return cancelAnimationFrame(requestRef.current)
 
     if (previousTimeRef.current != undefined) {

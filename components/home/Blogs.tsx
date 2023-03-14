@@ -22,21 +22,21 @@ const Blogs = () => {
           <div className="flex flex-wrap md:-m-2">
             <div className="flex w-full flex-wrap">
               <div className="w-2/3 p-[15px] h-[450px] relative">
-                <h2 className='absolute -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 z-10 w-full h-full flex items-center justify-center text-white'>Title X</h2>
+                <h2 className='absolute -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 z-[1] w-full h-full flex items-center justify-center text-white'>Title X</h2>
                 <img
                   alt="gallery"
                   className="block h-full w-full rounded-lg object-cover object-center grayscale"
                   src="https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(70).webp" />
               </div>
               <div className="w-1/3 p-[15px] h-[450px] relative">
-                <h2 className='absolute -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 z-10 w-full h-full flex items-center justify-center text-white'>Title X</h2>
+                <h2 className='absolute -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 z-[1] w-full h-full flex items-center justify-center text-white'>Title X</h2>
                 <img
                   alt="gallery"
                   className="block h-full w-full rounded-lg object-cover object-center grayscale"
                   src="https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(72).webp" />
               </div>
               <div className="w-1/3 p-[15px] h-[450px] relative">
-                <h2 className='absolute -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 z-10 w-full h-full flex items-center justify-center text-white'>Title X</h2>
+                <h2 className='absolute -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 z-[1] w-full h-full flex items-center justify-center text-white'>Title X</h2>
                 <img
                   alt="gallery"
                   className="block h-full w-full rounded-lg object-cover object-center grayscale"
@@ -44,21 +44,21 @@ const Blogs = () => {
               </div>
 
               <div className="w-2/3 p-[15px] h-[450px] relative">
-                <h2 className='absolute -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 z-10 w-full h-full flex items-center justify-center text-white'>Title X</h2>
+                <h2 className='absolute -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 z-[1] w-full h-full flex items-center justify-center text-white'>Title X</h2>
                 <img
                   alt="gallery"
                   className="block h-full w-full rounded-lg object-cover object-center grayscale"
                   src="https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(74).webp" />
               </div>
               <div className="w-2/3 p-[15px] h-[450px] relative">
-                <h2 className='absolute -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 z-10 w-full h-full flex items-center justify-center text-white'>Title X</h2>
+                <h2 className='absolute -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 z-[1] w-full h-full flex items-center justify-center text-white'>Title X</h2>
                 <img
                   alt="gallery"
                   className="block h-full w-full rounded-lg object-cover object-center grayscale"
                   src="https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(77).webp" />
               </div>
               <div className="w-1/3 p-[15px] h-[450px] relative">
-                <h2 className='absolute -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 z-10 w-full h-full flex items-center justify-center text-white'>Title X</h2>
+                <h2 className='absolute -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 z-[1] w-full h-full flex items-center justify-center text-white'>Title X</h2>
                 <img
                   alt="gallery"
                   className="block h-full w-full rounded-lg object-cover object-center grayscale"

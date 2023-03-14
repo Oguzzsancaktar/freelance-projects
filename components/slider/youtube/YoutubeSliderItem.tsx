@@ -8,9 +8,13 @@ import buttonStyles from '@/styles/button.module.css'
 import textStyles from '@/styles/text.module.css'
 import styles from './YoutubeSliderItem.module.css'
 
-const YoutubeSliderItem = () => {
+interface IProps {
+  text?: string
+}
+const YoutubeSliderItem: React.FC<IProps> = (props) => {
+  const { text } = props
   return (
-    <li className={incorporateClasses([styles.item, "relative"])} >
+    <li className={incorporateClasses([styles.item, "relative transition-all duration-300 cursor-pointer"])} >
       <Image
         src={"https://source.unsplash.com/user/c_v_r"}
         alt='youtube'
@@ -22,7 +26,7 @@ const YoutubeSliderItem = () => {
 
       <div className='absolute left-1/2 bottom-[50px] -translate-x-1/2'>
         <p className='text-white text-center mb-[20px]'>
-          Video name
+          Video name - {text}
         </p>
 
         <button className={incorporateClasses([buttonStyles.button__primary__solid, textStyles.text__24]) + ' h-[40px] w-[120px] rounded-[40px]'}>

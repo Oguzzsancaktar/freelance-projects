@@ -6,7 +6,7 @@ const FeatureSlider = () => {
 
     <ul className='flex flex-wrap gap-[20px]'>
       {Array(3).fill(0).map((_, index) => (
-        <FeatureSliderItem />
+        <FeatureSliderItem key={index} />
       ))}
     </ul>
   )

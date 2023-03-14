@@ -12,20 +12,12 @@ import styles from './Navbar.module.css'
 // Utils.
 import { incorporateClasses } from '@/utils/cssUtils'
 import { selectIcon } from '@/utils/selectIconUtil'
+import Link from 'next/link'
+import { navigation } from '@/constant/navigation'
 
 
 
-const navigation = [
-  { name: 'Our Services', href: '#', current: true },
-  { name: 'About Us', href: '#', current: false },
-  { name: 'Reviews', href: '#', current: false },
-  { name: 'Contact', href: '#', current: false },
-]
-const userNavigation = [
-  { name: 'Your Profile', href: '#' },
-  { name: 'Settings', href: '#' },
-  { name: 'Sign out', href: '#' },
-]
+
 
 function classNames(...classes: string[]) {
   return classes.filter(Boolean).join(' ')
@@ -38,35 +30,39 @@ const Navbar = () => {
         <>
           <div className="w-full px-[48px] mx-auto">
             <div className={incorporateClasses([layoutStyles.x__between]) + " h-16 "}>
-              <div className="flex items-center">
-                {selectIcon('logo')}
+              <Link href={"#welcome"}>
+                <div className="flex items-center">
+                  {selectIcon('logo')}
 
-              </div>
+                </div>
+              </Link>
 
 
               <div className="hidden md:block">
-                <div className="ml-10 flex items-baseline space-x-4">
+                <div className="flex items-baseline ">
                   {navigation.map((item) => (
-                    <a
+                    <Link
                       key={item.name}
                       href={item.href}
                       className={incorporateClasses([
                         (item.current ? 'text-white' : 'text-white hover:text-white'),
-                        'px-[24px] ', textStyles.text__24,
+                        'px-[15px] ', textStyles.text__20,
                       ])}
                       aria-current={item.current ? 'page' : undefined}
                     >
                       {item.name}
-                    </a>
+                    </Link>
                   ))}
 
 
                 </div>
               </div>
 
-              <button className={incorporateClasses([buttonStyles.button__primary__solid, textStyles.text__26]) + 'text-white h-[62px] w-[268px] rounded-[40px]'}>
-                Get Appointment
-              </button>
+              <Link href={'#contact'}>
+                <button className={incorporateClasses([buttonStyles.button__primary__solid, textStyles.text__26]) + 'text-white h-[62px] w-[268px] rounded-[40px]'}>
+                  Get Appointment
+                </button>
+              </Link>
 
               <div className="-mr-2 flex md:hidden">
                 {/* Mobile menu button */}
@@ -94,20 +90,6 @@ const Navbar = () => {
                   {item.name}
                 </Disclosure.Button>
               ))}
-            </div>
-            <div className="border-t border-gray-700 pt-4 pb-3">
-              <div className="mt-3 space-y-1 px-2">
-                {userNavigation.map((item) => (
-                  <Disclosure.Button
-                    key={item.name}
-                    as="a"
-                    href={item.href}
-                    className="block rounded-md px-3 py-2 text-base font-medium text-gray-400 hover:bg-gray-700 hover:text-white"
-                  >
-                    {item.name}
-                  </Disclosure.Button>
-                ))}
-              </div>
             </div>
           </Disclosure.Panel>
         </>

@@ -1,5 +1,6 @@
-import React from 'react'
+import React, { useEffect, useRef } from 'react'
 // Styles.
+import animation from '@/styles/animation.module.css'
 import buttonStyles from '@/styles/button.module.css'
 import layoutStyles from '@/styles/layout.module.css'
 import textStyles from '@/styles/text.module.css'
@@ -8,13 +9,18 @@ import styles from './Welcome.module.css'
 import { selectIcon } from '@/utils/selectIconUtil'
 import { incorporateClasses } from '@/utils/cssUtils'
 import { ContactInteraction } from '../contact'
+import { useInView } from 'framer-motion'
 
 const Welcome = () => {
+  const ref = useRef(null)
+  const isInView = useInView(ref)
+
+
 
   return (
-    <div className={styles.container}>
+    <div className={styles.container} ref={ref}>
       <div className={incorporateClasses([layoutStyles.xy__center, ' w-full m-auto max-w-[1200px]'])}>
-        <div className={incorporateClasses([layoutStyles.y__center, 'relative w-full max-w-[1200px]'])}>
+        <div className={incorporateClasses([layoutStyles.y__center, (isInView ? animation.animate__in__top : animation.animate__out__top), 'relative w-full max-w-[1200px] transition-all duration-2000'])}>
           <div className={incorporateClasses([layoutStyles.y__center, 'absolute top-0 left-[15%] -translate-y-1/2  w-[60px] h-[60px] border-[3px] p-[10px] border-double border-gray rounded-full'])}>
             {selectIcon("law")}
           </div>

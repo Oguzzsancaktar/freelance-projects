@@ -15,6 +15,13 @@ module.exports = {
       },
     },
 
+    transitionDuration: {
+      '100': '100ms',
+      '200': '200ms',
+      '300': '300ms',
+      '2000': '2000ms',
+    },
+
     colors: {
       black: "#000000",
       mineShaft:"#2A2A2A",
