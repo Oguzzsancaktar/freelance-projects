@@ -35,12 +35,15 @@ const YoutubeSlider = () => {
     const step = Math.floor(timeInSec / diff)
     const direction = step % 2 === 0 ? Direction.LEFT : Direction.RIGHT
 
-    if (direction) {
-      const x = Math.floor(timeInSec % diff)
-      sliderRef.current.style.right = -x + "px"
-    } else {
-      const x = (diff - Math.floor(timeInSec) % diff)
-      sliderRef.current.style.right = -x + "px"
+    if (sliderRef.current) {
+
+      if (direction) {
+        const x = Math.floor(timeInSec % diff)
+        sliderRef.current.style.right = -x + "px"
+      } else {
+        const x = (diff - Math.floor(timeInSec) % diff)
+        sliderRef.current.style.right = -x + "px"
+      }
     }
 
     // go diff in 10 seconds
