@@ -58,11 +58,22 @@ const Navbar = () => {
                 </div>
               </div>
 
-              <Link href={'#contact'}>
-                <button className={incorporateClasses([buttonStyles.button__primary__solid, textStyles.text__26]) + 'text-white h-[62px] w-[268px] rounded-[40px]'}>
-                  Get Appointment
-                </button>
-              </Link>
+              <div className="flex justify-center">
+                <div className="flex justify-center items-center bg-silver h-[35px] w-[35px] rounded-[5px] mr-[10px]">
+                  {selectIcon('whatsapp')}
+                </div>
+                <div className="flex justify-center items-center bg-silver h-[35px] w-[35px] rounded-[5px]">
+                  {selectIcon('twitter')}
+                </div>
+                <div className="flex justify-center items-center bg-silver h-[35px] w-[35px] rounded-[5px] mx-[10px]">
+                  {selectIcon('facebook')}
+                </div>
+                <div className="flex justify-center items-center bg-silver h-[35px] w-[35px] rounded-[5px]">
+                  {selectIcon('linkedin')}
+                </div>
+              </div>
+
+
 
               <div className="-mr-2 flex md:hidden">
                 {/* Mobile menu button */}

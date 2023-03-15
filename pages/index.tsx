@@ -63,7 +63,6 @@ const Home: NextPageWithLayout = () => {
         case '/#contact':
           tempRef = contactRef;
           break;
-
         default:
           tempRef = welcomeRef;
           break;
@@ -97,7 +96,9 @@ const Home: NextPageWithLayout = () => {
         <div ref={welcomeRef} >
           <Welcome />
         </div>
-        <Youtube />
+
+        {/* <Youtube /> */}
+
         <div ref={aboutRef} >
           <About />
         </div>

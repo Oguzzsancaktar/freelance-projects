@@ -1,6 +1,6 @@
-import { CaseIcon, CircleMinusIcon, CirclePlusIcon, CityIcon, CompanyIcon, CompanyLogo, FacebookIcon, LawIcon, LinkedinIcon, MessageIcon, PostboxIcon, TelephoneIcon, TwitterIcon, WorldIcon, YoutubeIcon } from "@/components/icons";
+import { CaseIcon, CircleMinusIcon, CirclePlusIcon, CityIcon, CompanyIcon, CompanyLogo, FacebookIcon, LawIcon, LinkedinIcon, MessageIcon, PostboxIcon, TelephoneIcon, TwitterIcon, WhatsappIcon, WorldIcon, YoutubeIcon } from "@/components/icons";
 
-type IconTypes = "case" | "circle-minus" | "circle-plus" | 'city' | 'company-icon' | 'facebook' | 'linkedin' | 'message' | 'postbox' | 'telephone' | "twitter" | 'world' | "youtube" | "logo" | "law";
+type IconTypes = "case" | "circle-minus" | "circle-plus" | 'city' | 'company-icon' | 'facebook' | 'linkedin' | 'message' | 'postbox' | 'telephone' | "twitter" | 'world' | "youtube" | "logo" | "law" | "whatsapp";
 
 export const selectIcon = (iconName: IconTypes, size?: string, color?: string) => {
   if (!size) size = '3rem';
@@ -34,6 +34,8 @@ export const selectIcon = (iconName: IconTypes, size?: string, color?: string) =
       return <PostboxIcon />;
     case 'twitter':
       return <TwitterIcon />;
+    case 'whatsapp':
+      return <WhatsappIcon />;
     case 'world':
       return <WorldIcon />;
     case 'youtube':

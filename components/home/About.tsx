@@ -21,7 +21,7 @@ const About = () => {
   return (
     <div className={styles.container}>
 
-      <div ref={imageRef} className={incorporateClasses([(isImageInView ? animation.animate__in__left : animation.animate__out__left), 'h-[700px] flex-1  bg-white mr-[50px]  rounded-[40%] overflow-hidden transition-all duration-2000'])} >
+      <div ref={imageRef} className={incorporateClasses([(isImageInView ? animation.animate__in__left : animation.animate__out__left), 'h-[400px] w-[300px]   bg-white mr-[50px]  rounded-3xl overflow-hidden transition-all duration-2000'])} >
         <Image
           src={WomanImagePath}
           alt="Picture of the author"
@@ -31,7 +31,7 @@ const About = () => {
         />
       </div>
 
-      <div ref={textRef} className={incorporateClasses([(isTextInView ? animation.animate__in__right : animation.animate__out__right), 'flex-1 flex-col transition-all duration-2000'])} >
+      <div ref={textRef} className={incorporateClasses([(isTextInView ? animation.animate__in__right : animation.animate__out__right), 'w-[calc(100%-300px)] flex-col transition-all duration-2000'])} >
         <h4 className={incorporateClasses([textStyles.text__74, 'text-white pb-[32px]'])} >
           Let's Introduce Ourself
         </h4>

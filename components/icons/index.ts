@@ -16,6 +16,8 @@ export { default as PostboxIcon } from './PostboxIcon';
 export { default as TelephoneIcon } from './TelephoneIcon';
 export { default as TwitterIcon } from './TwitterIcon';
 
+
+export { default as WhatsappIcon } from './WhatsappIcon';
 export { default as WorldIcon } from './WorldIcon';
 export { default as YoutubeIcon } from './YoutubeIcon';
 

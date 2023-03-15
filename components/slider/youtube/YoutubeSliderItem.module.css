@@ -1,10 +1,10 @@
 
 .item{
-  @apply w-[350px] h-[350px] bg-white rounded-full mx-[20px] transition-all overflow-hidden;
+  @apply w-[150px] h-[150px] m-[20px] bg-white rounded-full mx-[20px] transition-all overflow-hidden;
 }
 
 
-.item:hover{
+/* .item:hover{
   @apply h-[550px]
-}
+} */
 

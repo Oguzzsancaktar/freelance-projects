@@ -30,7 +30,7 @@ module.exports = {
       gray:"#888888",
       white: "#FFFFFF",
 
-      blueRibbon:"#3739FF"
+      blueRibbon:"#d3f174"
     },
   },
   plugins: [],

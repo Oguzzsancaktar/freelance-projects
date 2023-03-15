@@ -38,6 +38,11 @@
 }
 
 
+.text__20{
+  @apply text-[20px] leading-[25px]
+}
+
+
 .text__14{
   @apply text-[14px] leading-[18px]
 }

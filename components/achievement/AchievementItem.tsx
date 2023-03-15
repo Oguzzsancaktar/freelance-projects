@@ -29,14 +29,14 @@ const AchievementItem = () => {
 
 
   return (
-    <div ref={ref} className="flex flex-col items-center w-[400px]">
+    <div ref={ref} className="flex flex-col items-center w-[240px]">
       <div className={incorporateClasses([layoutStyles.xy__center, "w-[60px] h-[60px] border rounded-full border-white bg-black"])}>
         {selectIcon("case")}
       </div>
 
-      <span className='h-[80px] border-dotted border-[2px] border-l-blueRibbon' ></span>
+      <span className='h-[40px] border-dotted border-[2px] border-l-blueRibbon' ></span>
 
-      <div className={incorporateClasses([layoutStyles.xy__center, 'flex-col w-full h-[250px] border-[1px] border-silver rounded-[20px] backdrop-blur-xl bg-white/20'])}>
+      <div className={incorporateClasses([layoutStyles.xy__center, 'flex-col w-full h-[200px] border-[1px] border-silver rounded-[20px] backdrop-blur-xl bg-white/20'])}>
         <h5 className={incorporateClasses([textStyles.text__44, "text-white text-center pb-[20px]"])}>{Math.round(count)}+</h5>
         <p className={incorporateClasses([textStyles.text__26, "text-silver text-center"])}>Happy Clients</p>
       </div>
