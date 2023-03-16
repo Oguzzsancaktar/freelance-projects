@@ -2,7 +2,7 @@
   @apply 
   
   bg-blueRibbon
-  text-white
+  text-black
 }
 
 .button__primary__solid:hover{
@@ -32,5 +32,5 @@
   border-[1px]
   bg-blueRibbon
   border-blueRibbon
-  text-white
+  text-black
 }

@@ -25,11 +25,8 @@ const YoutubeSliderItem: React.FC<IProps> = (props) => {
       />
 
       <div className='absolute left-1/2 bottom-[50px] -translate-x-1/2'>
-        <p className='text-white text-center mb-[20px]'>
-          Video name - {text}
-        </p>
 
-        <button className={incorporateClasses([buttonStyles.button__primary__solid, textStyles.text__24]) + ' h-[40px] w-[120px] rounded-[40px]'}>
+        <button className={incorporateClasses(["text-black", buttonStyles.button__primary__solid, textStyles.text__24]) + ' h-[40px] w-[120px] rounded-[40px] text-black'}>
           Let's Talk
         </button>
 
