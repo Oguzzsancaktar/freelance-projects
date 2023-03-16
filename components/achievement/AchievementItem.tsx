@@ -10,7 +10,6 @@ import { useAnimationFrame, useInView } from 'framer-motion'
 const AchievementItem = () => {
   const x = Math.random() * 2000
 
-  console.log(x);
   const [count, setCount] = useState(0)
 
   const ref = useRef<HTMLDivElement>(null)
