@@ -12,7 +12,10 @@ import { ContactInteraction } from '../contact'
 import { useInView } from 'framer-motion'
 import YoutubeSliderVertical from '../slider/youtube/YoutubeSliderVertical'
 import Link from 'next/link'
-import { TestimonialsSlider } from '../slider/testimonials'
+import dynamic from 'next/dynamic'
+
+// Dynamic Imports.
+const TestimonialsSlider = dynamic(() => import('../slider/testimonials/TestimonialsSlider'))
 
 const Welcome = () => {
   const ref = useRef(null)
@@ -21,11 +24,11 @@ const Welcome = () => {
   return (
     <div className={styles.container} ref={ref}>
 
-      <div className={incorporateClasses([styles.slider, 'absolute left-[50px] top-1/2 -translate-y-1/2 h-4/6 w-[190px] overflow-hidden'])}>
+      <div className={incorporateClasses(['absolute left-[50px] top-1/2 -translate-y-1/2 h-4/6 w-[190px] overflow-hidden'])}>
         <YoutubeSliderVertical />
       </div>
 
-      <div className={incorporateClasses(['absolute right-[50px] top-1/2 -translate-y-1/2 h-4/6 w-[350px] overflow-hidden bg-mineShaft rounded-3xl'])}>
+      <div className={incorporateClasses(['absolute right-[50px] top-1/2 -translate-y-1/2 h-4/6 w-[350px] overflow-hidden rounded-3xl'])}>
         <TestimonialsSlider />
       </div>
 

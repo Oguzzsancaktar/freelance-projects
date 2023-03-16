@@ -28,7 +28,7 @@ const YoutubeSliderVertical = () => {
 
 
   useAnimationFrame((time, delta) => {
-    const timeInSec = time / 10
+    const timeInSec = time / 30
 
     const step = Math.floor(timeInSec / diff)
     const direction = step % 2 === 0 ? Direction.LEFT : Direction.RIGHT
@@ -55,7 +55,7 @@ const YoutubeSliderVertical = () => {
 
 
   return (
-    <ul ref={sliderRef} className={incorporateClasses(['transition-opacity duration-2000  overflow-hidden', styles.animate, `flex flex-col absolute  `])}  >
+    <ul ref={sliderRef} className={incorporateClasses(['transition-opacity duration-2000  overflow-hidden', styles.slider, styles.animate, `flex flex-col absolute  `])}  >
       {Array(15).fill(0).map((_, index) => (
         <YoutubeSliderItem key={index} text={index.toString()} />
       ))
