@@ -58,7 +58,7 @@ const Welcome = () => {
             <div className={incorporateClasses([layoutStyles.y__center, 'w-[60px] h-[60px] border-[3px] p-[10px] border-double border-gray rounded-full flex-row justify-center'])}>
               {selectIcon("law")}
             </div>
-            <span className={incorporateClasses(["flex-row", textStyles.text__26, layoutStyles.y__center, 'flex  flex-col text-center   text-blueRibbon ml-[20px]'])}>
+            <span className={incorporateClasses(["flex-row", textStyles.text__26, layoutStyles.y__center, 'flex text-center   text-blueRibbon ml-[20px]'])}>
               Attny.Melinda Basaran
             </span>
           </div>
