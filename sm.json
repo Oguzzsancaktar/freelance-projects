@@ -1,0 +1,11 @@
+{
+  "PRISMIC_ACCESS_TOKEN": "MC5aQnJSaVJJQUFDTUFkU2Q1.MBw7QjhJ77-9OV0i77-977-9HRXvv73vv73vv73vv73vv73vv73vv73vv73vv73vv73vv70_QO-_vVZPDW4,",
+  "PRISMIC_CLIENT_ID": "ZBrRiRIAACAAdSd4",
+  "RISMIC_CLIENT_SECRET": "781953065a465c65375fbc0eeb7f397e",
+  "localSliceSimulatorURL": "http://localhost:3000/slice-simulator",
+  "apiEndpoint": "https://bklaw.prismic.io/api/v2",
+  "libraries": [
+    "@/slices"
+  ],
+  "_latest": "0.7.1"
+}

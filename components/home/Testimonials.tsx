@@ -9,7 +9,11 @@ import styles from './Features.module.css'
 import { incorporateClasses } from '@/utils/cssUtils'
 import { useInView } from 'framer-motion'
 
-const Features = () => {
+interface IProps{
+  data:any
+}
+
+const Features:React.FC<IProps>  = () => {
   const imageRef = useRef(null)
   const textRef = useRef(null)
 

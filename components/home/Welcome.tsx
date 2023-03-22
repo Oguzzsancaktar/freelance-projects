@@ -17,7 +17,11 @@ import dynamic from 'next/dynamic'
 // Dynamic Imports.
 const TestimonialsSlider = dynamic(() => import('../slider/testimonials/TestimonialsSlider'))
 
-const Welcome = () => {
+interface IProps{
+  data:any
+}
+
+const Welcome:React.FC<IProps> = ({data}) => {
   const ref = useRef(null)
   const isInView = useInView(ref)
 
@@ -37,12 +41,13 @@ const Welcome = () => {
 
 
           <h3 className={incorporateClasses([textStyles.text__100, 'text-center  text-white'])}>
-            Welcome to the
+           {data["top_title"]||"Welcome to the"}  
           </h3>
 
           <div className="flex">
             <h3 className={incorporateClasses([textStyles.text__100, 'text-center  text-white'])}>
-              BK
+           {data["icon_left_text"]||"BK"}  
+              
             </h3>
 
             <div className={incorporateClasses([layoutStyles.y__center, 'w-[100px] h-[100px] mx-[20px] flex-col'])}>
@@ -50,7 +55,9 @@ const Welcome = () => {
             </div>
 
             <h3 className={incorporateClasses([textStyles.text__100, 'text-center  text-white'])}>
-              Law Group.
+           {data["icon_right_text"]||"Law Group."}  
+
+              
             </h3>
           </div>
 
@@ -59,21 +66,25 @@ const Welcome = () => {
               {selectIcon("law")}
             </div>
             <span className={incorporateClasses(["flex-row", textStyles.text__26, layoutStyles.y__center, 'flex text-center   text-blueRibbon ml-[20px]'])}>
-              Attny.Melinda Basaran
+           {data["lawyer_name"]||"Attny.Melinda Basaran"}  
+              
+              
             </span>
           </div>
 
           <div className='mt-[40px] max-w-[500px] w-full'>
-            <ContactInteraction />
+            <ContactInteraction buttonText={data["contact_send_text"]} />
           </div>
 
           <span className={incorporateClasses([textStyles.text__20, 'text-blueRibbon mt-[60px]'])}>
-            Free Consultation Saturday
+           {data["appointment_slogan"]||"Free Consultation Saturday"}  
+            
           </span>
 
           <Link href={'#contact'}>
             <button className={incorporateClasses([buttonStyles.button__primary__solid, textStyles.text__26]) + 'text-white h-[62px] w-[268px] rounded-[40px] mt-[20px]'}>
-              Get Appointment
+           {data["appointment_slogan"]||" Get Appointment"}  
+             
             </button>
           </Link>
         </div>

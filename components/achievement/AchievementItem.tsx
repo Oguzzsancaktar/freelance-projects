@@ -7,9 +7,11 @@ import { selectIcon } from '@/utils/selectIconUtil'
 
 import { useAnimationFrame, useInView } from 'framer-motion'
 
-const AchievementItem = () => {
-  const x = Math.random() * 2000
+interface IProps {
+  achivement: any
+}
 
+const AchievementItem:React.FC<IProps> = ({achivement}) => {
   const [count, setCount] = useState(0)
 
   const ref = useRef<HTMLDivElement>(null)
@@ -17,15 +19,13 @@ const AchievementItem = () => {
 
   useAnimationFrame(() => {
     if (isInView) {
-      if (count < x) {
+      if (count < achivement["count"]) {
         setCount((prev) => prev + 1)
       }
     } else {
       setCount(0)
     }
   })
-
-
 
   return (
     <div ref={ref} className="flex flex-col items-center w-[240px]">

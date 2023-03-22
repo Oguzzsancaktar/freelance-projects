@@ -1,0 +1,58 @@
+{
+  "_cts": {
+    "homepage": {}
+  },
+  "slices": {
+    "Welcome": {
+      "default": {
+        "primary": {},
+        "items": {}
+      }
+    },
+    "About": {
+      "default": {
+        "primary": {}
+      }
+    },
+    "Features": {
+      "default": {
+        "primary": {}
+      }
+    },
+    "Blogs": {
+      "default": {
+        "primary": {},
+        "items": {}
+      }
+    },
+    "Testimonials": {},
+    "Achivements": {
+      "default": {
+        "primary": {}
+      }
+    },
+    "Faq": {
+      "default": {
+        "primary": {}
+      }
+    },
+    "Contact": {
+      "default": {
+        "primary": {},
+        "items": {}
+      }
+    },
+    "Header": {
+      "default": {
+        "primary": {},
+        "items": {}
+      }
+    },
+    "Footer": {
+      "default": {
+        "primary": {},
+        "items": {}
+      }
+    }
+  }
+}

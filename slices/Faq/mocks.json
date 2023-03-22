@@ -1,0 +1,30 @@
+[
+  {
+    "__TYPE__": "SharedSliceContent",
+    "variation": "default",
+    "primary": {},
+    "items": [
+      {
+        "__TYPE__": "GroupItemContent",
+        "value": [
+          [
+            "question",
+            {
+              "__TYPE__": "FieldContent",
+              "value": "popular",
+              "type": "Text"
+            }
+          ],
+          [
+            "answer",
+            {
+              "__TYPE__": "FieldContent",
+              "value": "tales",
+              "type": "Text"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+]

@@ -20,8 +20,13 @@ import Blogs from '@/components/home/Blogs'
 import Achivements from '@/components/home/Achivements'
 import { useRouter } from 'next/router'
 
+import map from 'lodash/map'
 
-const Home: NextPageWithLayout = () => {
+import {createClient} from '../prismicio'
+
+
+
+const Home: NextPageWithLayout<{dataMap:any}> = ({dataMap}) => {
   const welcomeRef = useRef<any>();
   const aboutRef = useRef<any>();
   const featuresRef = useRef<any>();
@@ -34,7 +39,9 @@ const Home: NextPageWithLayout = () => {
 
   const router = useRouter();
 
-  useEffect(() => {
+  console.log("dataMap",dataMap);
+
+   useEffect(() => {
     const onHashChangeStart = (url: string) => {
       let tempRef;
 
@@ -94,31 +101,31 @@ const Home: NextPageWithLayout = () => {
       </Head>
       <main>
         <div ref={welcomeRef} >
-          <Welcome />
+          <Welcome data={dataMap["welcome"]} />
         </div>
 
         {/* <Youtube /> */}
 
         <div ref={aboutRef} >
-          <About />
+          <About  data={dataMap["about"]}/>
         </div>
         <div ref={featuresRef} >
-          <Features />
+          <Features  data={dataMap["features"]}/>
         </div>
         <div ref={blogsRef} >
-          <Blogs />
+          <Blogs data={dataMap["blogs"]} />
         </div>
-        <div ref={testimonialsRef} >
+        {/* <div ref={testimonialsRef} >
           <Testimonials />
-        </div>
+        </div> */}
         <div ref={achivementsRef} >
-          <Achivements />
+          <Achivements data={dataMap["achivements"]} />
         </div>
         <div ref={faqRef} >
-          <FAQ />
+          <FAQ data={dataMap["faq"]} />
         </div>
         <div ref={contactRef} >
-          <Contact />
+          <Contact data={dataMap["contact"]} />
         </div>
       </main>
     </>
@@ -130,3 +137,24 @@ Home.getLayout = function getLayout(page: ReactElement) {
 }
 
 export default Home
+
+
+
+export async function getStaticProps() {
+  const client = createClient()
+  const result = await client.getSingle("homepage")
+  const {slices} = result.data
+
+  const dataMap:any = {}
+
+
+  map(slices, (slice) => {
+    dataMap[slice.slice_type] = {items:slice.items,...slice.primary}
+  })
+
+  return {
+    props: {
+      dataMap,
+    },
+  }
+}

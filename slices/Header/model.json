@@ -1,0 +1,90 @@
+{
+  "id": "header",
+  "type": "SharedSlice",
+  "name": "Header",
+  "description": "Header",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "sktwi1xtmkfgx8626",
+      "description": "Header",
+      "primary": {
+        "logo": {
+          "type": "Image",
+          "config": {
+            "label": "Logo",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "about": {
+          "type": "Text",
+          "config": {
+            "label": "About",
+            "placeholder": ""
+          }
+        },
+        "features": {
+          "type": "Text",
+          "config": {
+            "label": "Features",
+            "placeholder": ""
+          }
+        },
+        "blogs": {
+          "type": "Text",
+          "config": {
+            "label": "Blogs",
+            "placeholder": ""
+          }
+        },
+        "testimonials": {
+          "type": "Text",
+          "config": {
+            "label": "Testimonials",
+            "placeholder": ""
+          }
+        },
+        "achivements": {
+          "type": "Text",
+          "config": {
+            "label": "Achivements",
+            "placeholder": ""
+          }
+        },
+        "faqs": {
+          "type": "Text",
+          "config": {
+            "label": "Faqs",
+            "placeholder": ""
+          }
+        }
+      },
+      "items": {
+        "icon": {
+          "type": "Select",
+          "config": {
+            "label": "Icon",
+            "placeholder": "",
+            "options": [
+              "whatsapp",
+              "twitter",
+              "facebook",
+              "linkedin"
+            ]
+          }
+        },
+        "address": {
+          "type": "Text",
+          "config": {
+            "label": "address",
+            "placeholder": ""
+          }
+        }
+      },
+      "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+    }
+  ]
+}

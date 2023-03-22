@@ -1,9 +1,8 @@
-import React, { useLayoutEffect, useMemo, useRef, useState } from 'react'
+import React, { useLayoutEffect, useMemo, useRef,  } from 'react'
 // Components.
 import YoutubeSliderItem from './YoutubeSliderItem'
 // Styles.
 import styles from './YoutubeSlider.module.css'
-import animation from '@/styles/animation.module.css'
 
 import { incorporateClasses } from '@/utils/cssUtils'
 import { useAnimationFrame, useInView } from 'framer-motion'

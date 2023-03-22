@@ -11,7 +11,11 @@ import { Disclosure, Transition } from '@headlessui/react'
 import { Accordeon } from '../accordeon'
 import { useInView } from 'framer-motion'
 
-const FAQ = () => {
+interface IProps{
+  data:any
+}
+
+const FAQ:React.FC<IProps>  = ({data}) => {
   const faqRef1 = React.useRef<any>();
   const faqRef2 = React.useRef<any>();
   const faqRef3 = React.useRef<any>();
@@ -29,6 +33,9 @@ const FAQ = () => {
   const faqRefs = [faqRef1, faqRef2, faqRef3, faqRef4, faqRef5];
   const isViewIns = [isViewIn1, isViewIn2, isViewIn3, isViewIn4, isViewIn5];
 
+
+  console.log("data",data);
+
   return (
     <div className={styles.container}>
       <h4 className={incorporateClasses([textStyles.text__44, ' text-center text-white pb-[50px]'])} >
@@ -36,9 +43,9 @@ const FAQ = () => {
       </h4>
 
       <ul>
-        {Array(5).fill(0).map((_, index) => (
+        {data["items"].map((faq:any, index:number) => (
           <li ref={faqRefs[index]} className={incorporateClasses([(index % 2 === 0 ? isViewIns[index] ? animation.animate__in__right : animation.animate__out__right : isViewIns[index] ? animation.animate__in__left : animation.animate__out__left), 'mb-[30px]'])} key={index}>
-            <Accordeon head={"What questions immigration lawyer will ask me?"} body={"An immigration attorney will ask you questions about your entries into the United States, your criminal background, information about family members and their immigration status, if you have ever been granted immigration benefits in the past, and other similar questions."} />
+            <Accordeon  head={faq["question"]} body={faq["answer"]} />
           </li>
         ))}
 

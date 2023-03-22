@@ -12,7 +12,11 @@ import { useInView } from 'framer-motion'
 // Dynamic imports.
 const YoutubeSlider = dynamic(() => import('../slider/youtube/YoutubeSlider'), { ssr: false })
 
-const Youtube = () => {
+interface IProps{
+  data:any
+}
+
+const Youtube:React.FC<IProps>  = () => {
   const ref = React.useRef(null)
   const isInView = useInView(ref)
   return (

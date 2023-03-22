@@ -6,15 +6,6 @@ import { incorporateClasses } from '@/utils/cssUtils'
 import textStyles from '@/styles/text.module.css'
 
 const TestimonialsSliderItem: React.FC<{ index: number }> = ({ index }) => {
-
-  useEffect(() => {
-    console.log("TestimonialsSliderItem mounted")
-    return () => {
-      console.log("TestimonialsSliderItem unmounted")
-    }
-  }, [])
-
-
   return (
     <div className='flex flex-col h-full border-b-gray border-solid border-b-[1px] py-[20px]'>
       <div className="flex items-center">

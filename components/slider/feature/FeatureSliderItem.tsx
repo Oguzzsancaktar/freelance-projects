@@ -7,7 +7,12 @@ import { selectIcon } from '@/utils/selectIconUtil'
 import textStyles from '@/styles/text.module.css'
 import buttonStyles from '@/styles/button.module.css'
 
-const FeatureSliderItem = () => {
+
+interface IProps{
+  feature:any
+}
+
+  const FeatureSliderItem:React.FC<IProps> = ({feature}) => {
   return (
     <li className='flex-1 bg-codGray border-[1px] border-mineShaft rounded-[32px] hover:bg-mineShaft'>
       <div className=' px-[32px] pt-[22px] '>
@@ -16,15 +21,15 @@ const FeatureSliderItem = () => {
         </div>
 
         <h2 className='text-[26px] leading-[32px] text-white mb-[21px]'>
-          100% Success Rate.
+        {feature["title"]||"100% Success Rate."}
         </h2>
 
         <p className='text-[24px] leading-[32px] text-gray mb-[12px]'>
-          Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+          {feature["paragraph"]||"Read More"}
         </p>
 
         <button className={incorporateClasses([textStyles.text__24, buttonStyles.button__primary__outlined, 'text-white h-[54px] w-full  rounded-[40px] my-[40px]'])}>
-          Read More
+          {feature["button_text"]||"Read More"}
         </button>
       </div>
     </li>

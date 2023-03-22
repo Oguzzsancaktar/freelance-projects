@@ -1,12 +1,15 @@
 import React from 'react'
 import FeatureSliderItem from './FeatureSliderItem'
+import { map } from 'lodash';
 
-const FeatureSlider = () => {
+interface IProps{
+  features:any
+}
+const FeatureSlider:React.FC<IProps> = ({features}) => {
   return (
-
     <ul className='flex flex-wrap gap-[20px]'>
-      {Array(3).fill(0).map((_, index) => (
-        <FeatureSliderItem key={index} />
+      {map(features,(feature, index) => (
+        <FeatureSliderItem feature={feature}  key={index} />
       ))}
     </ul>
   )
