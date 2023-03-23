@@ -24,7 +24,9 @@ interface IProps{
 const Welcome:React.FC<IProps> = ({data}) => {
   const ref = useRef(null)
   const isInView = useInView(ref)
-
+  if (!data) {
+    return <div>...</div>
+  }
   return (
     <div className={styles.container} ref={ref}>
 

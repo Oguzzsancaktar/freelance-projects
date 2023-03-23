@@ -22,7 +22,9 @@ interface IProps {
 const Footer:React.FC<IProps> = ({data}) => {
   const footerRef = useRef(null)
   const isFooterInView = useInView(footerRef)
-
+  if (!data) {
+    return <div>...</div>
+  }
   return <footer ref={footerRef} className={styles.footer}>
     <div className={incorporateClasses([(isFooterInView ? animation.scale__in : animation.scale__out), "flex-col justify-center"])}>
       <h3 className={incorporateClasses([textStyles.text__74]) + 'text-center text-white pb-[30px]'} >

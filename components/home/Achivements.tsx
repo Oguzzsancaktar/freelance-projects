@@ -20,6 +20,9 @@ interface IProps{
 }
 
 const Achivements :React.FC<IProps> = ({data}) => {
+  if (!data) {
+    return <div>...</div>
+  }
   return (
     <div className={styles.container}>
 

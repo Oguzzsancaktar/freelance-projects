@@ -33,7 +33,9 @@ const Blogs:React.FC<IProps>  = ({data}) => {
 
   const blogRefs = [blogRef1, blogRef2, blogRef3, blogRef4, blogRef5, blogRef6];
   const isViewIns = [isViewIn1, isViewIn2, isViewIn3, isViewIn4, isViewIn5, isViewIn6];
-
+  if (!data) {
+    return <div>...</div>
+  }
   return (
     <div className={styles.container}>
       <h3 className={incorporateClasses([textStyles.text__74]) + 'text-center text-white pb-[4rem]'} >

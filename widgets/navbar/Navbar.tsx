@@ -27,6 +27,11 @@ interface IProps {
   data: any
 }
 const Navbar :React.FC<IProps> = ({data}) => {
+  
+  if (!data) {
+    return <div>...</div>
+  }
+
   return (
     <Disclosure as="nav" className={styles.nav}>
       {({ open }) => (
@@ -35,7 +40,7 @@ const Navbar :React.FC<IProps> = ({data}) => {
             <div className={incorporateClasses([layoutStyles.x__between]) + " h-16 "}>
               <Link href={"#welcome"}>
                 <div className="flex items-center">
-                  <Image src={data.logo.url||CompanyLogoPath} alt="logo" width={100} height={200} />
+                  <Image src={data?.logo.url||CompanyLogoPath} alt="logo" width={100} height={200} />
                 </div>
               </Link>
 

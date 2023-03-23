@@ -18,7 +18,9 @@ const Features:React.FC<IProps>  = ({data}) => {
 
   const isImageInView = useInView(imageRef)
   const isTextInView = useInView(textRef)
-
+  if (!data) {
+    return <div>...</div>
+  }
   
   return (
     <div className={styles.container}>

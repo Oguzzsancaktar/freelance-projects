@@ -20,6 +20,8 @@ const Features:React.FC<IProps>  = () => {
   const isImageInView = useInView(imageRef)
   const isTextInView = useInView(textRef)
 
+  
+
   return (
     <div className={styles.container}>
       <h3 ref={textRef} className={incorporateClasses([(isTextInView ? animation.animate__in__bottom : animation.animate__out__bottom), textStyles.text__74]) + 'text-center text-white pb-[4rem]'} >
