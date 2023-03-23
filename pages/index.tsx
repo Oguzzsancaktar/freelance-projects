@@ -133,7 +133,8 @@ const Home: NextPageWithLayout<{dataMap:any}> = ({dataMap}) => {
 }
 
 Home.getLayout = function getLayout(page: ReactElement) {
-  return <NavFooterLayout>{page}</NavFooterLayout>
+  const dataMap = page.props.dataMap;
+  return <NavFooterLayout navData={dataMap["header"]} footerData={dataMap["footer"]}>{page}</NavFooterLayout>
 }
 
 export default Home

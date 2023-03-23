@@ -23,7 +23,11 @@ function classNames(...classes: string[]) {
   return classes.filter(Boolean).join(' ')
 }
 
-const Navbar = () => {
+interface IProps {
+  data: any
+}
+const Navbar :React.FC<IProps> = ({data}) => {
+  console.log("nav data",data);
   return (
     <Disclosure as="nav" className={styles.nav}>
       {({ open }) => (
@@ -32,8 +36,7 @@ const Navbar = () => {
             <div className={incorporateClasses([layoutStyles.x__between]) + " h-16 "}>
               <Link href={"#welcome"}>
                 <div className="flex items-center">
-                  {selectIcon('logo')}
-
+                  <Image src={data.logo.url||CompanyLogoPath} alt="logo" width={100} height={200} />
                 </div>
               </Link>
 
@@ -50,7 +53,7 @@ const Navbar = () => {
                       ])}
                       aria-current={item.current ? 'page' : undefined}
                     >
-                      {item.name}
+                      {data[item.href.replace('#','')] || item.name}
                     </Link>
                   ))}
 
@@ -58,20 +61,15 @@ const Navbar = () => {
                 </div>
               </div>
 
-              <div className="flex justify-center">
-                <div className="flex justify-center items-center bg-silver h-[35px] w-[35px] rounded-[5px] mr-[10px]">
-                  {selectIcon('whatsapp')}
-                </div>
-                <div className="flex justify-center items-center bg-silver h-[35px] w-[35px] rounded-[5px]">
-                  {selectIcon('twitter')}
-                </div>
-                <div className="flex justify-center items-center bg-silver h-[35px] w-[35px] rounded-[5px] mx-[10px]">
-                  {selectIcon('facebook')}
-                </div>
-                <div className="flex justify-center items-center bg-silver h-[35px] w-[35px] rounded-[5px]">
-                  {selectIcon('linkedin')}
-                </div>
-              </div>
+              <ul className="flex justify-center">
+                {data.items.map((item: any) => (
+                <li className="flex justify-center items-center bg-silver h-[35px] w-[35px] rounded-[5px] mr-[10px]">
+                  <a href={item.address} target='_blank'>
+                  {selectIcon(item.icon)}
+                  </a>
+                </li>
+                ))}
+              </ul>
 
 
 

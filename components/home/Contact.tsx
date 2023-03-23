@@ -26,8 +26,6 @@ const Contact:React.FC<IProps>  = ({data}) => {
   const isFormInView = useInView(formRef)
   const isImageInView = useInView(imageRef)
 
-  console.log("data",data);
-
   return (
     <div className={incorporateClasses([styles.container, 'relative  border-[1px]   px-[32px] pt-[22px] '])}>
       <h3 ref={textsRef} className={incorporateClasses([(isTextInView ? animation.animate__in__top : animation.animate__out__top), textStyles.text__74, 'text-center text-white pb-[40px]'])} >
