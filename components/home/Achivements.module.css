@@ -1,10 +1,10 @@
 .container{
-  @apply  w-screen h-screen  bg-black  relative py-[96px] px-[140px];
+  @apply  h-[auto] bg-black  relative py-[5.5rem] ;
   
 }
 
 .wrapper{
-  @apply w-full bg-no-repeat bg-cover h-[calc(100%-125px)] ;
+  @apply w-full bg-no-repeat bg-center bg-cover h-[calc(100%-125px)] ;
   
   background-image: url('/assets/images/background-line.png');
 }

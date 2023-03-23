@@ -9,9 +9,10 @@ import { useAnimationFrame, useInView } from 'framer-motion'
 
 interface IProps {
   achivement: any
+  reverse?: boolean
 }
 
-const AchievementItem:React.FC<IProps> = ({achivement}) => {
+const AchievementItem:React.FC<IProps> = ({achivement,reverse}) => {
   const [count, setCount] = useState(0)
 
   const ref = useRef<HTMLDivElement>(null)
@@ -27,8 +28,9 @@ const AchievementItem:React.FC<IProps> = ({achivement}) => {
     }
   })
 
+  console.log("rev",reverse);
   return (
-    <div ref={ref} className="flex flex-col items-center w-[240px]">
+    <div ref={ref} className={"flex  items-center w-[240px] " + (reverse ? "flex-col-reverse":"flex-col")}>
       <div className={incorporateClasses([layoutStyles.xy__center, "w-[60px] h-[60px] border rounded-full border-white bg-black"])}>
         {selectIcon("case")}
       </div>

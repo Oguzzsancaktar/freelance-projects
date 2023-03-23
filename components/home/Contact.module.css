@@ -1,5 +1,5 @@
 .container{
-  @apply  bg-black relative py-[120px] px-[140px];
+  @apply  bg-black relative py-[120px] ;
 }
 
  

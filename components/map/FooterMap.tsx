@@ -12,7 +12,7 @@ export default function FooterMap() {
   }, [window]);
 
   return (
-    <MapContainer center={[51.505, -0.09]} zoom={13} scrollWheelZoom={false} style={{ height: 600, width: "100%" }}>
+    <MapContainer center={[51.505, -0.09]} zoom={13} scrollWheelZoom={false} style={{ height: 300, width: "100%" }}>
       <TileLayer
         attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
         url="https://mt1.google.com/vt/style.grayscale/lyrs=m&x={x}&y={y}&z={z}"

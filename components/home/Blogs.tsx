@@ -36,7 +36,7 @@ const Blogs:React.FC<IProps>  = ({data}) => {
 
   return (
     <div className={styles.container}>
-      <h3 className={incorporateClasses([textStyles.text__74]) + 'text-center text-white pb-[72px]'} >
+      <h3 className={incorporateClasses([textStyles.text__74]) + 'text-center text-white pb-[4rem]'} >
         {data["title"]||"Our Latest Blogs"}
       </h3>
 
@@ -52,7 +52,7 @@ const Blogs:React.FC<IProps>  = ({data}) => {
                     isViewIns[index] ? animation.animate__in__right : animation.animate__out__right, 
                     blog.size === "small" ? styles.blog__small : styles.blog__big ])} key={index}>
                       
-                  <h2 className={styles.blog__text}>
+                  <h2 className={incorporateClasses([styles.blog__text,textStyles.text__44]) }>
                     {blog.text}
                      </h2>
                   <img

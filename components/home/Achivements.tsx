@@ -16,10 +16,10 @@ const AchievementItem = dynamic(() => import('@/components/achievement/Achieveme
 
 interface IProps{
   data:any
+
 }
 
 const Achivements :React.FC<IProps> = ({data}) => {
-console.log("data",data);
   return (
     <div className={styles.container}>
 
@@ -28,11 +28,11 @@ console.log("data",data);
       </h3>
 
       <div className={styles.wrapper}>
-        <div className='flex relative w-full h-full max-w-[1000px] justify-center  mx-auto'>
+        <div className='flex relative w-full h-full justify-center  mx-auto'>
           {data["items"].map((achivement:any,index:number)=>{
             return (
-              <div className={incorporateClasses(["flex" , index % 2 === 0 ?   "items-start mt-[50px] mr-[-50px]":"items-end mb-[50px] ml-[-50px]"])  }>
-                <AchievementItem achivement={achivement} key={index} />
+              <div className={incorporateClasses(["flex mx-[1rem]" , index % 2 === 0 ?   "items-start mt-[50px] ":"items-end mb-[50px] "])  }>
+                <AchievementItem achivement={achivement} reverse={(index % 2 === 0)} key={index} />
               </div>
               )
             })

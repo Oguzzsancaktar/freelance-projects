@@ -1,5 +1,5 @@
 .container{
-  @apply  w-screen h-screen  bg-cover bg-center relative bg-black;
+  @apply   h-screen  bg-cover bg-center relative bg-black;
 
 }
 

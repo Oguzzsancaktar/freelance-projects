@@ -15,7 +15,7 @@ interface IProps{
   const FeatureSliderItem:React.FC<IProps> = ({feature}) => {
   return (
     <li className='flex-1 bg-codGray border-[1px] border-mineShaft rounded-[32px] hover:bg-mineShaft'>
-      <div className=' px-[32px] pt-[22px] '>
+      <div className='flex flex-col justify-between px-[32px] pt-[22px] h-full'>
         <div className='w-[75px] h-[75px] mb-[53px]'>
           {selectIcon('world')}
         </div>
@@ -24,7 +24,7 @@ interface IProps{
         {feature["title"]||"100% Success Rate."}
         </h2>
 
-        <p className='text-[24px] leading-[32px] text-gray mb-[12px]'>
+        <p className={incorporateClasses([textStyles.text__24,' text-gray mb-[12px]'])}>
           {feature["paragraph"]||"Read More"}
         </p>
 

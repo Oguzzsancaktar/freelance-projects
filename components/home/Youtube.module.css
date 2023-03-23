@@ -1,5 +1,5 @@
 .container{
-  @apply bg-black z-[2] relative my-[96px] px-[140px] ;
+  @apply bg-black z-[2] relative my-[5.5rem]  ;
 }
 
 .text__container{

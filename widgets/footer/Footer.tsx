@@ -23,7 +23,6 @@ const Footer:React.FC<IProps> = ({data}) => {
   const footerRef = useRef(null)
   const isFooterInView = useInView(footerRef)
 
-  console.log("footerdata",data);
   return <footer ref={footerRef} className={styles.footer}>
     <div className={incorporateClasses([(isFooterInView ? animation.scale__in : animation.scale__out), "flex-col justify-center"])}>
       <h3 className={incorporateClasses([textStyles.text__74]) + 'text-center text-white pb-[30px]'} >
@@ -34,7 +33,7 @@ const Footer:React.FC<IProps> = ({data}) => {
       {data["description"]||"Contact Our Team"}
       </h6>
 
-      <div className="grayscale invert rounded-[40px] overflow-hidden  py-[60px] ">
+      <div className="grayscale invert rounded-[40px] overflow-hidden  py-[3rem] ">
         <FooterMap />
       </div>
 

@@ -27,7 +27,6 @@ interface IProps {
   data: any
 }
 const Navbar :React.FC<IProps> = ({data}) => {
-  console.log("nav data",data);
   return (
     <Disclosure as="nav" className={styles.nav}>
       {({ open }) => (

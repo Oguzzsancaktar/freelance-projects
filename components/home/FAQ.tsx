@@ -34,8 +34,6 @@ const FAQ:React.FC<IProps>  = ({data}) => {
   const isViewIns = [isViewIn1, isViewIn2, isViewIn3, isViewIn4, isViewIn5];
 
 
-  console.log("data",data);
-
   return (
     <div className={styles.container}>
       <h4 className={incorporateClasses([textStyles.text__44, ' text-center text-white pb-[50px]'])} >

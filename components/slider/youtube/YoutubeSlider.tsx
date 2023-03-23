@@ -44,22 +44,6 @@ const YoutubeSlider = () => {
       }
     }
 
-    // go diff in 10 seconds
-    // We have distance -> diff
-    // go 0 -> diff in 10 seconds
-    // when its done -> go diff -> 0 in 10 seconds
-
-
-
-
-    // console.log(Math.floor(timeInSec / diff), diff);
-    // console.log(Math.floor(Math.floor(time / 30) / diff % 2));
-    // if (!Math.floor(Math.floor(time / 30) / diff % 2)) {
-    //   sliderRef.current.style.left = -time / 30 + "px"
-    // } else {
-    //   sliderRef.current.style.left = diff - time / 30 + "px"
-    // }
-
   })
 
 

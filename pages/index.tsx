@@ -39,8 +39,6 @@ const Home: NextPageWithLayout<{dataMap:any}> = ({dataMap}) => {
 
   const router = useRouter();
 
-  console.log("dataMap",dataMap);
-
    useEffect(() => {
     const onHashChangeStart = (url: string) => {
       let tempRef;
@@ -99,35 +97,36 @@ const Home: NextPageWithLayout<{dataMap:any}> = ({dataMap}) => {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main>
-        <div ref={welcomeRef} >
+    
+      <div className='px-[10rem]'>
+        <section ref={welcomeRef} >
           <Welcome data={dataMap["welcome"]} />
-        </div>
+        </section>
 
         {/* <Youtube /> */}
 
-        <div ref={aboutRef} >
+        <section ref={aboutRef} >
           <About  data={dataMap["about"]}/>
-        </div>
-        <div ref={featuresRef} >
+        </section>
+        <section ref={featuresRef} >
           <Features  data={dataMap["features"]}/>
-        </div>
-        <div ref={blogsRef} >
+        </section>
+        <section ref={blogsRef} >
           <Blogs data={dataMap["blogs"]} />
-        </div>
-        {/* <div ref={testimonialsRef} >
+        </section>
+        {/* <section ref={testimonialsRef} >
           <Testimonials />
-        </div> */}
-        <div ref={achivementsRef} >
+        </section> */}
+        <section ref={achivementsRef} >
           <Achivements data={dataMap["achivements"]} />
-        </div>
-        <div ref={faqRef} >
+        </section>
+        <section ref={faqRef} >
           <FAQ data={dataMap["faq"]} />
-        </div>
-        <div ref={contactRef} >
+        </section>
+        <section ref={contactRef} >
           <Contact data={dataMap["contact"]} />
-        </div>
-      </main>
+        </section>
+      </div>
     </>
   )
 }

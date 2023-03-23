@@ -1,5 +1,5 @@
 .container{
-  @apply  bg-black relative py-[96px] px-[140px];
+  @apply  bg-black relative py-[5.5rem] ;
 }
 
 .blog__big{
@@ -10,7 +10,17 @@
 }
 
 .blog__text{
-  @apply absolute -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 z-[1] w-full h-full flex items-center justify-center text-white
+  @apply absolute -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 z-[1] w-full h-full flex items-center justify-center text-white;
+  backdrop-filter: blur(3px);
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+}
+
+.blog__text:hover{
+  color: transparent;
+  backdrop-filter: blur(0px);
+  transition: all 0.5s ease-in-out;
+
 }
 
 

@@ -24,13 +24,13 @@ const Accordeon: React.FC<IProps> = (props) => {
           return (
             <>
               <Disclosure.Button className="flex w-full justify-between rounded-lg bg-purple-100 px-4 py-2 text-left text-sm font-medium text-purple-900 hover:bg-purple-200 focus:outline-none focus-visible:ring focus-visible:ring-purple-500 focus-visible:ring-opacity-75">
-                <div className={incorporateClasses([layoutStyles.x__between, "w-full"])}>
+                <div className={incorporateClasses([layoutStyles.x__between,textStyles.text__26, "w-full"])}>
                   {head}
                   {open ? (selectIcon("circle-minus")) : (selectIcon("circle-plus"))}
                 </div>
 
               </Disclosure.Button>
-              <Disclosure.Panel className="px-4 pt-4 pb-2 text-sm text-gray">
+              <Disclosure.Panel className={incorporateClasses([textStyles.text__24,"px-4 pt-4 pb-2 text-sm text-gray"])}>
                 {body}
               </Disclosure.Panel>
             </>

@@ -22,7 +22,7 @@ const Features:React.FC<IProps>  = () => {
 
   return (
     <div className={styles.container}>
-      <h3 ref={textRef} className={incorporateClasses([(isTextInView ? animation.animate__in__bottom : animation.animate__out__bottom), textStyles.text__74]) + 'text-center text-white pb-[72px]'} >
+      <h3 ref={textRef} className={incorporateClasses([(isTextInView ? animation.animate__in__bottom : animation.animate__out__bottom), textStyles.text__74]) + 'text-center text-white pb-[4rem]'} >
         What says our Happy Clients
       </h3>
 

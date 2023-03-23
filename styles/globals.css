@@ -18,15 +18,17 @@
   margin: 0;
 }
 
+html{
+  font-size: calc(100vw / 1920 * 10) !important;
+}
+
 html,
 body {
   overflow-x: hidden;
 
   width: 100vw;
-
-  /* font-size: calc(100vw / 1920 * 10) !important; */
 }
-/* 
+
 @media only screen and (max-width: 1600px) {
   html {
     font-size: calc(100vw / 1600 * 12) !important;
@@ -49,7 +51,7 @@ body {
   html {
     font-size: calc(100vw / 600 * 10) !important;
   }
-} */
+}
 
 a {
   color: inherit;

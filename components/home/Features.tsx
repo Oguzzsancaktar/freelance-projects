@@ -22,7 +22,7 @@ const Features:React.FC<IProps>  = ({data}) => {
   
   return (
     <div className={styles.container}>
-      <h3 ref={textRef} className={incorporateClasses([(isTextInView ? animation.animate__in__top : animation.animate__out__top), textStyles.text__74, 'text-center text-white pb-[72px] '])} >
+      <h3 ref={textRef} className={incorporateClasses([(isTextInView ? animation.animate__in__top : animation.animate__out__top), textStyles.text__74, 'text-center text-white pb-[4rem] '])} >
         {data["title"]||"Why Choose Us"}
       </h3>
 

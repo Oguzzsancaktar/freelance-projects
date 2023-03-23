@@ -18,12 +18,12 @@ const TestimonialsSliderItem: React.FC<{ index: number }> = ({ index }) => {
             className='h-full grayscale'
           />
         </span>
-        <h6 className='text-silver'>
+        <h6 className={incorporateClasses([textStyles.text__26,'text-silver'])}>
           Lorem, ipsum. {index}
         </h6>
       </div>
 
-      <div className='text-gray py-[10px]' >
+      <div className={incorporateClasses([textStyles.text__24,'text-gray py-[10px]'])} >
         Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magnam expedita iusto fugiat quis natus, laboriosam tempora quos velit fuga similique.
       </div>
 
