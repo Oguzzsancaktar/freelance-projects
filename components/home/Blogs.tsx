@@ -45,14 +45,14 @@ const Blogs:React.FC<IProps>  = ({data}) => {
       <div className="overflow-hidden  ">
         <div className="mx-auto">
           <div className="flex flex-wrap md:-m-2">
-            <div className="flex w-full flex-wrap">
+            <div className="flex w-full flex-wrap 1000:flex-col">
 
               {data["items"].map((blog:any, index:number) => (
                 <div ref={blogRefs[index]} className={
                   incorporateClasses([index % 2 === 0 ?
                     isViewIns[index] ? animation.animate__in__left : animation.animate__out__left :
                     isViewIns[index] ? animation.animate__in__right : animation.animate__out__right, 
-                    blog.size === "small" ? styles.blog__small : styles.blog__big ])} key={index}>
+                    blog.size === "small" ? styles.blog__small : styles.blog__big ,"1000:w-full"])} key={index}>
                       
                   <h2 className={incorporateClasses([styles.blog__text,textStyles.text__44]) }>
                     {blog.text}

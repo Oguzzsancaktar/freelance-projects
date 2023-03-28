@@ -28,17 +28,17 @@ const About:React.FC<IProps>  = ({data}) => {
   return (
     <div className={styles.container}>
 
-      <div ref={imageRef} className={incorporateClasses([(isImageInView ? animation.animate__in__left : animation.animate__out__left), 'h-[400px] w-[300px]   bg-white mr-[50px]  rounded-3xl overflow-hidden transition-all duration-2000'])} >
+      <div ref={imageRef} className={incorporateClasses([(isImageInView ? animation.animate__in__left : animation.animate__out__left), 'h-[400px] w-[300px]   bg-white mr-[50px]  rounded-3xl overflow-hidden transition-all duration-2000 1000:m-0 1000:w-full 1000:h-[200px] object-cover'])} >
         <Image
           src={data["image"].url||WomanImagePath}
           alt="Picture of the author"
           width={275}
           height={216}
-          className='w-full h-full'
+          className='w-full h-full object-cover'
         />
       </div>
 
-      <div ref={textRef} className={incorporateClasses([(isTextInView ? animation.animate__in__right : animation.animate__out__right), 'w-[calc(100%-300px)] flex-col transition-all duration-2000'])} >
+      <div ref={textRef} className={incorporateClasses([(isTextInView ? animation.animate__in__right : animation.animate__out__right), 'w-[calc(100%-300px)] flex-col transition-all duration-2000 1000:w-full 1000:text-center'])} >
         <h4 className={incorporateClasses([textStyles.text__74, 'text-white pb-[32px]'])} >
           {data["header"]||"Let's Introduce Ourself"} 
         </h4>

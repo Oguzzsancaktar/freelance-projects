@@ -98,7 +98,7 @@ const Home: NextPageWithLayout<{dataMap:any}> = ({dataMap}) => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
     
-      <div className='px-[10rem]'>
+      <div className='px-[5rem]'>
         <section ref={welcomeRef} >
           <Welcome data={dataMap["welcome"]} />
         </section>

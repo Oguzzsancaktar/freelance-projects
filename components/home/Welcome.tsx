@@ -30,16 +30,16 @@ const Welcome:React.FC<IProps> = ({data}) => {
   return (
     <div className={styles.container} ref={ref}>
 
-      <div className={incorporateClasses(['absolute left-[50px] top-1/2 -translate-y-1/2 h-4/6 w-[190px] overflow-hidden'])}>
+      <div className={incorporateClasses(['absolute left-[0px] top-1/2 -translate-y-1/2 h-4/6 w-[190px] overflow-hidden 1000:hidden'])}>
         <YoutubeSliderVertical />
       </div>
 
-      <div className={incorporateClasses(['absolute right-[50px] top-1/2 -translate-y-1/2 h-4/6 w-[350px] overflow-hidden rounded-3xl'])}>
+      <div className={incorporateClasses(['absolute right-[0px] top-1/2 -translate-y-1/2 h-4/6 w-[35rem] overflow-hidden rounded-3xl 1000:hidden'])}>
         <TestimonialsSlider />
       </div>
 
-      <div className={incorporateClasses([layoutStyles.xy__center, 'h-full w-full m-auto max-w-[1200px]'])}>
-        <div className={incorporateClasses([layoutStyles.y__center, (isInView ? animation.animate__in__top : animation.animate__out__top), 'relative w-full max-w-[1200px] transition-all duration-2000 flex-col'])}>
+      <div className={incorporateClasses([layoutStyles.xy__center, 'h-full w-full m-auto '])}>
+        <div className={incorporateClasses([layoutStyles.y__center, (isInView ? animation.animate__in__top : animation.animate__out__top), 'relative w-full  transition-all duration-2000 flex-col'])}>
 
 
           <h3 className={incorporateClasses([textStyles.text__100, 'text-center  text-white'])}>
@@ -74,7 +74,7 @@ const Welcome:React.FC<IProps> = ({data}) => {
             </span>
           </div>
 
-          <div className='mt-[40px] max-w-[500px] w-full'>
+          <div className='mt-[40px] max-w-[50rem] w-full'>
             <ContactInteraction buttonText={data["contact_send_text"]} />
           </div>
 
@@ -91,7 +91,7 @@ const Welcome:React.FC<IProps> = ({data}) => {
           </Link>
         </div>
       </div>
-      <button className={incorporateClasses([buttonStyles.button__orange, textStyles.text__26, layoutStyles.xy__center]) + 'absolute bottom-[40px] right-[48px] translate-y-0.5 bg-sunsetOrange border-l-[1px] border-t-[1px] border-r-[5px] border-b-[5px]   h-[88px] w-[88px]  rounded-[50%] '}>
+      <button className={incorporateClasses([buttonStyles.button__orange, textStyles.text__26, layoutStyles.xy__center]) + 'absolute bottom-[40px] right-[5rem] translate-y-0.5 bg-sunsetOrange border-l-[1px] border-t-[1px] border-r-[5px] border-b-[5px]   h-[88px] w-[88px]  rounded-[50%] '}>
         {selectIcon('message')}
       </button>
 

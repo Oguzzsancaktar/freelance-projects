@@ -3,10 +3,10 @@
 }
 
 .blog__big{
-  @apply w-2/3 p-[15px] h-[450px] relative
+  @apply w-2/3 p-[15px] h-[450px] relative 1000:w-full
 }
 .blog__small{
-  @apply w-1/3 p-[15px] h-[450px] relative
+  @apply w-1/3 p-[15px] h-[450px] relative 1000:w-full
 }
 
 .blog__text{

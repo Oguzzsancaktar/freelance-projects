@@ -31,10 +31,10 @@ const Achivements :React.FC<IProps> = ({data}) => {
       </h3>
 
       <div className={styles.wrapper}>
-        <div className='flex relative w-full h-full justify-center  mx-auto'>
+        <div className='flex relative w-full h-full justify-center  mx-auto 1000:flex-col'>
           {data["items"].map((achivement:any,index:number)=>{
             return (
-              <div className={incorporateClasses(["flex mx-[1rem]" , index % 2 === 0 ?   "items-start mt-[50px] ":"items-end mb-[50px] "])  }>
+              <div className={incorporateClasses(["flex mx-[1rem] 1000:my-[3rem] " , index % 2 === 0 ?   "items-start mt-[50px] ":"items-end mb-[50px] "])  }>
                 <AchievementItem achivement={achivement} reverse={(index % 2 === 0)} key={index} />
               </div>
               )

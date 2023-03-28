@@ -36,7 +36,7 @@ const Navbar :React.FC<IProps> = ({data}) => {
     <Disclosure as="nav" className={styles.nav}>
       {({ open }) => (
         <>
-          <div className="w-full px-[48px] mx-auto">
+          <div className="w-full px-[5rem] mx-auto">
             <div className={incorporateClasses([layoutStyles.x__between]) + " h-16 "}>
               <Link href={"#welcome"}>
                 <div className="flex items-center">

@@ -29,7 +29,7 @@ const AchievementItem:React.FC<IProps> = ({achivement,reverse}) => {
   })
 
   return (
-    <div ref={ref} className={"flex  items-center w-[240px] " + (reverse ? "flex-col-reverse":"flex-col")}>
+    <div ref={ref} className={"flex  items-center w-[240px] 1000:w-full 1000:flex-col " + (reverse ? "flex-col-reverse":"flex-col")}>
       <div className={incorporateClasses([layoutStyles.xy__center, "w-[60px] h-[60px] border rounded-full border-white bg-black"])}>
         {selectIcon("case")}
       </div>

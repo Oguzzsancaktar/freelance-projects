@@ -5,6 +5,9 @@ module.exports = {
   content: ['./pages/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}', './widgets/**/*.{js,ts,jsx,tsx}'],
   darkMode: 'class', // or 'media' or 'class',
   theme: {
+    screens: {
+      1000: { max: '1000px' },
+    },
     extend: {
       fontFamily: {
         UbuntuBold: ['Ubuntu-Bold', 'sans-serif'],

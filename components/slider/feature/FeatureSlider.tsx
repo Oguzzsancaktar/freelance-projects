@@ -7,7 +7,7 @@ interface IProps{
 }
 const FeatureSlider:React.FC<IProps> = ({features}) => {
   return (
-    <ul className='flex flex-wrap gap-[20px]'>
+    <ul className='flex flex-wrap gap-[20px] 1000:flex-col'>
       {map(features,(feature, index) => (
         <FeatureSliderItem feature={feature}  key={index} />
       ))}

@@ -1,7 +1,8 @@
 .container{
-  @apply flex  bg-black  relative py-[5.5rem];
+  @apply flex  bg-black  relative py-[5.5rem] 1000:flex-col;
 }
 
 .text__container{
+  @apply 1000:w-full 1000:text-center;
   max-width: 900px;
 }

@@ -39,7 +39,7 @@ const Contact:React.FC<IProps>  = ({data}) => {
       </h6 >
 
 
-      <div className="flex h-[50rem]">
+      <div className="flex h-[50rem] 1000:flex-col 1000:h-auto 1000:w-full">
         <div ref={imageRef} className={incorporateClasses([(isImageInView ? animation.animate__in__left : animation.animate__out__left), ' w-[500px] bg-white rounded-[40%] overflow-hidden'])}>
           <Image  
             src={data.image.url ||WomanImagePath}
