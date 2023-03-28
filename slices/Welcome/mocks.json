@@ -47,7 +47,24 @@
     "items": [
       {
         "__TYPE__": "GroupItemContent",
-        "value": []
+        "value": [
+          [
+            "address",
+            {
+              "__TYPE__": "FieldContent",
+              "value": "blue",
+              "type": "Text"
+            }
+          ],
+          [
+            "icon",
+            {
+              "__TYPE__": "FieldContent",
+              "value": "facebook",
+              "type": "Select"
+            }
+          ]
+        ]
       }
     ]
   }

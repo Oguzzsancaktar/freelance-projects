@@ -8,11 +8,11 @@ import { incorporateClasses } from '@/utils/cssUtils'
 import { FeatureSlider, FeatureSliderItem } from '../slider/feature'
 import { useInView } from 'framer-motion'
 
-interface IProps{
-  data:any
+interface IProps {
+  data: any
 }
 
-const Features:React.FC<IProps>  = ({data}) => {
+const Features: React.FC<IProps> = ({ data }) => {
   const imageRef = useRef(null)
   const textRef = useRef(null)
 
@@ -21,14 +21,14 @@ const Features:React.FC<IProps>  = ({data}) => {
   if (!data) {
     return <div>...</div>
   }
-  
+
   return (
-    <div className={styles.container}>
+    <div className={styles.container} ref={imageRef}>
       <h3 ref={textRef} className={incorporateClasses([(isTextInView ? animation.animate__in__top : animation.animate__out__top), textStyles.text__74, 'text-center text-white pb-[4rem] '])} >
-        {data["title"]||"Why Choose Us"}
+        {data["title"] || "Why Choose Us"}
       </h3>
 
-      <div ref={imageRef} className={incorporateClasses([(isImageInView ? animation.animate__in__bottom : animation.animate__out__bottom), textStyles.text__7, ""])} >
+      <div className={incorporateClasses([(isImageInView ? animation.animate__in__bottom : animation.animate__out__bottom), textStyles.text__7, ""])} >
         <FeatureSlider features={data["items"]} />
       </div>
 

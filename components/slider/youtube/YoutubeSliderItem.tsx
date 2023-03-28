@@ -9,12 +9,10 @@ import textStyles from '@/styles/text.module.css'
 import styles from './YoutubeSliderItem.module.css'
 
 interface IProps {
-  text?: string
 }
-const YoutubeSliderItem: React.FC<IProps> = (props) => {
-  const { text } = props
+const YoutubeSliderItem: React.FC<IProps> = () => {
   return (
-    <li className={incorporateClasses([styles.item, "relative transition-all duration-300 cursor-pointer"])} >
+    <li className={incorporateClasses([styles.item, "relative transition-all duration-300 cursor-pointer w-[150px] "])} >
       <Image
         src={"https://source.unsplash.com/user/c_v_r"}
         alt='youtube'
@@ -25,11 +23,9 @@ const YoutubeSliderItem: React.FC<IProps> = (props) => {
       />
 
       <div className='absolute left-1/2 bottom-[50px] -translate-x-1/2'>
-
         <button className={incorporateClasses(["text-black", buttonStyles.button__primary__solid, textStyles.text__24]) + ' h-[40px] w-[120px] rounded-[40px] text-black'}>
           Watch Video
         </button>
-
       </div>
     </li>
   )

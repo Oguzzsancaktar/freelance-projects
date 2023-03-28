@@ -850,6 +850,32 @@ interface WelcomeSliceDefaultPrimary {
     appointment_button_text: prismicT.KeyTextField;
 }
 /**
+ * Item in Welcome → Items
+ *
+ */
+export interface WelcomeSliceDefaultItem {
+    /**
+     * address field in *Welcome → Items*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: welcome.items[].address
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    address: prismicT.KeyTextField;
+    /**
+     * icon field in *Welcome → Items*
+     *
+     * - **Field Type**: Select
+     * - **Placeholder**: *None*
+     * - **API ID Path**: welcome.items[].icon
+     * - **Documentation**: https://prismic.io/docs/core-concepts/select
+     *
+     */
+    icon: prismicT.SelectField<"whatsapp" | "linkedin" | "twitter" | "facebook" | "phone">;
+}
+/**
  * Default variation for Welcome Slice
  *
  * - **API ID**: `default`
@@ -857,7 +883,7 @@ interface WelcomeSliceDefaultPrimary {
  * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
  *
  */
-export type WelcomeSliceDefault = prismicT.SharedSliceVariation<"default", Simplify<WelcomeSliceDefaultPrimary>, never>;
+export type WelcomeSliceDefault = prismicT.SharedSliceVariation<"default", Simplify<WelcomeSliceDefaultPrimary>, Simplify<WelcomeSliceDefaultItem>>;
 /**
  * Slice variation for *Welcome*
  *
@@ -877,6 +903,6 @@ declare module "@prismicio/client" {
         (repositoryNameOrEndpoint: string, options?: prismic.ClientConfig): prismic.Client<AllDocumentTypes>;
     }
     namespace Content {
-        export type { HomepageDocumentData, HomepageDocumentDataSlicesSlice, HomepageDocument, AllDocumentTypes, AboutSliceDefaultPrimary, AboutSliceDefault, AboutSliceVariation, AboutSlice, AchivementsSliceDefaultPrimary, AchivementsSliceDefaultItem, AchivementsSliceDefault, AchivementsSliceVariation, AchivementsSlice, BlogsSliceDefaultPrimary, BlogsSliceDefaultItem, BlogsSliceDefault, BlogsSliceVariation, BlogsSlice, ContactSliceDefaultPrimary, ContactSliceDefaultItem, ContactSliceDefault, ContactSliceVariation, ContactSlice, FaqSliceDefaultItem, FaqSliceDefault, FaqSliceVariation, FaqSlice, FeaturesSliceDefaultPrimary, FeaturesSliceDefaultItem, FeaturesSliceDefault, FeaturesSliceVariation, FeaturesSlice, FooterSliceDefaultPrimary, FooterSliceDefaultItem, FooterSliceDefault, FooterSliceVariation, FooterSlice, HeaderSliceDefaultPrimary, HeaderSliceDefaultItem, HeaderSliceDefault, HeaderSliceVariation, HeaderSlice, TestimonialsSliceDefaultPrimary, TestimonialsSliceDefault, TestimonialsSliceVariation, TestimonialsSlice, WelcomeSliceDefaultPrimary, WelcomeSliceDefault, WelcomeSliceVariation, WelcomeSlice };
+        export type { HomepageDocumentData, HomepageDocumentDataSlicesSlice, HomepageDocument, AllDocumentTypes, AboutSliceDefaultPrimary, AboutSliceDefault, AboutSliceVariation, AboutSlice, AchivementsSliceDefaultPrimary, AchivementsSliceDefaultItem, AchivementsSliceDefault, AchivementsSliceVariation, AchivementsSlice, BlogsSliceDefaultPrimary, BlogsSliceDefaultItem, BlogsSliceDefault, BlogsSliceVariation, BlogsSlice, ContactSliceDefaultPrimary, ContactSliceDefaultItem, ContactSliceDefault, ContactSliceVariation, ContactSlice, FaqSliceDefaultItem, FaqSliceDefault, FaqSliceVariation, FaqSlice, FeaturesSliceDefaultPrimary, FeaturesSliceDefaultItem, FeaturesSliceDefault, FeaturesSliceVariation, FeaturesSlice, FooterSliceDefaultPrimary, FooterSliceDefaultItem, FooterSliceDefault, FooterSliceVariation, FooterSlice, HeaderSliceDefaultPrimary, HeaderSliceDefaultItem, HeaderSliceDefault, HeaderSliceVariation, HeaderSlice, TestimonialsSliceDefaultPrimary, TestimonialsSliceDefault, TestimonialsSliceVariation, TestimonialsSlice, WelcomeSliceDefaultPrimary, WelcomeSliceDefaultItem, WelcomeSliceDefault, WelcomeSliceVariation, WelcomeSlice };
     }
 }

@@ -29,7 +29,7 @@ const Contact:React.FC<IProps>  = ({data}) => {
     return <div>...</div>
   }
   return (
-    <div className={incorporateClasses([styles.container, 'relative  border-[1px]   px-[32px] pt-[22px] '])}>
+    <div className={incorporateClasses([styles.container, 'relative  border-[1px]  pt-[22px] '])}>
       <h3 ref={textsRef} className={incorporateClasses([(isTextInView ? animation.animate__in__top : animation.animate__out__top), textStyles.text__74, 'text-center text-white pb-[40px]'])} >
         {data["title"]||"Free Consultation"}
       </h3>
@@ -40,7 +40,7 @@ const Contact:React.FC<IProps>  = ({data}) => {
 
 
       <div className="flex h-[50rem] 1000:flex-col 1000:h-auto 1000:w-full">
-        <div ref={imageRef} className={incorporateClasses([(isImageInView ? animation.animate__in__left : animation.animate__out__left), ' w-[500px] bg-white rounded-[40%] overflow-hidden'])}>
+        <div ref={imageRef} className={incorporateClasses([(isImageInView ? animation.animate__in__left : animation.animate__out__left), ' w-[500px] bg-white rounded-[40%] overflow-hidden 1000:w-full'])}>
           <Image  
             src={data.image.url ||WomanImagePath}
             alt="Picture of the author"
@@ -50,7 +50,7 @@ const Contact:React.FC<IProps>  = ({data}) => {
           />
         </div>
 
-        <div ref={formRef} className={incorporateClasses([(isFormInView ? animation.animate__in__right : animation.animate__out__right), 'flex flex-col h-full justify-between items-center w-[calc(100%-500px)] pl-[50px] relative'])} >
+        <div ref={formRef} className={incorporateClasses([(isFormInView ? animation.animate__in__right : animation.animate__out__right), 'flex flex-col h-full justify-between items-center w-[calc(100%-500px)] pl-[50px] relative 1000:w-full'])} >
           <div className="flex flex-wrap">
             <div className="my-[2rem] w-[calc((100%-2rem)/2)] mr-[1rem]">
               <label htmlFor="your_name" className={incorporateClasses([textStyles.text__24,"block mb-[15px] text-sm font-medium text-gray-900 text-white"])}>Your Name</label>

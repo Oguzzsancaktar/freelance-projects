@@ -5,9 +5,9 @@ import { incorporateClasses } from '@/utils/cssUtils'
 // Styles.
 import textStyles from '@/styles/text.module.css'
 
-const TestimonialsSliderItem: React.FC<{ index: number }> = ({ index }) => {
+const TestimonialsSliderItem: React.FC<{ index: number, isHorizontal?: boolean }> = ({ index, isHorizontal = false }) => {
   return (
-    <div className='flex flex-col h-full border-b-gray border-solid border-b-[1px] py-[20px]'>
+    <div className={'flex flex-col h-full   ' + (isHorizontal ? "w-full px-[2rem]" : "border-b-[1px] border-b-gray border-solid  py-[20px]")}>
       <div className="flex items-center">
         <span className='rounded-full overflow-hidden w-[40px] h-[40px] mr-[10px]' >
           <Image
@@ -18,12 +18,12 @@ const TestimonialsSliderItem: React.FC<{ index: number }> = ({ index }) => {
             className='h-full grayscale'
           />
         </span>
-        <h6 className={incorporateClasses([textStyles.text__26,'text-silver'])}>
+        <h6 className={incorporateClasses([textStyles.text__26, 'text-silver'])}>
           Lorem, ipsum. {index}
         </h6>
       </div>
 
-      <div className={incorporateClasses([textStyles.text__24,'text-gray py-[10px]'])} >
+      <div className={incorporateClasses([textStyles.text__24, 'text-gray py-[10px]'])} >
         Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magnam expedita iusto fugiat quis natus, laboriosam tempora quos velit fuga similique.
       </div>
 

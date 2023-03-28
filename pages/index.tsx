@@ -22,11 +22,13 @@ import { useRouter } from 'next/router'
 
 import map from 'lodash/map'
 
-import {createClient} from '../prismicio'
+import { createClient } from '../prismicio'
+import { YoutubeSlider } from '@/components/slider'
+import { TestimonialsSlider } from '@/components/slider/testimonials'
 
 
 
-const Home: NextPageWithLayout<{dataMap:any}> = ({dataMap}) => {
+const Home: NextPageWithLayout<{ dataMap: any }> = ({ dataMap }) => {
   const welcomeRef = useRef<any>();
   const aboutRef = useRef<any>();
   const featuresRef = useRef<any>();
@@ -39,7 +41,7 @@ const Home: NextPageWithLayout<{dataMap:any}> = ({dataMap}) => {
 
   const router = useRouter();
 
-   useEffect(() => {
+  useEffect(() => {
     const onHashChangeStart = (url: string) => {
       let tempRef;
 
@@ -97,19 +99,27 @@ const Home: NextPageWithLayout<{dataMap:any}> = ({dataMap}) => {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-    
-      <div className='px-[5rem]'>
+
+      <div className='px-[5rem] '>
         <section ref={welcomeRef} >
           <Welcome data={dataMap["welcome"]} />
         </section>
 
-        {/* <Youtube /> */}
+        <div className=' w-full overflow-hidden items-center hidden 1000:flex'>
+          <YoutubeSlider />
+        </div>
+
 
         <section ref={aboutRef} >
-          <About  data={dataMap["about"]}/>
+          <About data={dataMap["about"]} />
         </section>
+
+        <div ref={testimonialsRef} className='  w-full overflow-hidden items-center hidden 1000:flex'>
+          <TestimonialsSlider />
+        </div>
+
         <section ref={featuresRef} >
-          <Features  data={dataMap["features"]}/>
+          <Features data={dataMap["features"]} />
         </section>
         <section ref={blogsRef} >
           <Blogs data={dataMap["blogs"]} />
@@ -143,13 +153,13 @@ export default Home
 export async function getStaticProps() {
   const client = createClient()
   const result = await client.getSingle("homepage")
-  const {slices} = result.data
+  const { slices } = result.data
 
-  const dataMap:any = {}
+  const dataMap: any = {}
 
 
   map(slices, (slice) => {
-    dataMap[slice.slice_type] = {items:slice.items,...slice.primary}
+    dataMap[slice.slice_type] = { items: slice.items, ...slice.primary }
   })
 
   return {

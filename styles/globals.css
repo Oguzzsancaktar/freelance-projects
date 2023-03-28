@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+@import "react-alice-carousel/lib/alice-carousel.css";
+
 /* @font-face {
   font-family: "Ubuntu-Bold";
   src: url("../../public/fonts/Ubuntu-Bold.ttf");
@@ -19,13 +21,14 @@
 }
 
 html{
+  overflow-x: hidden!important;
+  width: 100vw;
   font-size: calc(100vw / 1920 * 10) !important;
 }
 
 html,
 body {
-  overflow-x: hidden;
-
+  overflow-x: hidden!important;
   width: 100vw;
 }
 
