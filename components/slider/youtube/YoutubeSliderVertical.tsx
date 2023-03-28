@@ -1,4 +1,4 @@
-import React, { useLayoutEffect, useMemo, useRef,  } from 'react'
+import React, { useLayoutEffect, useMemo, useRef, } from 'react'
 // Components.
 import YoutubeSliderItem from './YoutubeSliderItem'
 // Styles.
@@ -56,7 +56,7 @@ const YoutubeSliderVertical = () => {
   return (
     <ul ref={sliderRef} className={incorporateClasses(['transition-opacity duration-2000  overflow-hidden', styles.slider, styles.animate, `flex flex-col absolute  `])}  >
       {Array(15).fill(0).map((_, index) => (
-        <YoutubeSliderItem key={index} text={index.toString()} />
+        <YoutubeSliderItem key={index} />
       ))
       }
     </ul>
