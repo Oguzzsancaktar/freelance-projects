@@ -40,7 +40,7 @@ const Welcome: React.FC<IProps> = ({ data }) => {
       </div>
 
       <div className={incorporateClasses([layoutStyles.xy__center, 'h-full w-full m-auto'])}>
-        <div className={incorporateClasses([layoutStyles.y__center, (isInView ? animation.animate__in__top : animation.animate__out__top), '1000:hidden relative w-full  transition-all duration-2000 flex-col top-[-80px] '])}>
+        <div className={incorporateClasses([layoutStyles.y__center, (isInView ? animation.animate__in__top : animation.animate__out__top), '1000:hidden relative w-full  transition-all duration-2000 flex-col top-[-100px] '])}>
           <h3 className={incorporateClasses(['text-center  text-white hidden 1000:block 1000:text-[6rem] leading-[5.5rem]'])}>
             {data["top_title"] || "Welcome to the"}   {data["icon_left_text"] || "BK"}    {data["icon_right_text"] || "Law Group."}
           </h3>
@@ -59,11 +59,11 @@ const Welcome: React.FC<IProps> = ({ data }) => {
               {data["icon_right_text"] || "Law Group."}
             </h3>
           </div>
-          <div className={incorporateClasses([styles.x__center, "flex  flex-col justify-center my-[4rem]  "])}>
+          <div className={incorporateClasses([styles.x__center, "flex  flex-col justify-center my-[4rem] mb-[2rem] "])}>
             <div className={incorporateClasses([layoutStyles.y__center, 'w-[60px] h-[60px] border-[3px] m-auto p-[10px] border-double border-gray rounded-full flex-row justify-center'])}>
               {selectIcon("law")}
             </div>
-            <span className={incorporateClasses(["flex-row", textStyles.text__26, layoutStyles.y__center, 'flex text-center mt-[2rem]  text-blueRibbon ml-[20px]'])}>
+            <span className={incorporateClasses(["flex-row", textStyles.text__26, layoutStyles.y__center, 'flex text-center mt-[2rem]  text-blueRibbon ml-[20px] '])}>
               {data["lawyer_name"] || "Attny.Melinda Basaran"}
             </span>
           </div>
@@ -83,7 +83,7 @@ const Welcome: React.FC<IProps> = ({ data }) => {
       {/* <button className={incorporateClasses([buttonStyles.button__orange, textStyles.text__26, layoutStyles.xy__center]) + 'absolute bottom-[40px] right-[5rem] translate-y-0.5 bg-sunsetOrange border-l-[1px] border-t-[1px] border-r-[5px] border-b-[5px]   h-[88px] w-[88px]  rounded-[50%] '}>
         {selectIcon('message')}
       </button> */}
-      <div className='absolute bottom-[7rem] w-full overflow-hidden items-center hidden 1000:flex'>
+      <div className='absolute bottom-[8rem] w-full overflow-hidden items-center hidden 1000:flex'>
         <YoutubeSlider />
       </div>
 
