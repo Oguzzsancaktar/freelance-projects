@@ -87,3 +87,7 @@ h6 {
   background: #21ada9;
 }
 
+
+[data-id="branding"]{
+  display: none;
+}

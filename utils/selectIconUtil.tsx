@@ -1,7 +1,8 @@
 import { CaseIcon, CircleMinusIcon, CirclePlusIcon, CityIcon, CompanyIcon, CompanyLogo, FacebookIcon, LawIcon, LinkedinIcon, MessageIcon, PostboxIcon, TelephoneIcon, TwitterIcon, WhatsappIcon, WorldIcon, YoutubeIcon } from "@/components/icons";
 import HamburgerIcon from "@/components/icons/HamburgerIcon";
+import MapIcon from "@/components/icons/MapIcon";
 
-type IconTypes = "case" | "circle-minus" | "circle-plus" | 'city' | 'company-icon' | 'facebook' | "hambuger" | 'linkedin' | 'message' | "phone" | 'postbox' | 'telephone' | "twitter" | 'world' | "youtube" | "logo" | "law" | "whatsapp";
+type IconTypes = "case" | "circle-minus" | "circle-plus" | 'city' | 'company-icon' | 'facebook' | "hambuger" | 'linkedin' | "map" | 'message' | "phone" | 'postbox' | 'telephone' | "twitter" | 'world' | "youtube" | "logo" | "law" | "whatsapp";
 
 export const selectIcon = (iconName: IconTypes, size?: string, color?: string) => {
   if (!size) size = '3rem';
@@ -29,6 +30,8 @@ export const selectIcon = (iconName: IconTypes, size?: string, color?: string) =
       return <LawIcon />;
     case 'logo':
       return <CompanyLogo />;
+    case 'map':
+      return <MapIcon />;
     case 'message':
       return <MessageIcon />;
     case 'telephone':

@@ -25,6 +25,7 @@ import map from 'lodash/map'
 import { createClient } from '../prismicio'
 import { YoutubeSlider } from '@/components/slider'
 import { TestimonialsSlider } from '@/components/slider/testimonials'
+import CalendlyAppointment from '@/components/appointment/CalendlyAppointment'
 
 
 
@@ -136,6 +137,9 @@ const Home: NextPageWithLayout<{ dataMap: any }> = ({ dataMap }) => {
         <section ref={contactRef} >
           <Contact data={dataMap["contact"]} />
         </section>
+
+        <CalendlyAppointment />
+
       </div>
     </>
   )

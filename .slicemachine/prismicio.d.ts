@@ -873,7 +873,7 @@ export interface WelcomeSliceDefaultItem {
      * - **Documentation**: https://prismic.io/docs/core-concepts/select
      *
      */
-    icon: prismicT.SelectField<"whatsapp" | "linkedin" | "twitter" | "facebook" | "phone">;
+    icon: prismicT.SelectField<"whatsapp" | "linkedin" | "twitter" | "facebook" | "phone" | "map">;
 }
 /**
  * Default variation for Welcome Slice

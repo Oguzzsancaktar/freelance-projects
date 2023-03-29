@@ -86,7 +86,8 @@
               "linkedin",
               "twitter",
               "facebook",
-              "phone"
+              "phone",
+              "map"
             ]
           }
         }
