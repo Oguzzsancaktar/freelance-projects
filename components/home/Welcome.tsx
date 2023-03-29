@@ -42,8 +42,7 @@ const Welcome: React.FC<IProps> = ({ data }) => {
 
       <div className={incorporateClasses([layoutStyles.xy__center, 'h-full w-full m-auto'])}>
         <div className={incorporateClasses([layoutStyles.y__center, (isInView ? animation.animate__in__top : animation.animate__out__top), '1000:hidden relative w-full  transition-all duration-2000 flex-col  '])}>
-
-          <h3 className={incorporateClasses([textStyles.text__100, 'text-center  text-white hidden 1000:block'])}>
+          <h3 className={incorporateClasses([textStyles.text__100, 'text-center  text-white hidden 1000:block '])}>
             {data["top_title"] || "Welcome to the"}   {data["icon_left_text"] || "BK"}    {data["icon_right_text"] || "Law Group."}
           </h3>
 
