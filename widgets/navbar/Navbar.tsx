@@ -39,7 +39,7 @@ const Navbar: React.FC<IProps> = ({ data }) => {
     <Disclosure as="nav" className={styles.nav}>
       {({ open }) => (
         <>
-          <div className={'fixed top-0 left-0 w-screen h-screen bg-codGray flex items-center justify-center duration-2000 ' + (mobileMenuOpen ? "" : "top-[-100%]")} onClick={() => setMobileMenuOpen(false)} >
+          <div className={'fixed z-[10] top-0 left-0 w-screen h-screen bg-codGray flex items-center justify-center duration-2000 ' + (mobileMenuOpen ? "" : "left-[-100%]")} onClick={() => setMobileMenuOpen(false)} >
             <div className='absolute top-[10rem]'>
               <Link href={"#welcome"} onClick={() => setMobileMenuOpen(false)}>
                 <div className="flex items-center">
@@ -68,12 +68,12 @@ const Navbar: React.FC<IProps> = ({ data }) => {
           <div className="w-full px-[5rem] mx-auto">
             <div className={incorporateClasses([layoutStyles.x__between]) + " h-16 "}>
               <Link href={"#welcome"}>
-                <div className="flex items-center">
+                <div className="flex items-center z-[999]">
                   <Image src={data?.logo.url || CompanyLogoPath} alt="logo" width={100} height={200} />
                 </div>
               </Link>
 
-              <div className="block 1000:hidden">
+              <div className="block z-[999] 1000:hidden">
                 <div className="flex items-baseline ">
                   {navigation.map((item) => (
                     <Link
