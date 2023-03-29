@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react'
+import React, { Fragment, useEffect, useRef } from 'react'
 // Styles.
 import animation from '@/styles/animation.module.css'
 import buttonStyles from '@/styles/button.module.css'
@@ -14,6 +14,8 @@ import YoutubeSliderVertical from '../slider/youtube/YoutubeSliderVertical'
 import Link from 'next/link'
 import dynamic from 'next/dynamic'
 import { YoutubeSlider } from '../slider'
+import { Dialog, Transition } from '@headlessui/react'
+import CalendlyAppointment from '../appointment/CalendlyAppointment'
 
 // Dynamic Imports.
 const TestimonialsSliderVertical = dynamic(() => import('../slider/testimonials/TestimonialsSliderVertical'))
@@ -25,11 +27,22 @@ interface IProps {
 const Welcome: React.FC<IProps> = ({ data }) => {
   const ref = useRef(null)
   const isInView = useInView(ref)
+  const [isOpen, setIsOpen] = React.useState(false)
+
+  function closeModal() {
+    setIsOpen(false)
+  }
+
+  function openModal() {
+    setIsOpen(true)
+  }
+
   if (!data) {
     return <div>...</div>
   }
   return (
     <div className={styles.container} ref={ref}>
+
 
       <div className={incorporateClasses(['absolute left-[0px] top-1/2 -translate-y-1/2 h-4/6 w-[190px] overflow-hidden 1000:hidden'])}>
         <YoutubeSliderVertical />
@@ -73,11 +86,51 @@ const Welcome: React.FC<IProps> = ({ data }) => {
           {/* <span className={incorporateClasses([textStyles.text__20, 'text-blueRibbon mt-[2rem]'])}>
             {data["appointment_slogan"] || "Free Consultation Saturday"}
           </span> */}
-          <Link href={'#contact'}>
-            <button className={incorporateClasses([buttonStyles.button__primary__solid, textStyles.text__26]) + 'text-white h-[62px] w-[40rem] rounded-[40px] mt-[20px]'}>
-              {data["appointment_slogan"] || " Get Appointment"}
-            </button>
-          </Link>
+
+
+          <button onClick={openModal} className={incorporateClasses([buttonStyles.button__primary__solid, textStyles.text__26]) + 'text-white h-[62px] w-[40rem] rounded-[40px] mt-[20px]'}>
+            {data["appointment_slogan"] || " Get Appointment"}
+          </button>
+
+          <Transition appear show={isOpen} as={Fragment}>
+            <Dialog as="div" className="relative z-10 " onClose={closeModal}>
+              <Transition.Child
+                as={Fragment}
+                enter="ease-out duration-300"
+                enterFrom="opacity-0"
+                enterTo="opacity-100"
+                leave="ease-in duration-200"
+                leaveFrom="opacity-100"
+                leaveTo="opacity-0"
+              >
+                <div className="fixed inset-0 bg-black bg-opacity-25" />
+              </Transition.Child>
+
+              <div className="fixed inset-0 overflow-y-auto">
+                <div className="flex min-h-full items-center justify-center p-4 text-center">
+                  <Transition.Child
+                    as={Fragment}
+                    enter="ease-out duration-300"
+                    enterFrom="opacity-0 scale-95"
+                    enterTo="opacity-100 scale-100"
+                    leave="ease-in duration-200"
+                    leaveFrom="opacity-100 scale-100"
+                    leaveTo="opacity-0 scale-95"
+                  >
+                    <Dialog.Panel className="w-auto  transform overflow-hidden rounded-2xl bg-white p-6 text-left align-middle shadow-xl transition-all">
+                      <CalendlyAppointment />
+
+                      <div className="m-auto flex justify-center">
+                        <button onClick={closeModal} className={incorporateClasses([buttonStyles.button__primary__solid, textStyles.text__26]) + 'text-white h-[62px] w-[40rem] rounded-[40px] mt-[20px]'}>
+                          Got it, thanks!
+                        </button>
+                      </div>
+                    </Dialog.Panel>
+                  </Transition.Child>
+                </div>
+              </div>
+            </Dialog>
+          </Transition>
         </div>
       </div>
       {/* <button className={incorporateClasses([buttonStyles.button__orange, textStyles.text__26, layoutStyles.xy__center]) + 'absolute bottom-[40px] right-[5rem] translate-y-0.5 bg-sunsetOrange border-l-[1px] border-t-[1px] border-r-[5px] border-b-[5px]   h-[88px] w-[88px]  rounded-[50%] '}>
