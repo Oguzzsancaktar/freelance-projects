@@ -83,7 +83,7 @@ const Welcome: React.FC<IProps> = ({ data }) => {
       {/* <button className={incorporateClasses([buttonStyles.button__orange, textStyles.text__26, layoutStyles.xy__center]) + 'absolute bottom-[40px] right-[5rem] translate-y-0.5 bg-sunsetOrange border-l-[1px] border-t-[1px] border-r-[5px] border-b-[5px]   h-[88px] w-[88px]  rounded-[50%] '}>
         {selectIcon('message')}
       </button> */}
-      <div className='absolute bottom-0 w-full overflow-hidden items-center hidden 1000:flex'>
+      <div className='absolute bottom-[8rem] w-full overflow-hidden items-center hidden 1000:flex'>
         <YoutubeSlider />
       </div>
 
