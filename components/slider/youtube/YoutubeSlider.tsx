@@ -20,7 +20,7 @@ const YoutubeSlider = () => {
   ))
 
   return (
-    <AliceCarousel innerWidth={400} swipeExtraPadding={200} disableSlideInfo disableDotsControls infinite animationDuration={2000} autoPlay={true} items={items} />
+    <AliceCarousel innerWidth={400} swipeExtraPadding={200} disableSlideInfo disableDotsControls infinite animationDuration={8000} autoPlay={true} items={items} />
   )
 }
 

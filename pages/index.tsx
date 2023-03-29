@@ -106,9 +106,6 @@ const Home: NextPageWithLayout<{ dataMap: any }> = ({ dataMap }) => {
           <Welcome data={dataMap["welcome"]} />
         </section>
 
-        <div className=' w-full overflow-hidden items-center hidden 1000:flex'>
-          <YoutubeSlider />
-        </div>
 
 
         <section ref={aboutRef} >
@@ -135,10 +132,10 @@ const Home: NextPageWithLayout<{ dataMap: any }> = ({ dataMap }) => {
           <FAQ data={dataMap["faq"]} />
         </section>
         <section ref={contactRef} >
-          <Contact data={dataMap["contact"]} />
+          {/* <Contact data={dataMap["contact"]} /> */}
+          <CalendlyAppointment />
         </section>
 
-        <CalendlyAppointment />
 
       </div>
     </>

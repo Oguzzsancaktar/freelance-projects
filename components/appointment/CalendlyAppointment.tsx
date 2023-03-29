@@ -17,7 +17,7 @@ const CalendlyAppointment = () => {
   return (
     <div
       className="calendly-inline-widget"
-      data-url="https://calendly.com/tmattermongo/30min"
+      data-url="https://calendly.com/tmattermongo"
       style={{ minWidth: '320px', height: '630px' }}
     />
   );

@@ -23,14 +23,13 @@ const ContactInteraction: React.FC<IProps> = ({ buttonText = "Let's Talk", data 
 
       <ul className="flex justify-center">
         {data.map((item: any, index: number) => (
-          <li className={"flex justify-center items-center bg-silver h-[35px] w-[35px] rounded-[5px] " + (data.length - 1 > index ? "mr-[10px]" : "")}>
+          <li className={"flex justify-center items-center bg-silver h-[7rem] w-[7rem] rounded-[5px] " + (data.length - 1 > index ? "mr-[10px]" : "")}>
             <a href={item.icon === "phone" ? "tel:" + item.address : item.address} target='_blank'>
               {selectIcon(item.icon)}
             </a>
           </li>
         ))}
       </ul>
-
     </div >
   )
 }
