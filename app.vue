@@ -49,16 +49,22 @@ export default {
       if (selectedMake.value) {
         const response = await $fetch(carModelEndpoint + selectedMake.value.name)
         carModels.value = response.car_models.map((item) => {
-          return { name: item.car_model }
+          return { name: item.car_model, years: item.years }
         })
       }
     }
 
     const fetchCarYears = async () => {
-      if (selectedModel.value) {
-        // const response = await $fetch(carYearEndpoint + selectedModel.value.name)
-        // console.log("333", response)
-        carYears.value = [{ year: 2020 }, { year: 2021 }, { year: 2022 }]
+      if (selectedModel.value && selectedMake.value) {
+        const years = carModels.value.find((item) => {
+          return item.name === selectedModel.value.name
+        })
+
+        carYears.value = years.years.split("|").map((item) => {
+          return { year: item }
+        })
+
+        console.log("---", years.years.split("|"))
       }
     }
 
