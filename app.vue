@@ -63,8 +63,6 @@ export default {
         carYears.value = years.years.split("|").map((item) => {
           return { year: item }
         })
-
-        console.log("---", years.years.split("|"))
       }
     }
 
