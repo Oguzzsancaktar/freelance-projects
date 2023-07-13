@@ -20,7 +20,7 @@
 </template>
 
 <script>
-import { reactive, ref, computed, watch } from 'vue'
+import { ref, watch } from 'vue'
 import Multiselect from 'vue-multiselect'
 
 export default {
@@ -67,7 +67,8 @@ export default {
 
     const goToPage = () => {
       if (selectedMake.value && selectedModel.value && selectedYear.value) {
-        const url = `/make/${selectedMake.value.id}/model/${selectedModel.value.id}/year/${selectedYear.value.year}`
+        const url = `/${selectedMake.value.name}/${selectedModel.value.name}/${selectedYear.value.year}`
+        console.log("Url", url)
         this.$router.push(url)
       }
     }
