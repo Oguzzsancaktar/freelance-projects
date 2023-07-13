@@ -58,7 +58,7 @@ export default {
       if (selectedModel.value) {
         // const response = await $fetch(carYearEndpoint + selectedModel.value.name)
         // console.log("333", response)
-        // carYears.value = data
+        carYears.value = [{ year: 2020 }, { year: 2021 }, { year: 2022 }]
       }
     }
 
