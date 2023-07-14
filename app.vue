@@ -5,15 +5,15 @@
       <multiselect v-model="selectedMake" id="car-make" :options="carMakes" label="name" track-by="id"
         placeholder="Select Car Make"></multiselect>
     </div>
-    <div v-if="selectedMake">
+    <div>
       <label for="car-model">Car Model:</label>
-      <multiselect v-model="selectedModel" id="car-model" :options="carModels" label="name" track-by="id"
-        placeholder="Select Car Model"></multiselect>
+      <multiselect v-model="selectedModel" :disabled="!selectedMake" id="car-model" :options="carModels" label="name"
+        track-by="id" placeholder="Select Car Model"></multiselect>
     </div>
-    <div v-if="selectedModel">
+    <div>
       <label for="car-year">Car Year:</label>
-      <multiselect v-model="selectedYear" id="car-year" :options="carYears" label="year" track-by="id"
-        placeholder="Select Car Year"></multiselect>
+      <multiselect v-model="selectedYear" id="car-year" :disabled="!selectedModel" :options="carYears" label="year"
+        track-by="id" placeholder="Select Car Year"></multiselect>
     </div>
     <button @click="goToPage">Go</button>
   </div>
