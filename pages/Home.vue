@@ -5,10 +5,10 @@
     </div>
 
     <div class="w-full bg-gray p-10 m-10 rounded">
-      <SearchReg @send-modal-data="setModalData" />
+      <SearchReg @send-modal-data="setModalData" @set-modal-state="setModalState" />
     </div>
 
-    <RegistrationDetailModal @reset-modal-data="resetModalData" :modalData="modalData" />
+    <RegistrationDetailModal @reset-modal-data="resetModalData" :modalData="modalData" :state="modalState" />
   </div>
 </template>
 
@@ -20,14 +20,23 @@ import RegistrationDetailModal from '../src/modals/RegistrationDetailModal.vue'
 
 
 
-let modalData = ref(null);
+const modalData = ref(null);
+const modalState = ref({
+  isOpen: false,
+  isLoading: false
+});
 
+const setModalState = (state) => {
+  modalState.value = state
+}
 
 const setModalData = (data) => {
   modalData.value = data
+  modalState.value = { isOpen: true, isLoading: false }
 }
 const resetModalData = () => {
   modalData.value = null
+  modalState.value = { isOpen: false, isLoading: false }
 }
 
 

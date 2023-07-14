@@ -10,9 +10,10 @@ const checkRegistrationEndpoint = "https://s2c-uk-go-siteapi-production.up.railw
 
 const registration = ref("EN11XAV");
 
-const emit = defineEmits(['sendModalData']);
+const emit = defineEmits(['sendModalData', "setModalState"]);
 
 const checkRegistration = async () => {
+  emit("setModalState", { isLoading: true, isOpen: true })
   const response = await $fetch(checkRegistrationEndpoint + registration.value)
 
   emit('sendModalData', response)
