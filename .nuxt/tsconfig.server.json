@@ -1,0 +1,61 @@
+{
+  "compilerOptions": {
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "target": "ESNext",
+    "module": "ESNext",
+    "moduleResolution": "Node",
+    "allowJs": true,
+    "resolveJsonModule": true,
+    "jsx": "preserve",
+    "jsxFactory": "h",
+    "jsxFragmentFactory": "Fragment",
+    "paths": {
+      "#imports": [
+        "/Users/oguzsancaktar/Projects/upwork/nuxt-multiselect/.nuxt/types/nitro-imports"
+      ],
+      "#paths": [
+        "/Users/oguzsancaktar/Projects/upwork/nuxt-multiselect/node_modules/nuxt/dist/core/runtime/nitro/paths"
+      ],
+      "~": [
+        "/Users/oguzsancaktar/Projects/upwork/nuxt-multiselect"
+      ],
+      "~/*": [
+        "/Users/oguzsancaktar/Projects/upwork/nuxt-multiselect/*"
+      ],
+      "@": [
+        "/Users/oguzsancaktar/Projects/upwork/nuxt-multiselect"
+      ],
+      "@/*": [
+        "/Users/oguzsancaktar/Projects/upwork/nuxt-multiselect/*"
+      ],
+      "~~": [
+        "/Users/oguzsancaktar/Projects/upwork/nuxt-multiselect"
+      ],
+      "~~/*": [
+        "/Users/oguzsancaktar/Projects/upwork/nuxt-multiselect/*"
+      ],
+      "@@": [
+        "/Users/oguzsancaktar/Projects/upwork/nuxt-multiselect"
+      ],
+      "@@/*": [
+        "/Users/oguzsancaktar/Projects/upwork/nuxt-multiselect/*"
+      ],
+      "assets": [
+        "/Users/oguzsancaktar/Projects/upwork/nuxt-multiselect/assets"
+      ],
+      "public": [
+        "/Users/oguzsancaktar/Projects/upwork/nuxt-multiselect/public"
+      ],
+      "public/*": [
+        "/Users/oguzsancaktar/Projects/upwork/nuxt-multiselect/public/*"
+      ]
+    }
+  },
+  "include": [
+    "/Users/oguzsancaktar/Projects/upwork/nuxt-multiselect/.nuxt/types/nitro-nuxt.d.ts",
+    "./types/nitro.d.ts",
+    "../**/*",
+    "../server/**/*"
+  ]
+}
