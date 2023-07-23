@@ -1,25 +1,3 @@
-<!-- <template>
-  <q-select v-model="model" :options="options" label="Standard" />
-</template>
-
-<script>
-import { defineComponent } from 'vue'
-import { ref } from 'vue'
-
-
-export default defineComponent({
-  name: 'IndexPage',
-  setup() {
-    return {
-      model: ref(null),
-      options: [
-        'Google', 'Facebook', 'Twitter', 'Apple', 'Oracle'
-      ]
-    }
-  }
-})
-</script> -->
-
 
 <template>
   <div class="row justify-center sidebar-bg" style="padding: 20px 0 20px 0;margin-bottom: 2rem;">
@@ -66,6 +44,9 @@ export default defineComponent({
 // Libs.
 import { ref, watch } from 'vue'
 import { ofetch } from 'ofetch'
+import { useRouter } from 'vue-router'
+
+
 
 export default {
   name: "IndexPage",
@@ -81,6 +62,8 @@ export default {
     const carModels = ref([])
     const carYears = ref([])
     const model = ref(null)
+
+    const router = useRouter()
 
     const carMakesEndpoint = "https://s2c-uk-go-siteapi-production.up.railway.app/api/v1/s2c/uk/mysql/car_makes"
     const carModelEndpoint = "https://s2c-uk-go-siteapi-production.up.railway.app/api/v1/s2c/uk/mysql/car_models/ofmake/"
@@ -149,8 +132,11 @@ export default {
 
           url = `/${selectedMake.value.value}/${selectedModel.value.value}/${yearsString}`
         }
-        console.log("Url", url)
+
+        router.push(url);
+
       }
+
     }
 
 
