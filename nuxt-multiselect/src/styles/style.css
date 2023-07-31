@@ -1,0 +1,251 @@
+/* flexbox  */
+
+.d-none{
+  display: none;
+}
+
+.d-flex{
+  display: flex;
+}
+
+.column{
+  display: flex;
+  flex-direction: column;
+}
+
+.row{
+  display: flex;
+  flex-direction: row;
+}
+
+.justify-between{
+  justify-content: space-between;
+}
+
+.justify-center{
+  justify-content: center;
+}
+
+.items-center{
+  align-items: center;
+}
+
+
+/* background  */
+
+.bg-gray{
+  background-color: #5f5f5f;
+}
+
+.bg-red{
+  background-color: #ff0000;
+}
+
+.bg-blue{
+  background-color: #0000ff;
+}
+
+.bg-green{
+  background-color: #00ff00;
+}
+
+.bg-yellow{
+  background-color: #ffff00;
+}
+
+.bg-blurred{
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(0.8px);
+}
+/* colors */
+
+.text-gray{
+  color: #5f5f5f;
+}
+
+.text-blue{
+  color: #0000ff;
+}
+
+.text-green{
+  color: #ffffff;
+}
+
+.text-red{
+  color: #ff0000;
+}
+
+/* sizes */
+.h-md{
+  height: 550px;
+}
+
+.h-lg{
+  height: 1024px;
+}
+
+.h-xl{
+  height: 1280px;
+}
+
+.w-md{
+  width: 400px;
+}
+
+.w-lg{
+  width: 1024px;
+}
+
+.w-xl{
+  width: 1280px;
+}
+
+
+.h-full{
+  height: 100%;
+}
+
+.w-full{
+  width: 100%;
+}
+
+.h-screen{
+  height:   100vh;
+}
+
+.w-screen{
+  width: 100vw;
+}
+
+/* spacing */
+
+.p-10{
+  padding: 10px;
+}
+
+.p-20{
+  padding: 20px;
+}
+
+.p-30{
+  padding: 30px;
+}
+
+.m-10{
+  margin: 10px;
+}
+
+.m-20{
+  margin: 20px;
+}
+
+.m-30{
+  margin: 30px;
+}
+
+
+/* border */
+
+.border{
+  border: 1px solid #000000;
+}
+
+.border-b-1{
+  border-bottom: 1px solid #dbdbdb;
+}
+.border-t-1 {
+  border-top: 1px solid #dbdbdb;
+}
+.rounded{
+  border-radius: 8px;
+}
+
+
+/* position */
+
+.position-relative{
+  position: relative;
+}
+
+.position-absolute{
+  position: absolute;
+}
+
+.position-fixed{
+  position: absolute;
+}
+
+/* alignment */
+
+.top-0{
+  top: 0;
+}
+
+.left-0{
+  left: 0;
+}
+
+.abs-middle{
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+
+/*  SVG  */
+
+.spinner_Wezc {
+  transform-origin: center;
+  animation: spinner_Oiah .75s step-end infinite
+}
+
+@keyframes spinner_Oiah {
+  8.3% {
+    transform: rotate(30deg)
+  }
+
+  16.6% {
+    transform: rotate(60deg)
+  }
+
+  25% {
+    transform: rotate(90deg)
+  }
+
+  33.3% {
+    transform: rotate(120deg)
+  }
+
+  41.6% {
+    transform: rotate(150deg)
+  }
+
+  50% {
+    transform: rotate(180deg)
+  }
+
+  58.3% {
+    transform: rotate(210deg)
+  }
+
+  66.6% {
+    transform: rotate(240deg)
+  }
+
+  75% {
+    transform: rotate(270deg)
+  }
+
+  83.3% {
+    transform: rotate(300deg)
+  }
+
+  91.6% {
+    transform: rotate(330deg)
+  }
+
+  100% {
+    transform: rotate(360deg)
+  }
+}
