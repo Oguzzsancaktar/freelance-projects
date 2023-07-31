@@ -1,0 +1,7 @@
+.container{
+  @apply bg-black relative py-[5.5rem] ;
+}
+
+.text__container{
+  max-width: 900px;
+}

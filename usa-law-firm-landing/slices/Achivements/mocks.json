@@ -1,0 +1,44 @@
+[
+  {
+    "__TYPE__": "SharedSliceContent",
+    "variation": "default",
+    "primary": {
+      "title": {
+        "__TYPE__": "FieldContent",
+        "value": "afraid",
+        "type": "Text"
+      }
+    },
+    "items": [
+      {
+        "__TYPE__": "GroupItemContent",
+        "value": [
+          [
+            "count",
+            {
+              "__TYPE__": "FieldContent",
+              "value": "opinion",
+              "type": "Text"
+            }
+          ],
+          [
+            "text",
+            {
+              "__TYPE__": "FieldContent",
+              "value": "yet",
+              "type": "Text"
+            }
+          ],
+          [
+            "icon",
+            {
+              "__TYPE__": "FieldContent",
+              "value": "1",
+              "type": "Select"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,48 @@
+.text__100{
+  @apply text-[10rem] leading-[12rem]
+}
+
+.text__74{
+  @apply text-[7.4rem] leading-[8.4rem]
+}
+
+.text__44{
+  @apply text-[4.4rem] leading-[6.0rem]
+}
+
+.text__32{
+  @apply text-[3.2rem] leading-[4.6rem]
+}
+
+
+.text__30{
+  @apply text-[3.0rem] leading-[4.0rem]
+}
+
+
+
+
+.text__26{
+  @apply text-[2.6rem] leading-[3.0rem]
+}
+
+
+
+
+.text__24{
+  @apply text-[2.0rem] leading-[2.2rem]
+}
+
+.text__22{
+  @apply text-[2.2rem] leading-[4.0rem]
+}
+
+
+.text__20{
+  @apply text-[2.0rem] leading-[2.5rem]
+}
+
+
+.text__14{
+  @apply text-[1.4rem] leading-[1.8rem]
+}

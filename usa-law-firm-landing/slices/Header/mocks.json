@@ -1,0 +1,84 @@
+[
+  {
+    "__TYPE__": "SharedSliceContent",
+    "variation": "default",
+    "primary": {
+      "logo": {
+        "origin": {
+          "id": "main",
+          "url": "https://images.unsplash.com/photo-1606248897732-2c5ffe759c04",
+          "width": 4000,
+          "height": 4000
+        },
+        "url": "https://images.unsplash.com/photo-1606248897732-2c5ffe759c04",
+        "width": 4000,
+        "height": 4000,
+        "edit": {
+          "zoom": 1,
+          "crop": {
+            "x": 0,
+            "y": 0
+          },
+          "background": "transparent"
+        },
+        "credits": null,
+        "alt": null,
+        "__TYPE__": "ImageContent",
+        "thumbnails": {}
+      },
+      "about": {
+        "__TYPE__": "FieldContent",
+        "value": "perhaps",
+        "type": "Text"
+      },
+      "features": {
+        "__TYPE__": "FieldContent",
+        "value": "hour",
+        "type": "Text"
+      },
+      "blogs": {
+        "__TYPE__": "FieldContent",
+        "value": "person",
+        "type": "Text"
+      },
+      "testimonials": {
+        "__TYPE__": "FieldContent",
+        "value": "fence",
+        "type": "Text"
+      },
+      "achivements": {
+        "__TYPE__": "FieldContent",
+        "value": "eventually",
+        "type": "Text"
+      },
+      "faqs": {
+        "__TYPE__": "FieldContent",
+        "value": "jungle",
+        "type": "Text"
+      }
+    },
+    "items": [
+      {
+        "__TYPE__": "GroupItemContent",
+        "value": [
+          [
+            "icon",
+            {
+              "__TYPE__": "FieldContent",
+              "value": "twitter",
+              "type": "Select"
+            }
+          ],
+          [
+            "address",
+            {
+              "__TYPE__": "FieldContent",
+              "value": "show",
+              "type": "Text"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+]

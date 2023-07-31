@@ -1,0 +1,71 @@
+[
+  {
+    "__TYPE__": "SharedSliceContent",
+    "variation": "default",
+    "primary": {
+      "top_title": {
+        "__TYPE__": "FieldContent",
+        "value": "worth",
+        "type": "Text"
+      },
+      "icon_left_text": {
+        "__TYPE__": "FieldContent",
+        "value": "comfortable",
+        "type": "Text"
+      },
+      "icon_right_text": {
+        "__TYPE__": "FieldContent",
+        "value": "beautiful",
+        "type": "Text"
+      },
+      "lawyer_name": {
+        "__TYPE__": "FieldContent",
+        "value": "wave",
+        "type": "Text"
+      },
+      "contact_place_holder": {
+        "__TYPE__": "FieldContent",
+        "value": "compass",
+        "type": "Text"
+      },
+      "contact_send_text": {
+        "__TYPE__": "FieldContent",
+        "value": "meant",
+        "type": "Text"
+      },
+      "appointment_slogan": {
+        "__TYPE__": "FieldContent",
+        "value": "silent",
+        "type": "Text"
+      },
+      "appointment_button_text": {
+        "__TYPE__": "FieldContent",
+        "value": "one",
+        "type": "Text"
+      }
+    },
+    "items": [
+      {
+        "__TYPE__": "GroupItemContent",
+        "value": [
+          [
+            "address",
+            {
+              "__TYPE__": "FieldContent",
+              "value": "blue",
+              "type": "Text"
+            }
+          ],
+          [
+            "icon",
+            {
+              "__TYPE__": "FieldContent",
+              "value": "facebook",
+              "type": "Select"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+]
