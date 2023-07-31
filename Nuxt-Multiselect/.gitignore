@@ -1,0 +1,27 @@
+# Nuxt dev/build outputs
+.output
+.nuxt
+.nitro
+.cache
+dist
+
+# Node dependencies
+node_modules
+
+# Logs
+logs
+*.log
+
+# Misc
+.DS_Store
+.fleet
+.idea
+
+# Local env files
+# .env
+.env.*
+!.env.example
+
+
+# const carMakesEndpoint = "https://s2c-uk-go-siteapi-production.up.railway.app/api/v1/s2c/uk/mysql/car_makes"
+# const carModelEndpoint = "https://s2c-uk-go-siteapi-production.up.railway.app/api/v1/s2c/uk/mysql/car_models/ofmake/"
