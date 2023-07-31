@@ -1,0 +1,1225 @@
+{
+  "CategoryPage": {
+    "TopInfoData": {
+      "Before": "Search result",
+      "Count": "132.455",
+      "After": "advert finded",
+      "ButtonText": "Reduced Price"
+    },
+    "ButtonSelectData": [{ "Text": "For Sale" }, { "Text": "For Rent" }],
+    "CategoriesData": [
+      {
+        "Type": "select",
+        "Header": "Location",
+        "List": ["Select City", "Select City", "Select City"]
+      },
+      {
+        "Type": "check",
+        "Header": "Catagories",
+        "List": [
+          "Select City",
+          "Select City",
+          "Select City",
+          "Select City",
+          "Select City",
+          "Select City"
+        ]
+      },
+      {
+        "Type": "select",
+        "Header": "Housing Type",
+        "List": ["Select City"]
+      },
+      { "Type": "input", "Header": "Price", "InputType": "dolar" },
+      { "Type": "input", "Header": "Square Meters", "InputType": "m2" },
+      {
+        "Type": "select",
+        "Header": "Number Of Rooms",
+        "List": ["Select City"]
+      },
+      {
+        "Type": "select",
+        "Header": "Building Age",
+        "List": ["Select City"]
+      },
+      {
+        "Type": "select",
+        "Header": "Floor Location",
+        "List": ["Select City"]
+      },
+      {
+        "Type": "select",
+        "Header": "Number of floors in the building",
+        "List": ["Select City"]
+      },
+      {
+        "Type": "select",
+        "Header": "Title status",
+        "List": ["Select City"]
+      },
+      {
+        "Type": "select",
+        "Header": "Front",
+        "List": ["Select City"]
+      }
+    ]
+  },
+  "AdvertDetailPage": {
+    "BoostPageData": {
+      "PageHeadingData": {
+        "Heading": "İlanı Öne Çıkar Hızlı Sonuçlara Ulaş !",
+        "Description": "İlanınızı öne çıkararak daha çok alıcıya daha hızlı şekilde ulaşabilirsiniz."
+      },
+      "BoostInfoData": {
+        "FinishPayment": "Finish Payment",
+        "AdvertType": "Pick your advert type",
+        "PaymentType": "Pick your payment type",
+        "CreditCard": "Pay with credit card",
+        "CardUser": "Card User Name",
+        "SecCode": "Security Code",
+
+        "Placeholder": "1 week 199,00£",
+        "List": ["Category1-a", "Category1-b", "Category1-c", "Category1-d"],
+        "Ebilling": "I want to receive my billing information via e-mail",
+        "Checkbox1": "via e-mail",
+        "Checkbox2": "I want to receive ",
+        "ExpirationDate": "Expiration Date",
+        "Months": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
+        "Years": [2021, 2022, 2023, 2024, 2025]
+      }
+    },
+    "NextEditData": {
+      "Next": "Next",
+      "Edit": "Edit",
+      "Paragraph": "One last check before posting your ad!"
+    },
+    "DetailHeroData": {
+      "InfoCardData": {
+        "Text": "Josef Santana",
+        "Type": "Authorized Person",
+        "Phone": "Show Phone Number",
+        "Message": "Send Message",
+        "Other": " Other postings of the company"
+      }
+    },
+    "DetailTopData": {
+      "Header": "Sakarya For Sale, Serdivan For Sale, Esentepe For Sale, Villa For Sale ",
+      "Btn1": "Gigant Logo",
+      "Btn2": "Share",
+      "Btn3": "Favorites"
+    },
+    "DetailInfoData": {
+      "Header": "SERDİVAN ESENTEPEDE SATILIK GÖL MANZARALI VİLLA",
+      "Feature1": "Istanbul/Sarıyer ",
+      "Feature2": "For Sale",
+      "Feature3": "200 m2",
+      "Feature4": "3 + 1",
+      "Price": "£ 75,550,000"
+    },
+
+    "DetailDescriptionData": {
+      "Header": "Ad Description",
+      "Description1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam finibus malesuada rutrum. Nunc sollicitudin ipsum ac nunc blandit blandit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque mattis egestas neque vitae eleifend. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque pulvinar lectus tellus. Duis pretium volutpat tellus, quis porttitor ante facilisis ut. Phasellus velit arcu, molestie non est quis, euismod elementum dolor.",
+      "Description2": "Quisque ullamcorper, enim feugiat porttitor dignissim, sapien eros auctor ex, non elementum dolor nisi ac elit. Aliquam consequat at magna quis feugiat. Nullam lectus ligula, sollicitudin vitae lacinia in, eleifend id justo. Pellentesque risus tortor, pharetra a erat ac, vehicula pretium orci. Quisque dignissim feugiat massa, eleifend eleifend libero consectetur id. Integer placerat eget dolor vel posuere. Vivamus lobortis arcu eget magna lobortis dapibus. Proin molestie enim non odio dapibus iaculis. Sed nec risus nisl. Proin convallis lorem sit amet dolor volutpat, non suscipit elit sodales. Nulla facilisi."
+    },
+
+    "DetailFeaturesData": {
+      "Header": "Ad Information",
+
+      "List": [
+        {
+          "key": "İlan No",
+          "value": "123456789"
+        },
+
+        {
+          "key": "Son Güncelleme Tarihi",
+          "value": "Bugün"
+        },
+        {
+          "key": "İlan Durumu",
+          "value": "Satılık"
+        },
+
+        {
+          "key": "Konut Şekli",
+          "value": "Daire"
+        },
+        {
+          "key": "Brüt / Metre2",
+          "value": "220 M2"
+        },
+
+        {
+          "key": "Bulunduğu Kat",
+          "value": "3"
+        },
+        {
+          "key": "Isınma Tipi",
+          "value": "Kombi"
+        },
+
+        {
+          "key": "Kat Sayısı",
+          "value": "13"
+        }
+      ]
+    },
+    "DetailInternalFeaturesData": {
+      "Header1": "Ad Information1",
+      "Header2": "Ad Information2",
+      "Header3": "Ad Information3",
+
+      "List": [
+        "İlan No",
+        "Son Güncelleme Tarihi",
+        "İlan Durumu",
+        "Konut Şekli",
+        "Brüt / Metre2",
+        "Bulunduğu Kat",
+        "Isınma Tipi",
+        "Kat Sayısı",
+        "Brüt / Metre2",
+        "Bulunduğu Kat",
+        "Isınma Tipi",
+        "Kat Sayısı"
+      ]
+    },
+    "DetailCardsData": {
+      "CardData": [
+        {
+          "Header": "Luxury Villa In Alice",
+
+          "Location": "Irak/Erbil",
+          "Type": "Sale",
+          "Description": "New Build Modern Istanbul Property with Sea View on Bagdat Streetpremium three bedroom apartment offers dual aspect south eastern views towards Canary Wharf and the",
+          "Price": "£ 1,150,000"
+        },
+        {
+          "Header": "Luxury Villa In Alice",
+
+          "Location": "Irak/Erbil",
+          "Type": "Sale",
+          "Description": "New Build Modern Istanbul Property with Sea View on Bagdat Streetpremium three bedroom apartment offers dual aspect south eastern views towards Canary Wharf and the",
+          "Price": "£ 1,150,000"
+        },
+
+        {
+          "Header": "Luxury Villa In Alice",
+
+          "Location": "Irak/Erbil",
+          "Type": "Sale",
+          "Description": "New Build Modern Istanbul Property with Sea View on Bagdat Streetpremium three bedroom apartment offers dual aspect south eastern views towards Canary Wharf and the",
+          "Price": "£ 1,150,000"
+        },
+        {
+          "Header": "Luxury Villa In Alice",
+          "Location": "Irak/Erbil",
+          "Type": "Sale",
+          "Description": "New Build Modern Istanbul Property with Sea View on Bagdat Streetpremium three bedroom apartment offers dual aspect south eastern views towards Canary Wharf and the",
+          "Price": "£ 1,150,000"
+        }
+      ]
+    }
+  },
+  "AddAdvertPage": {
+    "TopBarData": {
+      "AdvertInfo": "Advert Information",
+      "Preview": "Preview",
+      "Boost": "Boost Advert",
+      "Entered": "Entered Information"
+    },
+
+    "AdvertCategoryData": {
+      "InfoText": "The correct selection of the ad category is important so that your ad can be sold/rented faster.",
+      "Heading": "Advert Categories",
+      "SelectBoxData": [
+        {
+          "Required": true,
+          "Placeholder": "Select",
+          "Text": "Category1",
+          "List": ["Category1-a", "Category1-b", "Category1-c", "Category1-d"]
+        },
+        {
+          "Required": true,
+          "Placeholder": "Select",
+          "Text": "Category2",
+          "List": ["Category2-a", "Category2-b", "Category2-c", "Category2-d"]
+        },
+        {
+          "Required": true,
+          "Placeholder": "Select",
+          "Text": "Category2",
+          "List": ["Category3-a", "Category3-b", "Category3-c", "Category3-d"]
+        }
+      ]
+    },
+    "AdvertInformationData": {
+      "InfoText": "The correct selection of the ad category is important so that your ad can be sold/rented faster.",
+      "AdvertHeading": "Advert Heading",
+      "AdvertDescription": "Advert Description",
+      "Heading": "Advert Information",
+
+      "InputData": {
+        "Required": true,
+        "Placeholder": "Select",
+        "Text": "Category1"
+      },
+
+      "EditorData": {
+        "Required": true,
+        "Placeholder": "Select",
+        "Text": "Category1"
+      },
+
+      "SelectBoxData": [
+        [
+          {
+            "Required": true,
+            "Placeholder": "Select",
+            "Text": "Category1",
+            "List": ["Category1-a", "Category1-b", "Category1-c", "Category1-d"]
+          },
+          {
+            "Required": true,
+            "Placeholder": "Select",
+            "Text": "Category2",
+            "List": ["Category2-a", "Category2-b", "Category2-c", "Category2-d"]
+          },
+          {
+            "Required": true,
+            "Placeholder": "Select",
+            "Text": "Category2",
+            "List": ["Category3-a", "Category3-b", "Category3-c", "Category3-d"]
+          }
+        ],
+        [
+          {
+            "Required": true,
+            "Placeholder": "Select",
+            "Text": "Category1",
+            "List": ["Category1-a", "Category1-b", "Category1-c", "Category1-d"]
+          },
+          {
+            "Required": true,
+            "Placeholder": "Select",
+            "Text": "Category2",
+            "List": ["Category2-a", "Category2-b", "Category2-c", "Category2-d"]
+          },
+          {
+            "Required": true,
+            "Placeholder": "Select",
+            "Text": "Category2",
+            "List": ["Category3-a", "Category3-b", "Category3-c", "Category3-d"]
+          }
+        ],
+        [
+          {
+            "Required": true,
+            "Placeholder": "Select",
+            "Text": "Category1",
+            "List": ["Category1-a", "Category1-b", "Category1-c", "Category1-d"]
+          },
+          {
+            "Required": true,
+            "Placeholder": "Select",
+            "Text": "Category2",
+            "List": ["Category2-a", "Category2-b", "Category2-c", "Category2-d"]
+          },
+          {
+            "Required": true,
+            "Placeholder": "Select",
+            "Text": "Category2",
+            "List": ["Category3-a", "Category3-b", "Category3-c", "Category3-d"]
+          }
+        ],
+        [
+          {
+            "Required": true,
+            "Placeholder": "Select",
+            "Text": "Category1",
+            "List": ["Category1-a", "Category1-b", "Category1-c", "Category1-d"]
+          },
+          {
+            "Required": true,
+            "Placeholder": "Select",
+            "Text": "Category2",
+            "List": ["Category2-a", "Category2-b", "Category2-c", "Category2-d"]
+          },
+          {
+            "Required": true,
+            "Placeholder": "Select",
+            "Text": "Category2",
+            "List": ["Category3-a", "Category3-b", "Category3-c", "Category3-d"]
+          }
+        ]
+      ]
+    },
+    "AdvertAdressData": {
+      "Heading": "Advert Adress Informations",
+      "InfoText": "The correct selection of the ad category is important so that your ad can be sold/rented faster.",
+
+      "SelectBoxData": [
+        {
+          "Required": true,
+          "Placeholder": "Select",
+          "Text": "Category1",
+          "List": ["Category1-a", "Category1-b", "Category1-c", "Category1-d"]
+        },
+        {
+          "Required": true,
+          "Placeholder": "Select",
+          "Text": "Category2",
+          "List": ["Category2-a", "Category2-b", "Category2-c", "Category2-d"]
+        },
+        {
+          "Required": true,
+          "Placeholder": "Select",
+          "Text": "Category2",
+          "List": ["Category3-a", "Category3-b", "Category3-c", "Category3-d"]
+        }
+      ]
+    },
+
+    "AdvertFeaturesData": {
+      "Heading": "Advert Features ",
+      "CheckBoxData": [
+        {
+          "Text": "Inline Features",
+          "List": [
+            "Category3-a",
+            "Category3-b",
+            "Category3-c",
+            "Category3-d",
+            "Category3-a",
+            "Category3-b",
+            "Category3-c",
+            "Category3-d"
+          ]
+        },
+        {
+          "Text": "Outline Features",
+          "List": [
+            "Category3-a",
+            "Category3-b",
+            "Category3-c",
+            "Category3-d",
+            "Category3-a",
+            "Category3-b",
+            "Category3-c",
+            "Category3-d"
+          ]
+        },
+        {
+          "Text": "Location",
+          "List": [
+            "Category3-a",
+            "Category3-b",
+            "Category3-c",
+            "Category3-d",
+            "Category3-a",
+            "Category3-b",
+            "Category3-c",
+            "Category3-d"
+          ]
+        }
+      ]
+    },
+
+    "AdvertPhotosData": {
+      "Heading": "Advert Photos",
+      "Photos": [
+        { "Type": "together", "IconType": "camera", "Text": "Add Photo" },
+        { "Type": "icon", "IconType": "plus", "Text": "" },
+        { "Type": "icon", "IconType": "plus", "Text": "" },
+        { "Type": "icon", "IconType": "plus", "Text": "" },
+        { "Type": "icon", "IconType": "plus", "Text": "" }
+      ]
+    },
+
+    "AdvertNextData": {
+      "Next": "Next",
+      "ReadAccept": "I read and accept the",
+      "AdvertRules": "Advert Rules"
+    }
+  },
+
+  "HomePage": {
+    "HeroSliderData": {
+      "HeroSliderInfos": [
+        {
+          "Title": "New Project1",
+          "BeforeText": "Find Your Next Perfect1",
+          "PrimaryText": " Place1",
+          "AfterText": "to Live1",
+          "Image": "heroBackground-0.jpg"
+        },
+        {
+          "Title": "New Project2",
+          "BeforeText": "Find Your Next Perfect255",
+          "PrimaryText": " Place2",
+          "AfterText": "to Live2",
+          "Image": "heroBackground-1.jpg"
+        },
+        {
+          "Title": "New Project3",
+          "BeforeText": "Find Your Next Perfect3",
+          "PrimaryText": " Place3",
+          "AfterText": "to Live3",
+          "Image": "heroBackground-2.jpg"
+        },
+        {
+          "Title": "New Project4",
+          "BeforeText": "Find Your Next Perfect4",
+          "PrimaryText": " Place4",
+          "AfterText": "to Live4",
+          "Image": "heroBackground-3.jpg"
+        },
+        {
+          "Title": "New Project5",
+          "BeforeText": "Find Your Next Perfect5",
+          "PrimaryText": " Place5",
+          "AfterText": "to Live5",
+          "Image": "heroBackground-4.jpg"
+        }
+      ],
+
+      "HeroSearchData": {
+        "SearchSelectData": [
+          {
+            "Text": "Type",
+            "List": ["Type 1", "Type 2", "Type 3", "Type 4", "Type 5"]
+          },
+          {
+            "Text": "City",
+            "List": ["City 1", "City 2", "City 3", "City 4", "City 5"]
+          }
+        ],
+        "SearchInputData": { "Text": "Size", "SubText": "Accusantium" },
+        "SearchAddNewData": { "Text": "Advanced", "SubText": "Other Options" },
+        "Search": "Search"
+      },
+
+      "AdvencedSettingsData": {
+        "Heading": "Advenced Search",
+        "Search": "Search",
+
+        "SelectBoxData": [
+          {
+            "Placeholder": "Select",
+            "Text": "Category1",
+            "List": ["Category1-a", "Category1-b", "Category1-c", "Category1-d"]
+          },
+          {
+            "Placeholder": "Select",
+            "Text": "Category2",
+            "List": ["Category2-a", "Category2-b", "Category2-c", "Category2-d"]
+          },
+          {
+            "Placeholder": "Select",
+            "Text": "Category2",
+            "List": ["Category3-a", "Category3-b", "Category3-c", "Category3-d"]
+          },
+          {
+            "Placeholder": "Select",
+            "Text": "Category1",
+            "List": ["Category1-a", "Category1-b", "Category1-c", "Category1-d"]
+          },
+          {
+            "Placeholder": "Select",
+            "Text": "Category2",
+            "List": ["Category2-a", "Category2-b", "Category2-c", "Category2-d"]
+          },
+          {
+            "Placeholder": "Select",
+            "Text": "Category2",
+            "List": ["Category3-a", "Category3-b", "Category3-c", "Category3-d"]
+          }
+        ],
+        "CheckBoxData": [
+          {
+            "Text": "Inline Features"
+          },
+          {
+            "Text": "Outline Features"
+          },
+          {
+            "Text": "Location"
+          },
+          {
+            "Text": "Inline Features"
+          },
+          {
+            "Text": "Outline Features"
+          },
+          {
+            "Text": "Location"
+          }
+        ]
+      }
+    },
+    "CarouselData": {
+      "Items": [
+        "refferance-logo-0.png",
+        "refferance-logo-1.png",
+        "refferance-logo-2.png",
+        "refferance-logo-3.png",
+        "refferance-logo-4.png",
+        "refferance-logo-5.png",
+        "refferance-logo-6.png"
+      ]
+    },
+    "GridGalleryData": {
+      "TopHeader": "Featured Listing",
+      "About": "About",
+      "Counter": "765",
+      "CounterAfter": "ads waiting for you.",
+      "SeeAll": "See All",
+      "ForSale": "For Sale",
+
+      "GalleryCards": [
+        {
+          "PropID": "12341234",
+          "Image": "cardImage-1.jpg",
+          "Header": "Luxury Villa In Alice",
+          "Description": "New Build Modern Istanbul Property with Sea View on Bagdat Streetpremium three bed-",
+          "Price": "£ 1,150,000",
+          "Location": "Irak/Erbil",
+          "AdvertType": "For Sale"
+        },
+        {
+          "PropID": "12341234",
+          "Image": "cardImage-2.jpg",
+          "Header": "Luxury Villa In Alice",
+          "Description": "New Build Modern Istanbul Property with Sea View on Bagdat Streetpremium three bed-",
+          "Price": "£ 1,150,000",
+          "Location": "Irak/Erbil",
+          "AdvertType": "For Sale"
+        },
+        {
+          "PropID": "12341234",
+          "Image": "cardImage-3.jpg",
+          "Header": "Luxury Villa In Alice",
+          "Description": "New Build Modern Istanbul Property with Sea View on Bagdat Streetpremium three bed-",
+          "Price": "£ 1,150,000",
+          "Location": "Irak/Erbil",
+          "AdvertType": "For Sale"
+        },
+        {
+          "PropID": "12341234",
+          "Image": "cardImage-4.jpg",
+          "Header": "Luxury Villa In Alice",
+          "Description": "New Build Modern Istanbul Property with Sea View on Bagdat Streetpremium three bed-",
+          "Price": "£ 1,150,000",
+          "Location": "Irak/Erbil",
+          "AdvertType": "For Sale"
+        },
+        {
+          "PropID": "12341234",
+          "Image": "cardImage-5.jpg",
+          "Header": "Luxury Villa In Alice",
+          "Description": "New Build Modern Istanbul Property with Sea View on Bagdat Streetpremium three bed-",
+          "Price": "£ 1,150,000",
+          "Location": "Irak/Erbil",
+          "AdvertType": "For Sale"
+        },
+        {
+          "PropID": "12341234",
+          "Image": "cardImage-6.jpg",
+          "Header": "Luxury Villa In Alice",
+          "Description": "New Build Modern Istanbul Property with Sea View on Bagdat Streetpremium three bed-",
+          "Price": "£ 1,150,000",
+          "Location": "Irak/Erbil",
+          "AdvertType": "For Sale"
+        }
+      ]
+    },
+
+    "AdsAreaData": {
+      "FirstKey": "Set your ",
+      "BgKey": "location",
+      "SecondKey": " and we'll find your special options!",
+      "Search": "Search",
+      "SearchData": {
+        "SearchValue": "Choose Location",
+        "List": [
+          "Location 1",
+          "Location 2",
+          "Location 3",
+          "Location 4",
+          "Location 5"
+        ]
+      }
+    },
+
+    "GridGallery2Data": {
+      "TopHeader": "Featured Listing",
+      "About": "About",
+      "Counter": "765",
+      "CounterAfter": "ads waiting for you.",
+      "SeeAll": "See All",
+      "GalleryCards": [
+        {
+          "PropID": "12341234",
+          "Image": "cardImage-1.jpg",
+          "Header": "Luxury Villa In Alice",
+          "Description": "New Build Modern Istanbul Property with Sea View on Bagdat Streetpremium three bed-",
+          "Price": "£ 1,150,000",
+          "Location": "Irak/Erbil",
+          "AdvertType": "For Sale"
+        },
+        {
+          "PropID": "12341234",
+          "Image": "cardImage-2.jpg",
+          "Header": "Luxury Villa In Alice",
+          "Description": "New Build Modern Istanbul Property with Sea View on Bagdat Streetpremium three bed-",
+          "Price": "£ 1,150,000",
+          "Location": "Irak/Erbil",
+          "AdvertType": "For Sale"
+        },
+        {
+          "PropID": "12341234",
+          "Image": "cardImage-3.jpg",
+          "Header": "Luxury Villa In Alice",
+          "Description": "New Build Modern Istanbul Property with Sea View on Bagdat Streetpremium three bed-",
+          "Price": "£ 1,150,000",
+          "Location": "Irak/Erbil",
+          "AdvertType": "For Sale"
+        },
+        {
+          "PropID": "12341234",
+          "Image": "cardImage-4.jpg",
+          "Header": "Luxury Villa In Alice",
+          "Description": "New Build Modern Istanbul Property with Sea View on Bagdat Streetpremium three bed-",
+          "Price": "£ 1,150,000",
+          "Location": "Irak/Erbil",
+          "AdvertType": "For Sale"
+        },
+        {
+          "PropID": "12341234",
+          "Image": "cardImage-5.jpg",
+          "Header": "Luxury Villa In Alice",
+          "Description": "New Build Modern Istanbul Property with Sea View on Bagdat Streetpremium three bed-",
+          "Price": "£ 1,150,000",
+          "Location": "Irak/Erbil",
+          "AdvertType": "For Sale"
+        },
+        {
+          "PropID": "12341234",
+          "Image": "cardImage-6.jpg",
+          "Header": "Luxury Villa In Alice",
+          "Description": "New Build Modern Istanbul Property with Sea View on Bagdat Streetpremium three bed-",
+          "Price": "£ 1,150,000",
+          "Location": "Irak/Erbil",
+          "AdvertType": "For Sale"
+        }
+      ]
+    },
+    "MasonryGalleryData": {
+      "TopHeader": "Featured Listing",
+      "About": "About",
+      "Counter": "765",
+      "CounterAfter": "ads waiting for you.",
+      "SeeAll": "See All",
+      "MasonryCards": [
+        {
+          "Background": "var(--color-other-2)",
+          "Text": "Al Mansour Mall / Baghdad",
+          "Text2": "Show nearby areas",
+
+          "Type": "short",
+          "Class": ""
+        },
+        {
+          "Background": "var(--color-other-4)",
+          "Text2": "Show nearby areas",
+          "Text": "Supreme Judicial Council",
+          "Type": "long",
+          "Class": "vertical"
+        },
+        {
+          "Background": "var(--color-other-5)",
+          "Text2": "Show nearby areas",
+          "Text": "Baghdad Railway/ Baghdad",
+          "Type": "short",
+          "Class": ""
+        },
+        {
+          "Background": "var(--color-other-3)",
+          "Text": "Al Mansour Mall / Baghdad",
+          "Text2": "Show nearby areas",
+          "Type": "short",
+          "Class": ""
+        },
+        {
+          "Background": "var(--color-other-1)",
+          "Text": "Baghdad International  Airport",
+          "Text2": "Show nearby areas",
+          "Type": "short",
+          "Class": ""
+        }
+      ]
+    }
+  },
+  "ProfilePage": {
+    "LeftNavData": [
+      {
+        "Text": "Profile",
+        "Keyword": "profile",
+        "IconType": "profile",
+        "Counter": 0
+      },
+      {
+        "Text": "Adverts",
+        "Keyword": "adverts",
+        "IconType": "list",
+        "Counter": 0
+      },
+      {
+        "Text": "Fav Adverts",
+        "Keyword": "favs",
+        "IconType": "favorites",
+        "Counter": 10
+      },
+      {
+        "Text": "Messages",
+        "Keyword": "messages",
+        "IconType": "envelope",
+        "Counter": 2
+      }
+    ],
+
+    "CategoryGalleryData": {
+      "Heading1": "Liked Adverts",
+      "Heading2": "My Adverts",
+
+      "CardData": [
+        {
+          "Header": "Luxury Villa In Alice",
+
+          "Location": "Irak/Erbil",
+          "Type": "Sale",
+          "Description": "New Build Modern Istanbul Property with Sea View on Bagdat Streetpremium three bedroom apartment offers dual aspect south eastern views towards Canary Wharf and the",
+          "Price": "£ 1,150,000"
+        },
+        {
+          "Header": "Luxury Villa In Alice",
+
+          "Location": "Irak/Erbil",
+          "Type": "Sale",
+          "Description": "New Build Modern Istanbul Property with Sea View on Bagdat Streetpremium three bedroom apartment offers dual aspect south eastern views towards Canary Wharf and the",
+          "Price": "£ 1,150,000"
+        },
+
+        {
+          "Header": "Luxury Villa In Alice",
+
+          "Location": "Irak/Erbil",
+          "Type": "Sale",
+          "Description": "New Build Modern Istanbul Property with Sea View on Bagdat Streetpremium three bedroom apartment offers dual aspect south eastern views towards Canary Wharf and the",
+          "Price": "£ 1,150,000"
+        },
+        {
+          "Header": "Luxury Villa In Alice",
+          "Location": "Irak/Erbil",
+          "Type": "Sale",
+          "Description": "New Build Modern Istanbul Property with Sea View on Bagdat Streetpremium three bedroom apartment offers dual aspect south eastern views towards Canary Wharf and the",
+          "Price": "£ 1,150,000"
+        },
+        {
+          "Header": "Luxury Villa In Alice",
+
+          "Location": "Irak/Erbil",
+          "Type": "Sale",
+          "Description": "New Build Modern Istanbul Property with Sea View on Bagdat Streetpremium three bedroom apartment offers dual aspect south eastern views towards Canary Wharf and the",
+          "Price": "£ 1,150,000"
+        },
+        {
+          "Header": "Luxury Villa In Alice",
+
+          "Location": "Irak/Erbil",
+          "Type": "Sale",
+          "Description": "New Build Modern Istanbul Property with Sea View on Bagdat Streetpremium three bedroom apartment offers dual aspect south eastern views towards Canary Wharf and the",
+          "Price": "£ 1,150,000"
+        },
+        {
+          "Header": "Luxury Villa In Alice",
+
+          "Location": "Irak/Erbil",
+          "Type": "Sale",
+          "Description": "New Build Modern Istanbul Property with Sea View on Bagdat Streetpremium three bedroom apartment offers dual aspect south eastern views towards Canary Wharf and the",
+          "Price": "£ 1,150,000"
+        },
+        {
+          "Header": "Luxury Villa In Alice",
+          "Location": "Irak/Erbil",
+          "Type": "Sale",
+          "Description": "New Build Modern Istanbul Property with Sea View on Bagdat Streetpremium three bedroom apartment offers dual aspect south eastern views towards Canary Wharf and the",
+          "Price": "£ 1,150,000"
+        },
+        {
+          "Header": "Luxury Villa In Alice",
+          "Location": "Irak/Erbil",
+          "Type": "Sale",
+          "Description": "New Build Modern Istanbul Property with Sea View on Bagdat Streetpremium three bedroom apartment offers dual aspect south eastern views towards Canary Wharf and the",
+          "Price": "£ 1,150,000"
+        }
+      ]
+    },
+    "MyProfileData": {
+      "Heading": "Profile",
+      "Messages": "Messages",
+
+      "Save": "Save",
+
+      "messages": [
+        {
+          "from": "Kemal TUNCER",
+          "date": "02.03.2021",
+          "message": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, "
+        },
+        {
+          "from": "Kemal TUNCER",
+          "date": "02.03.2021",
+          "message": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, "
+        },
+        {
+          "from": "Kemal TUNCER",
+          "date": "02.03.2021",
+          "message": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, "
+        },
+
+        {
+          "from": "Kemal TUNCER",
+          "date": "02.03.2021",
+          "message": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, "
+        }
+      ],
+
+      "List1": [
+        {
+          "List": [{ "Text": "Name" }, { "Text": "Surname" }]
+        },
+        { "List": [{ "Text": "Phone" }, { "Text": "Email" }] }
+      ],
+
+      "List2": [
+        { "Text": "Current Password" },
+        { "Text": "New Password" },
+        { "Text": "Confirm Password" }
+      ]
+    }
+  },
+  "AboutUsPage": {
+    "Section": "profile",
+
+    "LeftNavData": [
+      {
+        "Text": "About Us",
+        "Keyword": "about",
+        "IconType": "home"
+      },
+      {
+        "Text": "Membership Agreement ",
+        "Keyword": "member",
+        "IconType": "resume"
+      },
+      {
+        "Text": "Legal Warning",
+        "Keyword": "warn",
+        "IconType": "notification"
+      },
+      {
+        "Text": "Using Rules",
+        "Keyword": "rules",
+        "IconType": "writing"
+      },
+      {
+        "Text": "Lightness Text",
+        "Keyword": "light",
+        "IconType": "lamp"
+      }
+    ],
+    "AboutUs": "About Us",
+
+    "AboutUsData": {
+      "Heading": "About Us",
+      "Paragraphs": [
+        {
+          "Paragraph": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis libero augue, fringilla nec lorem at, interdum viverra est. Cras ornare quam vitae faucibus fermentum. Sed commodo ex non vehicula luctus. Maecenas sit amet condimentum sapien, vitae dictum tortor. Phasellus volutpat libero justo, vel hendrerit ante vehicula volutpat. Nullam euismod nisl vitae ipsum sollicitudin, ac condimentum nulla egestas. Etiam eu semper enim, et fringilla tellus. Duis et lacus ac lorem porta sodales. Nam sed fringilla leo, quis malesuada orci. Integer tincidunt nisi lectus, ut blandit neque varius vitae. Phasellus nec tristique nibh. Pellentesque enim lectus, feugiat eu ultrices in, condimentum sed dui. Vivamus bibendum mi ante, quis congue justo venenatis vel."
+        },
+        {
+          "Paragraph": "Nullam quis rhoncus nisl. Aliquam et commodo dolor, ut accumsan ipsum. Proin posuere a odio blandit pulvinar. In orci tortor, semper vel fringilla sit amet, blandit a elit. Proin eget sapien eget sapien sollicitudin accumsan. Proin ultrices felis faucibus, ultricies turpis id, ullamcorper ex. Suspendisse potenti."
+        },
+        {
+          "Paragraph": "Etiam consectetur odio non risus venenatis rutrum. Pellentesque semper iaculis nisl sed volutpat. Vivamus et lectus ante. Etiam sit amet dapibus mauris. Pellentesque fringilla turpis vitae elit dictum, ac blandit libero hendrerit. Morbi sapien massa, porttitor nec condimentum eget, feugiat in velit. Cras scelerisque vel neque sed tempor. Aenean mollis nec justo ut semper. Fusce in nunc condimentum, semper dolor laoreet, pharetra risus. Curabitur aliquam ac quam eget tempus. Nunc facilisis tempus pulvinar. Fusce pretium diam tellus, vel pellentesque lectus pellentesque ut. Sed risus diam, accumsan id ullamcorper id, eleifend nec eros. Ut ligula elit, consequat et tortor sed, gravida vestibulum lorem."
+        },
+        {
+          "Paragraph": "Phasellus at venenatis turpis. Ut rutrum posuere est, non eleifend dui vehicula sed. Donec turpis urna, posuere ac faucibus mattis, vulputate id ligula. Nunc blandit nulla ex, placerat feugiat tortor accumsan et. Praesent dictum non ipsum in posuere. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas fringilla mattis ante, tempus scelerisque ex placerat eu. Nunc rhoncus pharetra ex, in fringilla neque rutrum vitae. Vivamus cursus consectetur purus non vulputate. Duis finibus dignissim neque, vel porttitor neque facilisis ac. Aenean placerat ornare ligula, pulvinar imperdiet elit bibendum id. Suspendisse at ante mi. Pellentesque auctor ac justo a lobortis."
+        },
+        {
+          "Paragraph": "Vivamus non nisi diam. Interdum et malesuada fames ac ante ipsum primis in faucibus. In at turpis maximus ante facilisis aliquam. Ut vulputate ornare quam at sollicitudin. Morbi nec magna varius, pharetra dolor eget, posuere erat. "
+        }
+      ]
+    },
+    "MembershipData": {
+      "Heading": "Membership Agreement",
+      "Paragraphs": [
+        {
+          "Paragraph": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis libero augue, fringilla nec lorem at, interdum viverra est. Cras ornare quam vitae faucibus fermentum. Sed commodo ex non vehicula luctus. Maecenas sit amet condimentum sapien, vitae dictum tortor. Phasellus volutpat libero justo, vel hendrerit ante vehicula volutpat. Nullam euismod nisl vitae ipsum sollicitudin, ac condimentum nulla egestas. Etiam eu semper enim, et fringilla tellus. Duis et lacus ac lorem porta sodales. Nam sed fringilla leo, quis malesuada orci. Integer tincidunt nisi lectus, ut blandit neque varius vitae. Phasellus nec tristique nibh. Pellentesque enim lectus, feugiat eu ultrices in, condimentum sed dui. Vivamus bibendum mi ante, quis congue justo venenatis vel."
+        },
+        {
+          "Paragraph": "Nullam quis rhoncus nisl. Aliquam et commodo dolor, ut accumsan ipsum. Proin posuere a odio blandit pulvinar. In orci tortor, semper vel fringilla sit amet, blandit a elit. Proin eget sapien eget sapien sollicitudin accumsan. Proin ultrices felis faucibus, ultricies turpis id, ullamcorper ex. Suspendisse potenti."
+        },
+        {
+          "Paragraph": "Etiam consectetur odio non risus venenatis rutrum. Pellentesque semper iaculis nisl sed volutpat. Vivamus et lectus ante. Etiam sit amet dapibus mauris. Pellentesque fringilla turpis vitae elit dictum, ac blandit libero hendrerit. Morbi sapien massa, porttitor nec condimentum eget, feugiat in velit. Cras scelerisque vel neque sed tempor. Aenean mollis nec justo ut semper. Fusce in nunc condimentum, semper dolor laoreet, pharetra risus. Curabitur aliquam ac quam eget tempus. Nunc facilisis tempus pulvinar. Fusce pretium diam tellus, vel pellentesque lectus pellentesque ut. Sed risus diam, accumsan id ullamcorper id, eleifend nec eros. Ut ligula elit, consequat et tortor sed, gravida vestibulum lorem."
+        },
+        {
+          "Paragraph": "Phasellus at venenatis turpis. Ut rutrum posuere est, non eleifend dui vehicula sed. Donec turpis urna, posuere ac faucibus mattis, vulputate id ligula. Nunc blandit nulla ex, placerat feugiat tortor accumsan et. Praesent dictum non ipsum in posuere. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas fringilla mattis ante, tempus scelerisque ex placerat eu. Nunc rhoncus pharetra ex, in fringilla neque rutrum vitae. Vivamus cursus consectetur purus non vulputate. Duis finibus dignissim neque, vel porttitor neque facilisis ac. Aenean placerat ornare ligula, pulvinar imperdiet elit bibendum id. Suspendisse at ante mi. Pellentesque auctor ac justo a lobortis."
+        },
+        {
+          "Paragraph": "Vivamus non nisi diam. Interdum et malesuada fames ac ante ipsum primis in faucibus. In at turpis maximus ante facilisis aliquam. Ut vulputate ornare quam at sollicitudin. Morbi nec magna varius, pharetra dolor eget, posuere erat. "
+        }
+      ]
+    },
+    "LegalWarnData": {
+      "Heading": "Legal Warn",
+      "Paragraphs": [
+        {
+          "Paragraph": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis libero augue, fringilla nec lorem at, interdum viverra est. Cras ornare quam vitae faucibus fermentum. Sed commodo ex non vehicula luctus. Maecenas sit amet condimentum sapien, vitae dictum tortor. Phasellus volutpat libero justo, vel hendrerit ante vehicula volutpat. Nullam euismod nisl vitae ipsum sollicitudin, ac condimentum nulla egestas. Etiam eu semper enim, et fringilla tellus. Duis et lacus ac lorem porta sodales. Nam sed fringilla leo, quis malesuada orci. Integer tincidunt nisi lectus, ut blandit neque varius vitae. Phasellus nec tristique nibh. Pellentesque enim lectus, feugiat eu ultrices in, condimentum sed dui. Vivamus bibendum mi ante, quis congue justo venenatis vel."
+        },
+        {
+          "Paragraph": "Nullam quis rhoncus nisl. Aliquam et commodo dolor, ut accumsan ipsum. Proin posuere a odio blandit pulvinar. In orci tortor, semper vel fringilla sit amet, blandit a elit. Proin eget sapien eget sapien sollicitudin accumsan. Proin ultrices felis faucibus, ultricies turpis id, ullamcorper ex. Suspendisse potenti."
+        },
+        {
+          "Paragraph": "Etiam consectetur odio non risus venenatis rutrum. Pellentesque semper iaculis nisl sed volutpat. Vivamus et lectus ante. Etiam sit amet dapibus mauris. Pellentesque fringilla turpis vitae elit dictum, ac blandit libero hendrerit. Morbi sapien massa, porttitor nec condimentum eget, feugiat in velit. Cras scelerisque vel neque sed tempor. Aenean mollis nec justo ut semper. Fusce in nunc condimentum, semper dolor laoreet, pharetra risus. Curabitur aliquam ac quam eget tempus. Nunc facilisis tempus pulvinar. Fusce pretium diam tellus, vel pellentesque lectus pellentesque ut. Sed risus diam, accumsan id ullamcorper id, eleifend nec eros. Ut ligula elit, consequat et tortor sed, gravida vestibulum lorem."
+        },
+        {
+          "Paragraph": "Phasellus at venenatis turpis. Ut rutrum posuere est, non eleifend dui vehicula sed. Donec turpis urna, posuere ac faucibus mattis, vulputate id ligula. Nunc blandit nulla ex, placerat feugiat tortor accumsan et. Praesent dictum non ipsum in posuere. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas fringilla mattis ante, tempus scelerisque ex placerat eu. Nunc rhoncus pharetra ex, in fringilla neque rutrum vitae. Vivamus cursus consectetur purus non vulputate. Duis finibus dignissim neque, vel porttitor neque facilisis ac. Aenean placerat ornare ligula, pulvinar imperdiet elit bibendum id. Suspendisse at ante mi. Pellentesque auctor ac justo a lobortis."
+        },
+        {
+          "Paragraph": "Vivamus non nisi diam. Interdum et malesuada fames ac ante ipsum primis in faucibus. In at turpis maximus ante facilisis aliquam. Ut vulputate ornare quam at sollicitudin. Morbi nec magna varius, pharetra dolor eget, posuere erat. "
+        }
+      ]
+    },
+    "RulesData": {
+      "Heading": "Using Rules",
+      "Paragraphs": [
+        {
+          "Paragraph": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis libero augue, fringilla nec lorem at, interdum viverra est. Cras ornare quam vitae faucibus fermentum. Sed commodo ex non vehicula luctus. Maecenas sit amet condimentum sapien, vitae dictum tortor. Phasellus volutpat libero justo, vel hendrerit ante vehicula volutpat. Nullam euismod nisl vitae ipsum sollicitudin, ac condimentum nulla egestas. Etiam eu semper enim, et fringilla tellus. Duis et lacus ac lorem porta sodales. Nam sed fringilla leo, quis malesuada orci. Integer tincidunt nisi lectus, ut blandit neque varius vitae. Phasellus nec tristique nibh. Pellentesque enim lectus, feugiat eu ultrices in, condimentum sed dui. Vivamus bibendum mi ante, quis congue justo venenatis vel."
+        },
+        {
+          "Paragraph": "Nullam quis rhoncus nisl. Aliquam et commodo dolor, ut accumsan ipsum. Proin posuere a odio blandit pulvinar. In orci tortor, semper vel fringilla sit amet, blandit a elit. Proin eget sapien eget sapien sollicitudin accumsan. Proin ultrices felis faucibus, ultricies turpis id, ullamcorper ex. Suspendisse potenti."
+        },
+        {
+          "Paragraph": "Etiam consectetur odio non risus venenatis rutrum. Pellentesque semper iaculis nisl sed volutpat. Vivamus et lectus ante. Etiam sit amet dapibus mauris. Pellentesque fringilla turpis vitae elit dictum, ac blandit libero hendrerit. Morbi sapien massa, porttitor nec condimentum eget, feugiat in velit. Cras scelerisque vel neque sed tempor. Aenean mollis nec justo ut semper. Fusce in nunc condimentum, semper dolor laoreet, pharetra risus. Curabitur aliquam ac quam eget tempus. Nunc facilisis tempus pulvinar. Fusce pretium diam tellus, vel pellentesque lectus pellentesque ut. Sed risus diam, accumsan id ullamcorper id, eleifend nec eros. Ut ligula elit, consequat et tortor sed, gravida vestibulum lorem."
+        },
+        {
+          "Paragraph": "Phasellus at venenatis turpis. Ut rutrum posuere est, non eleifend dui vehicula sed. Donec turpis urna, posuere ac faucibus mattis, vulputate id ligula. Nunc blandit nulla ex, placerat feugiat tortor accumsan et. Praesent dictum non ipsum in posuere. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas fringilla mattis ante, tempus scelerisque ex placerat eu. Nunc rhoncus pharetra ex, in fringilla neque rutrum vitae. Vivamus cursus consectetur purus non vulputate. Duis finibus dignissim neque, vel porttitor neque facilisis ac. Aenean placerat ornare ligula, pulvinar imperdiet elit bibendum id. Suspendisse at ante mi. Pellentesque auctor ac justo a lobortis."
+        },
+        {
+          "Paragraph": "Vivamus non nisi diam. Interdum et malesuada fames ac ante ipsum primis in faucibus. In at turpis maximus ante facilisis aliquam. Ut vulputate ornare quam at sollicitudin. Morbi nec magna varius, pharetra dolor eget, posuere erat. "
+        }
+      ]
+    },
+    "LightnessData": {
+      "Heading": "Lightness Text",
+      "Paragraphs": [
+        {
+          "Paragraph": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis libero augue, fringilla nec lorem at, interdum viverra est. Cras ornare quam vitae faucibus fermentum. Sed commodo ex non vehicula luctus. Maecenas sit amet condimentum sapien, vitae dictum tortor. Phasellus volutpat libero justo, vel hendrerit ante vehicula volutpat. Nullam euismod nisl vitae ipsum sollicitudin, ac condimentum nulla egestas. Etiam eu semper enim, et fringilla tellus. Duis et lacus ac lorem porta sodales. Nam sed fringilla leo, quis malesuada orci. Integer tincidunt nisi lectus, ut blandit neque varius vitae. Phasellus nec tristique nibh. Pellentesque enim lectus, feugiat eu ultrices in, condimentum sed dui. Vivamus bibendum mi ante, quis congue justo venenatis vel."
+        },
+        {
+          "Paragraph": "Nullam quis rhoncus nisl. Aliquam et commodo dolor, ut accumsan ipsum. Proin posuere a odio blandit pulvinar. In orci tortor, semper vel fringilla sit amet, blandit a elit. Proin eget sapien eget sapien sollicitudin accumsan. Proin ultrices felis faucibus, ultricies turpis id, ullamcorper ex. Suspendisse potenti."
+        },
+        {
+          "Paragraph": "Etiam consectetur odio non risus venenatis rutrum. Pellentesque semper iaculis nisl sed volutpat. Vivamus et lectus ante. Etiam sit amet dapibus mauris. Pellentesque fringilla turpis vitae elit dictum, ac blandit libero hendrerit. Morbi sapien massa, porttitor nec condimentum eget, feugiat in velit. Cras scelerisque vel neque sed tempor. Aenean mollis nec justo ut semper. Fusce in nunc condimentum, semper dolor laoreet, pharetra risus. Curabitur aliquam ac quam eget tempus. Nunc facilisis tempus pulvinar. Fusce pretium diam tellus, vel pellentesque lectus pellentesque ut. Sed risus diam, accumsan id ullamcorper id, eleifend nec eros. Ut ligula elit, consequat et tortor sed, gravida vestibulum lorem."
+        },
+        {
+          "Paragraph": "Phasellus at venenatis turpis. Ut rutrum posuere est, non eleifend dui vehicula sed. Donec turpis urna, posuere ac faucibus mattis, vulputate id ligula. Nunc blandit nulla ex, placerat feugiat tortor accumsan et. Praesent dictum non ipsum in posuere. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas fringilla mattis ante, tempus scelerisque ex placerat eu. Nunc rhoncus pharetra ex, in fringilla neque rutrum vitae. Vivamus cursus consectetur purus non vulputate. Duis finibus dignissim neque, vel porttitor neque facilisis ac. Aenean placerat ornare ligula, pulvinar imperdiet elit bibendum id. Suspendisse at ante mi. Pellentesque auctor ac justo a lobortis."
+        },
+        {
+          "Paragraph": "Vivamus non nisi diam. Interdum et malesuada fames ac ante ipsum primis in faucibus. In at turpis maximus ante facilisis aliquam. Ut vulputate ornare quam at sollicitudin. Morbi nec magna varius, pharetra dolor eget, posuere erat. "
+        }
+      ]
+    }
+  },
+
+  "NavbarData": {
+    "Lang": "AR",
+    "Lang1": "EN",
+    "Lang2": "AR",
+
+    "AddProperty": "Add Property",
+    "LoginSignup": "Login / Signup",
+    "NavLinks": [
+      { "text": "Self/Rent", "href": "/add" },
+      { "text": "About Us", "href": "/about" },
+      { "text": "Contact Us", "href": "/contact" }
+    ]
+  },
+
+  "SignInUpData": {
+    "SignInData": {
+      "SignIn": "User Sign In",
+      "Email": "E-mail Adress",
+      "Password": "Password",
+      "ForgetPassword": "I forget my password",
+      "LogIn": "Log In",
+      "Or": "Or",
+      "SignWith": "Sign In With",
+      "Facebook": "Facebook",
+      "Google": "Google",
+      "NewUser": "Create New User",
+      "CreateAccount": "Create Account",
+      "Description": "If you dont have account, please enter your informations to form and submit."
+    },
+    "SignUpData": {
+      "NewUser": "Create New User",
+      "NameSurname": "Name Surname",
+      "Phone": "Phone",
+      "Email": "E-mail Adress",
+      "Password": "Password",
+      "Agree": "I agree the",
+      "Terms": "Terms and Conditions",
+      "ForgetPassword": "I forget my password",
+      "LogIn": "Log In",
+      "Or": "Or",
+      "SignWith": "Sign In With",
+      "Facebook": "Facebook",
+      "Google": "Google"
+    }
+  },
+  "FullScreenNavbarData": {
+    "AddProperty": "Add Property",
+    "LoginSignup": "Login / Signup",
+    "Lang": "AR",
+    "Lang1": "EN",
+    "Lang2": "AR",
+
+    "NavLinks": [
+      { "text": "Self/Rent", "href": "/add" },
+      { "text": "About Us", "href": "/about" },
+      { "text": "Contact Us", "href": "/contact" }
+    ]
+  },
+
+  "FooterData": {
+    "All": "All",
+    "Rights": "Rights",
+    "Reserved": "Reserved",
+    "Borsa": "Borsa",
+    "ButtonText": "You can share your views with us!",
+    "FooterItems": [
+      {
+        "Type": "logo",
+        "Button": "",
+        "Texts": [
+          "Legal warning",
+          "Terms of Use",
+          "Illumination Text",
+          "Cookie Policy",
+          "Ad Posting Rules"
+        ]
+      },
+
+      {
+        "Type": "normal",
+        "Button": true,
+        "Texts": [
+          "Legal warning",
+          "Terms of Use",
+          "Illumination Text",
+          "Cookie Policy",
+          "Ad Posting Rules"
+        ]
+      },
+      {
+        "Type": "normal",
+        "Button": false,
+        "Texts": [
+          "Legal warning",
+          "Terms of Use",
+          "Illumination Text",
+          "Cookie Policy"
+        ]
+      },
+      {
+        "Type": "normal",
+        "Button": false,
+        "Texts": [
+          "Legal warning",
+          "Terms of Use",
+          "Illumination Text",
+          "Cookie Policy",
+          "Ad Posting Rules"
+        ]
+      },
+
+      {
+        "Type": "normal",
+        "Button": false,
+        "Texts": [
+          "Legal warning",
+          "Terms of Use",
+          "Illumination Text",
+          "Cookie Policy",
+          "Ad Posting Rules"
+        ]
+      },
+
+      {
+        "Type": "social",
+        "Button": false,
+        "Texts": ["Twitter", "Facebook", "Instagram"]
+      },
+      {
+        "Type": "mobile",
+        "Button": "",
+        "Texts": [
+          "About Us",
+          "Membership Agreement",
+          "Advertissement",
+          "Cotact Us"
+        ]
+      }
+    ]
+  },
+
+  "ContactUsPage": {
+    "Heading": "Contact Us",
+    "Adress": "Adress",
+    "AdressInfo": "Alkent Mahallesi, Hadımköy Yolu Caddesi No: 147 Büyükçekmece İstanbul / Türkiye",
+
+    "CustomerServices": "Customer Services",
+    "CustomerInfo": "Alkent Mahallesi, Hadımköy Yolu Caddesi No: 147 Büyükçekmece İstanbul / Türkiye",
+
+    "InputData": [
+      {
+        "Text": "Name Surname"
+      },
+      {
+        "Text": "Phone"
+      },
+      {
+        "Text": "Mail"
+      }
+    ],
+    "YourMessage": "Enter Your Message",
+
+    "ButtonsData": {
+      "List1": [
+        {
+          "Type": "phone",
+          "Text": "0850 555 55 55"
+        },
+        { "Type": "fax", "Text": "0850 555 55 55" },
+        { "Type": "envelope", "Text": "info@borsakrd.com" }
+      ],
+      "List2": [
+        { "Type": "phone", "Text": "0850 555 55 55" },
+        { "Type": "envelope", "Text": "info@borsakrd.com" }
+      ],
+      "ButtonSend": { "Type": "send", "Text": "Send" }
+    }
+  }
+}
